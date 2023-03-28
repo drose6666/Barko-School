@@ -936,7 +936,8 @@ button:focus {
 }
 
 i {
-  font-family: "Font Rose 1.0";
+  font-family: "Barko School Font";
+  vertical-align: middle;
 }
 
 ::-webkit-scrollbar {
