@@ -1,0 +1,61 @@
+@import './_vars';
+@import './_mixins';
+@import '../../node_modules/swiper/swiper-bundle.min';
+
+
+
+
+// TODO  Остновные стили
+
+* {
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+
+html,body {
+   height: 100%;
+   // all: unset; // сбрасывыает все стили до значений по умолчанию
+}
+
+body {
+   position: relative;
+   // font-family: $Roboto;
+   &.no-scroll {
+      overflow: hidden;
+   }
+}
+
+button {
+   border: none;
+   background: transparent;
+   &:active, &:focus {
+      border: none;
+   }
+}
+
+
+
+// TODO  Custom Scroll
+
+::-webkit-scrollbar {
+   background: var(--borderLight);
+   border-radius: 50px;
+   width: 5px;
+   height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+   background: var(--decorationBright);
+   border-radius: 50px;
+}
+
+::-webkit-scrollbar-corner {
+   background: transparent;
+}
+
+// for Mozilla
+* {
+   -webkit-tap-highlight-color: transparent;
+   // scrollbar-color:  ; /* «цвет ползунка» «цвет полосы скроллбара» */
+   scrollbar-width: thin ;/* толщина */
+}
