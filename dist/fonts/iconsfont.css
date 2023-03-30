@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'Barko School Font';
-  src:  url('../fonts/IconsFont/barko-school.eot?b0u8pl');
-  src:  url('../fonts/IconsFont/barko-school.eot?b0u8pl#iefix') format('embedded-opentype'),
-    url('../fonts/IconsFont/barko-school.ttf?b0u8pl') format('truetype'),
-    url('../fonts/IconsFont/barko-school.woff?b0u8pl') format('woff'),
-    url('../fonts/IconsFont/barko-school.svg?b0u8pl#barko-school') format('svg');
+  src:  url('../fonts/Iconsfont/barko-school.eot?2vclqo');
+  src:  url('../fonts/Iconsfont/barko-school.eot?2vclqo#iefix') format('embedded-opentype'),
+    url('../fonts/Iconsfont/barko-school.ttf?2vclqo') format('truetype'),
+    url('../fonts/Iconsfont/barko-school.woff?2vclqo') format('woff'),
+    url('../fonts/Iconsfont/barko-school.svg?2vclqo#barko-school') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="dr_"]:before, [class*=" dr_"]:before {
+[class^="i_"]:before, [class*=" i_"]:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'Barko School Font' !important;
   speak: never;
@@ -25,78 +25,81 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.dr_chat:before {
+.i_schedule:before {
+  content: "\e919";
+}
+.i_chat:before {
   content: "\e916";
 }
-.dr_close:before {
+.i_close:before {
   content: "\e917";
 }
-.dr_telegram_minimal:before {
+.i_telegram_minimal:before {
   content: "\e918";
 }
-.dr_arrow_down:before {
+.i_arrow_down:before {
   content: "\e900";
 }
-.dr_arrow_left:before {
+.i_arrow_left:before {
   content: "\e901";
 }
-.dr_arrow_right:before {
+.i_arrow_right:before {
   content: "\e902";
 }
-.dr_arrow_up:before {
+.i_arrow_up:before {
   content: "\e903";
 }
-.dr_check_bold:before {
+.i_check_bold:before {
   content: "\e904";
 }
-.dr_check_circle_fill:before {
+.i_check_circle_fill:before {
   content: "\e905";
 }
-.dr_check_medium:before {
+.i_check_medium:before {
   content: "\e906";
 }
-.dr_clock:before {
+.i_clock:before {
   content: "\e907";
 }
-.dr_eye:before {
+.i_eye:before {
   content: "\e908";
 }
-.dr_eye_hide:before {
+.i_eye_hide:before {
   content: "\e909";
 }
-.dr_facebook:before {
+.i_facebook:before {
   content: "\e90a";
 }
-.dr_instagram:before {
+.i_instagram:before {
   content: "\e90b";
 }
-.dr_location:before {
+.i_location:before {
   content: "\e90c";
 }
-.dr_message:before {
+.i_message:before {
   content: "\e90d";
 }
-.dr_phone:before {
+.i_phone:before {
   content: "\e90e";
 }
-.dr_play:before {
+.i_play:before {
   content: "\e90f";
 }
-.dr_schedule_price:before {
+.i_schedule_price:before {
   content: "\e910";
 }
-.dr_telegram:before {
+.i_telegram:before {
   content: "\e911";
 }
-.dr_twitter:before {
+.i_twitter:before {
   content: "\e912";
 }
-.dr_viber:before {
+.i_viber:before {
   content: "\e913";
 }
-.dr_vk:before {
+.i_vk:before {
   content: "\e914";
 }
-.dr_whatsapp:before {
+.i_whatsapp:before {
   content: "\e915";
 }

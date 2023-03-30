@@ -2,6 +2,9 @@
 @import './_mixins';
 @import '../../node_modules/swiper/swiper-bundle.min';
 
+@import '../components/top-info/top-info';
+@import '../components/socials/socials';
+
 
 
 
@@ -19,7 +22,7 @@ html,body {
 
 body {
    position: relative;
-   // font-family: $Roboto;
+   font-family: $Monts;
    &.no-scroll {
       overflow: hidden;
    }
@@ -31,6 +34,10 @@ button {
    &:active, &:focus {
       border: none;
    }
+}
+
+a, a:hover, a:focus, a:active {
+   text-decoration: none;
 }
 
 i {

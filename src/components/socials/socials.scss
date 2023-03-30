@@ -1,0 +1,15 @@
+.socials {
+   display: flex;
+   align-items: center;
+   
+
+   &.socials--top {
+      a:not(:last-child) {
+         margin-right: 12px;
+      }
+      i {
+         color: $text;
+         font-size: 18px;
+      }
+   }
+}

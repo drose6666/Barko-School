@@ -1,0 +1,36 @@
+// TODO Container
+
+@mixin container (
+   $margin: 0 auto,
+   $padding: 0 20px,
+   $maxWidth: 1390px,
+
+   $flex: false,
+   $alignX: space-between,
+   $alignY: center,
+
+   $grid: false,
+   $columns: auto,
+   $rows: auto,
+   
+   $gap: 15px
+) {
+   margin: $margin;
+   padding: $padding;
+   max-width: $maxWidth;
+
+   @if ($flex) {
+      display: flex;
+      justify-content: $alignX;
+      align-items: $alignY;
+      gap: 15px
+   }
+
+   @if ($grid) {
+      display: grid;
+      grid-template-columns: $columns;
+      grid-template-rows: $rows;
+      gap: 15px
+   }
+}
+.ui-container { @include container }
