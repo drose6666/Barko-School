@@ -17,6 +17,7 @@ export const path = {
       libs: `${distFolder}/libs/`,
       fonts: `${distFolder}/fonts/`,
       images: `${distFolder}/img/optimized/`,
+      svg: `${distFolder}/img/`,
       js: `${distFolder}/js/`,
       css: `${distFolder}/css/`,
       html: `${distFolder}/`,

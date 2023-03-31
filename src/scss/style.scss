@@ -2,8 +2,20 @@
 @import './_mixins';
 @import '../../node_modules/swiper/swiper-bundle.min';
 
+// Components
 @import '../components/top-info/top-info';
 @import '../components/socials/socials';
+@import '../components/header/header';
+@import '../components/menu/nav/nav';
+
+// UI
+@import '../components/ui/ui-burger/ui-burger';
+@import '../components/ui/ui-buttons/ui-buttons';
+
+// Sections
+@import '../components/sections/hero-section/hero-section';
+@import '../components/sections/about-section/about-section';
+
 
 
 
@@ -41,7 +53,7 @@ a, a:hover, a:focus, a:active {
 }
 
 i {
-   font-family: 'Barko School Font';
+   font-family: BRFont;
    vertical-align: middle;
 }
 

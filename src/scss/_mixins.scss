@@ -34,3 +34,74 @@
    }
 }
 .ui-container { @include container }
+.ui-container.container--flex { @include container($flex: true) }
+
+
+
+// TODO Button
+
+@mixin button (
+   $pd: 15px 39px,
+   $fFamily: $Monts,
+   $fSize: 18px,
+   $fWeight: 600,
+   $lHeight: 100%,
+   $color: $light,
+   $bg: $action,
+   $border: 1px solid transparent,
+   $trans: all 0.2s ease-out,
+   $borderR: $btnR,
+   $shadow: none,
+
+   // $dark: false,
+   // $action: false,
+   // $withIcon: false,
+   // $bordered: false,
+) {
+   padding: $pd;
+   font-family: $fFamily;
+   font-size: $fSize;
+   font-weight: $fWeight;
+   line-height: $lHeight;
+   color: $color;
+   background: $bg;
+   border: $border;
+   border-radius: $borderR;
+   box-shadow: $shadow;
+   position: relative;
+   transition: $trans;
+}
+.ui-btn {
+   @include button;
+
+   &.btn--dark {
+      @include button(
+         $bg: $darkDecor,
+         $color: $light,
+         $shadow: $btnDarkFillS,
+      )
+   }
+
+   &.btn--action {
+      @include button( $shadow: $btnDarkFillS, )
+   }
+
+   &.btn--bordered {
+      @include button(
+         $fWeight: 500,
+         $bg: transparent,
+         $color: $title,
+         $border: 1px solid $title,
+      )
+   }
+
+   &.btn--icon {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+      i {
+         font-size: 18px;
+      }
+   }
+}
+

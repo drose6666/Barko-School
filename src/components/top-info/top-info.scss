@@ -3,10 +3,6 @@
    background: $light;
    box-shadow: $blocksWhiteS;
 
-   .ui-container {
-      @include container($flex: true)
-   }
-
    .items {
       display: flex;
       align-items: center;

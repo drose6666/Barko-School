@@ -11,12 +11,12 @@
    <meta property="og:image" content="http://bkb-company.ru/img/about/about1.jpg">
    <meta property="og:site_name" content="Barko School">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20230330185448" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <link rel="stylesheet" href="../libs/bootstrap-grid.min.css?_v=20230330185448">
-   <link rel="stylesheet" href="../libs/reset.min.css?_v=20230330185448">
-   <link rel="stylesheet" as="font" href="../fonts/fonts.css?_v=20230330185448">
-   <link rel="stylesheet" as="font" href="../fonts/iconsfont.css?_v=20230330185448">
-   <link rel="stylesheet" href="css/style.min.css?_v=20230330185448">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20230331184622" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <link rel="stylesheet" href="../libs/bootstrap-grid.min.css?_v=20230331184622">
+   <link rel="stylesheet" href="../libs/reset.min.css?_v=20230331184622">
+   <link rel="stylesheet" as="font" href="../fonts/fonts.css?_v=20230331184622">
+   <link rel="stylesheet" as="font" href="../fonts/iconsfont.css?_v=20230331184622">
+   <link rel="stylesheet" href="css/style.min.css?_v=20230331184622">
    
    <title>Barko School</title>
 </head>
@@ -24,7 +24,7 @@
 
 <body>
    <div class="top-info">
-   <div class="ui-container">
+   <div class="ui-container container--flex">
       <div class="items">
          <div class="item item--address first">
             <i class="i_location"></i>
@@ -51,16 +51,61 @@
       </div>
    </div>
 </div>
+   <header>
+   <div class="ui-container container--flex">
+      <a href="#" class="logo"><img src="../../img/logo_dark.svg" alt="Barko School Logo"></a>
+
+      <nav class="nav nav--head">
+         <ul>
+   <li><a href="#">О нас</a></li>
+   <li><a href="#">Курсы</a></li>
+   <li><a href="#">Расписание и цены</a></li>
+   <li><a href="#">Отзывы</a></li>
+   <li><a href="#">Контакты</a></li>
+</ul>
+      </nav>
+
+      <button class="ui-burger">
+   <span></span>
+</button>
+   </div>
+</header>
 
    
 
    <main>
-      
+      <section class="hero-section">
+   <div class="ui-container container--flex">
+      <div class="hero-info">
+         <h1 class="hero-title">Barko <mark>School</mark></h1>
+         <h2 class="hero-subtitle">Центр комплексного развития</h2>
+
+         <ul class="hero-list">
+            <li>Авторские программы с индивидуальным подходом</li>
+            <li>Развитие детей в безопасной и уютной среде</li>
+         </ul>
+
+         <div class="hero-action">
+            <button class="ui-btn btn--dark btn--hero-dark"><span>О нас</span></button>
+            <div class="action-wrap">
+               <div class="action-icon"><i class="i_check_bold"></i></div>
+               <p class="action-text">Пробное занятие бесплатно</p>
+               <button class="ui-btn btn--icon btn--action btn--hero-action"><span>Запишитесь сейчас</span> <i class="i_arrow_right"></i></button>
+            </div>
+         </div>
+      </div>
+
+      <div class="hero-img">
+         <img src="../../../img/optimized/hero_img.webp" alt="Girl - super women">
+         <img class="triangle" src="../../../img/triangle.svg" alt="">
+      </div>
+   </div>
+</section>
    </main>
 
    
    
-   <script defer src="./libs/jquery-3.6.3.min.js?_v=20230330185448"></script>
-   <script defer src="js/bundle.min.js?_v=20230330185448"></script>
+   <script defer src="./libs/jquery-3.6.3.min.js?_v=20230331184622"></script>
+   <script defer src="js/bundle.min.js?_v=20230331184622"></script>
 </body>
 </html>

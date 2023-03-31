@@ -1,0 +1,122 @@
+.hero-section {
+   .ui-container { position: relative; }
+}
+
+// TODO Info
+
+.hero-info {
+   margin-top: 165px;
+}
+
+.hero-title {
+   font-size: 95px;
+   font-weight: 700;
+   line-height: 105%;
+   color: $title;
+   mark {
+      color: $action;
+      background: transparent;
+   }
+}
+
+.hero-subtitle {
+   margin: 10px 0 50px 0;
+   font-family: $MontsAlt;
+   font-size: 42px;
+   font-weight: 400;
+   line-height: 110%;
+   color: $title;
+   max-width: 640px;
+}
+
+.hero-list {
+   li {
+      font-family: $Rob;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 100%;
+      color: $title;
+      display: flex;
+      align-items: flex-start;
+      &:not(:last-child) { margin-bottom: 15px; }
+      &:before {
+         content: '\e905';
+         margin-right: 15px;
+         display: block;
+         color: $title;
+         font-family: $BRFont;
+         font-size: 20px;
+      }
+   }
+}
+
+.hero-action {
+   margin-top: 90px;
+   display: flex;
+   align-items: center;
+   gap: 30px;
+   position: relative;
+   z-index: 1;
+
+   .ui-btn.btn--hero-dark {
+      padding: 18px 25px;
+      font-weight: 500;
+   }
+
+   .action-wrap {
+      background: $light;
+      border-radius: $btnR;
+      display: flex;
+      align-items: center;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+      
+      .action-icon {
+         margin-right: 20px;
+         height: 55px;
+         width: 55px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         background: $weakDecor;
+         border-radius: 50%;
+         i {
+            font-size: 24px;
+            color: $action;
+         }
+      }
+      .action-text {
+         margin-right: 65px;
+         font-family: $MontsAlt;
+         font-size: 18px;
+         font-weight: 400;
+         line-height: 100%;
+         color: $title;
+      }
+
+      .ui-btn.btn--hero-action {
+         padding: 19px 28px 18px 28px;
+         box-shadow: none;
+      }
+   }
+}
+
+
+// TODO image
+
+.hero-img {
+   position: absolute;
+   top: 65px;
+   right: -30px;
+   max-width: 590px;
+   img {
+      max-width: 100%;
+      height: auto;
+   }
+   img.triangle {
+      position: absolute;
+      bottom: 25px;
+      left: -20px;
+      width: 230px;
+      height: 186px;
+   }
+}
