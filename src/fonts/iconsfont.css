@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Barko School Font';
-  src:  url('../fonts/Iconsfont/barko-school.eot?2vclqo');
-  src:  url('../fonts/Iconsfont/barko-school.eot?2vclqo#iefix') format('embedded-opentype'),
-    url('../fonts/Iconsfont/barko-school.ttf?2vclqo') format('truetype'),
-    url('../fonts/Iconsfont/barko-school.woff?2vclqo') format('woff'),
-    url('../fonts/Iconsfont/barko-school.svg?2vclqo#barko-school') format('svg');
+  src:  url('../fonconsfontfont/barko-school.eot?q1geuy');
+  src:  url('../fonts/Iconsfont/barko-school.eot?q1geuy#iefix') format('embedded-opentype'),
+    url('../fonts/Iconsfont/barko-school.ttf?q1geuy') format('truetype'),
+    url('../fonts/Iconsfont/barko-school.woff?q1geuy') format('woff'),
+    url('../fonts/Iconsfont/barko-school.svg?q1geuy#barko-school') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,18 +25,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.i_schedule:before {
-  content: "\e919";
-}
-.i_chat:before {
-  content: "\e916";
-}
-.i_close:before {
-  content: "\e917";
-}
-.i_telegram_minimal:before {
-  content: "\e918";
-}
 .i_arrow_down:before {
   content: "\e900";
 }
@@ -49,57 +37,69 @@
 .i_arrow_up:before {
   content: "\e903";
 }
-.i_check_bold:before {
+.i_award_fill:before {
   content: "\e904";
 }
-.i_check_circle_fill:before {
+.i_chat_circle:before {
   content: "\e905";
 }
-.i_check_medium:before {
+.i_chat_square:before {
   content: "\e906";
 }
-.i_clock:before {
+.i_check_bold:before {
   content: "\e907";
 }
-.i_eye:before {
+.i_check_circle_fill:before {
   content: "\e908";
 }
-.i_eye_hide:before {
+.i_clock:before {
   content: "\e909";
 }
-.i_facebook:before {
+.i_eye:before {
   content: "\e90a";
 }
-.i_instagram:before {
+.i_facebook:before {
   content: "\e90b";
 }
-.i_location:before {
+.i_instagram:before {
   content: "\e90c";
 }
-.i_message:before {
+.i_location:before {
   content: "\e90d";
 }
-.i_phone:before {
+.i_message:before {
   content: "\e90e";
 }
-.i_play:before {
+.i_phone:before {
   content: "\e90f";
 }
-.i_schedule_price:before {
+.i_play:before {
   content: "\e910";
 }
-.i_telegram:before {
+.i_quotes:before {
   content: "\e911";
 }
-.i_twitter:before {
+.i_schedule:before {
   content: "\e912";
 }
-.i_viber:before {
+.i_shedule_price:before {
   content: "\e913";
 }
-.i_vk:before {
+.i_telegram:before {
   content: "\e914";
 }
-.i_whatsapp:before {
+.i_telegram_min:before {
   content: "\e915";
+}
+.i_viber:before {
+  content: "\e916";
+}
+.i_vk:before {
+  content: "\e917";
+}
+.i_vk_md:before {
+  content: "\e918";
+}
+.i_whatsapp:before {
+  content: "\e919";
 }
