@@ -2,14 +2,14 @@
 
 .ui-container {
   margin: 0 auto;
-  padding: 0 20px;
-  max-width: 1390px;
+  padding: 0 30px;
+  max-width: 1410px;
 }
 
 .ui-container.container--flex {
   margin: 0 auto;
-  padding: 0 20px;
-  max-width: 1390px;
+  padding: 0 30px;
+  max-width: 1410px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -121,6 +121,14 @@
 .ui-btn.btn--icon i {
   font-size: 18px;
 }
+
+/* 
+   VARS 
+   $currentWidth - текущая ширина, с которой начинается изменение
+   $targetWidth - целевая ширина, на которой изменения заканчиваются
+   $currentFont - текущий размер шрифта - значение, с которого изменяется шрифт
+   $targetFont - целевой размер шрифа, значение до которого изменяется шрифт
+*/
 
 /**
  * Swiper 8.0.7
@@ -1256,7 +1264,7 @@ header .logo img {
 }
 
 .hero-list li:before {
-  content: "\e905";
+  content: "\e909";
   margin-right: 15px;
   display: block;
   color: #212529;
@@ -1343,7 +1351,7 @@ header .logo img {
 }
 
 .hero-action .action-wrap .ui-btn.btn--hero-action {
-  padding: 19px 28px 18px 28px;
+  padding: 18px 28px 17px 28px;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -1436,6 +1444,19 @@ i {
   -webkit-tap-highlight-color: transparent;
   scrollbar-width: thin;
   /* толщина */
+}
+
+@media all and (max-width: 1500px) {
+  .hero-img {
+    right: 20px;
+  }
+}
+
+@media all and (max-width: 1300px) {
+  .hero-title {
+    font-size: -webkit-calc((100vw - 1200px) / (1300 - 1200) * (95 - 85) + 85px);
+    font-size: calc((100vw - 1200px) / (1300 - 1200) * (95 - 85) + 85px);
+  }
 }
 
 @media all and (max-width: 1090px) {
