@@ -1348,6 +1348,10 @@ header .logo img {
           box-shadow: none;
 }
 
+.hero-action .action-wrap .ui-btn.btn--hero-action i {
+  font-size: 16px;
+}
+
 .hero-img {
   position: absolute;
   top: 65px;
