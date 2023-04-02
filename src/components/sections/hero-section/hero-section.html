@@ -20,8 +20,22 @@
       </div>
 
       <div class="hero-img">
-         <img src="../../../img/optimized/hero_img.webp" alt="Girl - super women">
-         <img class="triangle" src="../../../img/triangle.svg" alt="">
+         <div class="img-wrap">
+            <picture>
+               <source srcset="../../../img/optimized/hero_img_2x_950w.webp" media="(max-width: 950px)">
+               <img src="../../../img/optimized/hero_img_2x.webp" alt="Girl - super women">
+            </picture>
+            
+            <img class="triangle" src="../../../img/triangle.svg" alt="">
+         </div>
+
+         <!-- show on @media <= 950px -->
+         <div class="free-lesson">
+            <p class="text">Пробное занятие бесплатно</p>
+            <div class="icon"><i class="i-check-bold"></i></div>
+         </div>
       </div>
+
+      
    </div>
 </section>

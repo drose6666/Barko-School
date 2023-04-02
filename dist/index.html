@@ -11,12 +11,12 @@
    <meta property="og:image" content="http://bkb-company.ru/img/about/about1.jpg">
    <meta property="og:site_name" content="Barko School">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20230402130203" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <link rel="stylesheet" href="../libs/bootstrap-grid.min.css?_v=20230402130203">
-   <link rel="stylesheet" href="../libs/reset.min.css?_v=20230402130203">
-   <link rel="stylesheet" as="font" href="../fonts/fonts.css?_v=20230402130203">
-   <link rel="stylesheet" as="font" href="../fonts/iconsfont.css?_v=20230402130203">
-   <link rel="stylesheet" href="css/style.min.css?_v=20230402130203">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20230402201818" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <link rel="stylesheet" href="../libs/bootstrap-grid.min.css?_v=20230402201818">
+   <link rel="stylesheet" href="../libs/reset.min.css?_v=20230402201818">
+   <link rel="stylesheet" as="font" href="../fonts/fonts.css?_v=20230402201818">
+   <link rel="stylesheet" as="font" href="../fonts/iconsfont.css?_v=20230402201818">
+   <link rel="stylesheet" href="css/style.min.css?_v=20230402201818">
    
    <title>Barko School</title>
 </head>
@@ -96,16 +96,30 @@
       </div>
 
       <div class="hero-img">
-         <img src="../../../img/optimized/hero_img.webp" alt="Girl - super women">
-         <img class="triangle" src="../../../img/triangle.svg" alt="">
+         <div class="img-wrap">
+            <picture>
+               <source srcset="../../../img/optimized/hero_img_2x_950w.webp" media="(max-width: 950px)">
+               <img src="../../../img/optimized/hero_img_2x.webp" alt="Girl - super women">
+            </picture>
+            
+            <img class="triangle" src="../../../img/triangle.svg" alt="">
+         </div>
+
+         <!-- show on @media <= 950px -->
+         <div class="free-lesson">
+            <p class="text">Пробное занятие бесплатно</p>
+            <div class="icon"><i class="i-check-bold"></i></div>
+         </div>
       </div>
+
+      
    </div>
 </section>
    </main>
 
    
    
-   <script defer src="./libs/jquery-3.6.3.min.js?_v=20230402130203"></script>
-   <script defer src="js/bundle.min.js?_v=20230402130203"></script>
+   <script defer src="./libs/jquery-3.6.3.min.js?_v=20230402201818"></script>
+   <script defer src="js/bundle.min.js?_v=20230402201818"></script>
 </body>
 </html>

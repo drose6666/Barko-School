@@ -2,8 +2,8 @@
 
 @mixin container (
    $margin: 0 auto,
-   $padding: 0 30px,
-   $maxWidth: 1410px,
+   $padding: 0 25px,
+   $maxWidth: 1400px,
 
    $flex: false,
    $alignX: space-between,
@@ -31,6 +31,10 @@
       grid-template-columns: $columns;
       grid-template-rows: $rows;
       gap: 15px
+   }
+
+   @media all and (max-width: 450px) {
+      padding: 0 20px;
    }
 }
 .ui-container { @include container }
