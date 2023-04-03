@@ -54,7 +54,7 @@ $offset: 30px;
    li {
       font-family: $Rob;
       font-size: 17.5px;
-      font-weight: 400;
+      font-weight: 300;
       line-height: 120%;
       color: $title;
       display: flex;
@@ -150,6 +150,29 @@ $offset: 30px;
       width: 230px;
       height: 186px;
    }
+   .hero-award {
+      position: absolute;
+      bottom: -15px;
+      right: 0;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(33, 37, 41, 0.6);
+      animation: awardMove 6s ease-in-out infinite;
+      i {
+         font-size: 55px;
+         color: $light;
+      }
+   }
+}
+
+@keyframes awardMove {
+   0% { transform: translateY(0); }
+   50% { transform: translateY(20px); }
+   100% { transform: translateY(0); }
 }
 
 
@@ -201,26 +224,30 @@ $offset: 30px;
 
 
 // TODO Scroll animation
+
+.hero-wrap .hero-bg {
+   @include scrollAnimationFade($toLeft: true, $delay: 0.15s, $transform: 0)
+}
 .hero-title {
-   @include scrollAnimationFade($toLeft: true, $delay: 0.3s, $transform: $offset)
-}
-.hero-subtitle {
-   @include scrollAnimationFade($toLeft: true, $delay: 0.38s, $transform: $offset)
-}
-.hero-list {
-   @include scrollAnimationFade($toLeft: true, $delay: 0.5s, $transform: $offset)
-}
-.hero-action .btn--hero-dark {
    @include scrollAnimationFade($toLeft: true, $delay: 0.6s, $transform: $offset)
 }
+.hero-subtitle {
+   @include scrollAnimationFade($toLeft: true, $delay: 0.68s, $transform: $offset)
+}
+.hero-list {
+   @include scrollAnimationFade($toLeft: true, $delay: 0.8s, $transform: $offset)
+}
+.hero-action .btn--hero-dark {
+   @include scrollAnimationFade($toLeft: true, $delay: 0.9s, $transform: $offset)
+}
 .hero-action .action-wrap {
-   @include scrollAnimationFade($toLeft: true, $delay: 0.7s, $transform: $offset)
+   @include scrollAnimationFade($toLeft: true, $delay: 1s, $transform: $offset)
 }
 .hero-img .img-wrap {
-   @include scrollAnimationFade($toRight: true, $duration: 1.2s, $delay: 0.2s, $transform: 60px)
+   @include scrollAnimationFade($toRight: true, $duration: 1.2s, $delay: 0.3s, $transform: 60px)
 }
 .hero-img .triangle {
-   @include scrollAnimationFade($toRight: true, $duration: 1.2s, $delay: 0.27s, $transform: 60px)
+   @include scrollAnimationFade($toRight: true, $duration: 1.2s, $delay: 0.37s, $transform: 60px)
 }
 
 
@@ -336,8 +363,9 @@ $offset: 30px;
       max-width: 100%;
       order: 1;
    }
+   
    .hero-subtitle { 
-      margin: 10px 0 50px 0;
+      margin: 10px 0 60px 0;
       font-size: 33px;
       line-height: 136%;
       max-width: 100%; 
@@ -345,7 +373,7 @@ $offset: 30px;
    }
 
    .hero-action {
-      margin: 0 0 50px 0;
+      margin: 0 0 60px 0;
       order: 3;
       .action-wrap {
          .action-icon, .action-text { display: none; }
@@ -355,6 +383,29 @@ $offset: 30px;
    .hero-list { 
       order: 4;
       li { font-size: 18px; }
+   }
+
+
+   .hero-img .img-wrap {
+      @include scrollAnimationFade($toRight: true, $duration: 0.8s, $delay: 0.15s, $transform: 60px)
+   }
+   .hero-img .free-lesson {
+      @include scrollAnimationFade($toRight: true, $duration: 0.8s, $delay: 0.3s, $transform: 60px)
+   }
+   .hero-title {
+      @include scrollAnimationFade($toLeft: true, $duration: 0.8s, $delay: 0.45s, $transform: $offset)
+   }
+   .hero-subtitle {
+      @include scrollAnimationFade($toLeft: true, $duration: 0.8s, $delay: 0.55s, $transform: $offset)
+   }
+   .hero-list {
+      @include scrollAnimationFade($toLeft: true, $delay: 0.2s, $transform: $offset)
+   }
+   .hero-action .btn--hero-dark {
+      @include scrollAnimationFade($toLeft: true, $delay: 0.28s, $transform: $offset)
+   }
+   .hero-action .action-wrap {
+      @include scrollAnimationFade($toLeft: true, $delay: 0.2s, $transform: $offset)
    }
 }
 
@@ -388,7 +439,7 @@ $offset: 30px;
    .hero-title { font-size: calcSize($currentW, $targetW, 95, 75); }
 
    .hero-subtitle {
-      margin: 15px 0 50px 0;
+      margin: 15px 0 60px 0;
       font-size: calcSize($currentW, $targetW, 33, 28);
       text-align: center;
       max-width: 400px;
@@ -407,7 +458,7 @@ $offset: 30px;
    }
 
    .hero-subtitle {
-      margin: 25px 0 50px 0;
+      margin: 25px 0 60px 0;
       font-size: calcSize($currentW, $targetW, 33, 30);
    }
 
@@ -430,6 +481,11 @@ $offset: 30px;
             font-size: 26px;
             top: -30px;
          }
+      }
+      .hero-award {
+         width: 80px;
+         height: 80px;
+         i { font-size: 45px; }
       }
    }
 }

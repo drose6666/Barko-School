@@ -1450,7 +1450,7 @@ header .logo img {
 .hero-list li {
   font-family: "Roboto", sans-serif;
   font-size: 17.5px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 120%;
   color: #212529;
   display: -webkit-box;
@@ -1521,11 +1521,11 @@ header .logo img {
 .hero-action .action-wrap.animate {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 0.8s ease 0.7s, visibility 0.8s ease 0.7s, -webkit-transform 0.8s ease 0.7s;
-  transition: opacity 0.8s ease 0.7s, visibility 0.8s ease 0.7s, -webkit-transform 0.8s ease 0.7s;
-  -o-transition: opacity 0.8s ease 0.7s, visibility 0.8s ease 0.7s, -o-transform 0.8s ease 0.7s;
-  transition: transform 0.8s ease 0.7s, opacity 0.8s ease 0.7s, visibility 0.8s ease 0.7s;
-  transition: transform 0.8s ease 0.7s, opacity 0.8s ease 0.7s, visibility 0.8s ease 0.7s, -webkit-transform 0.8s ease 0.7s, -o-transform 0.8s ease 0.7s;
+  -webkit-transition: opacity 0.6s ease 0.7s, visibility 0.6s ease 0.7s, -webkit-transform 0.6s ease 0.7s;
+  transition: opacity 0.6s ease 0.7s, visibility 0.6s ease 0.7s, -webkit-transform 0.6s ease 0.7s;
+  -o-transition: opacity 0.6s ease 0.7s, visibility 0.6s ease 0.7s, -o-transform 0.6s ease 0.7s;
+  transition: transform 0.6s ease 0.7s, opacity 0.6s ease 0.7s, visibility 0.6s ease 0.7s;
+  transition: transform 0.6s ease 0.7s, opacity 0.6s ease 0.7s, visibility 0.6s ease 0.7s, -webkit-transform 0.6s ease 0.7s, -o-transform 0.6s ease 0.7s;
   -webkit-transform: translateX(30px);
       -ms-transform: translateX(30px);
        -o-transform: translateX(30px);
@@ -1615,6 +1615,94 @@ header .logo img {
   height: 186px;
 }
 
+.hero-img .hero-award {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: rgba(33, 37, 41, 0.6);
+  -webkit-animation: awardMove 6s ease-in-out infinite;
+       -o-animation: awardMove 6s ease-in-out infinite;
+          animation: awardMove 6s ease-in-out infinite;
+}
+
+.hero-img .hero-award i {
+  font-size: 55px;
+  color: #fff;
+}
+
+@-webkit-keyframes awardMove {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-o-keyframes awardMove {
+  0% {
+    -o-transform: translateY(0);
+       transform: translateY(0);
+  }
+
+  50% {
+    -o-transform: translateY(20px);
+       transform: translateY(20px);
+  }
+
+  100% {
+    -o-transform: translateY(0);
+       transform: translateY(0);
+  }
+}
+
+@keyframes awardMove {
+  0% {
+    -webkit-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+  }
+
+  50% {
+    -webkit-transform: translateY(20px);
+         -o-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 .free-lesson {
   background: #FFE7ED;
   width: 190px;
@@ -1677,14 +1765,37 @@ header .logo img {
   color: #fff;
 }
 
+.hero-wrap .hero-bg.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.6s ease 0.15s, visibility 0.6s ease 0.15s, -webkit-transform 0.6s ease 0.15s;
+  transition: opacity 0.6s ease 0.15s, visibility 0.6s ease 0.15s, -webkit-transform 0.6s ease 0.15s;
+  -o-transition: opacity 0.6s ease 0.15s, visibility 0.6s ease 0.15s, -o-transform 0.6s ease 0.15s;
+  transition: transform 0.6s ease 0.15s, opacity 0.6s ease 0.15s, visibility 0.6s ease 0.15s;
+  transition: transform 0.6s ease 0.15s, opacity 0.6s ease 0.15s, visibility 0.6s ease 0.15s, -webkit-transform 0.6s ease 0.15s, -o-transform 0.6s ease 0.15s;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+       -o-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.hero-wrap .hero-bg.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
 .hero-title.animate {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 0.8s ease 0.3s, visibility 0.8s ease 0.3s, -webkit-transform 0.8s ease 0.3s;
-  transition: opacity 0.8s ease 0.3s, visibility 0.8s ease 0.3s, -webkit-transform 0.8s ease 0.3s;
-  -o-transition: opacity 0.8s ease 0.3s, visibility 0.8s ease 0.3s, -o-transform 0.8s ease 0.3s;
-  transition: transform 0.8s ease 0.3s, opacity 0.8s ease 0.3s, visibility 0.8s ease 0.3s;
-  transition: transform 0.8s ease 0.3s, opacity 0.8s ease 0.3s, visibility 0.8s ease 0.3s, -webkit-transform 0.8s ease 0.3s, -o-transform 0.8s ease 0.3s;
+  -webkit-transition: opacity 0.6s ease 0.6s, visibility 0.6s ease 0.6s, -webkit-transform 0.6s ease 0.6s;
+  transition: opacity 0.6s ease 0.6s, visibility 0.6s ease 0.6s, -webkit-transform 0.6s ease 0.6s;
+  -o-transition: opacity 0.6s ease 0.6s, visibility 0.6s ease 0.6s, -o-transform 0.6s ease 0.6s;
+  transition: transform 0.6s ease 0.6s, opacity 0.6s ease 0.6s, visibility 0.6s ease 0.6s;
+  transition: transform 0.6s ease 0.6s, opacity 0.6s ease 0.6s, visibility 0.6s ease 0.6s, -webkit-transform 0.6s ease 0.6s, -o-transform 0.6s ease 0.6s;
   -webkit-transform: translateX(30px);
       -ms-transform: translateX(30px);
        -o-transform: translateX(30px);
@@ -1703,11 +1814,11 @@ header .logo img {
 .hero-subtitle.animate {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 0.8s ease 0.38s, visibility 0.8s ease 0.38s, -webkit-transform 0.8s ease 0.38s;
-  transition: opacity 0.8s ease 0.38s, visibility 0.8s ease 0.38s, -webkit-transform 0.8s ease 0.38s;
-  -o-transition: opacity 0.8s ease 0.38s, visibility 0.8s ease 0.38s, -o-transform 0.8s ease 0.38s;
-  transition: transform 0.8s ease 0.38s, opacity 0.8s ease 0.38s, visibility 0.8s ease 0.38s;
-  transition: transform 0.8s ease 0.38s, opacity 0.8s ease 0.38s, visibility 0.8s ease 0.38s, -webkit-transform 0.8s ease 0.38s, -o-transform 0.8s ease 0.38s;
+  -webkit-transition: opacity 0.6s ease 0.68s, visibility 0.6s ease 0.68s, -webkit-transform 0.6s ease 0.68s;
+  transition: opacity 0.6s ease 0.68s, visibility 0.6s ease 0.68s, -webkit-transform 0.6s ease 0.68s;
+  -o-transition: opacity 0.6s ease 0.68s, visibility 0.6s ease 0.68s, -o-transform 0.6s ease 0.68s;
+  transition: transform 0.6s ease 0.68s, opacity 0.6s ease 0.68s, visibility 0.6s ease 0.68s;
+  transition: transform 0.6s ease 0.68s, opacity 0.6s ease 0.68s, visibility 0.6s ease 0.68s, -webkit-transform 0.6s ease 0.68s, -o-transform 0.6s ease 0.68s;
   -webkit-transform: translateX(30px);
       -ms-transform: translateX(30px);
        -o-transform: translateX(30px);
@@ -1726,11 +1837,11 @@ header .logo img {
 .hero-list.animate {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 0.8s ease 0.5s, visibility 0.8s ease 0.5s, -webkit-transform 0.8s ease 0.5s;
-  transition: opacity 0.8s ease 0.5s, visibility 0.8s ease 0.5s, -webkit-transform 0.8s ease 0.5s;
-  -o-transition: opacity 0.8s ease 0.5s, visibility 0.8s ease 0.5s, -o-transform 0.8s ease 0.5s;
-  transition: transform 0.8s ease 0.5s, opacity 0.8s ease 0.5s, visibility 0.8s ease 0.5s;
-  transition: transform 0.8s ease 0.5s, opacity 0.8s ease 0.5s, visibility 0.8s ease 0.5s, -webkit-transform 0.8s ease 0.5s, -o-transform 0.8s ease 0.5s;
+  -webkit-transition: opacity 0.6s ease 0.8s, visibility 0.6s ease 0.8s, -webkit-transform 0.6s ease 0.8s;
+  transition: opacity 0.6s ease 0.8s, visibility 0.6s ease 0.8s, -webkit-transform 0.6s ease 0.8s;
+  -o-transition: opacity 0.6s ease 0.8s, visibility 0.6s ease 0.8s, -o-transform 0.6s ease 0.8s;
+  transition: transform 0.6s ease 0.8s, opacity 0.6s ease 0.8s, visibility 0.6s ease 0.8s;
+  transition: transform 0.6s ease 0.8s, opacity 0.6s ease 0.8s, visibility 0.6s ease 0.8s, -webkit-transform 0.6s ease 0.8s, -o-transform 0.6s ease 0.8s;
   -webkit-transform: translateX(30px);
       -ms-transform: translateX(30px);
        -o-transform: translateX(30px);
@@ -1749,11 +1860,11 @@ header .logo img {
 .hero-action .btn--hero-dark.animate {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 0.8s ease 0.6s, visibility 0.8s ease 0.6s, -webkit-transform 0.8s ease 0.6s;
-  transition: opacity 0.8s ease 0.6s, visibility 0.8s ease 0.6s, -webkit-transform 0.8s ease 0.6s;
-  -o-transition: opacity 0.8s ease 0.6s, visibility 0.8s ease 0.6s, -o-transform 0.8s ease 0.6s;
-  transition: transform 0.8s ease 0.6s, opacity 0.8s ease 0.6s, visibility 0.8s ease 0.6s;
-  transition: transform 0.8s ease 0.6s, opacity 0.8s ease 0.6s, visibility 0.8s ease 0.6s, -webkit-transform 0.8s ease 0.6s, -o-transform 0.8s ease 0.6s;
+  -webkit-transition: opacity 0.6s ease 0.9s, visibility 0.6s ease 0.9s, -webkit-transform 0.6s ease 0.9s;
+  transition: opacity 0.6s ease 0.9s, visibility 0.6s ease 0.9s, -webkit-transform 0.6s ease 0.9s;
+  -o-transition: opacity 0.6s ease 0.9s, visibility 0.6s ease 0.9s, -o-transform 0.6s ease 0.9s;
+  transition: transform 0.6s ease 0.9s, opacity 0.6s ease 0.9s, visibility 0.6s ease 0.9s;
+  transition: transform 0.6s ease 0.9s, opacity 0.6s ease 0.9s, visibility 0.6s ease 0.9s, -webkit-transform 0.6s ease 0.9s, -o-transform 0.6s ease 0.9s;
   -webkit-transform: translateX(30px);
       -ms-transform: translateX(30px);
        -o-transform: translateX(30px);
@@ -1772,11 +1883,11 @@ header .logo img {
 .hero-action .action-wrap.animate {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 0.8s ease 0.7s, visibility 0.8s ease 0.7s, -webkit-transform 0.8s ease 0.7s;
-  transition: opacity 0.8s ease 0.7s, visibility 0.8s ease 0.7s, -webkit-transform 0.8s ease 0.7s;
-  -o-transition: opacity 0.8s ease 0.7s, visibility 0.8s ease 0.7s, -o-transform 0.8s ease 0.7s;
-  transition: transform 0.8s ease 0.7s, opacity 0.8s ease 0.7s, visibility 0.8s ease 0.7s;
-  transition: transform 0.8s ease 0.7s, opacity 0.8s ease 0.7s, visibility 0.8s ease 0.7s, -webkit-transform 0.8s ease 0.7s, -o-transform 0.8s ease 0.7s;
+  -webkit-transition: opacity 0.6s ease 1s, visibility 0.6s ease 1s, -webkit-transform 0.6s ease 1s;
+  transition: opacity 0.6s ease 1s, visibility 0.6s ease 1s, -webkit-transform 0.6s ease 1s;
+  -o-transition: opacity 0.6s ease 1s, visibility 0.6s ease 1s, -o-transform 0.6s ease 1s;
+  transition: transform 0.6s ease 1s, opacity 0.6s ease 1s, visibility 0.6s ease 1s;
+  transition: transform 0.6s ease 1s, opacity 0.6s ease 1s, visibility 0.6s ease 1s, -webkit-transform 0.6s ease 1s, -o-transform 0.6s ease 1s;
   -webkit-transform: translateX(30px);
       -ms-transform: translateX(30px);
        -o-transform: translateX(30px);
@@ -1795,11 +1906,11 @@ header .logo img {
 .hero-img .img-wrap.animate {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 1.2s ease 0.2s, visibility 1.2s ease 0.2s, -webkit-transform 1.2s ease 0.2s;
-  transition: opacity 1.2s ease 0.2s, visibility 1.2s ease 0.2s, -webkit-transform 1.2s ease 0.2s;
-  -o-transition: opacity 1.2s ease 0.2s, visibility 1.2s ease 0.2s, -o-transform 1.2s ease 0.2s;
-  transition: transform 1.2s ease 0.2s, opacity 1.2s ease 0.2s, visibility 1.2s ease 0.2s;
-  transition: transform 1.2s ease 0.2s, opacity 1.2s ease 0.2s, visibility 1.2s ease 0.2s, -webkit-transform 1.2s ease 0.2s, -o-transform 1.2s ease 0.2s;
+  -webkit-transition: opacity 1.2s ease 0.3s, visibility 1.2s ease 0.3s, -webkit-transform 1.2s ease 0.3s;
+  transition: opacity 1.2s ease 0.3s, visibility 1.2s ease 0.3s, -webkit-transform 1.2s ease 0.3s;
+  -o-transition: opacity 1.2s ease 0.3s, visibility 1.2s ease 0.3s, -o-transform 1.2s ease 0.3s;
+  transition: transform 1.2s ease 0.3s, opacity 1.2s ease 0.3s, visibility 1.2s ease 0.3s;
+  transition: transform 1.2s ease 0.3s, opacity 1.2s ease 0.3s, visibility 1.2s ease 0.3s, -webkit-transform 1.2s ease 0.3s, -o-transform 1.2s ease 0.3s;
   -webkit-transform: translateX(-60px);
       -ms-transform: translateX(-60px);
        -o-transform: translateX(-60px);
@@ -1818,11 +1929,11 @@ header .logo img {
 .hero-img .triangle.animate {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 1.2s ease 0.27s, visibility 1.2s ease 0.27s, -webkit-transform 1.2s ease 0.27s;
-  transition: opacity 1.2s ease 0.27s, visibility 1.2s ease 0.27s, -webkit-transform 1.2s ease 0.27s;
-  -o-transition: opacity 1.2s ease 0.27s, visibility 1.2s ease 0.27s, -o-transform 1.2s ease 0.27s;
-  transition: transform 1.2s ease 0.27s, opacity 1.2s ease 0.27s, visibility 1.2s ease 0.27s;
-  transition: transform 1.2s ease 0.27s, opacity 1.2s ease 0.27s, visibility 1.2s ease 0.27s, -webkit-transform 1.2s ease 0.27s, -o-transform 1.2s ease 0.27s;
+  -webkit-transition: opacity 1.2s ease 0.37s, visibility 1.2s ease 0.37s, -webkit-transform 1.2s ease 0.37s;
+  transition: opacity 1.2s ease 0.37s, visibility 1.2s ease 0.37s, -webkit-transform 1.2s ease 0.37s;
+  -o-transition: opacity 1.2s ease 0.37s, visibility 1.2s ease 0.37s, -o-transform 1.2s ease 0.37s;
+  transition: transform 1.2s ease 0.37s, opacity 1.2s ease 0.37s, visibility 1.2s ease 0.37s;
+  transition: transform 1.2s ease 0.37s, opacity 1.2s ease 0.37s, visibility 1.2s ease 0.37s, -webkit-transform 1.2s ease 0.37s, -o-transform 1.2s ease 0.37s;
   -webkit-transform: translateX(-60px);
       -ms-transform: translateX(-60px);
        -o-transform: translateX(-60px);
@@ -2113,7 +2224,7 @@ i {
   }
 
   .hero-subtitle {
-    margin: 10px 0 50px 0;
+    margin: 10px 0 60px 0;
     font-size: 33px;
     line-height: 136%;
     max-width: 100%;
@@ -2125,7 +2236,7 @@ i {
   }
 
   .hero-action {
-    margin: 0 0 50px 0;
+    margin: 0 0 60px 0;
     -webkit-box-ordinal-group: 4;
     -webkit-order: 3;
        -moz-box-ordinal-group: 4;
@@ -2148,6 +2259,167 @@ i {
 
   .hero-list li {
     font-size: 18px;
+  }
+
+  .hero-img .img-wrap.animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.8s ease 0.15s, visibility 0.8s ease 0.15s, -webkit-transform 0.8s ease 0.15s;
+    transition: opacity 0.8s ease 0.15s, visibility 0.8s ease 0.15s, -webkit-transform 0.8s ease 0.15s;
+    -o-transition: opacity 0.8s ease 0.15s, visibility 0.8s ease 0.15s, -o-transform 0.8s ease 0.15s;
+    transition: transform 0.8s ease 0.15s, opacity 0.8s ease 0.15s, visibility 0.8s ease 0.15s;
+    transition: transform 0.8s ease 0.15s, opacity 0.8s ease 0.15s, visibility 0.8s ease 0.15s, -webkit-transform 0.8s ease 0.15s, -o-transform 0.8s ease 0.15s;
+    -webkit-transform: translateX(-60px);
+        -ms-transform: translateX(-60px);
+         -o-transform: translateX(-60px);
+            transform: translateX(-60px);
+  }
+
+  .hero-img .img-wrap.animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .hero-img .free-lesson.animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.8s ease 0.3s, visibility 0.8s ease 0.3s, -webkit-transform 0.8s ease 0.3s;
+    transition: opacity 0.8s ease 0.3s, visibility 0.8s ease 0.3s, -webkit-transform 0.8s ease 0.3s;
+    -o-transition: opacity 0.8s ease 0.3s, visibility 0.8s ease 0.3s, -o-transform 0.8s ease 0.3s;
+    transition: transform 0.8s ease 0.3s, opacity 0.8s ease 0.3s, visibility 0.8s ease 0.3s;
+    transition: transform 0.8s ease 0.3s, opacity 0.8s ease 0.3s, visibility 0.8s ease 0.3s, -webkit-transform 0.8s ease 0.3s, -o-transform 0.8s ease 0.3s;
+    -webkit-transform: translateX(-60px);
+        -ms-transform: translateX(-60px);
+         -o-transform: translateX(-60px);
+            transform: translateX(-60px);
+  }
+
+  .hero-img .free-lesson.animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .hero-title.animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.8s ease 0.45s, visibility 0.8s ease 0.45s, -webkit-transform 0.8s ease 0.45s;
+    transition: opacity 0.8s ease 0.45s, visibility 0.8s ease 0.45s, -webkit-transform 0.8s ease 0.45s;
+    -o-transition: opacity 0.8s ease 0.45s, visibility 0.8s ease 0.45s, -o-transform 0.8s ease 0.45s;
+    transition: transform 0.8s ease 0.45s, opacity 0.8s ease 0.45s, visibility 0.8s ease 0.45s;
+    transition: transform 0.8s ease 0.45s, opacity 0.8s ease 0.45s, visibility 0.8s ease 0.45s, -webkit-transform 0.8s ease 0.45s, -o-transform 0.8s ease 0.45s;
+    -webkit-transform: translateX(30px);
+        -ms-transform: translateX(30px);
+         -o-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+
+  .hero-title.animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .hero-subtitle.animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.8s ease 0.55s, visibility 0.8s ease 0.55s, -webkit-transform 0.8s ease 0.55s;
+    transition: opacity 0.8s ease 0.55s, visibility 0.8s ease 0.55s, -webkit-transform 0.8s ease 0.55s;
+    -o-transition: opacity 0.8s ease 0.55s, visibility 0.8s ease 0.55s, -o-transform 0.8s ease 0.55s;
+    transition: transform 0.8s ease 0.55s, opacity 0.8s ease 0.55s, visibility 0.8s ease 0.55s;
+    transition: transform 0.8s ease 0.55s, opacity 0.8s ease 0.55s, visibility 0.8s ease 0.55s, -webkit-transform 0.8s ease 0.55s, -o-transform 0.8s ease 0.55s;
+    -webkit-transform: translateX(30px);
+        -ms-transform: translateX(30px);
+         -o-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+
+  .hero-subtitle.animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .hero-list.animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s, -webkit-transform 0.6s ease 0.2s;
+    transition: opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s, -webkit-transform 0.6s ease 0.2s;
+    -o-transition: opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s, -o-transform 0.6s ease 0.2s;
+    transition: transform 0.6s ease 0.2s, opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s;
+    transition: transform 0.6s ease 0.2s, opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s, -webkit-transform 0.6s ease 0.2s, -o-transform 0.6s ease 0.2s;
+    -webkit-transform: translateX(30px);
+        -ms-transform: translateX(30px);
+         -o-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+
+  .hero-list.animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .hero-action .btn--hero-dark.animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.6s ease 0.28s, visibility 0.6s ease 0.28s, -webkit-transform 0.6s ease 0.28s;
+    transition: opacity 0.6s ease 0.28s, visibility 0.6s ease 0.28s, -webkit-transform 0.6s ease 0.28s;
+    -o-transition: opacity 0.6s ease 0.28s, visibility 0.6s ease 0.28s, -o-transform 0.6s ease 0.28s;
+    transition: transform 0.6s ease 0.28s, opacity 0.6s ease 0.28s, visibility 0.6s ease 0.28s;
+    transition: transform 0.6s ease 0.28s, opacity 0.6s ease 0.28s, visibility 0.6s ease 0.28s, -webkit-transform 0.6s ease 0.28s, -o-transform 0.6s ease 0.28s;
+    -webkit-transform: translateX(30px);
+        -ms-transform: translateX(30px);
+         -o-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+
+  .hero-action .btn--hero-dark.animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .hero-action .action-wrap.animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s, -webkit-transform 0.6s ease 0.2s;
+    transition: opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s, -webkit-transform 0.6s ease 0.2s;
+    -o-transition: opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s, -o-transform 0.6s ease 0.2s;
+    transition: transform 0.6s ease 0.2s, opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s;
+    transition: transform 0.6s ease 0.2s, opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s, -webkit-transform 0.6s ease 0.2s, -o-transform 0.6s ease 0.2s;
+    -webkit-transform: translateX(30px);
+        -ms-transform: translateX(30px);
+         -o-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+
+  .hero-action .action-wrap.animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
   }
 }
 
@@ -2212,7 +2484,7 @@ i {
   }
 
   .hero-subtitle {
-    margin: 15px 0 50px 0;
+    margin: 15px 0 60px 0;
     font-size: -webkit-calc((100vw - 576px) / (768 - 576) * (33 - 28) + 28px);
     font-size: calc((100vw - 576px) / (768 - 576) * (33 - 28) + 28px);
     text-align: center;
@@ -2230,7 +2502,7 @@ i {
   }
 
   .hero-subtitle {
-    margin: 25px 0 50px 0;
+    margin: 25px 0 60px 0;
     font-size: -webkit-calc((100vw - 500px) / (576 - 500) * (33 - 30) + 30px);
     font-size: calc((100vw - 500px) / (576 - 500) * (33 - 30) + 30px);
   }
@@ -2259,6 +2531,15 @@ i {
     height: 60px;
     font-size: 26px;
     top: -30px;
+  }
+
+  .hero-img .hero-award {
+    width: 80px;
+    height: 80px;
+  }
+
+  .hero-img .hero-award i {
+    font-size: 45px;
   }
 }
 
