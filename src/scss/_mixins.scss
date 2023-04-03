@@ -56,11 +56,6 @@
    $trans: all 0.2s ease-out,
    $borderR: $btnR,
    $shadow: none,
-
-   // $dark: false,
-   // $action: false,
-   // $withIcon: false,
-   // $bordered: false,
 ) {
    padding: $pd;
    font-family: $fFamily;
@@ -113,3 +108,57 @@
    }
 }
 
+
+
+
+
+// TODO Scroll animation
+$animationTimingFunction: ease; // cubic-bezier(0.25, 0.8, 0.25, 1)
+@mixin scrollAnimationFade (
+   $fade: true,
+   $opacity: false,
+   $toTop: false,
+   $toRight: false,
+   $toBottom: false,
+   $toLeft: false,
+   $duration: 0.8s,
+   $timingFunction: $animationTimingFunction,
+   $delay: .4s,
+   $transform: 30px,
+   $hasMoreTransition: false,
+) {
+   &.animate {
+      opacity: 0;
+      visibility: hidden;
+      @if $hasMoreTransition == false {
+         transition: transform $duration $timingFunction $delay, opacity $duration $timingFunction $delay, visibility $duration $timingFunction $delay;
+      }
+      
+      @if $fade {
+         @if $toTop {
+            transform: translateY($transform);
+         }
+      
+         @if $toRight {
+            transform: translateX(-$transform);
+         }
+      
+         @if $toBottom {
+            transform: translateY(-$transform);
+         }
+      
+         @if $toLeft {
+            transform: translateX($transform);
+         }
+      }
+      
+      &.animation {
+         opacity: 1;
+         visibility: visible;
+
+         @if $fade {
+            transform: none;
+         }
+      }
+   }
+}

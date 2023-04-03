@@ -1518,6 +1518,29 @@ header .logo img {
           box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
 }
 
+.hero-action .action-wrap.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.8s ease 0.7s, visibility 0.8s ease 0.7s, -webkit-transform 0.8s ease 0.7s;
+  transition: opacity 0.8s ease 0.7s, visibility 0.8s ease 0.7s, -webkit-transform 0.8s ease 0.7s;
+  -o-transition: opacity 0.8s ease 0.7s, visibility 0.8s ease 0.7s, -o-transform 0.8s ease 0.7s;
+  transition: transform 0.8s ease 0.7s, opacity 0.8s ease 0.7s, visibility 0.8s ease 0.7s;
+  transition: transform 0.8s ease 0.7s, opacity 0.8s ease 0.7s, visibility 0.8s ease 0.7s, -webkit-transform 0.8s ease 0.7s, -o-transform 0.8s ease 0.7s;
+  -webkit-transform: translateX(30px);
+      -ms-transform: translateX(30px);
+       -o-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+.hero-action .action-wrap.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
 .hero-action .action-wrap .action-icon {
   margin-right: 20px;
   height: 55px;
@@ -1652,6 +1675,167 @@ header .logo img {
 
 .free-lesson .icon i {
   color: #fff;
+}
+
+.hero-title.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.8s ease 0.3s, visibility 0.8s ease 0.3s, -webkit-transform 0.8s ease 0.3s;
+  transition: opacity 0.8s ease 0.3s, visibility 0.8s ease 0.3s, -webkit-transform 0.8s ease 0.3s;
+  -o-transition: opacity 0.8s ease 0.3s, visibility 0.8s ease 0.3s, -o-transform 0.8s ease 0.3s;
+  transition: transform 0.8s ease 0.3s, opacity 0.8s ease 0.3s, visibility 0.8s ease 0.3s;
+  transition: transform 0.8s ease 0.3s, opacity 0.8s ease 0.3s, visibility 0.8s ease 0.3s, -webkit-transform 0.8s ease 0.3s, -o-transform 0.8s ease 0.3s;
+  -webkit-transform: translateX(30px);
+      -ms-transform: translateX(30px);
+       -o-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+.hero-title.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
+.hero-subtitle.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.8s ease 0.38s, visibility 0.8s ease 0.38s, -webkit-transform 0.8s ease 0.38s;
+  transition: opacity 0.8s ease 0.38s, visibility 0.8s ease 0.38s, -webkit-transform 0.8s ease 0.38s;
+  -o-transition: opacity 0.8s ease 0.38s, visibility 0.8s ease 0.38s, -o-transform 0.8s ease 0.38s;
+  transition: transform 0.8s ease 0.38s, opacity 0.8s ease 0.38s, visibility 0.8s ease 0.38s;
+  transition: transform 0.8s ease 0.38s, opacity 0.8s ease 0.38s, visibility 0.8s ease 0.38s, -webkit-transform 0.8s ease 0.38s, -o-transform 0.8s ease 0.38s;
+  -webkit-transform: translateX(30px);
+      -ms-transform: translateX(30px);
+       -o-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+.hero-subtitle.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
+.hero-list.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.8s ease 0.5s, visibility 0.8s ease 0.5s, -webkit-transform 0.8s ease 0.5s;
+  transition: opacity 0.8s ease 0.5s, visibility 0.8s ease 0.5s, -webkit-transform 0.8s ease 0.5s;
+  -o-transition: opacity 0.8s ease 0.5s, visibility 0.8s ease 0.5s, -o-transform 0.8s ease 0.5s;
+  transition: transform 0.8s ease 0.5s, opacity 0.8s ease 0.5s, visibility 0.8s ease 0.5s;
+  transition: transform 0.8s ease 0.5s, opacity 0.8s ease 0.5s, visibility 0.8s ease 0.5s, -webkit-transform 0.8s ease 0.5s, -o-transform 0.8s ease 0.5s;
+  -webkit-transform: translateX(30px);
+      -ms-transform: translateX(30px);
+       -o-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+.hero-list.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
+.hero-action .btn--hero-dark.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.8s ease 0.6s, visibility 0.8s ease 0.6s, -webkit-transform 0.8s ease 0.6s;
+  transition: opacity 0.8s ease 0.6s, visibility 0.8s ease 0.6s, -webkit-transform 0.8s ease 0.6s;
+  -o-transition: opacity 0.8s ease 0.6s, visibility 0.8s ease 0.6s, -o-transform 0.8s ease 0.6s;
+  transition: transform 0.8s ease 0.6s, opacity 0.8s ease 0.6s, visibility 0.8s ease 0.6s;
+  transition: transform 0.8s ease 0.6s, opacity 0.8s ease 0.6s, visibility 0.8s ease 0.6s, -webkit-transform 0.8s ease 0.6s, -o-transform 0.8s ease 0.6s;
+  -webkit-transform: translateX(30px);
+      -ms-transform: translateX(30px);
+       -o-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+.hero-action .btn--hero-dark.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
+.hero-action .action-wrap.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.8s ease 0.7s, visibility 0.8s ease 0.7s, -webkit-transform 0.8s ease 0.7s;
+  transition: opacity 0.8s ease 0.7s, visibility 0.8s ease 0.7s, -webkit-transform 0.8s ease 0.7s;
+  -o-transition: opacity 0.8s ease 0.7s, visibility 0.8s ease 0.7s, -o-transform 0.8s ease 0.7s;
+  transition: transform 0.8s ease 0.7s, opacity 0.8s ease 0.7s, visibility 0.8s ease 0.7s;
+  transition: transform 0.8s ease 0.7s, opacity 0.8s ease 0.7s, visibility 0.8s ease 0.7s, -webkit-transform 0.8s ease 0.7s, -o-transform 0.8s ease 0.7s;
+  -webkit-transform: translateX(30px);
+      -ms-transform: translateX(30px);
+       -o-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+.hero-action .action-wrap.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
+.hero-img .img-wrap.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 1.2s ease 0.2s, visibility 1.2s ease 0.2s, -webkit-transform 1.2s ease 0.2s;
+  transition: opacity 1.2s ease 0.2s, visibility 1.2s ease 0.2s, -webkit-transform 1.2s ease 0.2s;
+  -o-transition: opacity 1.2s ease 0.2s, visibility 1.2s ease 0.2s, -o-transform 1.2s ease 0.2s;
+  transition: transform 1.2s ease 0.2s, opacity 1.2s ease 0.2s, visibility 1.2s ease 0.2s;
+  transition: transform 1.2s ease 0.2s, opacity 1.2s ease 0.2s, visibility 1.2s ease 0.2s, -webkit-transform 1.2s ease 0.2s, -o-transform 1.2s ease 0.2s;
+  -webkit-transform: translateX(-60px);
+      -ms-transform: translateX(-60px);
+       -o-transform: translateX(-60px);
+          transform: translateX(-60px);
+}
+
+.hero-img .img-wrap.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
+.hero-img .triangle.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 1.2s ease 0.27s, visibility 1.2s ease 0.27s, -webkit-transform 1.2s ease 0.27s;
+  transition: opacity 1.2s ease 0.27s, visibility 1.2s ease 0.27s, -webkit-transform 1.2s ease 0.27s;
+  -o-transition: opacity 1.2s ease 0.27s, visibility 1.2s ease 0.27s, -o-transform 1.2s ease 0.27s;
+  transition: transform 1.2s ease 0.27s, opacity 1.2s ease 0.27s, visibility 1.2s ease 0.27s;
+  transition: transform 1.2s ease 0.27s, opacity 1.2s ease 0.27s, visibility 1.2s ease 0.27s, -webkit-transform 1.2s ease 0.27s, -o-transform 1.2s ease 0.27s;
+  -webkit-transform: translateX(-60px);
+      -ms-transform: translateX(-60px);
+       -o-transform: translateX(-60px);
+          transform: translateX(-60px);
+}
+
+.hero-img .triangle.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
 }
 
 * {

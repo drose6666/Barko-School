@@ -1,4 +1,5 @@
 
+import './module/scrollAnimation.js';
 
 
 // TODO Preloader

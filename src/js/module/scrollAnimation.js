@@ -2,7 +2,7 @@ window.addEventListener('load', () => {
    let options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.15
+      threshold: 0.1
    }
 
    let callback = (entries, observer) => {

@@ -1,3 +1,5 @@
+$offset: 30px;
+
 .hero-wrap {
    position: relative;
    overflow: hidden;
@@ -88,6 +90,7 @@
       display: flex;
       align-items: center;
       box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+      @include scrollAnimationFade($toLeft: true, $delay: 0.7s, $transform: $offset);
       
       .action-icon {
          margin-right: 20px;
@@ -121,7 +124,6 @@
       }
    }
 }
-
 
 
 
@@ -196,7 +198,30 @@
    }
 }
 
-// calc((100vw - 280px) / (1920 - 280) * (12 - 70) + 70%);
+
+
+// TODO Scroll animation
+.hero-title {
+   @include scrollAnimationFade($toLeft: true, $delay: 0.3s, $transform: $offset)
+}
+.hero-subtitle {
+   @include scrollAnimationFade($toLeft: true, $delay: 0.38s, $transform: $offset)
+}
+.hero-list {
+   @include scrollAnimationFade($toLeft: true, $delay: 0.5s, $transform: $offset)
+}
+.hero-action .btn--hero-dark {
+   @include scrollAnimationFade($toLeft: true, $delay: 0.6s, $transform: $offset)
+}
+.hero-action .action-wrap {
+   @include scrollAnimationFade($toLeft: true, $delay: 0.7s, $transform: $offset)
+}
+.hero-img .img-wrap {
+   @include scrollAnimationFade($toRight: true, $duration: 1.2s, $delay: 0.2s, $transform: 60px)
+}
+.hero-img .triangle {
+   @include scrollAnimationFade($toRight: true, $duration: 1.2s, $delay: 0.27s, $transform: 60px)
+}
 
 
 @media all and (max-width: 1920px) {
