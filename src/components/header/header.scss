@@ -1,5 +1,5 @@
 header {
-   margin-top: 25px;
+   padding-top: 25px;
 
    .logo {
       max-width: 210px;
@@ -15,5 +15,5 @@ header {
 }
 
 @media all and (max-width: 560px) {
-   header { margin-top: 15px; }
+   header { padding-top: 15px; }
 }

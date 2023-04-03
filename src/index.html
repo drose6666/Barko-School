@@ -6,12 +6,16 @@
 
 <body>
    @@include('./components/top-info/top-info.html')
-   @@include('./components/header/header.html')
+   
 
-   <!-- @@include('./html/ui-components/preloader/preloader.html') -->
+   @@include('./components/ui/ui-preloader/ui-preloader.html')
 
    <main>
-      @@include('./components/sections/hero-section/hero-section.html')
+      <div class="hero-wrap">
+         <img class="hero-bg" src="./img/hero_bg.svg" alt="">
+         @@include('./components/header/header.html')
+         @@include('./components/sections/hero-section/hero-section.html')
+      </div>
    </main>
 
    <!-- @@include('components/footer/_footer.html') -->

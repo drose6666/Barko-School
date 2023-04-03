@@ -12,6 +12,7 @@
 // UI
 @import '../components/ui/ui-burger/ui-burger';
 @import '../components/ui/ui-buttons/ui-buttons';
+@import '../components/ui/ui-preloader/ui-preloader';
 
 // Sections
 @import '../components/sections/hero-section/hero-section';
@@ -28,8 +29,9 @@
    scroll-behavior: smooth;
 }
 
-html,body {
+html,body, main {
    height: 100%;
+   position: relative;
    // all: unset; // сбрасывыает все стили до значений по умолчанию
 }
 
@@ -61,14 +63,14 @@ i {
 // TODO  Custom Scroll
 
 ::-webkit-scrollbar {
-   background: var(--borderLight);
-   border-radius: 50px;
+   background: $weakDecor;
+   // border-radius: 50px;
    width: 5px;
    height: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-   background: var(--decorationBright);
+   background: $title;
    border-radius: 50px;
 }
 
@@ -79,6 +81,6 @@ i {
 // for Mozilla
 * {
    -webkit-tap-highlight-color: transparent;
-   // scrollbar-color:  ; /* «цвет ползунка» «цвет полосы скроллбара» */
+   scrollbar-color: $title, $weakDecor ; /* «цвет ползунка» «цвет полосы скроллбара» */
    scrollbar-width: thin ;/* толщина */
 }
