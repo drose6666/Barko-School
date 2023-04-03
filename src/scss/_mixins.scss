@@ -52,8 +52,8 @@
    $lHeight: 100%,
    $color: $light,
    $bg: $action,
-   $border: 1px solid transparent,
-   $trans: all 0.2s ease-out,
+   $border: 2px solid transparent,
+   $trans: all 0.1s ease-out,
    $borderR: $btnR,
    $shadow: none,
 ) {
@@ -64,11 +64,23 @@
    line-height: $lHeight;
    color: $color;
    background: $bg;
-   border: $border;
    border-radius: $borderR;
    box-shadow: $shadow;
    position: relative;
    transition: $trans;
+   overflow: hidden;
+   &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: border;
+   }
+   &:active {
+      transform: scale(0.98);
+   }
 
    @media all and (max-width: 350px) {
       font-size: 17px;
@@ -76,17 +88,40 @@
 }
 .ui-btn {
    @include button;
+   span, i {
+      position: relative;
+      z-index: 1;
+   }
 
    &.btn--dark {
       @include button(
          $bg: $darkDecor,
          $color: $light,
          $shadow: $btnDarkFillS,
-      )
+      );
+      &:hover {
+         background: $hoverDarkBtn;
+      }
    }
 
    &.btn--action {
-      @include button( $shadow: $btnDarkFillS, )
+      @include button( $shadow: $btnDarkFillS );
+      &:before {
+         content: "";
+         position: absolute;
+         width: 200%;
+         height: 200%;
+         top: 110%;
+         left: 50%;
+         background: $hoverDarkBtn;
+         transform: translateX(-50%);
+         border-radius: 50%;
+         z-index: 0;
+         transition: all 0.8s ease;
+      }
+      &:hover::before {
+         top: -40%;
+      }
    }
 
    &.btn--bordered {
@@ -107,6 +142,8 @@
       }
    }
 }
+
+
 
 
 
@@ -162,3 +199,7 @@ $animationTimingFunction: ease; // cubic-bezier(0.25, 0.8, 0.25, 1)
       }
    }
 }
+
+
+
+

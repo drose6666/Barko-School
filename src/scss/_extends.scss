@@ -1,0 +1,21 @@
+// TODO Decoration title
+
+%decorTitle {
+   margin-bottom: 15px;
+   font-family: $MontsAlt;
+   font-size: 18px;
+   font-weight: 300;
+   line-height: 100%;
+   color: $title;
+   position: relative;
+   &:before {
+      content: '';
+      margin-right: 15px;
+      display: block;
+      vertical-align: middle;
+      width: 30px;
+      height: 1px;
+      border: $btnR;
+      background: $action;
+   }
+}

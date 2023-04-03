@@ -36,15 +36,38 @@
   line-height: 100%;
   color: #fff;
   background: #F2184F;
-  border: 1px solid transparent;
   -webkit-border-radius: 50px;
           border-radius: 50px;
   -webkit-box-shadow: none;
           box-shadow: none;
   position: relative;
-  -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  overflow: hidden;
+}
+
+.ui-btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: border;
+}
+
+.ui-btn:active {
+  -webkit-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+       -o-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.ui-btn span,
+.ui-btn i {
+  position: relative;
+  z-index: 1;
 }
 
 .ui-btn.btn--dark {
@@ -55,15 +78,36 @@
   line-height: 100%;
   color: #fff;
   background: #202C45;
-  border: 1px solid transparent;
   -webkit-border-radius: 50px;
           border-radius: 50px;
   -webkit-box-shadow: 0px 8px 30px -13px rgba(33, 37, 41, 0.7);
           box-shadow: 0px 8px 30px -13px rgba(33, 37, 41, 0.7);
   position: relative;
-  -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  overflow: hidden;
+}
+
+.ui-btn.btn--dark:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: border;
+}
+
+.ui-btn.btn--dark:active {
+  -webkit-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+       -o-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.ui-btn.btn--dark:hover {
+  background: #000000;
 }
 
 .ui-btn.btn--action {
@@ -74,15 +118,56 @@
   line-height: 100%;
   color: #fff;
   background: #F2184F;
-  border: 1px solid transparent;
   -webkit-border-radius: 50px;
           border-radius: 50px;
   -webkit-box-shadow: 0px 8px 30px -13px rgba(33, 37, 41, 0.7);
           box-shadow: 0px 8px 30px -13px rgba(33, 37, 41, 0.7);
   position: relative;
-  -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  overflow: hidden;
+}
+
+.ui-btn.btn--action:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: border;
+}
+
+.ui-btn.btn--action:active {
+  -webkit-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+       -o-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.ui-btn.btn--action:before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 110%;
+  left: 50%;
+  background: #000000;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  z-index: 0;
+  -webkit-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+.ui-btn.btn--action:hover::before {
+  top: -40%;
 }
 
 .ui-btn.btn--bordered {
@@ -93,15 +178,32 @@
   line-height: 100%;
   color: #212529;
   background: transparent;
-  border: 2px solid #212529;
   -webkit-border-radius: 50px;
           border-radius: 50px;
   -webkit-box-shadow: none;
           box-shadow: none;
   position: relative;
-  -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  overflow: hidden;
+}
+
+.ui-btn.btn--bordered:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: border;
+}
+
+.ui-btn.btn--bordered:active {
+  -webkit-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+       -o-transform: scale(0.98);
+          transform: scale(0.98);
 }
 
 .ui-btn.btn--icon {
@@ -1580,7 +1682,7 @@ header .logo img {
 }
 
 .hero-action .action-wrap .btn--hero-action {
-  padding: 18px 28px 17px 28px;
+  padding: 19px 28px 18px 28px;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -1857,7 +1959,7 @@ header .logo img {
           transform: none;
 }
 
-.hero-action .btn--hero-dark.animate {
+.hero-action .btn--hero-dark-wrap.animate {
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity 0.6s ease 0.9s, visibility 0.6s ease 0.9s, -webkit-transform 0.6s ease 0.9s;
@@ -1871,7 +1973,7 @@ header .logo img {
           transform: translateX(30px);
 }
 
-.hero-action .btn--hero-dark.animate.animation {
+.hero-action .btn--hero-dark-wrap.animate.animation {
   opacity: 1;
   visibility: visible;
   -webkit-transform: none;
@@ -2376,7 +2478,7 @@ i {
             transform: none;
   }
 
-  .hero-action .btn--hero-dark.animate {
+  .hero-action .btn--hero-dark-wrap.animate {
     opacity: 0;
     visibility: hidden;
     -webkit-transition: opacity 0.6s ease 0.28s, visibility 0.6s ease 0.28s, -webkit-transform 0.6s ease 0.28s;
@@ -2390,7 +2492,7 @@ i {
             transform: translateX(30px);
   }
 
-  .hero-action .btn--hero-dark.animate.animation {
+  .hero-action .btn--hero-dark-wrap.animate.animation {
     opacity: 1;
     visibility: visible;
     -webkit-transform: none;
@@ -2498,11 +2600,11 @@ i {
     font-size: -webkit-calc((100vw - 500px) / (576 - 500) * (95 - 87) + 87px);
     font-size: calc((100vw - 500px) / (576 - 500) * (95 - 87) + 87px);
     text-align: center;
-    line-height: 90%;
+    line-height: 88%;
   }
 
   .hero-subtitle {
-    margin: 25px 0 60px 0;
+    margin: 20px 0 60px 0;
     font-size: -webkit-calc((100vw - 500px) / (576 - 500) * (33 - 30) + 30px);
     font-size: calc((100vw - 500px) / (576 - 500) * (33 - 30) + 30px);
   }

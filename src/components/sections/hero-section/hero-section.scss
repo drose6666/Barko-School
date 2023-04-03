@@ -116,7 +116,7 @@ $offset: 30px;
       }
 
       .btn--hero-action {
-         padding: 18px 28px 17px 28px;
+         padding: 19px 28px 18px 28px;
          box-shadow: none;
          i {
             font-size: 15px;
@@ -237,7 +237,7 @@ $offset: 30px;
 .hero-list {
    @include scrollAnimationFade($toLeft: true, $delay: 0.8s, $transform: $offset)
 }
-.hero-action .btn--hero-dark {
+.hero-action .btn--hero-dark-wrap {
    @include scrollAnimationFade($toLeft: true, $delay: 0.9s, $transform: $offset)
 }
 .hero-action .action-wrap {
@@ -401,7 +401,7 @@ $offset: 30px;
    .hero-list {
       @include scrollAnimationFade($toLeft: true, $delay: 0.2s, $transform: $offset)
    }
-   .hero-action .btn--hero-dark {
+   .hero-action .btn--hero-dark-wrap  {
       @include scrollAnimationFade($toLeft: true, $delay: 0.28s, $transform: $offset)
    }
    .hero-action .action-wrap {
@@ -454,11 +454,11 @@ $offset: 30px;
    .hero-title { 
       font-size: calcSize($currentW, $targetW, 95, 87);
       text-align: center;
-      line-height: 90%;
+      line-height: 88%;
    }
 
    .hero-subtitle {
-      margin: 25px 0 60px 0;
+      margin: 20px 0 60px 0;
       font-size: calcSize($currentW, $targetW, 33, 30);
    }
 
