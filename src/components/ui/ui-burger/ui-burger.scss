@@ -10,6 +10,7 @@
       content: '';
       position: absolute;
       width: 50%;
+      background: $title;
    }
 
    &:before {
@@ -24,17 +25,16 @@
    span {
       display: inline-block;
       width: 100%;
+      background: $action;
    }
 
    span, &:before, &:after {
       height: 2px;
-      transition: all 0.2s ease-out;
       border-radius: $btnR;
-      background: $title;
+      transition: all 0.2s ease-out;
    }
 
    &:hover {
-      span { background: $action; }
       &:before, &:after { width: 100%; }
    }
 }

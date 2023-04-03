@@ -1173,6 +1173,7 @@ header .logo img {
   content: "";
   position: absolute;
   width: 50%;
+  background: #212529;
 }
 
 .ui-burger:before {
@@ -1188,22 +1189,18 @@ header .logo img {
 .ui-burger span {
   display: inline-block;
   width: 100%;
+  background: #F2184F;
 }
 
 .ui-burger span,
 .ui-burger:before,
 .ui-burger:after {
   height: 2px;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  -webkit-border-radius: 50px;
-          border-radius: 50px;
-  background: #212529;
-}
-
-.ui-burger:hover span {
-  background: #F2184F;
 }
 
 .ui-burger:hover:before,
@@ -1247,7 +1244,7 @@ header .logo img {
   font-family: "Roboto", sans-serif;
   font-size: 17.5px;
   font-weight: 400;
-  line-height: 100%;
+  line-height: 120%;
   color: #212529;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1539,6 +1536,16 @@ i {
     max-width: calc((100vw - 1100px) / (1300 - 1100) * (590 - 490) + 490px);
   }
 
+  .hero-img .img-wrap img.triangle {
+    width: -webkit-calc((100vw - 1100px) / (1300 - 1100) * (186 - 130) + 130px);
+    width: calc((100vw - 1100px) / (1300 - 1100) * (186 - 130) + 130px);
+    height: auto;
+    left: -webkit-calc((100vw - 1100px) / (1300 - 1100) * (-20 - 20) + 20px);
+    left: calc((100vw - 1100px) / (1300 - 1100) * (-20 - 20) + 20px);
+    bottom: -webkit-calc((100vw - 1100px) / (1300 - 1100) * (25 - 20) + 20px);
+    bottom: calc((100vw - 1100px) / (1300 - 1100) * (25 - 20) + 20px);
+  }
+
   .hero-list li {
     font-size: -webkit-calc((100vw - 1100px) / (1300 - 1100) * (17.5 - 16) + 16px);
     font-size: calc((100vw - 1100px) / (1300 - 1100) * (17.5 - 16) + 16px);
@@ -1560,6 +1567,15 @@ i {
   .hero-img {
     max-width: -webkit-calc((100vw - 950px) / (1100 - 950) * (520 - 470) + 470px);
     max-width: calc((100vw - 950px) / (1100 - 950) * (520 - 470) + 470px);
+  }
+
+  .hero-img .img-wrap img.triangle {
+    width: -webkit-calc((100vw - 950px) / (1100 - 950) * (130 - 100) + 100px);
+    width: calc((100vw - 950px) / (1100 - 950) * (130 - 100) + 100px);
+    left: -webkit-calc((100vw - 950px) / (1100 - 950) * (20 - 60) + 60px);
+    left: calc((100vw - 950px) / (1100 - 950) * (20 - 60) + 60px);
+    bottom: -webkit-calc((100vw - 950px) / (1100 - 950) * (50 - 30) + 30px);
+    bottom: calc((100vw - 950px) / (1100 - 950) * (50 - 30) + 30px);
   }
 
   .hero-list li {
@@ -1625,9 +1641,9 @@ i {
   }
 
   .hero-img .img-wrap {
-    max-width: 470px;
-    margin-right: -webkit-calc((100vw - 768px) / (950 - 768) * (40 - 0) + 0px);
-    margin-right: calc((100vw - 768px) / (950 - 768) * (40 - 0) + 0px);
+    max-width: 490px;
+    margin-right: -webkit-calc((100vw - 768px) / (950 - 768) * (80 - 0) + 0px);
+    margin-right: calc((100vw - 768px) / (950 - 768) * (80 - 0) + 0px);
   }
 
   .hero-img .img-wrap img {
@@ -1637,8 +1653,8 @@ i {
 
   .hero-img .img-wrap img.triangle {
     width: 100px;
-    left: 40px;
-    bottom: 35px;
+    left: 60px;
+    bottom: 20px;
   }
 
   .hero-img .free-lesson {
@@ -1647,8 +1663,8 @@ i {
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    left: -webkit-calc((100vw - 768px) / (950 - 768) * (70 - 0) + 0px);
-    left: calc((100vw - 768px) / (950 - 768) * (70 - 0) + 0px);
+    left: -webkit-calc((100vw - 768px) / (950 - 768) * (90 - 15) + 15px);
+    left: calc((100vw - 768px) / (950 - 768) * (90 - 15) + 15px);
   }
 
   .hero-info {
@@ -1806,13 +1822,13 @@ i {
   }
 
   .hero-subtitle {
-    margin: 25px 0 50px 0;
+    margin: 20px 0 50px 0;
     font-size: -webkit-calc((100vw - 500px) / (576 - 500) * (33 - 30) + 30px);
     font-size: calc((100vw - 500px) / (576 - 500) * (33 - 30) + 30px);
   }
 
   .hero-img .img-wrap {
-    max-width: 390px;
+    max-width: 430px;
   }
 
   .hero-img .free-lesson {
@@ -1831,12 +1847,10 @@ i {
   }
 
   .hero-img .free-lesson .icon {
-    width: -webkit-calc((100vw - 500px) / (576 - 500) * (60 - 60) + 60px);
-    width: calc((100vw - 500px) / (576 - 500) * (60 - 60) + 60px);
-    height: -webkit-calc((100vw - 500px) / (576 - 500) * (60 - 60) + 60px);
-    height: calc((100vw - 500px) / (576 - 500) * (60 - 60) + 60px);
-    font-size: -webkit-calc((100vw - 500px) / (576 - 500) * (26 - 26) + 26px);
-    font-size: calc((100vw - 500px) / (576 - 500) * (26 - 26) + 26px);
+    width: 60px;
+    height: 60px;
+    font-size: 26px;
+    top: -30px;
   }
 }
 
@@ -1851,14 +1865,18 @@ i {
 }
 
 @media all and (max-width: 500px) {
+  .hero-info {
+    margin-top: 40px;
+  }
+
   .hero-title {
-    font-size: -webkit-calc((100vw - 350px) / (500 - 350) * (87 - 74) + 74px);
-    font-size: calc((100vw - 350px) / (500 - 350) * (87 - 74) + 74px);
+    font-size: -webkit-calc((100vw - 350px) / (500 - 350) * (87 - 80) + 80px);
+    font-size: calc((100vw - 350px) / (500 - 350) * (87 - 80) + 80px);
   }
 
   .hero-subtitle {
-    font-size: -webkit-calc((100vw - 350px) / (500 - 350) * (30 - 25) + 25px);
-    font-size: calc((100vw - 350px) / (500 - 350) * (30 - 25) + 25px);
+    font-size: -webkit-calc((100vw - 350px) / (500 - 350) * (30 - 26) + 26px);
+    font-size: calc((100vw - 350px) / (500 - 350) * (30 - 26) + 26px);
   }
 
   .hero-img .img-wrap {
@@ -1929,5 +1947,62 @@ i {
 
   .ui-container.container--flex {
     padding: 0 20px;
+  }
+}
+
+@media all and (max-width: 350px) {
+  .ui-btn {
+    font-size: 17px;
+  }
+
+  .ui-btn.btn--dark {
+    font-size: 17px;
+  }
+
+  .ui-btn.btn--action {
+    font-size: 17px;
+  }
+
+  .ui-btn.btn--bordered {
+    font-size: 17px;
+  }
+
+  .hero-title {
+    font-size: -webkit-calc((100vw - 280px) / (350 - 280) * (80 - 65) + 65px);
+    font-size: calc((100vw - 280px) / (350 - 280) * (80 - 65) + 65px);
+  }
+
+  .hero-subtitle {
+    font-size: -webkit-calc((100vw - 280px) / (350 - 280) * (26 - 20) + 20px);
+    font-size: calc((100vw - 280px) / (350 - 280) * (26 - 20) + 20px);
+  }
+
+  .hero-img .img-wrap {
+    margin-right: 0;
+  }
+
+  .hero-img .free-lesson {
+    bottom: -30px;
+  }
+
+  .hero-img .free-lesson p {
+    font-size: -webkit-calc((100vw - 280px) / (350 - 280) * (15 - 13) + 13px);
+    font-size: calc((100vw - 280px) / (350 - 280) * (15 - 13) + 13px);
+    max-width: 125px;
+  }
+
+  .hero-img .free-lesson .icon {
+    width: 45px;
+    height: 45px;
+    top: -10px;
+    font-size: 20px;
+  }
+
+  .hero-action .action-wrap .ui-btn.btn--hero-action {
+    padding: 18px 25px 17px 25px;
+  }
+
+  .hero-action .action-wrap .ui-btn.btn--hero-action i {
+    display: none;
   }
 }

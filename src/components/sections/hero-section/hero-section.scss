@@ -36,7 +36,7 @@
       font-family: $Rob;
       font-size: 17.5px;
       font-weight: 400;
-      line-height: 100%;
+      line-height: 120%;
       color: $title;
       display: flex;
       align-items: flex-start;
@@ -175,7 +175,6 @@
    }
 }
 
-// calc((100vw - 400px)/(680 - 400) * (48 - 28) + 28px)
 
 @media all and (max-width: 1500px) {
    .hero-img { right: 10px; }
@@ -190,7 +189,15 @@
       font-size: calcSize($currentW, $targetW, 42, 37); 
       max-width: 500px;
    }
-   .hero-img { max-width: calcSize($currentW, $targetW, 590, 490); }
+   .hero-img { 
+      max-width: calcSize($currentW, $targetW, 590, 490);
+      .img-wrap img.triangle {
+         width: calcSize($currentW, $targetW, 186, 130);
+         height: auto;
+         left: calcSize($currentW, $targetW, -20, 20);
+         bottom: calcSize($currentW, $targetW, 25, 20);
+      }
+   }
    .hero-list li { font-size: calcSize($currentW, $targetW, 17.5, 16); }
 }
 
@@ -207,7 +214,14 @@
       margin: 25px 0 50px 0;
       font-size: 36px; 
    }
-   .hero-img { max-width: calcSize($currentW, $targetW, 520, 470); }
+   .hero-img { 
+      max-width: calcSize($currentW, $targetW, 520, 470); 
+      .img-wrap img.triangle {
+         width: calcSize($currentW, $targetW, 130, 100);
+         left: calcSize($currentW, $targetW, 20, 60);
+         bottom: calcSize($currentW, $targetW, 50, 30);
+      }
+   }
    .hero-list li { font-size: 17.5px; }
 }
 
@@ -232,21 +246,21 @@
       display: flex;
       justify-content: flex-end;
       .img-wrap {
-         max-width: 470px;
-         margin-right: calcSize($currentW, $targetW, 40, 0);
+         max-width: 490px;
+         margin-right: calcSize($currentW, $targetW, 80, 0);
          img {
             max-width: 100%;
             height: auto;
          }
          img.triangle {
             width: 100px;
-            left: 40px;
-            bottom: 35px;
+            left: 60px;
+            bottom: 20px;
          }
       }
       .free-lesson {
          display: flex;
-         left: calcSize($currentW, $targetW, 70, 0);;
+         left: calcSize($currentW, $targetW, 90, 15);
       }
    }
 
@@ -335,13 +349,13 @@
    }
 
    .hero-subtitle {
-      margin: 25px 0 50px 0;
+      margin: 20px 0 50px 0;
       font-size: calcSize($currentW, $targetW, 33, 30);
    }
 
    .hero-img {
       .img-wrap {
-         max-width: 390px;
+         max-width: 430px;
       }
       .free-lesson {
          $width: calcSize($currentW, $targetW, 150, 135);
@@ -352,10 +366,11 @@
          top: auto;
          p { font-size: calcSize($currentW, $targetW, 16, 15); }
          .icon {
-            $width: calcSize($currentW, $targetW, 60, 60);
+            $width: 60px;
             width: $width;
             height: $width;
-            font-size: calcSize($currentW, $targetW, 26, 26);
+            font-size: 26px;
+            top: -30px;
          }
       }
    }
@@ -365,12 +380,14 @@
    $currentW: 500;
    $targetW: 350;
 
+   .hero-info { margin-top: 40px; }
+
    .hero-title { 
-      font-size: calcSize($currentW, $targetW, 87, 74);
+      font-size: calcSize($currentW, $targetW, 87, 80);
    }
 
    .hero-subtitle {
-      font-size: calcSize($currentW, $targetW, 30, 25);
+      font-size: calcSize($currentW, $targetW, 30, 26);
    }
 
    .hero-img {
@@ -400,6 +417,47 @@
       align-items: center;
       .btn--hero-dark { order: 2; }
       .btn--hero-action { order: 1; }
+   }
+}
+
+@media all and (max-width: 350px) {
+   $currentW: 350;
+   $targetW: 280;
+
+   .hero-title { 
+      font-size: calcSize($currentW, $targetW, 80, 65);
+   }
+
+   .hero-subtitle {
+      font-size: calcSize($currentW, $targetW, 26, 20);
+   }
+
+   .hero-img {
+      .img-wrap { margin-right: 0; }
+      .free-lesson {
+         $width: calcSize($currentW, $targetW, 135, 110);
+         bottom: -30px;
+         p { 
+            font-size: calcSize($currentW, $targetW, 15, 13); 
+            max-width: 125px;
+         }
+         .icon {
+            $width: 45px;
+            width: $width;
+            height: $width;
+            top: -10px;
+            font-size: 20px;
+         }
+      }
+   }
+
+   .hero-action {
+      .action-wrap {
+         .ui-btn.btn--hero-action { 
+            padding: 18px 25px 17px 25px;
+            i { display: none; }
+         }
+      }
    }
 }
 

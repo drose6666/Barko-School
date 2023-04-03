@@ -74,6 +74,10 @@
    box-shadow: $shadow;
    position: relative;
    transition: $trans;
+
+   @media all and (max-width: 350px) {
+      font-size: 17px;
+   }
 }
 .ui-btn {
    @include button;
