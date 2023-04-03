@@ -30,7 +30,7 @@
       display: grid;
       grid-template-columns: $columns;
       grid-template-rows: $rows;
-      gap: 15px
+      gap: $gap;
    }
 
    @media all and (max-width: 450px) {
@@ -45,7 +45,7 @@
 // TODO Button
 
 @mixin button (
-   $pd: 15px 39px,
+   $pd: 16px 40px,
    $fFamily: $Monts,
    $fSize: 18px,
    $fWeight: 600,
@@ -76,7 +76,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      border: border;
+      border: $border;
+      border-radius: $btnR;
    }
    &:active {
       transform: scale(0.98);
@@ -105,23 +106,8 @@
    }
 
    &.btn--action {
-      @include button( $shadow: $btnDarkFillS );
-      &:before {
-         content: "";
-         position: absolute;
-         width: 200%;
-         height: 200%;
-         top: 110%;
-         left: 50%;
-         background: $hoverDarkBtn;
-         transform: translateX(-50%);
-         border-radius: 50%;
-         z-index: 0;
-         transition: all 0.8s ease;
-      }
-      &:hover::before {
-         top: -40%;
-      }
+      @include button( $shadow: $btnActionS );
+      @extend %btnHoverFill;
    }
 
    &.btn--bordered {
@@ -130,7 +116,12 @@
          $bg: transparent,
          $color: $title,
          $border: 2px solid $title,
-      )
+      );
+      @extend %btnHoverFill;
+      &:hover {
+         color: $light;
+         transition: color 0.1s ease 0.2s, transform 0.1s ease;
+      }
    }
 
    &.btn--icon {
@@ -203,3 +194,53 @@ $animationTimingFunction: ease; // cubic-bezier(0.25, 0.8, 0.25, 1)
 
 
 
+
+// TODO Title
+
+@mixin title (
+   $margin: 0,
+   $padding: 0,
+   $fFamily: $Monts,
+   $fSize: 40px,
+   $fWeight: 700,
+   $lHeight: 122%,
+   $color: $title,
+   $align: left
+) {
+   margin: $margin;
+   padding: $padding;
+   font-family: $fFamily;
+   font-size: $fSize;
+   font-weight: $fWeight;
+   line-height: $lHeight;
+   color: $color;
+   text-align: $align;
+   position: relative;
+   &.title--center {
+      text-align: center;
+   }
+}
+.decor-title {
+   @include title (
+      $margin: 0 0 15px 0,
+      $fFamily: $MontsAlt,
+      $fSize: 18px,
+      $fWeight: 300,
+      $lHeight: 100%,
+   );
+   display: flex;
+   align-items: center;
+   &:before {
+      content: '';
+      margin-right: 15px;
+      display: block;
+      width: 30px;
+      height: 2px;
+      background: $action;
+      border-radius: $btnR;
+   }
+}
+
+.section-title {
+   @include title;
+}

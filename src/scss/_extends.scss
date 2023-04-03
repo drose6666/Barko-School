@@ -1,21 +1,30 @@
 // TODO Decoration title
 
-%decorTitle {
-   margin-bottom: 15px;
-   font-family: $MontsAlt;
-   font-size: 18px;
-   font-weight: 300;
-   line-height: 100%;
-   color: $title;
-   position: relative;
+%flexCenter {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+
+
+// TODO Button hover fill
+
+%btnHoverFill {
    &:before {
-      content: '';
-      margin-right: 15px;
-      display: block;
-      vertical-align: middle;
-      width: 30px;
-      height: 1px;
-      border: $btnR;
-      background: $action;
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: 110%;
+      left: 50%;
+      background: $hoverDarkBtn;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      z-index: 0;
+      transition: all 0.8s ease;
+   }
+   &:hover::before {
+      top: -40%;
    }
 }
