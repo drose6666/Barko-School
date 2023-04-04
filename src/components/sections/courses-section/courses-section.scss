@@ -1,0 +1,173 @@
+.courses-section {
+   padding: 60px 0 90px 0;
+   background: $weakColorSelection;
+   position: relative;
+   &::before, &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+   }
+   &::before {
+      bottom: 100%;
+      height: 82px;
+      background: url(../../../img/wave_top.svg) no-repeat center / cover;
+   }
+   &::after {
+      top: 100%;
+      height: 82px;
+      background: url(../../../img/wave_bottom.svg) no-repeat center / cover;
+   }
+
+   .heading {
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      .btn-all {
+         padding: 8px 20px;
+         font-size: 14px;
+         font-weight: 500;
+         white-space: nowrap;
+         width: 139px;
+         min-width: 139px;
+      }
+   }
+}
+
+
+// TODO Courses Swiper
+.courses {
+   width: 100%;
+   .swiper-courses {
+      width: 100%;
+      .course {
+         position: relative;
+         border-radius: $blockR;
+         overflow: hidden;
+         width: 430px;
+         height: 280px;
+         &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(0deg, rgba(33, 37, 41, 0.9) 0%, rgba(33, 37, 41, 0) 100%);
+            border-radius: $blockR;
+            transition: all 0.3s ease;
+         }
+         img {
+            display: inline-block;
+            object-fit: cover;
+            object-position: center;
+            height: 100%;
+            width: 100%;
+            transition: all 1s ease;
+         }
+         .age {
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 100%;
+            color: $action;
+            position: absolute;
+            bottom: 66px;
+            left: 30px;
+            z-index: 1;
+            transition: all .6s ease .1s;
+         }
+         .title {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 88%;
+            color: $light;
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            transition: all .6s ease;
+            z-index: 1;
+         }
+         .text {
+            font-family: $Rob;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 147%;
+            color: $light;
+            max-width: 350px;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            position: absolute;
+            bottom: 130px;
+            left: 30px;
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-30px);
+            transition: all .4s ease;
+         }
+         .more {
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 100%;
+            color: $action;
+            position: absolute;
+            bottom: 40px;
+            left: 30px;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1;
+            transform: translateX(-30px);
+            transition: all .4s ease;
+         }
+         &:hover {
+            &:after {
+               height: 400%;
+            }
+            img {
+               transform: scale(1.1);
+            }
+            .age {
+               opacity: 0;
+               visibility: hidden;
+               transform: translateY(-190px);
+               transition-delay: 0s;
+            }
+            .title {
+               transform: translateY(-190px);
+               transition-delay: .1s;
+            }
+            .text, .more {
+               opacity: 1;
+               visibility: visible;
+               transform: none;
+               transition-delay: 0.45s;
+            }
+            .more {
+               transition-delay: .55s;
+            }
+         }
+      }
+   }
+}
+
+
+
+@media all and (max-width: 700px) {
+   .courses-section {
+      .decor-title {
+         justify-content: center;
+      }
+      .heading {
+         flex-direction: column;
+         align-items: center;
+         gap: 30px;
+         .section-title {
+            text-align: center;
+         }
+      }
+   }
+}
