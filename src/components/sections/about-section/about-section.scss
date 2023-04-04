@@ -28,6 +28,7 @@
       box-shadow: $notBlurryColorLargeS;
       @extend %flexCenter;
       flex-direction: column;
+      z-index: 1;
       .numb {
          margin-bottom: 8px;
          font-family: $Rob;
@@ -115,4 +116,135 @@
       align-items: center;
       gap: 30px;
    }
+}
+
+
+
+// TODO Animation
+.about-img .img-wrap {
+   @include scrollAnimationFade($toRight: true, $delay: .1s, $transform: $offset)
+}
+.about-img .skill {
+   @include scrollAnimationFade($toRight: true, $delay: 1s, $transform: $offset)
+}
+.about-img .about-video-open {
+   @include scrollAnimationFade($toLeft: true, $delay: 1.1s, $transform: $offset)
+}
+.about-info .decor-title {
+   @include scrollAnimationFade($toRight: true, $delay: .3s, $transform: $offset)
+}
+.about-info .section-title {
+   @include scrollAnimationFade($toRight: true, $delay: .4s, $transform: $offset)
+}
+.about-info .text {
+   @include scrollAnimationFade($toRight: true, $delay: .5s, $transform: $offset)
+}
+.about-info .btn-wrap {
+   @include scrollAnimationFade($toRight: true, $delay: .6s, $transform: $offset)
+}
+
+
+
+
+// TODO  @media
+@media all and (max-width: 1200px) {
+   $currentW: 1200;
+   $targetW: 950;
+
+   .section-about .ui-container {
+      grid-template-columns: minmax(calcSize($currentW, $targetW, 500, 400), 1fr) 1fr;
+      gap: calcSize($currentW, $targetW, 110, 70);
+      align-items: start;
+   }
+
+   .about-info .text { font-size: calcSize($currentW, $targetW, 17, 16); }
+}
+
+@media all and (max-width: 950px) {
+   $currentW: 950;
+   $targetW: 768;
+
+   .section-about {
+      .ui-container {
+         grid-template-columns: 1fr;
+         gap: 60px;
+      }
+   }
+
+   .about-info { 
+      .section-title { text-align: center; }
+      .decor-title { justify-content: center; }
+      .text {
+         margin: 0 auto 60px auto;
+         max-width: 750px;
+         text-align: center;
+      }
+      .btn-wrap {
+         justify-content: center;
+      }
+   }
+
+   .about-img {
+      justify-self: center;
+      max-width: 850px;
+      .skill { left: -10px; }
+      .about-video-open { right: -10px; }
+   }
+
+   .about-img .img-wrap,
+   .about-info .decor-title,
+   .about-info .section-title,
+   .about-info .text,
+   .about-info .btn-wrap {
+      @include scrollAnimationFade($toRight: true, $delay: .1s, $transform: $offset)
+   }
+   .about-img .skill {
+      @include scrollAnimationFade($toRight: true, $delay: .3s, $transform: $offset)
+   }
+   .about-img .about-video-open {
+      @include scrollAnimationFade($toLeft: true, $delay: .4s, $transform: $offset)
+   }
+}
+
+@media all and (max-width: 768px) {
+   .about-info .text { font-size: 16px; }
+}
+
+@media all and (max-width: 670px) {
+   $currentW: 670;
+   $targetW: 280;
+
+   .about-img {
+      .skill {
+         $width: calcSize($currentW, $targetW, 150, 100);
+         width: $width;
+         height: $width;
+         .numb { font-size: calcSize($currentW, $targetW, 50, 30); }
+         .text { font-size: calcSize($currentW, $targetW, 15, 11); }
+      }
+
+      .about-video-open {
+         $padd: calcSize($currentW, $targetW, 19, 12);
+         padding: $padd;
+         .video-btn {
+            $width: calcSize($currentW, $targetW, 65, 40);
+            width: $width;
+            height: $width;
+            i { font-size: calcSize($currentW, $targetW, 30, 22); }
+         }
+         .text {
+            font-size: calcSize($currentW, $targetW, 16, 12);
+            max-width: calcSize($currentW, $targetW, 110, 80);
+         }
+      }
+   }
+}
+
+@media all and (max-width: 500px) {
+   .about-info .btn-wrap {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+   }
+   .about-info .text { margin-bottom: 50px; }
 }

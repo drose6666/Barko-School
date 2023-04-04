@@ -108,6 +108,9 @@
    &.btn--action {
       @include button( $shadow: $btnActionS );
       @extend %btnHoverFill;
+      &:hover {
+         box-shadow: $btnDarkFillS;
+      }
    }
 
    &.btn--bordered {
@@ -117,10 +120,11 @@
          $color: $title,
          $border: 2px solid $title,
       );
-      @extend %btnHoverFill;
+      // @extend %btnHoverFill;
       &:hover {
          color: $light;
-         transition: color 0.1s ease 0.2s, transform 0.1s ease;
+         background: $darkDecor;
+         transition: color 0.2s ease, background 0.2s ease, transform 0.1s ease;
       }
    }
 
@@ -203,7 +207,7 @@ $animationTimingFunction: ease; // cubic-bezier(0.25, 0.8, 0.25, 1)
    $fFamily: $Monts,
    $fSize: 40px,
    $fWeight: 700,
-   $lHeight: 122%,
+   $lHeight: 105%,
    $color: $title,
    $align: left
 ) {

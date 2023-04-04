@@ -14,7 +14,7 @@ $offset: 30px;
 }
 
 .hero-section {
-   padding-bottom: 150px;
+   padding-bottom: 200px;
    // overflow: hidden;
    position: relative;
    .ui-container { position: relative; }
@@ -287,6 +287,8 @@ $offset: 30px;
    $currentW: 1100;
    $targetW: 950;
 
+   .hero-section { padding-bottom: 110px; }
+
    .hero-title { 
       font-size: 100px; 
       line-height: 90%;
@@ -450,6 +452,8 @@ $offset: 30px;
    $currentW: 576;
    $targetW: 500;
 
+   .hero-section { padding-bottom: 80px; }
+
    .hero-title { 
       font-size: calcSize($currentW, $targetW, 95, 87);
       text-align: center;
@@ -457,9 +461,11 @@ $offset: 30px;
    }
 
    .hero-subtitle {
-      margin: 20px 0 60px 0;
+      margin: 20px 0 50px 0;
       font-size: calcSize($currentW, $targetW, 33, 30);
    }
+
+   .hero-list li { font-size: 17px; }
 
    .hero-img {
       .img-wrap {
@@ -531,6 +537,7 @@ $offset: 30px;
    .hero-action {
       flex-direction: column;
       align-items: center;
+      margin-bottom: 50px;
       .btn--hero-dark { 
          padding: 15px 45px;
          order: 2; 
