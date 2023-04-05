@@ -8,7 +8,7 @@
    $targetFont - целевой размер шрифа, значение до которого изменяется шрифт
 */
 
-.schedule-items .item .icon,
+.schedule-item .schedule-icon,
 .about-img .about-video-open .video-btn,
 .about-img .skill {
   display: -webkit-box;
@@ -3421,7 +3421,7 @@ header .logo img {
           transform: none;
 }
 
-.schedule-items .item {
+.schedule-item {
   margin-bottom: 40px;
   padding: 20px 50px;
   position: relative;
@@ -3439,12 +3439,12 @@ header .logo img {
   transition: all 0.3s ease;
 }
 
-.schedule-items .item.animate {
+.schedule-item.animate {
   opacity: 0;
   visibility: hidden;
 }
 
-.schedule-items .item .icon {
+.schedule-item .schedule-icon {
   width: 58px;
   height: 58px;
   background: #fff;
@@ -3463,13 +3463,30 @@ header .logo img {
   transition: all 0.3s ease;
 }
 
-.schedule-items .item .icon i {
+.schedule-item .schedule-icon i {
   margin-top: -1px;
   margin-right: -3px;
   font-size: 32px;
 }
 
-.schedule-items .item:hover {
+.schedule-item.item-price {
+  background: #202C45;
+  color: #fff;
+  -webkit-box-shadow: 0px 8px 30px -13px rgba(33, 37, 41, 0.7);
+          box-shadow: 0px 8px 30px -13px rgba(33, 37, 41, 0.7);
+  margin: 90px auto 0 auto;
+  position: relative;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+.schedule-item.item-price .schedule-icon {
+  border-color: #202C45;
+  color: #202C45;
+}
+
+.schedule-item:hover {
   background: #F2184F;
   -webkit-box-shadow: 0px 19px 28px -15px rgba(149, 9, 44, 0.35);
           box-shadow: 0px 19px 28px -15px rgba(149, 9, 44, 0.35);
@@ -3480,7 +3497,7 @@ header .logo img {
           transform: translateY(-5px);
 }
 
-.schedule-items .item:hover .icon {
+.schedule-item:hover .schedule-icon {
   border-color: #fff;
   -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.11);
           box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.11);
@@ -4537,11 +4554,16 @@ i {
     gap: 30px;
   }
 
-  .schedule-items .item {
+  .schedule-item {
     margin-bottom: 35px;
     padding: 17px 30px;
     gap: 30px;
     font-size: 18px;
+  }
+
+  .schedule-item.item-price {
+    padding: 20px 50px;
+    font-size: 20px;
   }
 }
 
