@@ -1,5 +1,5 @@
 .courses-section {
-   padding: 60px 0 90px 0;
+   padding: 60px 0 60px 0;
    background: $weakColorSelection;
    position: relative;
    &::before, &:after {
@@ -241,6 +241,10 @@
       }
       .more { left: calcSize($currentW, $targetW, 30, 15); }
    }
+}
+
+@media all and (max-width: 430px) {
+   .courses-section .section-title { font-size: 37px; }
 }
 
 

@@ -2935,7 +2935,7 @@ header .logo img {
 }
 
 .courses-section {
-  padding: 60px 0 90px 0;
+  padding: 60px 0 60px 0;
   background: #FFF3F6;
   position: relative;
 }
@@ -4400,6 +4400,12 @@ i {
   .courses .swiper-courses .course .more {
     left: -webkit-calc((100vw - 280px) / (450 - 280) * (30 - 15) + 15px);
     left: calc((100vw - 280px) / (450 - 280) * (30 - 15) + 15px);
+  }
+}
+
+@media all and (max-width: 430px) {
+  .courses-section .section-title {
+    font-size: 37px;
   }
 }
 
