@@ -1,0 +1,90 @@
+.schedule-section {
+   padding-top: 200px;
+   padding-bottom: 120px;
+
+   .decor-title { 
+      justify-content: center; 
+      @include scrollAnimationFade($toRight: true, $delay: .1s)
+   }
+
+   .section-title { 
+      text-align: center; 
+      @include scrollAnimationFade($toRight: true, $delay: .2s)
+   }
+}
+
+.schedule-items {
+   margin-top: 105px;
+   display: flex;
+   justify-content: center;
+   gap: 40px;
+   flex-wrap: wrap;
+   @include scrollAnimationFade($toRight: true, $delay: .3s);
+   .item {
+      margin-bottom: 40px;
+      padding: 20px 50px;
+      position: relative;
+      background: $weakSelection;
+      font-family: $MontsAlt;
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 100%;
+      color: $title;
+      border-radius: $btnR;
+      cursor: pointer;
+      transition: all 0.3s ease;
+         
+      &.animate {
+         opacity: 0;
+         visibility: hidden;
+      } 
+
+      .icon {
+         $width: 58px;
+         
+         @extend %flexCenter;
+         width: $width;
+         height: $width;
+         background: $light;
+         color: $text;
+         border: 2px solid $weakSelection;
+         position: absolute;
+         top: calc(15px - $width);
+         left: 50%;
+         margin-left: calc(-#{$width} / 2);
+         border-radius: 50%;
+         z-index: 1;
+         transition: all .3s ease;
+         i {
+            margin-top: -1px;
+            margin-right: -3px;
+            font-size: 32px;
+         }
+      }
+
+      &:hover {
+         background: $action;
+         box-shadow: $btnHoverToActionS;
+         color: $light;
+         transform: translateY(-5px);
+         .icon {
+            border-color: $light;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.11);
+            color: $action;
+            transform: translateY(-5px);
+         }
+      }
+   }
+}
+
+@media all and (max-width: 500px) {
+   .schedule-items {
+      gap: 30px;
+      .item {
+         margin-bottom: 35px;
+         padding: 17px 30px;
+         gap: 30px;
+         font-size: 18px;
+      }
+   }
+}

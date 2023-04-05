@@ -8,6 +8,7 @@
    $targetFont - целевой размер шрифа, значение до которого изменяется шрифт
 */
 
+.schedule-items .item .icon,
 .about-img .about-video-open .video-btn,
 .about-img .skill {
   display: -webkit-box;
@@ -2935,7 +2936,7 @@ header .logo img {
 }
 
 .courses-section {
-  padding: 60px 0 60px 0;
+  padding: 60px 0 40px 0;
   background: #FFF3F6;
   position: relative;
 }
@@ -3314,6 +3315,180 @@ header .logo img {
       -ms-transform: none;
        -o-transform: none;
           transform: none;
+}
+
+.schedule-section {
+  padding-top: 200px;
+  padding-bottom: 120px;
+}
+
+.schedule-section .decor-title {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.schedule-section .decor-title.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.6s ease 0.1s, visibility 0.6s ease 0.1s, -webkit-transform 0.6s ease 0.1s;
+  transition: opacity 0.6s ease 0.1s, visibility 0.6s ease 0.1s, -webkit-transform 0.6s ease 0.1s;
+  -o-transition: opacity 0.6s ease 0.1s, visibility 0.6s ease 0.1s, -o-transform 0.6s ease 0.1s;
+  transition: transform 0.6s ease 0.1s, opacity 0.6s ease 0.1s, visibility 0.6s ease 0.1s;
+  transition: transform 0.6s ease 0.1s, opacity 0.6s ease 0.1s, visibility 0.6s ease 0.1s, -webkit-transform 0.6s ease 0.1s, -o-transform 0.6s ease 0.1s;
+  -webkit-transform: translateX(-30px);
+      -ms-transform: translateX(-30px);
+       -o-transform: translateX(-30px);
+          transform: translateX(-30px);
+}
+
+.schedule-section .decor-title.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
+.schedule-section .section-title {
+  text-align: center;
+}
+
+.schedule-section .section-title.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s, -webkit-transform 0.6s ease 0.2s;
+  transition: opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s, -webkit-transform 0.6s ease 0.2s;
+  -o-transition: opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s, -o-transform 0.6s ease 0.2s;
+  transition: transform 0.6s ease 0.2s, opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s;
+  transition: transform 0.6s ease 0.2s, opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s, -webkit-transform 0.6s ease 0.2s, -o-transform 0.6s ease 0.2s;
+  -webkit-transform: translateX(-30px);
+      -ms-transform: translateX(-30px);
+       -o-transform: translateX(-30px);
+          transform: translateX(-30px);
+}
+
+.schedule-section .section-title.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
+.schedule-items {
+  margin-top: 105px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 40px;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.schedule-items.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s, -webkit-transform 0.6s ease 0.3s;
+  transition: opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s, -webkit-transform 0.6s ease 0.3s;
+  -o-transition: opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s, -o-transform 0.6s ease 0.3s;
+  transition: transform 0.6s ease 0.3s, opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s;
+  transition: transform 0.6s ease 0.3s, opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s, -webkit-transform 0.6s ease 0.3s, -o-transform 0.6s ease 0.3s;
+  -webkit-transform: translateX(-30px);
+      -ms-transform: translateX(-30px);
+       -o-transform: translateX(-30px);
+          transform: translateX(-30px);
+}
+
+.schedule-items.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
+.schedule-items .item {
+  margin-bottom: 40px;
+  padding: 20px 50px;
+  position: relative;
+  background: #F5F5F5;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 100%;
+  color: #212529;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.schedule-items .item.animate {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.schedule-items .item .icon {
+  width: 58px;
+  height: 58px;
+  background: #fff;
+  color: #9193A3;
+  border: 2px solid #F5F5F5;
+  position: absolute;
+  top: -43px;
+  left: 50%;
+  margin-left: -webkit-calc(-58px / 2);
+  margin-left: calc(-58px / 2);
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.schedule-items .item .icon i {
+  margin-top: -1px;
+  margin-right: -3px;
+  font-size: 32px;
+}
+
+.schedule-items .item:hover {
+  background: #F2184F;
+  -webkit-box-shadow: 0px 19px 28px -15px rgba(149, 9, 44, 0.35);
+          box-shadow: 0px 19px 28px -15px rgba(149, 9, 44, 0.35);
+  color: #fff;
+  -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+       -o-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.schedule-items .item:hover .icon {
+  border-color: #fff;
+  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.11);
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.11);
+  color: #F2184F;
+  -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+       -o-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 * {
@@ -4356,6 +4531,17 @@ i {
 
   .about-info .text {
     margin-bottom: 50px;
+  }
+
+  .schedule-items {
+    gap: 30px;
+  }
+
+  .schedule-items .item {
+    margin-bottom: 35px;
+    padding: 17px 30px;
+    gap: 30px;
+    font-size: 18px;
   }
 }
 
