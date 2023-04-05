@@ -20,7 +20,7 @@
    }
 
    .heading {
-      margin-bottom: 40px;
+      margin-bottom: 50px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -40,13 +40,15 @@
 // TODO Courses Swiper
 .courses {
    width: 100%;
+   position: relative;
    .swiper-courses {
       width: 100%;
       .course {
          position: relative;
          border-radius: $blockR;
          overflow: hidden;
-         width: 430px;
+         min-width: 430px;
+         max-width: 430px;
          height: 280px;
          &:after {
             content: '';
@@ -59,6 +61,19 @@
             border-radius: $blockR;
             transition: all 0.3s ease;
          }
+         .info {
+            padding: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+         }
          img {
             display: inline-block;
             object-fit: cover;
@@ -68,26 +83,24 @@
             transition: all 1s ease;
          }
          .age {
+            margin-bottom: 15px;
             font-size: 17px;
             font-weight: 700;
             line-height: 100%;
             color: $action;
-            position: absolute;
-            bottom: 66px;
-            left: 30px;
-            z-index: 1;
+            display: block;
             transition: all .6s ease .1s;
          }
          .title {
-            font-size: 24px;
+            font-size: 21px;
             font-weight: 700;
-            line-height: 88%;
+            line-height: 115%;
             color: $light;
-            position: absolute;
-            bottom: 30px;
-            left: 30px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
             transition: all .6s ease;
-            z-index: 1;
          }
          .text {
             font-family: $Rob;
@@ -97,11 +110,11 @@
             color: $light;
             max-width: 350px;
             display: -webkit-box;
-            -webkit-line-clamp: 4;
+            -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
             position: absolute;
-            bottom: 130px;
+            bottom: 115px;
             left: 30px;
             z-index: 1;
             opacity: 0;
@@ -115,7 +128,7 @@
             line-height: 100%;
             color: $action;
             position: absolute;
-            bottom: 40px;
+            bottom: 30px;
             left: 30px;
             opacity: 0;
             visibility: hidden;
@@ -126,6 +139,7 @@
          &:hover {
             &:after {
                height: 400%;
+               border-radius: $blockR;
             }
             img {
                transform: scale(1.1);
@@ -133,11 +147,11 @@
             .age {
                opacity: 0;
                visibility: hidden;
-               transform: translateY(-190px);
+               transform: translateY(-175px);
                transition-delay: 0s;
             }
             .title {
-               transform: translateY(-190px);
+               transform: translateY(-175px);
                transition-delay: .1s;
             }
             .text, .more {
@@ -154,6 +168,36 @@
    }
 }
 
+.courses-arrows {
+   margin-top: 30px;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+   z-index: 1;
+   .arrow {
+      position: static;
+      width: auto;
+   }
+}
+
+
+// TODO Animation
+.courses-section .decor-title {
+   @include scrollAnimationFade($toRight: true, $delay: .1s)
+}
+.courses-section .heading .section-title {
+   @include scrollAnimationFade($toRight: true, $delay: .2s)
+}
+.courses-section .heading .btn-all {
+   @include scrollAnimationFade($toRight: true, $delay: .3s)
+}
+.courses-section .courses {
+   @include scrollAnimationFade($toTop: true, $delay: .4s)
+}
+
+
 
 
 @media all and (max-width: 700px) {
@@ -169,5 +213,39 @@
             text-align: center;
          }
       }
+   }
+}
+
+@media all and (max-width: 550px) {
+   .courses { padding: 0 15px; }
+   .courses .swiper-courses .course {
+      min-width: 100%;
+   }
+}
+
+@media all and (max-width: 450px) {
+   $currentW: 450;
+   $targetW: 280;
+
+   .courses .swiper-courses .course {
+      .info { padding: 30px calcSize($currentW, $targetW, 30, 15); }
+      .age { font-size: calcSize($currentW, $targetW, 17, 16); }
+      .title { 
+         font-size: calcSize($currentW, $targetW, 21, 17); 
+         -webkit-line-clamp: 3;
+      }
+      .text {
+         font-size: calcSize($currentW, $targetW, 16, 15);
+         left: calcSize($currentW, $targetW, 30, 15);
+         max-width: calcSize($currentW, $targetW, 350, 210);
+      }
+      .more { left: calcSize($currentW, $targetW, 30, 15); }
+   }
+}
+
+
+@media all and (min-width: 1920px) {
+   .courses .swiper-courses .course {
+      min-width: 500px;
    }
 }

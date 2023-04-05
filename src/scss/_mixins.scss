@@ -143,6 +143,68 @@
 
 
 
+// TODO Title
+
+@mixin title (
+   $margin: 0,
+   $padding: 0,
+   $fFamily: $Monts,
+   $fSize: 40px,
+   $fWeight: 700,
+   $lHeight: 105%,
+   $color: $title,
+   $align: left
+) {
+   margin: $margin;
+   padding: $padding;
+   font-family: $fFamily;
+   font-size: $fSize;
+   font-weight: $fWeight;
+   line-height: $lHeight;
+   color: $color;
+   text-align: $align;
+   position: relative;
+   &.title--center {
+      text-align: center;
+   }
+}
+.decor-title {
+   @include title (
+      $margin: 0 0 15px 0,
+      $fFamily: $MontsAlt,
+      $fSize: 19px,
+      $fWeight: 300,
+      $lHeight: 100%,
+   );
+   display: flex;
+   align-items: center;
+   &:before {
+      content: '';
+      margin-right: 15px;
+      display: block;
+      width: 30px;
+      height: 2px;
+      background: $action;
+      border-radius: $btnR;
+   }
+   @media all and (max-width: 340px) {
+      font-size: 17px;
+   }
+}
+
+.section-title {
+   @include title;
+   @media all and (max-width: 340px) {
+      font-size: calcSize(340, 280, 40, 32);
+   }
+}
+
+
+
+
+
+
+
 
 
 // TODO Scroll animation
@@ -197,55 +259,3 @@ $animationTimingFunction: ease; // cubic-bezier(0.25, 0.8, 0.25, 1)
 }
 
 
-
-
-
-// TODO Title
-
-@mixin title (
-   $margin: 0,
-   $padding: 0,
-   $fFamily: $Monts,
-   $fSize: 40px,
-   $fWeight: 700,
-   $lHeight: 105%,
-   $color: $title,
-   $align: left
-) {
-   margin: $margin;
-   padding: $padding;
-   font-family: $fFamily;
-   font-size: $fSize;
-   font-weight: $fWeight;
-   line-height: $lHeight;
-   color: $color;
-   text-align: $align;
-   position: relative;
-   &.title--center {
-      text-align: center;
-   }
-}
-.decor-title {
-   @include title (
-      $margin: 0 0 15px 0,
-      $fFamily: $MontsAlt,
-      $fSize: 19px,
-      $fWeight: 300,
-      $lHeight: 100%,
-   );
-   display: flex;
-   align-items: center;
-   &:before {
-      content: '';
-      margin-right: 15px;
-      display: block;
-      width: 30px;
-      height: 2px;
-      background: $action;
-      border-radius: $btnR;
-   }
-}
-
-.section-title {
-   @include title;
-}

@@ -8,41 +8,49 @@ import Swiper from 'swiper/bundle';
 window.addEventListener('load', function () {
    const preloader = document.getElementById('ui-preloader')
    preloader.classList.add('hide')
-
 })
 
+document.querySelectorAll('.swiper-arrows .arrow').forEach(el => {
+   el.addEventListener('click', function (e) {
+      e.preventDefault()
+   })
+})
 
 // TODO Swiper Courses
 const courses = new Swiper('#courses-swiper', {
-   slidesPerView: 4,
+   slidesPerView: 'auto',
    slidesPerGroup: 1,
    loop: true,
-   spaceBetween: 30,
+   spaceBetween: 20,
    centeredSlides: true,
-   speed: 800,
+   speed: 400,
    // autoplay: {
-   //    delay: 3000,
-   //    disableOnInteraction: false,
+   //    delay: 2500,
+   //    // disableOnInteraction: false,
    // },
    navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev"
    },
-   // breakpoints: {
-   //    120: {
-   //       slidesPerView: 1,
-   //       slidesPerGroup: 1,
-   //       spaceBetween: 30,
-   //    },
-   //    700: {
-   //       slidesPerView: 2,
-   //       spaceBetween: 30,
-   //       slidesPerGroup: 1
-   //    },
-   //    1150: {
-   //       slidesPerView: 3,
-   //       spaceBetween: 40,
-   //       slidesPerGroup: 1
-   //    }
-   // }
+   breakpoints: {
+      120: {
+         slidesPerView: 1,
+         slidesPerGroup: 1,
+         spaceBetween: 20,
+         centeredSlides: true,
+      },
+      550: {
+         spaceBetween: 20,
+         slidesPerGroup: 1,
+         centeredSlides: true,
+         slidesPerView: 'auto',
+      },
+      800: {
+         spaceBetween: 20,
+         slidesPerGroup: 1,
+         centeredSlides: true,
+         slidesPerView: 'auto',
+      },
+
+   }
 })
