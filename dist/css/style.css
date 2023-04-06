@@ -3605,6 +3605,23 @@ header .logo img {
           transform: none;
 }
 
+.gallery-section .btn-all {
+  margin: 60px auto 0 auto;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
 .gallery-section .gallery {
   margin-top: 55px;
   display: -ms-grid;

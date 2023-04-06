@@ -34,6 +34,17 @@
       @include scrollAnimationFade($toLeft: true, $delay: .2s)
    }
 
+   .btn-all {
+      margin: 60px auto 0 auto;
+      padding: 14px 30px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 100%;
+      display: flex;
+      text-align: center;
+      max-width: max-content;
+   }
+
    .gallery {
       margin-top: 55px;
       display: grid;
