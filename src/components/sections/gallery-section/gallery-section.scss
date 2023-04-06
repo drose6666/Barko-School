@@ -1,0 +1,162 @@
+.gallery-section {
+   padding: 170px 0 50px 0;
+   overflow-x: hidden;
+   position: relative;
+   &:after, &:before {
+      content: '';
+      position: absolute;
+      background: url(../../../img/triangle.svg) no-repeat center / contain;
+      z-index: -1;
+   }
+   &:after {
+      $size: 500px;
+      top: 70px;
+      left: -140px;
+      width: $size;
+      height: $size;
+      transform: rotate(130deg);
+   }
+   &:before {
+      $size: 400px;
+      bottom: 10%;
+      right: -100px;
+      width: $size;
+      height: $size;
+   }
+
+   .decor-title { 
+      justify-content: center; 
+      @include scrollAnimationFade($toLeft: true, $delay: .1s)
+   }
+
+   .section-title { 
+      text-align: center; 
+      @include scrollAnimationFade($toLeft: true, $delay: .2s)
+   }
+
+   .gallery {
+      margin-top: 55px;
+      display: grid;
+      gap: 20px;
+      grid-template-areas: 'item-1 item-2 item-3'
+                           'item-1 item-4 item-5'
+                           'item-6 item-7 item-7';
+      [class^="item"] {
+         $j: 0.2s;
+         @for $i from 1 through 7 {
+            $j: $j +0.05s;
+            &:nth-child(#{$i}) {
+               @include scrollAnimationFade($toLeft: true, $delay: $j)
+            }
+         }
+         .photo {
+            border-radius: $blockR;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            transition: all .3s ease;
+            img {
+               height: 100%;
+               width: 100%;
+               object-fit: cover;
+               object-position: center;
+            }
+            .hidden-overlay {
+               position: absolute;
+               top: 0;
+               bottom: 0;
+               width: 100%;
+               height: 100%;
+               background: $cardColorG;
+               @extend %flexCenter;
+               transition: all .3s ease;
+            }
+            .view-icon {
+               width: 40px;
+               height: 40px;
+               background: $light;
+               border-radius: 50%;
+               box-shadow: 0px 0px 0px 12px rgba(255, 255, 255, 0.13);
+               @extend %flexCenter;
+               font-size: 20px;
+               color: $action;
+               opacity: 0;
+               transform: translateY(10px);
+               transition: all .3s ease .1s;
+               &:hover {
+   
+               }
+            }
+   
+            &:hover {
+               transform: translateY(-5px);
+               .hidden-overlay {
+                  background: rgba(32, 44, 69, .6);
+                  .view-icon {
+                     opacity: 1;
+                     transform: none;
+   
+                  } 
+               }
+            }
+         }
+         
+      }
+
+      .item-1 { grid-area: item-1; }
+      .item-2 { grid-area: item-2; }
+      .item-3 { grid-area: item-3; }
+      .item-4 { grid-area: item-4; }
+      .item-5 { grid-area: item-5; }
+      .item-6 { grid-area: item-6; }
+      .item-7 { grid-area: item-7; }
+   }
+}
+
+
+@media all and (max-width: 1150px) {
+   .gallery-section {
+      &:after {
+         width: 400px;
+         height: 400px;
+         top: 200px;
+      }
+   }
+}
+
+@media all and (max-width: 1000px) {
+   .gallery { gap: 15px; }
+}
+
+@media all and (max-width: 800px) {
+   .gallery-section .gallery {
+      grid-template-areas: 'item-1 item-2'
+                           'item-1 item-3'
+                           'item-4 item-5'
+                           'item-6 item-7';
+      gap: 15px;
+   }
+
+   .gallery-section {
+      &:after {
+         width: 400px;
+         height: 400px;
+         top: 250px;
+      }
+   }
+}
+
+@media all and (max-width: 500px) {
+   .gallery-section .gallery {
+      grid-template-areas: 'item-1'
+                           'item-2'
+                           'item-3'
+                           'item-4'
+                           'item-5'
+                           'item-6'
+                           'item-7';
+   }
+}
+

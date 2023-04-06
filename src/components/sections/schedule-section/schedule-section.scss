@@ -1,6 +1,5 @@
 .schedule-section {
    padding-top: 200px;
-   padding-bottom: 120px;
 
    .decor-title { 
       justify-content: center; 
@@ -56,6 +55,7 @@
       margin-left: calc(-#{$width} / 2);
       border-radius: 50%;
       z-index: 1;
+      user-select: none;
       transition: all .3s ease;
       i {
          margin-top: -1px;
@@ -68,7 +68,7 @@
       background: $darkDecor;
       color: $light;
       box-shadow: $btnDarkFillS;
-      margin: 90px auto 0 auto;
+      margin: 60px auto 0 auto;
       position: relative;
       max-width: max-content;
       .schedule-icon {
