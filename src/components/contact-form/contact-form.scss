@@ -83,3 +83,15 @@
       }
    }
 }
+
+
+@media all and (max-width: 1450px) {
+   .contact-form-wrap { right: 20px; }
+}
+
+@media all and (max-width: 1000px) {
+   .contact-form-wrap {
+      padding: 50px 35px 50px 35px;
+      max-width: 480px;
+   }
+}
