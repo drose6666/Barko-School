@@ -1,17 +1,26 @@
 .reviews-section {
-   padding: 60px 0;
+   margin: 180px 0;
+   padding: 60px 0 40px 0;
    background: $weakColorSelection;
    position: relative;
-   overflow: hidden;
+   // overflow: hidden;
 
    &:after, &:before {
       content: '';
       position: absolute;
       left: 0;
       width: 100%;
+      height: 100px;
    }
-   &:after {}
-   &:before {}
+   &:before {
+      bottom: 100%;
+      background: url(../../../img/wave_top.svg) no-repeat center / cover;
+   }
+   &:after {
+      top: 100%;
+      background: url(../../../img/wave_bottom.svg) no-repeat center / cover;
+   }
+   
 
    .ui-container {
       display: grid;
@@ -20,16 +29,48 @@
       gap: 40px;
    }
 
+   .btn--action {
+      &.min900 { display: block; }
+      &.max900 {
+         margin: 100px auto 0 auto;
+         display: none;
+      }
+   }
+   
+
    .reviews {
       width: 100%;
       max-width: 720px;
       justify-self: end;
       position: relative;
+      .quote-img {
+         position: absolute;
+         top: -90px;
+         right: -60px;
+         max-width: 100%;
+         height: auto;
+         z-index: 1;
+      }
+      &:after {
+         content: '\e907';
+         position: absolute;
+         top: 20%;
+         right: 105%;
+         font-family: $BRFont;
+         font-size: 13rem;
+         z-index: 0;
+         color: $weakDecor;
+         opacity: .7;
+      }
    }
+
+   .decor-title, .section-title, .text, .btn--action { position: relative; } 
 
    .section-title {
       margin-bottom: 35px;
       max-width: 430px;
+      position: relative;
+      z-index: 1;
    }
 
    .text {
@@ -39,11 +80,16 @@
       font-weight: 300;
       line-height: 171%;
       color: $title;
+      position: relative;
+      z-index: 1;
    }
 }
 
 
 // TODO Swiper
+.reviews-swiper-wrap {
+   position: relative;
+}
 .swiper-reviews {
    width: 100%;
    border-radius: $blockR;
@@ -58,6 +104,8 @@
          display: flex;
          align-items: center;
          gap: 20px;
+         position: relative;
+         z-index: 1;
          .photo {
             padding: 5px;
             width: 90px;
@@ -96,6 +144,8 @@
          font-weight: 400;
          line-height: 170%;
          color: $text;
+         position: relative;
+         z-index: 1;
       }
    }
 }
@@ -108,20 +158,49 @@
    left: 50%;
    transform: translateX(-50%);
    .swiper-pagination-bullet {
-      width: 10px;
-      height: 10px;
+      width: 12px;
+      height: 12px;
       background: $action;
    }
 }
 
 
+.decor-title {
+   @include scrollAnimationFade($toRight: true, $delay: .1s)
+}
+.section-title {
+   @include scrollAnimationFade($toRight: true, $delay: .2s)
+}
+.text {
+   @include scrollAnimationFade($toRight: true, $delay: .3s)
+}
+.btn--action {
+   @include scrollAnimationFade($toRight: true, $delay: .4s)
+}
+.reviews {
+   &:after {
+      @include scrollAnimationFade($toLeft: true, $delay: .7s)
+   }
+   .quote-img { @include scrollAnimationFade($toLeft: true, $delay: .6s) }
+}
+.swiper-reviews {
+   @include scrollAnimationFade($toLeft: true, $delay: .5s);
+}
+
+
+
+@media all and (max-width: 1500px) {
+   .reviews-section .reviews .quote-img {
+      max-width: 140px;
+      right: 20px;
+   }
+}
+
 @media all and (max-width: 1200px) {
    $currentW: 1200;
    $targetW: 900;
 
-   .reviews-section .reviews {
-      max-width: calcSize($currentW, $targetW, 720, 420);
-   }
+   .reviews-section .reviews { max-width: calcSize($currentW, $targetW, 720, 420); }
 }
 
 
@@ -130,9 +209,25 @@
       .ui-container {
          display: block;
       }
+
+      .btn--action {
+         &.min900 { display: none; }
+         &.max900 {
+            display: block;
+         }
+      }
+      
       .reviews {
          justify-self: center;
          max-width: 100%;
+         .quote-img {
+            display: none;
+         }
+         &:after {
+            top: -180px;
+            right: 0;
+            font-size: 10rem;
+         }
       }
       .decor-title { justify-content: center; }
       .section-title { 
@@ -140,7 +235,7 @@
          text-align: center; 
       }
       .text {
-         margin: 0 auto 55px auto;
+         margin: 0 auto 80px auto;
          max-width: 670px;
          text-align: center;
       }
