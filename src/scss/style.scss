@@ -10,6 +10,7 @@
 @import '../components/header/header';
 @import '../components/menu/nav/nav';
 @import '../components/features/features';
+@import '../components/contact-form/contact-form';
 
 // UI
 @import '../components/ui/ui-burger/ui-burger';
@@ -23,6 +24,7 @@
 @import '../components/sections/schedule-section/schedule-section';
 @import '../components/sections/gallery-section/gallery-section';
 @import '../components/sections/reviews-section/reviews-section';
+@import '../components/sections/contact-section/contact-section';
 
 
 
@@ -75,7 +77,7 @@ i {
 // TODO  Custom Scroll
 
 ::-webkit-scrollbar {
-   background: $weakDecor;
+   background: $weakColorSelection;
    // border-radius: 50px;
    width: 7px;
    height: 7px;
@@ -96,6 +98,7 @@ i {
    scrollbar-color: $title, $weakDecor ; /* «цвет ползунка» «цвет полосы скроллбара» */
    scrollbar-width: thin ;/* толщина */
 }
+
 
 
 

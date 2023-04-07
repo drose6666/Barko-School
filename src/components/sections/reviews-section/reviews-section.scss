@@ -1,24 +1,24 @@
 .reviews-section {
-   margin: 180px 0;
+   margin: 160px 0;
    padding: 60px 0 40px 0;
    background: $weakColorSelection;
+   
    position: relative;
-   // overflow: hidden;
 
    &:after, &:before {
       content: '';
       position: absolute;
       left: 0;
       width: 100%;
-      height: 100px;
+      height: 115px;
    }
    &:before {
-      bottom: 100%;
-      background: url(../../../img/wave_top.svg) no-repeat center / cover;
+      bottom: 99%;
+      background: url(../../../img/wave-reviews-top.svg) no-repeat center / cover;
    }
    &:after {
       top: 100%;
-      background: url(../../../img/wave_bottom.svg) no-repeat center / cover;
+      background: url(../../../img/wave-reviews-bottom.svg) no-repeat center / cover;
    }
    
 
@@ -60,7 +60,7 @@
          font-size: 13rem;
          z-index: 0;
          color: $weakDecor;
-         opacity: .7;
+         opacity: .5;
       }
    }
 
@@ -235,7 +235,7 @@
          text-align: center; 
       }
       .text {
-         margin: 0 auto 80px auto;
+         margin: 0 auto 60px auto;
          max-width: 670px;
          text-align: center;
       }

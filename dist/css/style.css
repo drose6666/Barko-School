@@ -281,6 +281,11 @@
   font-size: 18px;
 }
 
+.ui-btn.btn--submit {
+  padding: 15px 25px;
+  font-size: 17px;
+}
+
 .decor-title {
   margin: 0 0 15px 0;
   padding: 0;
@@ -1818,6 +1823,138 @@ header .logo img {
          -o-transform: translateY(0);
             transform: translateY(0);
   }
+}
+
+.contact-form-wrap {
+  padding: 50px 50px 60px 50px;
+  background: #F5F5F5;
+  max-width: 550px;
+  width: 100%;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+  position: absolute;
+  right: 0;
+  top: -40px;
+}
+
+.contact-form-wrap .form-title {
+  margin-bottom: 24px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 80%;
+  color: #F2184F;
+  text-align: center;
+}
+
+.contact-form-wrap .form-text {
+  margin: 0 auto 50px auto;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 153%;
+  text-align: center;
+  color: #28324D;
+  max-width: 330px;
+}
+
+.contact-form-wrap .contact-form .form-item {
+  position: relative;
+}
+
+.contact-form-wrap .contact-form .form-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contact-form-wrap .contact-form .form-item .ui-input {
+  padding: 18px 25px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 93%;
+  color: #9193A3;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+  background: #fff;
+  border: 1px solid transparent;
+  width: 100%;
+}
+
+.contact-form-wrap .contact-form .form-item .ui-input::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #9193A3;
+}
+
+.contact-form-wrap .contact-form .form-item .ui-input:-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #9193A3;
+}
+
+.contact-form-wrap .contact-form .form-item .ui-input::-moz-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #9193A3;
+}
+
+.contact-form-wrap .contact-form .form-item .ui-input:-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #9193A3;
+}
+
+.contact-form-wrap .contact-form .form-item .ui-input::-ms-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #9193A3;
+}
+
+.contact-form-wrap .contact-form .form-item .ui-input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #9193A3;
+}
+
+.contact-form-wrap .contact-form .form-item .ui-input .error-message {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 100%;
+  color: #F10B38;
+}
+
+.contact-form-wrap .contact-form .form-item .ui-textarea {
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+  min-height: 100px;
+}
+
+.contact-form-wrap .contact-form .submit-item {
+  margin-top: 65px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 30px;
+}
+
+.contact-form-wrap .contact-form .warning-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 131%;
+  color: #9193A3;
+  max-width: 220px;
 }
 
 .ui-burger {
@@ -3915,7 +4052,7 @@ header .logo img {
 }
 
 .reviews-section {
-  margin: 180px 0;
+  margin: 160px 0;
   padding: 60px 0 40px 0;
   background: #FFF3F6;
   position: relative;
@@ -3927,17 +4064,17 @@ header .logo img {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 115px;
 }
 
 .reviews-section:before {
-  bottom: 100%;
-  background: url(../../../img/wave_top.svg) no-repeat center/cover;
+  bottom: 99%;
+  background: url(../../../img/wave-reviews-top.svg) no-repeat center/cover;
 }
 
 .reviews-section:after {
   top: 100%;
-  background: url(../../../img/wave_bottom.svg) no-repeat center/cover;
+  background: url(../../../img/wave-reviews-bottom.svg) no-repeat center/cover;
 }
 
 .reviews-section .ui-container {
@@ -3989,7 +4126,7 @@ header .logo img {
   font-size: 13rem;
   z-index: 0;
   color: #FFE7ED;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .reviews-section .decor-title,
@@ -4278,6 +4415,23 @@ header .logo img {
           transform: none;
 }
 
+.contact-section {
+  padding-top: 100px;
+}
+
+.contact-section .ui-container {
+  position: relative;
+}
+
+.contact-section .section-title {
+  margin-bottom: 50px;
+}
+
+.contact-section #map {
+  width: 100%;
+  height: 400px;
+}
+
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -4330,7 +4484,7 @@ i {
 }
 
 ::-webkit-scrollbar {
-  background: #FFE7ED;
+  background: #FFF3F6;
   width: 7px;
   height: 7px;
 }
@@ -5041,7 +5195,7 @@ i {
   }
 
   .reviews-section .text {
-    margin: 0 auto 80px auto;
+    margin: 0 auto 60px auto;
     max-width: 670px;
     text-align: center;
   }

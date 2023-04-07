@@ -1,0 +1,85 @@
+.contact-form-wrap {
+   padding: 50px 50px 60px 50px;
+   background: $weakSelection;
+   max-width: 550px;
+   width: 100%;
+   border-radius: $blockR;
+   position: absolute;
+   right: 0;
+   top: -40px;
+
+   .form-title {
+      margin-bottom: 24px;
+      font-family: $MontsAlt;
+      font-size: 35px;
+      font-weight: 700;
+      line-height: 80%;
+      color: $action;
+      text-align: center;
+   }
+
+   .form-text {
+      margin: 0 auto 50px auto;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 153%;
+      text-align: center;
+      color: $subtitle;
+      max-width: 330px;
+   }
+
+   .contact-form {
+      .form-item {
+         position: relative;
+         &:not(:last-child) {
+            margin-bottom: 20px;
+         }
+
+         .ui-input {
+            padding: 18px 25px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 93%;
+            color: $text;
+            border-radius: $btnR;
+            background: $light;
+            border: 1px solid transparent;
+            width: 100%;
+            &::placeholder {
+               font-family: $Monts;
+               font-weight: 400;
+               color: $text;
+            }
+            .error-message {
+               font-family: $Rob;
+               font-size: 13px;
+               font-weight: 300;
+               line-height: 100%;
+               color: $error;
+            }
+         }
+
+         .ui-textarea {
+            border-radius: $blockR;
+            min-height: 100px;
+         }
+      }
+
+      .submit-item {
+         margin-top: 65px;
+         display: flex;
+         align-items: center;
+         justify-content: flex-start;
+         gap: 30px;
+      }
+
+      .warning-text {
+         font-family: $Rob;
+         font-size: 13px;
+         font-weight: 400;
+         line-height: 131%;
+         color: $text;
+         max-width: 220px;
+      }
+   }
+}
