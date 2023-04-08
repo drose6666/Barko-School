@@ -1331,8 +1331,8 @@ button.swiper-pagination-bullet {
 }
 
 .socials.socials--footer a {
-  width: 45px;
-  height: 45px;
+  width: 44px;
+  height: 44px;
   background: #fff;
   -webkit-border-radius: 50%;
           border-radius: 50%;
@@ -1349,6 +1349,20 @@ button.swiper-pagination-bullet {
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
+}
+
+.socials.socials--footer a:hover {
+  -webkit-transform: translateY(-3px);
+      -ms-transform: translateY(-3px);
+       -o-transform: translateY(-3px);
+          transform: translateY(-3px);
+  background: #F2184F;
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(242, 24, 79, 0.25);
+          box-shadow: 0px 0px 0px 4px rgba(242, 24, 79, 0.25);
+}
+
+.socials.socials--footer a:hover i {
+  color: #fff;
 }
 
 header {
@@ -1901,6 +1915,29 @@ footer {
   z-index: 1;
 }
 
+.contact-form-wrap.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s, -webkit-transform 0.6s ease 0.3s;
+  transition: opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s, -webkit-transform 0.6s ease 0.3s;
+  -o-transition: opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s, -o-transform 0.6s ease 0.3s;
+  transition: transform 0.6s ease 0.3s, opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s;
+  transition: transform 0.6s ease 0.3s, opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s, -webkit-transform 0.6s ease 0.3s, -o-transform 0.6s ease 0.3s;
+  -webkit-transform: translateX(30px);
+      -ms-transform: translateX(30px);
+       -o-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+.contact-form-wrap.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
 .contact-form-wrap .form-title {
   margin-bottom: 24px;
   font-family: "Montserrat Alternates", sans-serif;
@@ -2106,6 +2143,29 @@ footer {
   -webkit-column-gap: 60px;
      -moz-column-gap: 60px;
           column-gap: 60px;
+}
+
+.contact-links.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.6s ease 0.5s, visibility 0.6s ease 0.5s, -webkit-transform 0.6s ease 0.5s;
+  transition: opacity 0.6s ease 0.5s, visibility 0.6s ease 0.5s, -webkit-transform 0.6s ease 0.5s;
+  -o-transition: opacity 0.6s ease 0.5s, visibility 0.6s ease 0.5s, -o-transform 0.6s ease 0.5s;
+  transition: transform 0.6s ease 0.5s, opacity 0.6s ease 0.5s, visibility 0.6s ease 0.5s;
+  transition: transform 0.6s ease 0.5s, opacity 0.6s ease 0.5s, visibility 0.6s ease 0.5s, -webkit-transform 0.6s ease 0.5s, -o-transform 0.6s ease 0.5s;
+  -webkit-transform: translateX(-30px);
+      -ms-transform: translateX(-30px);
+       -o-transform: translateX(-30px);
+          transform: translateX(-30px);
+}
+
+.contact-links.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
 }
 
 .contact-links .contact-group-links {
@@ -4633,14 +4693,61 @@ footer {
 .contact-section {
   padding-top: 100px;
   position: relative;
+  overflow: hidden;
 }
 
 .contact-section .ui-container {
   position: relative;
 }
 
+.contact-section .decor-title.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.6s ease 0.1s, visibility 0.6s ease 0.1s, -webkit-transform 0.6s ease 0.1s;
+  transition: opacity 0.6s ease 0.1s, visibility 0.6s ease 0.1s, -webkit-transform 0.6s ease 0.1s;
+  -o-transition: opacity 0.6s ease 0.1s, visibility 0.6s ease 0.1s, -o-transform 0.6s ease 0.1s;
+  transition: transform 0.6s ease 0.1s, opacity 0.6s ease 0.1s, visibility 0.6s ease 0.1s;
+  transition: transform 0.6s ease 0.1s, opacity 0.6s ease 0.1s, visibility 0.6s ease 0.1s, -webkit-transform 0.6s ease 0.1s, -o-transform 0.6s ease 0.1s;
+  -webkit-transform: translateX(-30px);
+      -ms-transform: translateX(-30px);
+       -o-transform: translateX(-30px);
+          transform: translateX(-30px);
+}
+
+.contact-section .decor-title.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
 .contact-section .section-title {
   margin-bottom: 50px;
+}
+
+.contact-section .section-title.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s, -webkit-transform 0.6s ease 0.2s;
+  transition: opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s, -webkit-transform 0.6s ease 0.2s;
+  -o-transition: opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s, -o-transform 0.6s ease 0.2s;
+  transition: transform 0.6s ease 0.2s, opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s;
+  transition: transform 0.6s ease 0.2s, opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s, -webkit-transform 0.6s ease 0.2s, -o-transform 0.6s ease 0.2s;
+  -webkit-transform: translateX(-30px);
+      -ms-transform: translateX(-30px);
+       -o-transform: translateX(-30px);
+          transform: translateX(-30px);
+}
+
+.contact-section .section-title.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
 }
 
 .contact-section .map-wrap {

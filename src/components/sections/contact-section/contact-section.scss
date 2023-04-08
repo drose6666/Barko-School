@@ -1,15 +1,19 @@
 .contact-section {
-   $paddingTop: 100px;
-
-   padding-top:$paddingTop;
+   padding-top: 100px;
    position: relative;
+   overflow: hidden;
 
    .ui-container {
       position: relative;
    }
 
+   .decor-title {
+      @include scrollAnimationFade($toRight: true, $delay: .1s);
+   }
+
    .section-title {
       margin-bottom: 50px;
+      @include scrollAnimationFade($toRight: true, $delay: .2s);
    }
 
 

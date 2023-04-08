@@ -1,18 +1,18 @@
 @font-face {
-  font-family: 'Barko School';
-  src:  url('../fonts/Iconsfont/barko-school.eot?ed7i9j');
-  src:  url('../fonts/Iconsfont/barko-school.eot?ed7i9j#iefix') format('embedded-opentype'),
-    url('../fonts/Iconsfont/barko-school.ttf?ed7i9j') format('truetype'),
-    url('../fonts/Iconsfont/barko-school.woff?ed7i9j') format('woff'),
-    url('../fonts/Iconsfont/barko-school.svg?ed7i9j#barko-school') format('svg');
+  font-family: 'barko-school';
+  src:  url('fonts/barko-school.eot?ed7i9j');
+  src:  url('fonts/barko-school.eot?ed7i9j#iefix') format('embedded-opentype'),
+    url('fonts/barko-school.ttf?ed7i9j') format('truetype'),
+    url('fonts/barko-school.woff?ed7i9j') format('woff'),
+    url('fonts/barko-school.svg?ed7i9j#barko-school') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="i-"]:before, [class*=" i-"]:before {
+[class^="i-"], [class*=" i-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'Barko School' !important;
+  font-family: 'barko-school' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;

@@ -23,6 +23,7 @@
    background: $footerBg;
    max-width: 760px;
    column-gap: 60px;
+   @include scrollAnimationFade($toRight: true, $delay: .5s);
 
    .contact-group-links {
       display: flex;
