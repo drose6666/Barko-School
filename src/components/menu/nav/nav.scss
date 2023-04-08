@@ -28,5 +28,20 @@
          display: none;
       }
    }
+
+   &.nav--footer > ul {
+      gap: 40px;
+      li a {
+         color: $light;
+      }
+
+      @media all and (max-width: 1200px) {
+         gap: 20px;
+         li a { font-size: 15px; }
+      }
+      @media all and (max-width: 1060px) {
+         display: none;
+      }
+   }
 }
 

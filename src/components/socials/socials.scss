@@ -12,4 +12,22 @@
          font-size: 18px;
       }
    }
+
+   &.socials--footer {
+      gap: 20px;
+      a {
+         width: 45px;
+         height: 45px;
+         background: $light;
+         border-radius: 50%;
+         box-shadow: $notBlurryLightS;
+         @extend %flexCenter;
+         transition: all .2s ease;
+         i {
+            font-size: 22px;
+            color: $action;
+            transition: all .2s ease;
+         }
+      }
+   }
 }

@@ -111,6 +111,7 @@
       @extend %btnHoverFill;
       &:hover {
          box-shadow: $btnDarkFillS;
+         // background: $hoverDarkBtn;
       }
    }
 
@@ -141,6 +142,7 @@
    &.btn--submit {
       padding: 15px 25px;
       font-size: 17px;
+      flex: 0 0 auto;
    }
 }
 

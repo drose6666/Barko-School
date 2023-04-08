@@ -1,5 +1,8 @@
 .contact-section {
-   padding-top: 100px;
+   $paddingTop: 100px;
+
+   padding-top:$paddingTop;
+   position: relative;
 
    .ui-container {
       position: relative;
@@ -9,8 +12,51 @@
       margin-bottom: 50px;
    }
 
-   #map {
-      width: 100%;
-      height: 400px;
+
+   .map-wrap {
+      flex-direction: column;
+      align-items: center;
+      #map {
+         width: 100%;
+         height: 400px;
+      }
+   }
+
+   .contact-form-container {
+  
+   }
+}
+
+
+
+@media all and (max-width: 1450px) {
+   .contact-section {
+      .contact-form-container {
+         right: 20px;
+      }
+      .map-wrap { display: flex; }
+   }
+}
+
+@media all and (max-width: 900px) {
+   .contact-section {
+      .decor-title { justify-content: center; }
+      .section-title { text-align: center; }
+      .map-wrap { 
+         display: flex; 
+         #map { 
+            order: 2; 
+            height: 300px;
+            iframa { height: 300px; }
+         }
+      }
+      .contact-form-container {
+         padding: 70px 20px;
+         width: 100%;
+         background: $footerBg;
+         position: static;
+         display: flex;
+         justify-content: center;
+      }
    }
 }
