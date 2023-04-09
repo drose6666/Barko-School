@@ -1,5 +1,5 @@
 .contact-links-wrap {
-   padding: 60px 0 50px 0;
+   padding: 60px 0 20px 0;
    background: $footerBg;
    width: 100%;
    position: relative;
@@ -70,7 +70,7 @@
 
 @media all and (max-width: 900px) {
    .contact-links-wrap { 
-      padding: 10px 0 50px 0;
+      padding: 10px 0 20px 0;
       background: $light; 
       order: 1; 
       &:after {

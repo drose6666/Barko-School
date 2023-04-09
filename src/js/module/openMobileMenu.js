@@ -41,3 +41,5 @@ export default class openMobileMenu {
       document.body.classList.remove('no-scroll')
    }
 }
+
+

@@ -10,6 +10,7 @@
 @import '../components/header/header';
 @import '../components/footer/footer';
 @import '../components/menu/nav/nav';
+@import '../components/menu/mobile/mobile-menu'; 
 @import '../components/features/features';
 @import '../components/contact-form/contact-form';
 @import '../components/contact-links/contact-links';
@@ -18,6 +19,8 @@
 @import '../components/ui/ui-burger/ui-burger';
 @import '../components/ui/ui-buttons/ui-buttons';
 @import '../components/ui/ui-preloader/ui-preloader';
+@import '../components/ui/ui-close/ui-close';
+@import '../components/ui/ui-overlay/ui-overlay';
 
 // Sections
 @import '../components/sections/hero-section/hero-section';

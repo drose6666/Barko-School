@@ -1,4 +1,5 @@
 
+import openMobileMenu from './module/openMobileMenu.js';
 import './module/scrollAnimation.js';
 // import Swiper, { Navigation, Pagination } from 'swiper';
 // import 'swiper/css';
@@ -23,6 +24,14 @@ document.querySelectorAll('.swiper-arrows .arrow').forEach(el => {
 
 
 
+// TODO Mobile menu
+const mobileMenu = new openMobileMenu({
+   menu: '.mobile-menu-wrap',
+   close: '.mobile-menu-wrap .ui-close',
+   open: '.ui-burger',
+   overlay: '.ui-overlay',
+   closeItems: '.mobile-menu-list a',
+})
 
 
 

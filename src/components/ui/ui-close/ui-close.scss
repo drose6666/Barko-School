@@ -1,0 +1,8 @@
+.ui-close {
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   background: $action;
+   cursor: pointer;
+   @extend %flexCenter;
+}
