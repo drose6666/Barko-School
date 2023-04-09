@@ -1,6 +1,7 @@
-
-import openMobileMenu from './module/openMobileMenu.js';
 import './module/scrollAnimation.js';
+import openMobileMenu from './module/openMobileMenu.js';
+import openPopup from './module/openPopup.js';
+
 // import Swiper, { Navigation, Pagination } from 'swiper';
 // import 'swiper/css';
 // import 'swiper/css/navigation';
@@ -81,9 +82,6 @@ const courses = new Swiper('#swiper-courses', {
 
 
 
-
-
-
 // TODO Swiprr Reviews
 const reviews = new Swiper('#swiper-reviews', {
    // modules: [Pagination],
@@ -112,3 +110,25 @@ const reviews = new Swiper('#swiper-reviews', {
    },
    autoHeight: true
 })
+
+
+
+// TODO Popup with video
+
+
+window.addEventListener('load', function () {
+   const aboutVideo = `<iframe width="560" height="315" src="https://www.youtube.com/embed/LlCwHnp3kL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+
+   const options = {
+      popup: '#video-popup',
+      open: '.about-video-open',
+      close: '#video-popup .ui-close',
+      overlay: '#video-popup .popup-overlay',
+      whereInsert: '#about-video',
+      frame: aboutVideo
+   }
+
+   new openPopup(options)
+})
+
+

@@ -2587,6 +2587,22 @@ footer {
   font-size: 25px;
 }
 
+.video-wrap {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.video-wrap iframe {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .ui-burger {
   padding: 0;
   width: 30px;
@@ -2839,13 +2855,20 @@ footer {
   cursor: pointer;
 }
 
+.popup-wrap .ui-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+}
+
 .ui-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
   opacity: 0;
   visibility: hidden;
   z-index: 2;
@@ -2857,6 +2880,76 @@ footer {
 .ui-overlay.active {
   opacity: 1;
   visibility: visible;
+}
+
+.popup-wrap {
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template: 1fr/1fr;
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.popup-wrap .popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.popup-wrap .popup {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  max-width: 900px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(30px);
+      -ms-transform: translateY(30px);
+       -o-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.popup-wrap.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-wrap.active .popup {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  -webkit-transition-delay: 0.4s;
+       -o-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 
 .hero-wrap {
@@ -5976,7 +6069,7 @@ i {
   }
 
   .contact-links-wrap {
-    padding: 10px 0 20px 0;
+    padding: 10px 0 50px 0;
     background: #fff;
     -webkit-box-ordinal-group: 2;
     -webkit-order: 1;
