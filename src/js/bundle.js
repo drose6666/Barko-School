@@ -114,21 +114,23 @@ const reviews = new Swiper('#swiper-reviews', {
 
 
 // TODO Popup with video
+const aboutVideo = `<iframe width="560" height="315" src="https://www.youtube.com/embed/LlCwHnp3kL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+const options = {
+   popup: '#video-popup',
+   open: '.about-video-open',
+   close: '#video-popup .ui-close',
+   overlay: '#video-popup .popup-overlay',
+   whereInsert: '#about-video',
+   frame: aboutVideo
+}
+new openPopup(options)
 
 
-window.addEventListener('load', function () {
-   const aboutVideo = `<iframe width="560" height="315" src="https://www.youtube.com/embed/LlCwHnp3kL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
 
-   const options = {
-      popup: '#video-popup',
-      open: '.about-video-open',
-      close: '#video-popup .ui-close',
-      overlay: '#video-popup .popup-overlay',
-      whereInsert: '#about-video',
-      frame: aboutVideo
-   }
-
-   new openPopup(options)
+// TODO Popup schedule
+const schedulePopup = new openPopup({
+   popup: '#schedule-popup',
+   open: '.schedule-item',
+   close: '#schedule-popup .ui-close',
+   overlay: '#schedule-popup .popup-overlay'
 })
-
-

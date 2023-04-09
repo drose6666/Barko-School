@@ -16,15 +16,15 @@
    &.socials--footer {
       gap: 20px;
       a {
-         width: 44px;
-         height: 44px;
+         width: 40px;
+         height: 40px;
          background: $light;
          border-radius: 50%;
          box-shadow: $notBlurryLightS;
          @extend %flexCenter;
          transition: all .2s ease;
          i {
-            font-size: 22px;
+            font-size: 21px;
             color: $action;
             transition: all .2s ease;
          }
