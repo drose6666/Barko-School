@@ -1292,6 +1292,10 @@ button.swiper-pagination-bullet {
 .top-info .items .item > i {
   margin-right: 12px;
   color: #F2184F;
+  font-size: 17px;
+}
+
+.top-info .items .item.item--address > i {
   font-size: 20px;
 }
 

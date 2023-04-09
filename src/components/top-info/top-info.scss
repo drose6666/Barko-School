@@ -18,7 +18,13 @@
          & > i {
             margin-right: 12px;
             color: $action;
-            font-size: 20px;
+            font-size: 17px;
+         }
+
+         &.item--address {
+            & > i {
+               font-size: 20px;
+            }
          }
          &.first:after {
             content: '';

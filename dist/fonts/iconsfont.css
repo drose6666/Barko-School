@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'Barko School';
-  src:  url('../fonts/Iconsfont/barko-school.eot?ed7i9j');
-  src:  url('../fonts/Iconsfont/barko-school.eot?ed7i9j#iefix') format('embedded-opentype'),
-    url('../fonts/Iconsfont/barko-school.ttf?ed7i9j') format('truetype'),
-    url('../fonts/Iconsfont/barko-school.woff?ed7i9j') format('woff'),
-    url('../fonts/Iconsfont/barko-school.svg?ed7i9j#barko-school') format('svg');
+  font-family: 'Barko School Font';
+  src:  url('../fonts/Iconsfont/barko-school.eot?x7sogi');
+  src:  url('../fonts/Iconsfont/barko-school.eot?x7sogi#iefix') format('embedded-opentype'),
+    url('../fonts/Iconsfont/barko-school.ttf?x7sogi') format('truetype'),
+    url('../fonts/Iconsfont/barko-school.woff?x7sogi') format('woff'),
+    url('../fonts/Iconsfont/barko-school.svg?x7sogi#barko-school') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -12,7 +12,7 @@
 
 [class^="i-"]:before, [class*=" i-"]:before {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'Barko School' !important;
+  font-family: 'Barko School Font' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.i-message-fill:before {
+  content: "\e927";
+}
 .i-chat-fill:before {
   content: "\e922";
 }
@@ -34,14 +37,14 @@
 .i-eye-fill:before {
   content: "\e924";
 }
-.i-map-marker-fill:before {
+.i-map-marker-dot-fill:before {
   content: "\e925";
 }
-.i-message-fill:before {
+.i-map-marker-fill:before {
   content: "\e926";
 }
 .i-phone-fill:before {
-  content: "\e927";
+  content: "\e928";
 }
 .i-arrow-bottom-long-regular:before {
   content: "\e91c";
