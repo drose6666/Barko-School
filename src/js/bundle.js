@@ -134,3 +134,29 @@ const schedulePopup = new openPopup({
    close: '#schedule-popup .ui-close',
    overlay: '#schedule-popup .popup-overlay'
 })
+
+
+// TODO
+const schedules = [
+   {id: '1.5y-2y', title: '1.5 - 2 года', img:'../../../img/optimized/schedule/schedule_1.5-2_years_1.5x.webp'},
+   {id: '2y-3y', title: '2 - 3 года', img:'../../../img/optimized/about_img_450w.jpg'},
+   {id: '3y-4y', title: '3 - 4 года', img:'../../../img/optimized/gallery/gallery_2.jpg'},
+]
+const scheduleAge = document.querySelector('.schedule-age')
+const scheduleImage = document.querySelector('.schedule-body img')
+
+// const setData = function (age, img) {
+//    scheduleAge.textContet = age
+//    scheduleImage.src = img
+// }
+
+document.querySelectorAll('.schedule-item').forEach(el => {
+   el.addEventListener('click', function () {
+      const btnAttr = this.getAttribute('data-age')
+      const {title, img} = schedules.find(el => el.id === btnAttr)
+
+      scheduleAge.textContent = title
+      scheduleImage.src = img
+   })
+})
+

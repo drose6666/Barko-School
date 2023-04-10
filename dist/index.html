@@ -11,12 +11,12 @@
    <meta property="og:image" content="http://bkb-company.ru/img/about/about1.jpg">
    <meta property="og:site_name" content="Barko School">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20230409234458" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <link rel="stylesheet" href="../libs/bootstrap-grid.min.css?_v=20230409234458">
-   <link rel="stylesheet" href="../libs/reset.min.css?_v=20230409234458">
-   <link rel="stylesheet" as="font" href="../fonts/fonts.css?_v=20230409234458">
-   <link rel="stylesheet" as="font" href="../fonts/iconsfont.css?_v=20230409234458">
-   <link rel="stylesheet" href="css/style.min.css?_v=20230409234458">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20230410203121" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <link rel="stylesheet" href="../libs/bootstrap-grid.min.css?_v=20230410203121">
+   <link rel="stylesheet" href="../libs/reset.min.css?_v=20230410203121">
+   <link rel="stylesheet" as="font" href="../fonts/fonts.css?_v=20230410203121">
+   <link rel="stylesheet" as="font" href="../fonts/iconsfont.css?_v=20230410203121">
+   <link rel="stylesheet" href="css/style.min.css?_v=20230410203121">
    
    <title>Barko School</title>
 </head>
@@ -442,17 +442,17 @@
       <h2 class="section-title animate">Расписание и цены</h2>
 
       <div class="schedule-items animate">
-         <div class="schedule-item">
+         <div data-age="1.5y-2y" class="schedule-item">
             <div class="schedule-icon"><i class="i-schedule"></i></div>
             <span class="age">9 мес - 1.5 года</span>
          </div>
 
-         <div class="schedule-item">
+         <div data-age="2y-3y" class="schedule-item">
             <div class="schedule-icon"><i class="i-schedule"></i></div>
             <span class="age">1.5 - 2 года</span>
          </div>
 
-         <div class="schedule-item">
+         <div data-age="3y-4y" class="schedule-item">
             <div class="schedule-icon"><i class="i-schedule"></i></div>
             <span class="age">2 - 3 года</span>
          </div>
@@ -495,7 +495,7 @@
       <h2 class="section-title animate">Наши волшебные моменты</h2>
 
       <div class="gallery">
-         <div class="item-1 animate">
+         <div class="item-1 animate" data-img-full="../../../img/optimized/gallery/gallery_1.webp">
             <div class="photo">
                <div class="hidden-overlay">
                   <div class="view-icon"><i class="i-eye"></i></div>
@@ -504,7 +504,7 @@
             </div>
          </div>
 
-         <div class="item-2 animate">
+         <div class="item-2 animate" data-img-full="../../../img/optimized/gallery/gallery_2.webp">
             <div class="photo">
                <div class="hidden-overlay">
                   <div class="view-icon"><i class="i-eye"></i></div>
@@ -513,7 +513,7 @@
             </div>
          </div>
 
-         <div class="item-3 animate">
+         <div class="item-3 animate" data-img-full="../../../img/optimized/gallery/gallery_3.webp">
             <div class="photo">
                <div class="hidden-overlay">
                   <div class="view-icon"><i class="i-eye"></i></div>
@@ -522,7 +522,7 @@
             </div>
          </div>
 
-         <div class="item-4 animate">
+         <div class="item-4 animate" data-img-full="../../../img/optimized/gallery/gallery_4.webp">
             <div class="photo">
                <div class="hidden-overlay">
                   <div class="view-icon"><i class="i-eye"></i></div>
@@ -531,7 +531,7 @@
             </div>
          </div>
 
-         <div class="item-5 animate">
+         <div class="item-5 animate" data-img-full="../../../img/optimized/gallery/gallery_3.webp">
             <div class="photo">
                <div class="hidden-overlay">
                   <div class="view-icon"><i class="i-eye"></i></div>
@@ -540,7 +540,7 @@
             </div>
          </div>
 
-         <div class="item-6 animate">
+         <div class="item-6 animate" data-img-full="../../../img/optimized/gallery/gallery_2.webp">
             <div class="photo">
                <div class="hidden-overlay">
                   <div class="view-icon"><i class="i-eye"></i></div>
@@ -549,7 +549,7 @@
             </div>
          </div>
 
-         <div class="item-7 animate">
+         <div class="item-7 animate" data-img-full="../../../img/optimized/gallery/gallery_4.webp">
             <div class="photo">
                <div class="hidden-overlay">
                   <div class="view-icon"><i class="i-eye"></i></div>
@@ -742,11 +742,11 @@
       
       <div class="schedule-head">
          <h3 class="schedule-title">Расписание занятий</h3>
-         <h5 class="schedule-age">1.5 - 2 года</h5>
+         <h5 class="schedule-age"></h5>
       </div>
 
       <div class="schedule-body">
-         <img src="../../../img/optimized/schedule/schedule_1.5-2_years_1.5x.webp" alt="">
+         <img src="" alt="">
       </div>
 
       <div class="schedule-footer">
@@ -764,7 +764,7 @@
    <div class="ui-overlay"></div>
    
    
-   <script defer src="./libs/jquery-3.6.3.min.js?_v=20230409234458"></script>
-   <script defer src="js/bundle.min.js?_v=20230409234458"></script>
+   <script defer src="./libs/jquery-3.6.3.min.js?_v=20230410203121"></script>
+   <script defer src="js/bundle.min.js?_v=20230410203121"></script>
 </body>
 </html>
