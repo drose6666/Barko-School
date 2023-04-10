@@ -11,12 +11,12 @@
    <meta property="og:image" content="http://bkb-company.ru/img/about/about1.jpg">
    <meta property="og:site_name" content="Barko School">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20230410203121" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <link rel="stylesheet" href="../libs/bootstrap-grid.min.css?_v=20230410203121">
-   <link rel="stylesheet" href="../libs/reset.min.css?_v=20230410203121">
-   <link rel="stylesheet" as="font" href="../fonts/fonts.css?_v=20230410203121">
-   <link rel="stylesheet" as="font" href="../fonts/iconsfont.css?_v=20230410203121">
-   <link rel="stylesheet" href="css/style.min.css?_v=20230410203121">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20230411011555" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <link rel="stylesheet" href="../libs/bootstrap-grid.min.css?_v=20230411011555">
+   <link rel="stylesheet" href="../libs/reset.min.css?_v=20230411011555">
+   <link rel="stylesheet" as="font" href="../fonts/fonts.css?_v=20230411011555">
+   <link rel="stylesheet" as="font" href="../fonts/iconsfont.css?_v=20230411011555">
+   <link rel="stylesheet" href="css/style.min.css?_v=20230411011555">
    
    <title>Barko School</title>
 </head>
@@ -495,7 +495,7 @@
       <h2 class="section-title animate">Наши волшебные моменты</h2>
 
       <div class="gallery">
-         <div class="item-1 animate" data-img-full="../../../img/optimized/gallery/gallery_1.webp">
+         <div class="item-1 animate" data-img-preview="../../../img/optimized/gallery/gallery_1.webp">
             <div class="photo">
                <div class="hidden-overlay">
                   <div class="view-icon"><i class="i-eye"></i></div>
@@ -504,7 +504,7 @@
             </div>
          </div>
 
-         <div class="item-2 animate" data-img-full="../../../img/optimized/gallery/gallery_2.webp">
+         <div class="item-2 animate" data-img-preview="../../../img/optimized/gallery/gallery_2.webp">
             <div class="photo">
                <div class="hidden-overlay">
                   <div class="view-icon"><i class="i-eye"></i></div>
@@ -513,7 +513,7 @@
             </div>
          </div>
 
-         <div class="item-3 animate" data-img-full="../../../img/optimized/gallery/gallery_3.webp">
+         <div class="item-3 animate" data-img-preview="../../../img/optimized/gallery/gallery_3.webp">
             <div class="photo">
                <div class="hidden-overlay">
                   <div class="view-icon"><i class="i-eye"></i></div>
@@ -522,7 +522,7 @@
             </div>
          </div>
 
-         <div class="item-4 animate" data-img-full="../../../img/optimized/gallery/gallery_4.webp">
+         <div class="item-4 animate" data-img-preview="../../../img/optimized/gallery/gallery_4.webp">
             <div class="photo">
                <div class="hidden-overlay">
                   <div class="view-icon"><i class="i-eye"></i></div>
@@ -531,7 +531,7 @@
             </div>
          </div>
 
-         <div class="item-5 animate" data-img-full="../../../img/optimized/gallery/gallery_3.webp">
+         <div class="item-5 animate" data-img-preview="../../../img/optimized/gallery/gallery_3.webp">
             <div class="photo">
                <div class="hidden-overlay">
                   <div class="view-icon"><i class="i-eye"></i></div>
@@ -540,7 +540,7 @@
             </div>
          </div>
 
-         <div class="item-6 animate" data-img-full="../../../img/optimized/gallery/gallery_2.webp">
+         <div class="item-6 animate" data-img-preview="../../../img/optimized/gallery/gallery_2.webp">
             <div class="photo">
                <div class="hidden-overlay">
                   <div class="view-icon"><i class="i-eye"></i></div>
@@ -549,7 +549,7 @@
             </div>
          </div>
 
-         <div class="item-7 animate" data-img-full="../../../img/optimized/gallery/gallery_4.webp">
+         <div class="item-7 animate" data-img-preview="../../../img/optimized/gallery/gallery_4.webp">
             <div class="photo">
                <div class="hidden-overlay">
                   <div class="view-icon"><i class="i-eye"></i></div>
@@ -760,11 +760,30 @@
 
    <div class="popup-overlay"></div>
 </div>
+   <div class="popup-wrap" id="gallery-popup">
+   <div class="popup">
+      
+
+      <div class="gallery-preview">
+         <div class="swiper gallery-preview-swiper" id="gallery-preview-swiper">
+            <div class="swiper-wrapper"></div>
+         </div>
+
+         <div class="swiper-arrows gallery-preview-arrows">
+            <div class="swiper-button-prev arrow"></div>
+            <div class="swiper-button-next arrow"></div>
+         </div>
+      </div>
+   </div>
+
+   <div class="popup-overlay"></div>
+</div>
    
    <div class="ui-overlay"></div>
    
    
-   <script defer src="./libs/jquery-3.6.3.min.js?_v=20230410203121"></script>
-   <script defer src="js/bundle.min.js?_v=20230410203121"></script>
+   <script defer src="./libs/jquery-3.6.3.min.js?_v=20230411011555"></script>
+   <script defer src="./libs/defer/initPreviewGallery.js?_v=20230411011555"></script>
+   <script defer src="js/bundle.min.js?_v=20230411011555"></script>
 </body>
 </html>

@@ -1,15 +1,18 @@
 <div class="popup-wrap" id="gallery-popup">
    <div class="popup">
-      @@include('../../ui/ui-close/ui-close.html')
+      <!-- @@include('../../ui/ui-close/ui-close.html') -->
 
       <div class="gallery-preview">
-         <div class="swiper gallery-preview-swiper" id="gallery-preview-slider">
-            <div class="swiper-wrapper">
-               <div class="swiper-slide preview-img">
-                  <img src="" alt="">
-               </div>
-            </div>
+         <div class="swiper gallery-preview-swiper" id="gallery-preview-swiper">
+            <div class="swiper-wrapper"></div>
+         </div>
+
+         <div class="swiper-arrows gallery-preview-arrows">
+            <div class="swiper-button-prev arrow"></div>
+            <div class="swiper-button-next arrow"></div>
          </div>
       </div>
    </div>
+
+   <div class="popup-overlay"></div>
 </div>
