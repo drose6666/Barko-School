@@ -5,11 +5,12 @@
 })
 
 <body>
-   @@include('./components/top-info/top-info.html')
-   
-
    @@include('./components/ui/ui-preloader/ui-preloader.html')
 
+   @@include('./components/top-info/top-info.html')
+   @@include('./components/header/header-sticky.html')
+   @@include('./components/menu/mobile/mobile-menu.html')
+   
    <main>
       <div class="hero-wrap">
          <img class="hero-bg animate" src="./img/hero_bg.svg" alt="">
@@ -31,8 +32,9 @@
    @@include('./components/popups/schedule-popup/schedule-popup.html')
    @@include('./components/popups/gallery-popup/gallery-popup.html')
    
+   @@include('./components/scrollUp-wrap/scrollUp-wrap.html')
    <div class="ui-overlay"></div>
-   <!-- @@include('./html/ui-components/arrows/scrollUp-arrow.html') -->
+   
    
    <!-- <script defer src="./libs/jquery-3.6.3.min.js"></script> -->
    <script defer src="./libs/defer/initPreviewGallery.js"></script>

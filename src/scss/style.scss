@@ -17,6 +17,9 @@
 @import '../components/popups/video-popup/video-popup';
 @import '../components/popups/schedule-popup/schedule-popup';
 @import '../components/popups/gallery-popup/gallery-popup';
+@import '../components/scrollUp-arrow/scrollUp-arrow';
+@import '../components/scrollUp-wrap/scrollUp-wrap';
+@import '../components/messangers/messangers';
 
 // UI
 @import '../components/ui/ui-burger/ui-burger';
@@ -44,7 +47,11 @@
 
 * {
    box-sizing: border-box;
+   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+      -webkit-tap-highlight-color: transparent;
    scroll-behavior: smooth;
+   scrollbar-color: $title, $weakDecor ; /* «цвет ползунка» «цвет полосы скроллбара» */
+   scrollbar-width: thin ;/* толщина */
 }
 
 a, a:hover, a:focus, a:active {
@@ -52,9 +59,8 @@ a, a:hover, a:focus, a:active {
 }
 
 
-html,body, main {
+html,body {
    height: 100%;
-   position: relative;
    // all: unset; // сбрасывыает все стили до значений по умолчанию
 }
 
@@ -100,14 +106,6 @@ i {
 ::-webkit-scrollbar-corner {
    background: transparent;
 }
-
-// for Mozilla
-* {
-   -webkit-tap-highlight-color: transparent;
-   scrollbar-color: $title, $weakDecor ; /* «цвет ползунка» «цвет полосы скроллбара» */
-   scrollbar-width: thin ;/* толщина */
-}
-
 
 
 

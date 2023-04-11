@@ -11,18 +11,26 @@
    <meta property="og:image" content="http://bkb-company.ru/img/about/about1.jpg">
    <meta property="og:site_name" content="Barko School">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20230411025331" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <link rel="stylesheet" href="../libs/bootstrap-grid.min.css?_v=20230411025331">
-   <link rel="stylesheet" href="../libs/reset.min.css?_v=20230411025331">
-   <link rel="stylesheet" as="font" href="../fonts/fonts.css?_v=20230411025331">
-   <link rel="stylesheet" as="font" href="../fonts/iconsfont.css?_v=20230411025331">
-   <link rel="stylesheet" href="css/style.min.css?_v=20230411025331">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20230411153316" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <link rel="stylesheet" href="../libs/bootstrap-grid.min.css?_v=20230411153316">
+   <link rel="stylesheet" href="../libs/reset.min.css?_v=20230411153316">
+   <link rel="stylesheet" as="font" href="../fonts/fonts.css?_v=20230411153316">
+   <link rel="stylesheet" as="font" href="../fonts/iconsfont.css?_v=20230411153316">
+   <link rel="stylesheet" href="css/style.min.css?_v=20230411153316">
    
    <title>Barko School</title>
 </head>
 
 
 <body>
+   <div class="ui-preloader" id="ui-preloader">
+   <div class="loadingio-spinner-eclipse-e1yqoh6tcuv">
+      <div class="ldio-q8lh4k68ww">
+         <div></div>
+      </div>
+   </div>
+</div>
+
    <div class="top-info">
    <div class="ui-container container--flex">
       <div class="items">
@@ -51,37 +59,26 @@
       </div>
    </div>
 </div>
-   
-
-   <div class="ui-preloader" id="ui-preloader">
-   <div class="loadingio-spinner-eclipse-e1yqoh6tcuv">
-      <div class="ldio-q8lh4k68ww">
-         <div></div>
-      </div>
-   </div>
-</div>
-
-   <main>
-      <div class="hero-wrap">
-         <img class="hero-bg animate" src="./img/hero_bg.svg" alt="">
-         <header>
+   <header class="sticky">
    <div class="ui-container container--flex">
       <a href="#" class="logo"><img src="../../img/logo_dark.svg" alt="Barko School Logo"></a>
 
       <nav class="nav nav--head">
          <ul>
-   <li><a href="#">О нас</a></li>
-   <li><a href="#">Курсы</a></li>
-   <li><a href="#">Расписание и цены</a></li>
-   <li><a href="#">Отзывы</a></li>
-   <li><a href="#">Контакты</a></li>
+   <li><a href="#about">О нас</a></li>
+   <li><a href="#courses">Курсы</a></li>
+   <li><a href="#schedule">Расписание и цены</a></li>
+   <li><a href="#reviews">Отзывы</a></li>
+   <li><a href="#contact">Контакты</a></li>
 </ul>
       </nav>
 
       <button class="ui-burger">
    <span></span>
 </button>
-      <div class="mobile-menu-wrap">
+   </div>
+</header>
+   <div class="mobile-menu-wrap">
    <div class="mobile-head">
       <a href="#" class="mobile-logo"><img src="../../../img/logo_light.svg" alt="Barko School Logo"></a>
       <div class="ui-close"><i class="i-close"></i></div>
@@ -90,11 +87,11 @@
    <div class="mobile-menu">
       <nav class="menu-item mobile-nav">
          <ul class="mobile-menu-list">
-            <li><a href="#"><span>О нас</span></a></li>
-            <li><a href="#"><span>Курсы</span></a></li>
-            <li><a href="#"><span>Расписание и Цены</span></a></li>
-            <li><a href="#"><span>Отзывы</span></a></li>
-            <li><a href="#"><span>Контакты</span></a></li>
+            <li><a href="#about"><span>О нас</span></a></li>
+            <li><a href="#courses"><span>Курсы</span></a></li>
+            <li><a href="#schedule"><span>Расписание и Цены</span></a></li>
+            <li><a href="#reviews"><span>Отзывы</span></a></li>
+            <li><a href="#contact"><span>Контакты</span></a></li>
          </ul>
       </nav>
 
@@ -120,6 +117,27 @@
       </div>
    </div>
 </div>
+   
+   <main>
+      <div class="hero-wrap">
+         <img class="hero-bg animate" src="./img/hero_bg.svg" alt="">
+         <header class="header">
+   <div class="ui-container container--flex">
+      <a href="#" class="logo"><img src="../../img/logo_dark.svg" alt="Barko School Logo"></a>
+
+      <nav class="nav nav--head">
+         <ul>
+   <li><a href="#about">О нас</a></li>
+   <li><a href="#courses">Курсы</a></li>
+   <li><a href="#schedule">Расписание и цены</a></li>
+   <li><a href="#reviews">Отзывы</a></li>
+   <li><a href="#contact">Контакты</a></li>
+</ul>
+      </nav>
+
+      <button class="ui-burger">
+   <span></span>
+</button>
    </div>
 </header>
          <section class="hero-section">
@@ -285,7 +303,7 @@
    </div>
 </div>
 </section>
-      <section class="courses-section">
+      <section class="courses-section" id="courses">
    <div class="ui-container">
       <h3 class="decor-title animate">Наши курсы</h3>
       <div class="heading">
@@ -436,7 +454,7 @@
       </div>
    </div>
 </section>
-      <section class="schedule-section">
+      <section class="schedule-section" id="schedule">
    <div class="ui-container">
       <h3 class="decor-title animate">Возрастные группы</h3>
       <h2 class="section-title animate">Расписание и цены</h2>
@@ -489,7 +507,7 @@
       </div>
    </div>
 </section>
-      <section class="gallery-section">
+      <section class="gallery-section" id="gallery">
    <div class="ui-container">
       <h3 class="decor-title animate">Немного вдохновения</h3>
       <h2 class="section-title animate">Наши волшебные моменты</h2>
@@ -498,7 +516,7 @@
          <div class="item-1 animate" data-img-preview="../../../img/optimized/gallery/gallery_1.webp">
             <div class="photo">
                <div class="hidden-overlay">
-                  <div class="view-icon"><i class="i-eye"></i></div>
+                  <div class="view-icon"></div>
                </div>
                <img loading="lazy" src="../../../img/optimized/gallery/gallery_1.webp" alt="">
             </div>
@@ -507,7 +525,7 @@
          <div class="item-2 animate" data-img-preview="../../../img/optimized/gallery/gallery_2.webp">
             <div class="photo">
                <div class="hidden-overlay">
-                  <div class="view-icon"><i class="i-eye"></i></div>
+                  <div class="view-icon"></div>
                </div>
                <img loading="lazy" src="../../../img/optimized/gallery/gallery_2.webp" alt="">
             </div>
@@ -516,7 +534,7 @@
          <div class="item-3 animate" data-img-preview="../../../img/optimized/gallery/gallery_3.webp">
             <div class="photo">
                <div class="hidden-overlay">
-                  <div class="view-icon"><i class="i-eye"></i></div>
+                  <div class="view-icon"></div>
                </div>
                <img loading="lazy" src="../../../img/optimized/gallery/gallery_3.webp" alt="">
             </div>
@@ -525,7 +543,7 @@
          <div class="item-4 animate" data-img-preview="../../../img/optimized/gallery/gallery_4.webp">
             <div class="photo">
                <div class="hidden-overlay">
-                  <div class="view-icon"><i class="i-eye"></i></div>
+                  <div class="view-icon"></div>
                </div>
                <img loading="lazy" src="../../../img/optimized/gallery/gallery_4.webp" alt="">
             </div>
@@ -534,7 +552,7 @@
          <div class="item-5 animate" data-img-preview="../../../img/optimized/gallery/gallery_3.webp">
             <div class="photo">
                <div class="hidden-overlay">
-                  <div class="view-icon"><i class="i-eye"></i></div>
+                  <div class="view-icon"></div>
                </div>
                <img loading="lazy" src="../../../img/optimized/gallery/gallery_3.webp" alt="">
             </div>
@@ -543,7 +561,7 @@
          <div class="item-6 animate" data-img-preview="../../../img/optimized/gallery/gallery_2.webp">
             <div class="photo">
                <div class="hidden-overlay">
-                  <div class="view-icon"><i class="i-eye"></i></div>
+                  <div class="view-icon"></div>
                </div>
                <img loading="lazy" src="../../../img/optimized/gallery/gallery_2.webp" alt="">
             </div>
@@ -552,7 +570,7 @@
          <div class="item-7 animate" data-img-preview="../../../img/optimized/gallery/gallery_4.webp">
             <div class="photo">
                <div class="hidden-overlay">
-                  <div class="view-icon"><i class="i-eye"></i></div>
+                  <div class="view-icon"></div>
                </div>
                <img loading="lazy" src="../../../img/optimized/gallery/gallery_4.webp" alt="">
             </div>
@@ -562,7 +580,7 @@
       <a href="#" class="ui-btn btn--dark btn-all">Смотреть все</a>
    </div>
 </section>
-      <section class="reviews-section">
+      <section class="reviews-section" id="reviews">
    <div class="ui-container">
       <div class="info">
          <h3 class="decor-title animate">Отзывы</h3>
@@ -632,7 +650,7 @@
       </div>
    </div>
 </section>
-      <section class="contact-section">
+      <section class="contact-section" id="contact">
    <div class="ui-container">
       <h3 class="decor-title animate">Контакты</h3>
       <h2 class="section-title animate">Наши контакты</h2>
@@ -705,11 +723,11 @@
 
       <nav class="nav nav--footer">
          <ul>
-   <li><a href="#">О нас</a></li>
-   <li><a href="#">Курсы</a></li>
-   <li><a href="#">Расписание и цены</a></li>
-   <li><a href="#">Отзывы</a></li>
-   <li><a href="#">Контакты</a></li>
+   <li><a href="#about">О нас</a></li>
+   <li><a href="#courses">Курсы</a></li>
+   <li><a href="#schedule">Расписание и цены</a></li>
+   <li><a href="#reviews">Отзывы</a></li>
+   <li><a href="#contact">Контакты</a></li>
 </ul>
       </nav>
 
@@ -761,9 +779,10 @@
    <div class="popup-overlay"></div>
 </div>
    <div class="popup-wrap" id="gallery-popup">
+   <div class="ui-close"><i class="i-close"></i></div>
+
    <div class="popup">
       
-
       <div class="gallery-preview">
          <div class="swiper gallery-preview-swiper" id="gallery-preview-swiper">
             <div class="swiper-wrapper"></div>
@@ -779,11 +798,24 @@
    <div class="popup-overlay"></div>
 </div>
    
+   <div class="scrollUp-wrap sticky">
+   <div class="scrollUp-item"><div class="scrollUp-arrow"></div></div>
+   <div class="scrollUp-item"><div class="messangers-wrap" tabindex="0">
+   <div class="open">
+      <i class="i-chat-fill"></i>
+      <i class="i-close"></i>
+   </div>
+   
+   <a href="#" target="_blank" class="messanger whatsapp"></a>
+   <a href="#" target="_blank" class="messanger telegram"></a>
+   <a href="#" target="_blank" class="messanger viber"></a>
+</div></div>
+</div>
    <div class="ui-overlay"></div>
    
    
-   <!-- <script defer src="./libs/jquery-3.6.3.min.js?_v=20230411025331"></script> -->
-   <script defer src="./libs/defer/initPreviewGallery.js?_v=20230411025331"></script>
-   <script defer src="js/bundle.min.js?_v=20230411025331"></script>
+   <!-- <script defer src="./libs/jquery-3.6.3.min.js?_v=20230411153316"></script> -->
+   <script defer src="./libs/defer/initPreviewGallery.js?_v=20230411153316"></script>
+   <script defer src="js/bundle.min.js?_v=20230411153316"></script>
 </body>
 </html>

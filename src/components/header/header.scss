@@ -1,5 +1,24 @@
 header {
-   padding-top: 25px;
+   padding: 25px 0 0 0;
+   &.sticky {
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: $light;
+      box-shadow: $blocksWhiteS;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-20px);
+      z-index: 2;
+      &.active {
+         transform: none;
+         opacity: 1;
+         visibility: visible;
+         transition: all 1s ease;
+      }
+   }
 
    .logo {
       max-width: 210px;

@@ -60,6 +60,18 @@ const schedulePopup = new openPopup({
 })
 
 
+
+// TODO Gallery popup
+const galleryPopup = new openPopup({
+   popup: '#gallery-popup',
+   open: '.gallery [class^="item"]',
+   close: '#gallery-popup .ui-close',
+   overlay: '#gallery-popup .popup-overlay'
+})
+
+
+
+
 // TODO Создание Popup с расписаниями
 const schedules = [
    {id: '1.5y-2y', title: '1.5 - 2 года', img:'../../../img/optimized/schedule/schedule_1.5-2_years_1.5x.webp'},
@@ -72,19 +84,60 @@ const scheduleImage = document.querySelector('.schedule-body img')
 document.querySelectorAll('.schedule-item').forEach(el => {
    el.addEventListener('click', function () {
       const btnAttr = this.getAttribute('data-age')
-      const {title, img} = schedules.find(el => el.id === btnAttr)
 
-      scheduleAge.textContent = title
-      scheduleImage.src = img
+      if (btnAttr) {
+         const {title, img} = schedules.find(el => el.id === btnAttr)
+         scheduleAge.textContent = title
+         scheduleImage.src = img
+      } else {
+         scheduleAge.textContent = ''
+         scheduleImage.src = ''
+      }
    })
 })
 
 
 
-// TODO Создание Preview Галереи
-const galleryPopup = new openPopup({
-   popup: '#gallery-popup',
-   open: '.gallery [class^="item"]',
-   close: '#gallery-popup .ui-close',
-   overlay: '#gallery-popup .popup-overlay'
+
+//
+window.addEventListener('load', () => {
+   fadeInNavOnScroll('.sticky', 200)
+   
+   window.addEventListener('scroll', () => {
+      fadeInNavOnScroll('.sticky', 200)
+   })
+})
+
+function fadeInNavOnScroll(elements, distance) {
+   let items = document.querySelectorAll(elements)
+
+   for (let i = 0; i < items.length; i++) {
+      if (window.scrollY >= distance) 
+         items[i].classList.add('active')
+      
+      if (window.scrollY <= 150)
+         items[i].classList.remove('active')
+   }
+}
+
+
+
+
+// TODO Открытие иконок с мессенджерами
+const mesangers = document.querySelector('.messangers-wrap')
+document.querySelector('.messangers-wrap').addEventListener('click', function () {
+   document.querySelector('.scrollUp-arrow').classList.toggle('hide')
+   this.classList.toggle('active')
+})
+
+
+
+// TODO Scroll Up
+let scrollUpArrow = document.querySelector('.scrollUp-arrow')
+scrollUpArrow.addEventListener('click', () => {
+   window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+   });
 })

@@ -14,6 +14,7 @@
 .about-img .about-video-open .video-btn,
 .about-img .skill,
 .ui-close,
+.messangers-wrap,
 #schedule-popup .schedule-head .schedule-age,
 .contact-links .contact-link .icon,
 .socials.socials--footer a {
@@ -1372,7 +1373,37 @@ button.swiper-pagination-bullet {
 }
 
 header {
-  padding-top: 25px;
+  padding: 25px 0 0 0;
+}
+
+header.sticky {
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  -webkit-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.07);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+       -o-transform: translateY(-20px);
+          transform: translateY(-20px);
+  z-index: 2;
+}
+
+header.sticky.active {
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 header .logo {
@@ -1457,6 +1488,7 @@ footer {
   max-width: 400px;
   width: 100%;
   height: 100%;
+  min-height: 100%;
   position: fixed;
   top: 0;
   overflow: hidden;
@@ -1487,11 +1519,6 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: #1F2126;
-}
-
-.mobile-menu-wrap .mobile-head i {
-  font-size: 30px;
-  color: #9193A3;
 }
 
 .mobile-menu-wrap .mobile-logo {
@@ -2723,7 +2750,7 @@ footer {
 }
 
 #gallery-popup .popup {
-  max-width: 900px;
+  max-width: 1200px;
   height: 100%;
 }
 
@@ -2750,6 +2777,314 @@ footer {
      -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+#gallery-popup #gallery-preview-swiper .swiper-slide img {
+  max-width: 1200px;
+  width: 100%;
+  height: auto;
+}
+
+.scrollUp-arrow {
+  width: 55px;
+  height: 55px;
+  background: #fff;
+  -webkit-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.07);
+  position: relative;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.scrollUp-arrow:after {
+  content: "\e903";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: "Barko School Font";
+  font-size: 30px;
+  color: #F2184F;
+}
+
+.scrollUp-arrow:hover {
+  background: #202C45;
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(32, 44, 69, 0.2);
+          box-shadow: 0px 0px 0px 4px rgba(32, 44, 69, 0.2);
+}
+
+.scrollUp-arrow:hover:after {
+  color: #fff;
+}
+
+.scrollUp-arrow.hide {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+       -o-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.scrollUp-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  z-index: 2;
+}
+
+.scrollUp-wrap.sticky {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.scrollUp-wrap.sticky .scrollUp-item {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-30px);
+      -ms-transform: translateY(-30px);
+       -o-transform: translateY(-30px);
+          transform: translateY(-30px);
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.scrollUp-wrap.sticky.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scrollUp-wrap.sticky.active .scrollUp-item:nth-child(1) {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  -webkit-transition-delay: 0.25s;
+       -o-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.scrollUp-wrap.sticky.active .scrollUp-item:nth-child(2) {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  -webkit-transition-delay: 0.4s;
+       -o-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.messangers-wrap .messanger:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "Barko School Font";
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.messangers-wrap {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.messangers-wrap .open {
+  width: 55px;
+  height: 55px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: relative;
+  background: #F2184F;
+  -webkit-box-shadow: 0px 8px 30px -13px rgba(169, 12, 52, 0.7);
+          box-shadow: 0px 8px 30px -13px rgba(169, 12, 52, 0.7);
+  cursor: pointer;
+  z-index: 1;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.messangers-wrap .open i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.messangers-wrap .open i.i-chat-fill {
+  font-size: 25px;
+}
+
+.messangers-wrap .open i.i-close {
+  font-size: 19px;
+  opacity: 0;
+}
+
+.messangers-wrap .open:hover {
+  background: #202C45;
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(32, 44, 69, 0.2);
+          box-shadow: 0px 0px 0px 4px rgba(32, 44, 69, 0.2);
+}
+
+.messangers-wrap .messanger {
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  z-index: 0;
+}
+
+.messangers-wrap .messanger:after {
+  font-size: 22px;
+}
+
+.messangers-wrap .messanger.whatsapp {
+  background: #50ca5e;
+}
+
+.messangers-wrap .messanger.whatsapp:after {
+  content: "\e90c";
+}
+
+.messangers-wrap .messanger.telegram {
+  background: #249cd7;
+}
+
+.messangers-wrap .messanger.telegram:after {
+  content: "\e90d";
+}
+
+.messangers-wrap .messanger.viber {
+  background: #6f3faa;
+}
+
+.messangers-wrap .messanger.viber:after {
+  content: "\e915";
+}
+
+.messangers-wrap.active .open {
+  background: #202C45;
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(32, 44, 69, 0.2);
+          box-shadow: 0px 0px 0px 4px rgba(32, 44, 69, 0.2);
+}
+
+.messangers-wrap.active .open i.i-chat-fill {
+  opacity: 0;
+}
+
+.messangers-wrap.active .open i.i-close {
+  opacity: 1;
+}
+
+.messangers-wrap.active .messanger {
+  opacity: 1;
+  visibility: visible;
+}
+
+.messangers-wrap.active .messanger.whatsapp {
+  -webkit-transition-delay: 0.1s;
+       -o-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+  -webkit-transform: translate(-50px, -80px);
+      -ms-transform: translate(-50px, -80px);
+       -o-transform: translate(-50px, -80px);
+          transform: translate(-50px, -80px);
+}
+
+.messangers-wrap.active .messanger.whatsapp:hover {
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(80, 202, 94, 0.2);
+          box-shadow: 0px 0px 0px 4px rgba(80, 202, 94, 0.2);
+}
+
+.messangers-wrap.active .messanger.telegram {
+  -webkit-transition-delay: 0.18s;
+       -o-transition-delay: 0.18s;
+          transition-delay: 0.18s;
+  -webkit-transform: translate(-85px, -50%);
+      -ms-transform: translate(-85px, -50%);
+       -o-transform: translate(-85px, -50%);
+          transform: translate(-85px, -50%);
+}
+
+.messangers-wrap.active .messanger.telegram:hover {
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(36, 156, 215, 0.2);
+          box-shadow: 0px 0px 0px 4px rgba(36, 156, 215, 0.2);
+}
+
+.messangers-wrap.active .messanger.viber {
+  -webkit-transition-delay: 0.26s;
+       -o-transition-delay: 0.26s;
+          transition-delay: 0.26s;
+  -webkit-transform: translate(-50px, 30px);
+      -ms-transform: translate(-50px, 30px);
+       -o-transform: translate(-50px, 30px);
+          transform: translate(-50px, 30px);
+}
+
+.messangers-wrap.active .messanger.viber:hover {
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(111, 63, 170, 0.2);
+          box-shadow: 0px 0px 0px 4px rgba(111, 63, 170, 0.2);
 }
 
 .ui-burger {
@@ -3000,7 +3335,8 @@ footer {
   height: 30px;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  background: #F2184F;
+  color: #F2184F;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -3032,7 +3368,7 @@ footer {
 }
 
 .popup-wrap {
-  padding: 40px 20px 20px 40px;
+  padding: 40px 20px 40px 20px;
   position: fixed;
   top: 0;
   left: 0;
@@ -4866,18 +5202,44 @@ footer {
   background: #fff;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  -webkit-box-shadow: 0px 0px 0px 12px rgba(255, 255, 255, 0.13);
-          box-shadow: 0px 0px 0px 12px rgba(255, 255, 255, 0.13);
-  font-size: 20px;
-  color: #F2184F;
+  -webkit-box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.13);
+          box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.13);
+  position: relative;
   opacity: 0;
   -webkit-transform: translateY(10px);
       -ms-transform: translateY(10px);
        -o-transform: translateY(10px);
           transform: translateY(10px);
-  -webkit-transition: all 0.3s ease 0.1s;
-  -o-transition: all 0.3s ease 0.1s;
-  transition: all 0.3s ease 0.1s;
+  -webkit-transition: opacity 0.3s ease 0.1s, background 0.2s ease;
+  -o-transition: opacity 0.3s ease 0.1s, background 0.2s ease;
+  transition: opacity 0.3s ease 0.1s, background 0.2s ease;
+}
+
+.gallery-section .gallery [class^=item] .photo .view-icon:after {
+  content: "\e924";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: "Barko School Font";
+  color: #F2184F;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 20px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.gallery-section .gallery [class^=item] .photo .view-icon:hover {
+  background: #F2184F;
+  -webkit-box-shadow: 0px 0px 0px 8px rgba(242, 24, 79, 0.2);
+          box-shadow: 0px 0px 0px 8px rgba(242, 24, 79, 0.2);
+}
+
+.gallery-section .gallery [class^=item] .photo .view-icon:hover:after {
+  color: #fff;
 }
 
 .gallery-section .gallery [class^=item] .photo:hover {
@@ -5391,7 +5753,13 @@ footer {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
+  scrollbar-color: #212529, #FFE7ED;
+  /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-width: thin;
+  /* толщина */
 }
 
 a,
@@ -5402,10 +5770,8 @@ a:active {
 }
 
 html,
-body,
-main {
+body {
   height: 100%;
-  position: relative;
 }
 
 body {
@@ -5452,14 +5818,6 @@ i {
 
 ::-webkit-scrollbar-corner {
   background: transparent;
-}
-
-* {
-  -webkit-tap-highlight-color: transparent;
-  scrollbar-color: #212529, #FFE7ED;
-  /* «цвет ползунка» «цвет полосы скроллбара» */
-  scrollbar-width: thin;
-  /* толщина */
 }
 
 .swiper-button-prev,
