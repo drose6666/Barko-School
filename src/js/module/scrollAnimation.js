@@ -1,11 +1,11 @@
 window.addEventListener('load', () => {
-   let options = {
+   const options = {
       root: null,
       rootMargin: '0px',
       threshold: 0.1
    }
 
-   let callback = (entries, observer) => {
+   const callback = (entries, observer) => {
       entries.forEach(entry => {
          if (entry.isIntersecting) {
             entry.target.classList.add('animation')
@@ -13,10 +13,27 @@ window.addEventListener('load', () => {
       })
    }
 
-   let observer = new IntersectionObserver(callback, options)
+   const callbackFooter = (entries) => {
+      entries.forEach(entry => {
+         if (entry.isIntersecting) {
+            entry.target.classList.add('animation')
+         } else {
+            entry.target.classList.remove('animation')
+         }
+      })
+   }
 
-   let animateList = document.querySelectorAll('.animate')
+
+
+   const observer = new IntersectionObserver(callback, options)
+   const observeFooter = new IntersectionObserver(callbackFooter, options)
+
+   const animateList = document.querySelectorAll('.animate')
+   const footer = document.querySelector('footer')
+
    animateList?.forEach(i => {
       observer.observe(i)
    })
+
+   observeFooter.observe(footer)
 })

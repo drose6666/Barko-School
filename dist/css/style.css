@@ -1410,14 +1410,17 @@ button.swiper-pagination-bullet {
 }
 
 .socials.socials--footer {
-  gap: 0px;
+  gap: 20px;
 }
 
 .socials.socials--footer a {
   width: 40px;
   height: 40px;
+  background: #fff;
   -webkit-border-radius: 50%;
           border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.25);
+          box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.25);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -1425,7 +1428,7 @@ button.swiper-pagination-bullet {
 
 .socials.socials--footer a i {
   font-size: 21px;
-  color: #fff;
+  color: #F2184F;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -1443,6 +1446,26 @@ button.swiper-pagination-bullet {
 
 .socials.socials--footer a:hover i {
   color: #fff;
+}
+
+.socials.socials--schedule {
+  gap: 30px;
+}
+
+.socials.socials--schedule a {
+  font-size: 19px;
+  color: #fff;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.socials.socials--schedule a:hover {
+  -webkit-transform: translateY(-3px);
+      -ms-transform: translateY(-3px);
+       -o-transform: translateY(-3px);
+          transform: translateY(-3px);
+  color: #F2184F;
 }
 
 header {
@@ -1584,6 +1607,7 @@ footer {
   visibility: hidden;
   right: -400px;
   z-index: 3;
+  overflow-y: auto;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -1747,7 +1771,7 @@ footer {
 }
 
 .mobile-menu-wrap .mobile-menu .mobile-contact-links .mobile-contact-link:not(:first-child) {
-  margin-top: 30px;
+  margin-top: 22px;
 }
 
 .mobile-menu-wrap .mobile-menu .mobile-contact-links a.mobile-contact-link > span {
@@ -3007,7 +3031,7 @@ footer {
   gap: 10px;
   position: fixed;
   bottom: 60px;
-  right: 20px;
+  right: 15px;
   z-index: 2;
 }
 
@@ -3017,6 +3041,10 @@ footer {
   -webkit-transition: all 0.7s ease;
   -o-transition: all 0.7s ease;
   transition: all 0.7s ease;
+}
+
+.scrollUp-wrap.sticky.up {
+  bottom: 180px;
 }
 
 .scrollUp-wrap.sticky .scrollUp-item {
@@ -6705,6 +6733,10 @@ i {
 }
 
 @media all and (max-width: 900px) {
+  footer {
+    padding: 50px 0 0 0;
+  }
+
   .contact-form-wrap {
     padding: 0;
     max-width: 700px;

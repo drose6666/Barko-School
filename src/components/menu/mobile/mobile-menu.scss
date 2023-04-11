@@ -16,6 +16,7 @@
    visibility: hidden;
    right: -400px;
    z-index: 3;
+   overflow-y: auto;
    transition: all .4s ease;
 
    .mobile-head {
@@ -116,7 +117,7 @@
                i { font-size: 25px;}
             }
             &:not(:first-child) {
-               margin-top: 30px;
+               margin-top: 22px;
             }
          }
          a.mobile-contact-link  {

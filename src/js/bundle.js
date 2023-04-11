@@ -104,12 +104,15 @@ document.querySelectorAll('.schedule-item').forEach(el => {
 
 
 
+const footer = document.querySelector('footer')
+const scrollWrap = document.querySelector('.scrollUp-wrap')
 
 window.addEventListener('load', () => {
    fadeInNavOnScroll('.sticky', 200)
    
    window.addEventListener('scroll', () => {
       fadeInNavOnScroll('.sticky', 200)
+      footer.classList.contains('animation') ? scrollWrap.classList.add('up') : scrollWrap.classList.remove('up')
    })
 })
 
