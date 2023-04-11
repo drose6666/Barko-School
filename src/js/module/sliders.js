@@ -12,10 +12,10 @@ const courses = new Swiper('#swiper-courses', {
    spaceBetween: 20,
    centeredSlides: true,
    speed: 400,
-   autoplay: {
-      delay: 2500,
-      disableOnInteraction: true,
-   },
+   // autoplay: {
+   //    delay: 2500,
+   //    disableOnInteraction: true,
+   // },
    pauseOnMouseEnter: true,
    keyboard: {
       enabled: true,
@@ -57,10 +57,10 @@ const reviews = new Swiper('#swiper-reviews', {
    loop: true,
    speed: 400,
    spaceBetween: 20,
-   autoplay: {
-      delay: 2500,
-      disableOnInteraction: true
-   },
+   // autoplay: {
+   //    delay: 2500,
+   //    disableOnInteraction: true
+   // },
    keyboard: {
       enabled: true,
       onlyInViewport: false,

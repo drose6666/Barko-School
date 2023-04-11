@@ -1388,27 +1388,36 @@ button.swiper-pagination-bullet {
           align-items: center;
 }
 
-.socials.socials--top a:not(:last-child) {
-  margin-right: 12px;
+.socials.socials--top a {
+  display: inline-block;
+  color: #9193A3;
+  font-size: 19px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-.socials.socials--top i {
-  color: #9193A3;
-  font-size: 18px;
+.socials.socials--top a:hover {
+  color: #F2184F;
+  -webkit-transform: translateY(-3px);
+      -ms-transform: translateY(-3px);
+       -o-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.socials.socials--top a:not(:last-child) {
+  margin-right: 18px;
 }
 
 .socials.socials--footer {
-  gap: 20px;
+  gap: 0px;
 }
 
 .socials.socials--footer a {
   width: 40px;
   height: 40px;
-  background: #fff;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  -webkit-box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.25);
-          box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.25);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -1416,7 +1425,7 @@ button.swiper-pagination-bullet {
 
 .socials.socials--footer a i {
   font-size: 21px;
-  color: #F2184F;
+  color: #fff;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -5810,7 +5819,7 @@ footer {
           transform: none;
 }
 
-.swiper-reviews.animate {
+.reviews-swiper-wrap.animate {
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity 0.6s ease 0.5s, visibility 0.6s ease 0.5s, -webkit-transform 0.6s ease 0.5s;
@@ -5824,7 +5833,7 @@ footer {
           transform: translateX(30px);
 }
 
-.swiper-reviews.animate.animation {
+.reviews-swiper-wrap.animate.animation {
   opacity: 1;
   visibility: visible;
   -webkit-transform: none;

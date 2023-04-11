@@ -5,14 +5,14 @@ import Validation from './module/validation.js';
 import './module/sliders.js';
 
 
-let validForm = new Validation(
-   '#contact-form',
-   '#form-contact [name=user_name]',
-   null,
-   '#form-contact [name=user_phone]',
-   '#form-contact [name=user_email]',
-   '#form-contact [name=user_message]'
-)
+// let validForm = new Validation(
+//    '#contact-form',
+//    '#form-contact [name=user_name]',
+//    null,
+//    '#form-contact [name=user_phone]',
+//    '#form-contact [name=user_email]',
+//    '#form-contact [name=user_message]'
+// )
 
 
  
@@ -81,8 +81,8 @@ const galleryPopup = new openPopup({
 // TODO Создание Popup с расписаниями
 const schedules = [
    {id: '1.5y-2y', title: '1.5 - 2 года', img:'../../../img/optimized/schedule/schedule_1.5-2_years_1.5x.webp'},
-   {id: '2y-3y', title: '2 - 3 года', img:'../../../img/optimized/about_img_450w.jpg'},
-   {id: '3y-4y', title: '3 - 4 года', img:'../../../img/optimized/gallery/gallery_2.jpg'},
+   {id: '2y-3y', title: '2 - 3 года', img:'../../../img/optimized/schedule/schedule_1.5-2_years_1.5x.webp'},
+   {id: '3y-4y', title: '3 - 4 года', img:'../../../img/optimized/schedule/schedule_1.5-2_years_1.5x.webp'},
 ]
 const scheduleAge = document.querySelector('.schedule-age')
 const scheduleImage = document.querySelector('.schedule-body img')
@@ -105,7 +105,6 @@ document.querySelectorAll('.schedule-item').forEach(el => {
 
 
 
-//
 window.addEventListener('load', () => {
    fadeInNavOnScroll('.sticky', 200)
    
@@ -126,6 +125,9 @@ function fadeInNavOnScroll(elements, distance) {
    }
 }
 
+function changePosScrollWrap () {
+  
+}
 
 
 
@@ -147,3 +149,6 @@ scrollUpArrow.addEventListener('click', () => {
       behavior: 'smooth'
    });
 })
+
+
+

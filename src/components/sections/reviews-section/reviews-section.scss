@@ -183,7 +183,7 @@
    }
    .quote-img { @include scrollAnimationFade($toLeft: true, $delay: .6s) }
 }
-.swiper-reviews {
+.reviews-swiper-wrap {
    @include scrollAnimationFade($toLeft: true, $delay: .5s);
 }
 
