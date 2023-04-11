@@ -1,12 +1,18 @@
 import './module/scrollAnimation.js';
 import openMobileMenu from './module/openMobileMenu.js';
 import openPopup from './module/openPopup.js';
+import Validation from './module/validation.js';
 import './module/sliders.js';
 
-// import Swiper, { Navigation, Pagination } from 'swiper';
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
+
+let validForm = new Validation(
+   '#contact-form',
+   '#form-contact [name=user_name]',
+   null,
+   '#form-contact [name=user_phone]',
+   '#form-contact [name=user_email]',
+   '#form-contact [name=user_message]'
+)
 
 
  

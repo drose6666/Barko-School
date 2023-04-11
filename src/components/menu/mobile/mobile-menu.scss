@@ -71,7 +71,7 @@
                color: $light;
                display: flex;
                align-items: center;
-               // gap: 10px;
+               width: max-content;
                transition: all .3s ease;
                &:before {
                   content: '';
@@ -102,6 +102,11 @@
             font-weight: 500;
             line-height: 133%;
             color: $light;
+            
+            span {
+               padding: 5px 0;
+               transition: background-size .2s ease, transform .2s ease;
+            }
             i {
                font-size: 19px;
                color: $action;
@@ -112,6 +117,14 @@
             }
             &:not(:first-child) {
                margin-top: 30px;
+            }
+         }
+         a.mobile-contact-link  {
+            @include hoverLinks($hoverSpan: true);
+            &:hover {
+               span {
+                  transform: translateX(3px);
+               }
             }
          }
       }

@@ -6,7 +6,6 @@ import Swiper from 'swiper/bundle';
 
 // TODO Swiper Courses
 const courses = new Swiper('#swiper-courses', {
-   // modules: [Navigation],
    slidesPerView: 'auto',
    slidesPerGroup: 1,
    loop: true,
@@ -15,8 +14,9 @@ const courses = new Swiper('#swiper-courses', {
    speed: 400,
    autoplay: {
       delay: 2500,
-      // disableOnInteraction: false,
+      disableOnInteraction: true,
    },
+   pauseOnMouseEnter: true,
    keyboard: {
       enabled: true,
       onlyInViewport: false,
@@ -52,16 +52,15 @@ const courses = new Swiper('#swiper-courses', {
 
 // TODO Swiprr Reviews
 const reviews = new Swiper('#swiper-reviews', {
-   // modules: [Pagination],
    slidesPerView: 1,
    slidesPerGroup: 1,
    loop: true,
    speed: 400,
    spaceBetween: 20,
-   // autoplay: {
-   //    delay: 2500,
-   //    // disableOnInteraction: false,
-   // },
+   autoplay: {
+      delay: 2500,
+      disableOnInteraction: true
+   },
    keyboard: {
       enabled: true,
       onlyInViewport: false,

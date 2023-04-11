@@ -24,12 +24,14 @@ export default class Validation {
    #setup() {
       if (this.$form) 
          this.$form.addEventListener('submit', (event) => {
+            event.preventDefault()
             let innerEvent = event
             this.valid(innerEvent)
          })
    }
 
    valid(innerEvent) {
+      console.log('valid');
       // TODO: Name
       if (this.$name) 
          if (this.$name.value.trim() == '')
@@ -70,7 +72,7 @@ export default class Validation {
    error(error, input, message, innerEvent) {
       let parent = input.parentNode
       let errorMessage = parent.querySelector('.error-message span')
-
+      console.log(parent);
       if (errorMessage)
          errorMessage.innerHTML = message
 

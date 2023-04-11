@@ -349,6 +349,38 @@
   text-align: center;
 }
 
+.hoverLinks {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F2184F));
+  -webkit-background-size: 0% 1px;
+       -o-background-size: 0% 1px;
+          background-size: 0% 1px;
+  background-position: right 0% bottom;
+  background-repeat: no-repeat;
+}
+
+.hoverLinks:hover {
+  background-position: left 0% bottom;
+  -webkit-background-size: 100% 1px;
+       -o-background-size: 100% 1px;
+          background-size: 100% 1px;
+}
+
+.hoverSpanLinks > span {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F2184F));
+  -webkit-background-size: 0% 1px;
+       -o-background-size: 0% 1px;
+          background-size: 0% 1px;
+  background-position: right 0% bottom;
+  background-repeat: no-repeat;
+}
+
+.hoverSpanLinks:hover > span {
+  background-position: left 0% bottom;
+  -webkit-background-size: 100% 1px;
+       -o-background-size: 100% 1px;
+          background-size: 100% 1px;
+}
+
 /**
  * Swiper 8.0.7
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -1298,6 +1330,15 @@ button.swiper-pagination-bullet {
   font-size: 17px;
 }
 
+.top-info .items .item span {
+  padding: 5px 0;
+  -webkit-transition: -webkit-background-size 0.2s ease, -webkit-transform 0.2s ease;
+  transition: -webkit-background-size 0.2s ease, -webkit-transform 0.2s ease;
+  -o-transition: -o-background-size 0.2s ease, -o-transform 0.2s ease;
+  transition: background-size 0.2s ease, transform 0.2s ease;
+  transition: background-size 0.2s ease, transform 0.2s ease, -webkit-background-size 0.2s ease, -o-background-size 0.2s ease, -webkit-transform 0.2s ease, -o-transform 0.2s ease;
+}
+
 .top-info .items .item.item--address > i {
   font-size: 20px;
 }
@@ -1309,6 +1350,29 @@ button.swiper-pagination-bullet {
   height: 20px;
   width: 1px;
   background: #212529;
+}
+
+.top-info .items a.item > span {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F2184F));
+  -webkit-background-size: 0% 1px;
+       -o-background-size: 0% 1px;
+          background-size: 0% 1px;
+  background-position: right 0% bottom;
+  background-repeat: no-repeat;
+}
+
+.top-info .items a.item:hover > span {
+  background-position: left 0% bottom;
+  -webkit-background-size: 100% 1px;
+       -o-background-size: 100% 1px;
+          background-size: 100% 1px;
+}
+
+.top-info .items a.item :hover span {
+  -webkit-transform: translateX(3px);
+      -ms-transform: translateX(3px);
+       -o-transform: translateX(3px);
+          transform: translateX(3px);
 }
 
 .socials {
@@ -1452,14 +1516,29 @@ footer {
 }
 
 .nav > ul li a {
-  padding: 0 5px;
+  padding: 5px;
   font-size: 17px;
   font-weight: 500;
   line-height: 100%;
   position: relative;
-  -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  -webkit-transition: -webkit-background-size 0.2s ease-out;
+  transition: -webkit-background-size 0.2s ease-out;
+  -o-transition: -o-background-size 0.2s ease-out;
+  transition: background-size 0.2s ease-out;
+  transition: background-size 0.2s ease-out, -webkit-background-size 0.2s ease-out, -o-background-size 0.2s ease-out;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F2184F));
+  -webkit-background-size: 0% 2px;
+       -o-background-size: 0% 2px;
+          background-size: 0% 2px;
+  background-position: right 0% bottom;
+  background-repeat: no-repeat;
+}
+
+.nav > ul li a:hover {
+  background-position: left 0% bottom;
+  -webkit-background-size: 100% 2px;
+       -o-background-size: 100% 2px;
+          background-size: 100% 2px;
 }
 
 .nav.nav--head > ul {
@@ -1584,6 +1663,9 @@ footer {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -1629,6 +1711,15 @@ footer {
   color: #fff;
 }
 
+.mobile-menu-wrap .mobile-menu .mobile-contact-links .mobile-contact-link span {
+  padding: 5px 0;
+  -webkit-transition: -webkit-background-size 0.2s ease, -webkit-transform 0.2s ease;
+  transition: -webkit-background-size 0.2s ease, -webkit-transform 0.2s ease;
+  -o-transition: -o-background-size 0.2s ease, -o-transform 0.2s ease;
+  transition: background-size 0.2s ease, transform 0.2s ease;
+  transition: background-size 0.2s ease, transform 0.2s ease, -webkit-background-size 0.2s ease, -o-background-size 0.2s ease, -webkit-transform 0.2s ease, -o-transform 0.2s ease;
+}
+
 .mobile-menu-wrap .mobile-menu .mobile-contact-links .mobile-contact-link i {
   font-size: 19px;
   color: #F2184F;
@@ -1648,6 +1739,29 @@ footer {
 
 .mobile-menu-wrap .mobile-menu .mobile-contact-links .mobile-contact-link:not(:first-child) {
   margin-top: 30px;
+}
+
+.mobile-menu-wrap .mobile-menu .mobile-contact-links a.mobile-contact-link > span {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F2184F));
+  -webkit-background-size: 0% 1px;
+       -o-background-size: 0% 1px;
+          background-size: 0% 1px;
+  background-position: right 0% bottom;
+  background-repeat: no-repeat;
+}
+
+.mobile-menu-wrap .mobile-menu .mobile-contact-links a.mobile-contact-link:hover > span {
+  background-position: left 0% bottom;
+  -webkit-background-size: 100% 1px;
+       -o-background-size: 100% 1px;
+          background-size: 100% 1px;
+}
+
+.mobile-menu-wrap .mobile-menu .mobile-contact-links a.mobile-contact-link:hover span {
+  -webkit-transform: translateX(3px);
+      -ms-transform: translateX(3px);
+       -o-transform: translateX(3px);
+          transform: translateX(3px);
 }
 
 .mobile-menu-wrap.active {
@@ -2595,7 +2709,14 @@ footer {
 }
 
 .contact-links .contact-link span {
+  padding: 5px 0;
+  display: inline-block;
   color: #fff;
+  -webkit-transition: -webkit-background-size 0.2s ease, -webkit-transform 0.2s ease;
+  transition: -webkit-background-size 0.2s ease, -webkit-transform 0.2s ease;
+  -o-transition: -o-background-size 0.2s ease, -o-transform 0.2s ease;
+  transition: background-size 0.2s ease, transform 0.2s ease;
+  transition: background-size 0.2s ease, transform 0.2s ease, -webkit-background-size 0.2s ease, -o-background-size 0.2s ease, -webkit-transform 0.2s ease, -o-transform 0.2s ease;
 }
 
 .contact-links .contact-link.address {
@@ -2613,6 +2734,29 @@ footer {
 
 .contact-links .contact-link.address i {
   font-size: 25px;
+}
+
+.contact-links a.contact-link > span {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F2184F));
+  -webkit-background-size: 0% 1px;
+       -o-background-size: 0% 1px;
+          background-size: 0% 1px;
+  background-position: right 0% bottom;
+  background-repeat: no-repeat;
+}
+
+.contact-links a.contact-link:hover > span {
+  background-position: left 0% bottom;
+  -webkit-background-size: 100% 1px;
+       -o-background-size: 100% 1px;
+          background-size: 100% 1px;
+}
+
+.contact-links a.contact-link:hover span {
+  -webkit-transform: translateX(3px);
+      -ms-transform: translateX(3px);
+       -o-transform: translateX(3px);
+          transform: translateX(3px);
 }
 
 #video-popup {
@@ -2648,7 +2792,7 @@ footer {
 }
 
 #schedule-popup .schedule-head {
-  padding: 40px 0 0 0;
+  padding: 25px 0 0 0;
   position: relative;
   background: #FFF3F6;
 }
@@ -2659,12 +2803,12 @@ footer {
   top: 100%;
   left: 0;
   width: 100%;
-  height: 68px;
+  height: 45px;
   background: url(../../../img/wave-schedule-head.svg) no-repeat center/cover;
 }
 
 #schedule-popup .schedule-head .schedule-title {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 600;
   line-height: 100%;
   color: #212529;
@@ -2705,7 +2849,7 @@ footer {
 }
 
 #schedule-popup .schedule-footer {
-  padding: 25px 50px 45px 50px;
+  padding: 10px 50px 25px 50px;
   background: #25282E;
   position: relative;
   display: -webkit-box;
@@ -2729,7 +2873,7 @@ footer {
 #schedule-popup .schedule-footer:before {
   content: "";
   position: absolute;
-  bottom: 100%;
+  bottom: 96%;
   left: 0;
   width: 100%;
   height: 68px;
@@ -3331,8 +3475,6 @@ footer {
 }
 
 .ui-close {
-  width: 30px;
-  height: 30px;
   -webkit-border-radius: 50%;
           border-radius: 50%;
   color: #F2184F;
@@ -4494,6 +4636,7 @@ footer {
 }
 
 .courses .swiper-courses .course .more {
+  padding: 5px 0;
   font-weight: 600;
   font-size: 15px;
   line-height: 100%;
@@ -4508,9 +4651,28 @@ footer {
       -ms-transform: translateX(-30px);
        -o-transform: translateX(-30px);
           transform: translateX(-30px);
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: opacity 0.4s ease, visibility 0.4s ease, color 0.2s ease, -webkit-transform 0.4s ease, -webkit-background-size 0.2s ease;
+  transition: opacity 0.4s ease, visibility 0.4s ease, color 0.2s ease, -webkit-transform 0.4s ease, -webkit-background-size 0.2s ease;
+  -o-transition: opacity 0.4s ease, visibility 0.4s ease, color 0.2s ease, -o-transform 0.4s ease, -o-background-size 0.2s ease;
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease, background-size 0.2s ease, color 0.2s ease;
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease, background-size 0.2s ease, color 0.2s ease, -webkit-transform 0.4s ease, -o-transform 0.4s ease, -webkit-background-size 0.2s ease, -o-background-size 0.2s ease;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F2184F));
+  -webkit-background-size: 0% 1px;
+       -o-background-size: 0% 1px;
+          background-size: 0% 1px;
+  background-position: right 0% bottom;
+  background-repeat: no-repeat;
+}
+
+.courses .swiper-courses .course .more:hover {
+  background-position: left 0% bottom;
+  -webkit-background-size: 100% 1px;
+       -o-background-size: 100% 1px;
+          background-size: 100% 1px;
+}
+
+.courses .swiper-courses .course .more:hover {
+  color: #fff;
 }
 
 .courses .swiper-courses .course:hover:after {
@@ -4562,9 +4724,11 @@ footer {
 }
 
 .courses .swiper-courses .course:hover .more {
-  -webkit-transition-delay: 0.55s;
-       -o-transition-delay: 0.55s;
-          transition-delay: 0.55s;
+  -webkit-transition: opacity 0.4s ease 0.55s, visibility 0.4s ease 0.55s, color 0.2s ease, -webkit-transform 0.4s ease 0.55s, -webkit-background-size 0.2s ease;
+  transition: opacity 0.4s ease 0.55s, visibility 0.4s ease 0.55s, color 0.2s ease, -webkit-transform 0.4s ease 0.55s, -webkit-background-size 0.2s ease;
+  -o-transition: opacity 0.4s ease 0.55s, visibility 0.4s ease 0.55s, color 0.2s ease, -o-transform 0.4s ease 0.55s, -o-background-size 0.2s ease;
+  transition: opacity 0.4s ease 0.55s, visibility 0.4s ease 0.55s, transform 0.4s ease 0.55s, background-size 0.2s ease, color 0.2s ease;
+  transition: opacity 0.4s ease 0.55s, visibility 0.4s ease 0.55s, transform 0.4s ease 0.55s, background-size 0.2s ease, color 0.2s ease, -webkit-transform 0.4s ease 0.55s, -o-transform 0.4s ease 0.55s, -webkit-background-size 0.2s ease, -o-background-size 0.2s ease;
 }
 
 .courses-arrows {
@@ -5806,8 +5970,8 @@ i {
 
 ::-webkit-scrollbar {
   background: #FFF3F6;
-  width: 7px;
-  height: 7px;
+  width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -6080,7 +6244,7 @@ i {
   }
 
   #schedule-popup .schedule-footer {
-    padding: 25px 20px 45px 20px;
+    padding: 10px 20px 25px 20px;
   }
 
   .gallery {
@@ -6646,6 +6810,22 @@ i {
     color: #212529;
     text-align: center;
     max-width: 100%;
+  }
+
+  .contact-links a.contact-link > span {
+    background: -webkit-gradient(linear, left top, left bottom, from(#F2184F));
+    -webkit-background-size: 0% 2px;
+         -o-background-size: 0% 2px;
+            background-size: 0% 2px;
+    background-position: right 0% bottom;
+    background-repeat: no-repeat;
+  }
+
+  .contact-links a.contact-link:hover > span {
+    background-position: left 0% bottom;
+    -webkit-background-size: 100% 2px;
+         -o-background-size: 100% 2px;
+            background-size: 100% 2px;
   }
 
   .reviews-section .ui-container {

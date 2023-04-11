@@ -4,12 +4,13 @@
       align-items: center;
       li {
          a {
-            padding: 0 5px;
+            padding: 5px;
             font-size: 17px;
             font-weight: 500;
             line-height: 100%;
             position: relative;
-            transition: all 0.2s ease-out;
+            transition: background-size .2s ease-out;
+            @include hoverLinks($height: 2px)
          }
       }
    }

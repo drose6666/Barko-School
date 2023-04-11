@@ -17,6 +17,7 @@
 @import '../components/popups/video-popup/video-popup';
 @import '../components/popups/schedule-popup/schedule-popup';
 @import '../components/popups/gallery-popup/gallery-popup';
+@import '../components/popups/price-popup/price-popup';
 @import '../components/scrollUp-arrow/scrollUp-arrow';
 @import '../components/scrollUp-wrap/scrollUp-wrap';
 @import '../components/messangers/messangers';
@@ -94,8 +95,8 @@ i {
 ::-webkit-scrollbar {
    background: $weakColorSelection;
    // border-radius: 50px;
-   width: 7px;
-   height: 7px;
+   width: 5px;
+   height: 5px;
 }
 
 ::-webkit-scrollbar-thumb {

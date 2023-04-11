@@ -46,13 +46,25 @@
          font-size: 19px;
       }
       span {
+         padding: 5px 0;
+         display: inline-block;
          color: $light;
+         transition: background-size .2s ease, transform .2s ease;
       }
       &.address {
          line-height: 144%;
          align-items: flex-start;
          span { max-width: 330px; }
          i { font-size: 25px; }
+      }
+   }
+   a.contact-link {
+      @include hoverLinks($hoverSpan: true);
+      &:hover {
+         span {
+            transform: translateX(3px);
+
+         }
       }
    }
 }
@@ -105,6 +117,9 @@
             text-align: center;
             max-width: 100%;
          }
+      }
+      a.contact-link {
+         @include hoverLinks($hoverSpan: true, $height: 2px);
       }
    }
 }

@@ -124,6 +124,7 @@
             transition: all .4s ease;
          }
          .more {
+            padding: 5px 0;
             font-weight: 600;
             font-size: 15px;
             line-height: 100%;
@@ -135,7 +136,11 @@
             visibility: hidden;
             z-index: 1;
             transform: translateX(-30px);
-            transition: all .4s ease;
+            transition: opacity .4s ease, visibility .4s ease, transform .4s ease, background-size .2s ease, color .2s ease;
+            @include hoverLinks($height: 1px);
+            &:hover {
+               color: $light
+            }
          }
          &:hover {
             &:after {
@@ -162,7 +167,7 @@
                transition-delay: 0.45s;
             }
             .more {
-               transition-delay: .55s;
+               transition: opacity .4s ease .55s, visibility .4s ease .55s, transform .4s ease .55s, background-size .2s ease, color .2s ease;
             }
          }
       }

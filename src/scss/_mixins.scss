@@ -149,7 +149,6 @@
 
 
 
-
 // TODO Title
 
 @mixin title (
@@ -206,6 +205,45 @@
    }
 }
 
+
+
+
+// TODO Hover links
+@mixin hoverLinks (
+   $hoverSpan: false,
+   $color: $action,
+   $height: 1px,
+) {
+   @if $hoverSpan == false {
+      background: -webkit-gradient(linear, left top, left bottom, from($color));
+      background-size: 0% $height;
+      background-position: right 0% bottom;
+      background-repeat: no-repeat;
+      &:hover {
+         background-position: left 0% bottom;
+         background-size: 100% $height;
+      }
+   } @else if $hoverSpan {
+      & > span {
+         background: -webkit-gradient(linear, left top, left bottom, from($color));
+         background-size: 0% $height;
+         background-position: right 0% bottom;
+         background-repeat: no-repeat;
+      }
+      &:hover > span {
+         background-position: left 0% bottom;
+         background-size: 100% $height;
+      }
+   }
+}
+
+.hoverLinks {
+   @include hoverLinks;
+}
+
+.hoverSpanLinks {
+   @include hoverLinks($hoverSpan: true);
+}
 
 
 
