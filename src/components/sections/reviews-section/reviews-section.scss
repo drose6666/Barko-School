@@ -30,6 +30,7 @@
    }
 
    .btn--action {
+      max-width: max-content;
       &.min900 { display: block; }
       &.max900 {
          margin: 100px auto 0 auto;
@@ -157,6 +158,7 @@
    bottom: -45px;
    left: 50%;
    transform: translateX(-50%);
+   z-index: 1;
    .swiper-pagination-bullet {
       width: 12px;
       height: 12px;

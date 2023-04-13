@@ -2506,7 +2506,7 @@ footer {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .contact-form-wrap .contact-form .form-item-group {
@@ -2521,7 +2521,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  gap: 20px;
+  gap: 25px;
 }
 
 .contact-form-wrap .contact-form .form-item-group.media900 {
@@ -2542,66 +2542,118 @@ footer {
 .contact-form-wrap .contact-form .form-item .ui-input {
   padding: 18px 25px;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 93%;
   color: #9193A3;
   -webkit-border-radius: 50px;
           border-radius: 50px;
   background: #fff;
-  border: 1px solid transparent;
+  border: none;
   width: 100%;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .contact-form-wrap .contact-form .form-item .ui-input::-webkit-input-placeholder {
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
   color: #9193A3;
+  font-weight: 400;
 }
 
 .contact-form-wrap .contact-form .form-item .ui-input:-moz-placeholder {
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
   color: #9193A3;
+  font-weight: 400;
 }
 
 .contact-form-wrap .contact-form .form-item .ui-input::-moz-placeholder {
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
   color: #9193A3;
+  font-weight: 400;
 }
 
 .contact-form-wrap .contact-form .form-item .ui-input:-ms-input-placeholder {
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
   color: #9193A3;
+  font-weight: 400;
 }
 
 .contact-form-wrap .contact-form .form-item .ui-input::-ms-input-placeholder {
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
   color: #9193A3;
+  font-weight: 400;
 }
 
 .contact-form-wrap .contact-form .form-item .ui-input::placeholder {
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
   color: #9193A3;
-}
-
-.contact-form-wrap .contact-form .form-item .ui-input .error-message {
-  font-family: "Roboto", sans-serif;
-  font-size: 13px;
-  font-weight: 300;
-  line-height: 100%;
-  color: #F10B38;
+  font-weight: 400;
 }
 
 .contact-form-wrap .contact-form .form-item .ui-textarea {
+  font-family: "Roboto", sans-serif;
   -webkit-border-radius: 15px;
           border-radius: 15px;
   min-height: 100px;
   -webkit-border-radius: 20px;
           border-radius: 20px;
+}
+
+.contact-form-wrap .contact-form .form-item .error-message {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 100%;
+  color: #F10B38;
+  position: absolute;
+  bottom: -15px;
+  left: 18px;
+  opacity: 0;
+  -webkit-transform: translateX(15px);
+      -ms-transform: translateX(15px);
+       -o-transform: translateX(15px);
+          transform: translateX(15px);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.contact-form-wrap .contact-form .form-item.error .ui-input {
+  color: #94120a;
+  background: #ffdada;
+}
+
+.contact-form-wrap .contact-form .form-item.error .ui-input::-webkit-input-placeholder {
+  color: #94120a;
+}
+
+.contact-form-wrap .contact-form .form-item.error .ui-input:-moz-placeholder {
+  color: #94120a;
+}
+
+.contact-form-wrap .contact-form .form-item.error .ui-input::-moz-placeholder {
+  color: #94120a;
+}
+
+.contact-form-wrap .contact-form .form-item.error .ui-input:-ms-input-placeholder {
+  color: #94120a;
+}
+
+.contact-form-wrap .contact-form .form-item.error .ui-input::-ms-input-placeholder {
+  color: #94120a;
+}
+
+.contact-form-wrap .contact-form .form-item.error .ui-input::placeholder {
+  color: #94120a;
+}
+
+.contact-form-wrap .contact-form .form-item.error .error-message {
+  opacity: 1;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
 }
 
 .contact-form-wrap .contact-form .submit-item {
@@ -3104,8 +3156,8 @@ footer {
 }
 
 .messangers-wrap {
-  width: 70px;
-  height: 70px;
+  width: 55px;
+  height: 55px;
   position: relative;
   -webkit-border-radius: 50%;
           border-radius: 50%;
@@ -3170,10 +3222,12 @@ footer {
           transform: translate(-50%, -50%);
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
   z-index: 0;
+  -webkit-transition: opacity 0.2s ease visibility 0.2s ease, -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
+  transition: opacity 0.2s ease visibility 0.2s ease, -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
+  -o-transition: opacity 0.2s ease visibility 0.2s ease, box-shadow 0.2s ease, -o-transform 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease visibility 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease visibility 0.2s ease, box-shadow 0.2s ease, -webkit-transform 0.2s ease, -o-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
 }
 
 .messangers-wrap .messanger:after {
@@ -3224,9 +3278,11 @@ footer {
 }
 
 .messangers-wrap.active .messanger.whatsapp {
-  -webkit-transition-delay: 0.1s;
-       -o-transition-delay: 0.1s;
-          transition-delay: 0.1s;
+  -webkit-transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, -webkit-transform 0.2s ease 0.1s, -webkit-box-shadow 0.2s ease;
+  transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, -webkit-transform 0.2s ease 0.1s, -webkit-box-shadow 0.2s ease;
+  -o-transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, box-shadow 0.2s ease, -o-transform 0.2s ease 0.1s;
+  transition: transform 0.2s ease 0.1s, opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, box-shadow 0.2s ease;
+  transition: transform 0.2s ease 0.1s, opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, box-shadow 0.2s ease, -webkit-transform 0.2s ease 0.1s, -o-transform 0.2s ease 0.1s, -webkit-box-shadow 0.2s ease;
   -webkit-transform: translate(-50px, -80px);
       -ms-transform: translate(-50px, -80px);
        -o-transform: translate(-50px, -80px);
@@ -3234,14 +3290,16 @@ footer {
 }
 
 .messangers-wrap.active .messanger.whatsapp:hover {
-  -webkit-box-shadow: 0px 0px 0px 4px rgba(80, 202, 94, 0.2);
-          box-shadow: 0px 0px 0px 4px rgba(80, 202, 94, 0.2);
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(80, 202, 94, 0.5);
+          box-shadow: 0px 0px 0px 4px rgba(80, 202, 94, 0.5);
 }
 
 .messangers-wrap.active .messanger.telegram {
-  -webkit-transition-delay: 0.18s;
-       -o-transition-delay: 0.18s;
-          transition-delay: 0.18s;
+  -webkit-transition: opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, -webkit-transform 0.2s ease 0.18s, -webkit-box-shadow 0.2s ease;
+  transition: opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, -webkit-transform 0.2s ease 0.18s, -webkit-box-shadow 0.2s ease;
+  -o-transition: opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, box-shadow 0.2s ease, -o-transform 0.2s ease 0.18s;
+  transition: transform 0.2s ease 0.18s, opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, box-shadow 0.2s ease;
+  transition: transform 0.2s ease 0.18s, opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, box-shadow 0.2s ease, -webkit-transform 0.2s ease 0.18s, -o-transform 0.2s ease 0.18s, -webkit-box-shadow 0.2s ease;
   -webkit-transform: translate(-85px, -50%);
       -ms-transform: translate(-85px, -50%);
        -o-transform: translate(-85px, -50%);
@@ -3249,14 +3307,16 @@ footer {
 }
 
 .messangers-wrap.active .messanger.telegram:hover {
-  -webkit-box-shadow: 0px 0px 0px 4px rgba(36, 156, 215, 0.2);
-          box-shadow: 0px 0px 0px 4px rgba(36, 156, 215, 0.2);
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(36, 156, 215, 0.5);
+          box-shadow: 0px 0px 0px 4px rgba(36, 156, 215, 0.5);
 }
 
 .messangers-wrap.active .messanger.viber {
-  -webkit-transition-delay: 0.26s;
-       -o-transition-delay: 0.26s;
-          transition-delay: 0.26s;
+  -webkit-transition: opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, -webkit-transform 0.2s ease 0.26s, -webkit-box-shadow 0.2s ease;
+  transition: opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, -webkit-transform 0.2s ease 0.26s, -webkit-box-shadow 0.2s ease;
+  -o-transition: opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, box-shadow 0.2s ease, -o-transform 0.2s ease 0.26s;
+  transition: transform 0.2s ease 0.26s, opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, box-shadow 0.2s ease;
+  transition: transform 0.2s ease 0.26s, opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, box-shadow 0.2s ease, -webkit-transform 0.2s ease 0.26s, -o-transform 0.2s ease 0.26s, -webkit-box-shadow 0.2s ease;
   -webkit-transform: translate(-50px, 30px);
       -ms-transform: translate(-50px, 30px);
        -o-transform: translate(-50px, 30px);
@@ -3264,8 +3324,8 @@ footer {
 }
 
 .messangers-wrap.active .messanger.viber:hover {
-  -webkit-box-shadow: 0px 0px 0px 4px rgba(111, 63, 170, 0.2);
-          box-shadow: 0px 0px 0px 4px rgba(111, 63, 170, 0.2);
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(111, 63, 170, 0.5);
+          box-shadow: 0px 0px 0px 4px rgba(111, 63, 170, 0.5);
 }
 
 .ui-burger {
@@ -5546,6 +5606,12 @@ footer {
   gap: 40px;
 }
 
+.reviews-section .btn--action {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
 .reviews-section .btn--action.min900 {
   display: block;
 }
@@ -5701,6 +5767,7 @@ footer {
       -ms-transform: translateX(-50%);
        -o-transform: translateX(-50%);
           transform: translateX(-50%);
+  z-index: 1;
 }
 
 #reviews-pagination .swiper-pagination-bullet {
@@ -6427,6 +6494,14 @@ i {
        -moz-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
+  }
+
+  .hero-action .btn--hero-dark-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .hero-action .action-wrap .action-icon,
@@ -7636,7 +7711,7 @@ i {
        -moz-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 20px;
+    gap: 25px;
   }
 
   .contact-form-wrap .contact-form .warning-text {

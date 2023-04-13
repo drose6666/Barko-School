@@ -14,6 +14,7 @@ export default class Validation {
 
       this.nameRegex = /^[A-zА-я\s_ ][^0-9]+$/; //'[\\w\s]+';
       this.phoneRegex = /^(\s*)?(\+)?([- _():+]?\d[- _():+]?){11,14}(\s*)?$/;
+      // this.phoneRegex = /^\+7[\d()\s-]+$/
       this.emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/     
 
       if (this.$form) this.$fields = this.$form.querySelectorAll(`${form} .field`)
@@ -24,14 +25,12 @@ export default class Validation {
    #setup() {
       if (this.$form) 
          this.$form.addEventListener('submit', (event) => {
-            event.preventDefault()
             let innerEvent = event
             this.valid(innerEvent)
          })
    }
 
    valid(innerEvent) {
-      console.log('valid');
       // TODO: Name
       if (this.$name) 
          if (this.$name.value.trim() == '')
@@ -49,8 +48,8 @@ export default class Validation {
       // TODO: Phone
       if (this.$phone)
          if (this.$phone.value.trim() == '')
-            // error('error', userPhone, 'Это обязательное поле')
-            // else if (phoneRegex.test(userPhone.value.trim()))
+            this.error(true, this.$phone, 'Это обязательное поле', innerEvent)
+            else if (!this.phoneRegex.test(this.$phone.value.trim()))
                this.error(true, this.$phone, 'Введите корректный номер', innerEvent)
                else this.error(false, this.$phone, '', innerEvent)
 
@@ -63,16 +62,18 @@ export default class Validation {
                else this.error(false, this.$email, '', innerEvent)
 
       // TODO: Message
-      if (this.message)
-         if (this.message.value.trim().length > 3000)
-            this.error(true, this.message, 'Не более 3000 символов', innerEvent)
-            else this.error(false, this.message, '', innerEvent)
+      if (this.$message)
+         if (this.$message.value.trim() == '')
+            this.error(true, this.$message, 'Это обязательное поле', innerEvent)
+            else if (this.$message.value.trim().length > 3000)
+               this.error(true, this.$message, 'Не более 3000 символов', innerEvent)
+                  else this.error(false, this.$message, '', innerEvent)
    }
 
    error(error, input, message, innerEvent) {
       let parent = input.parentNode
-      let errorMessage = parent.querySelector('.error-message span')
-      console.log(parent);
+      let errorMessage = parent.querySelector('.error-message')
+
       if (errorMessage)
          errorMessage.innerHTML = message
 

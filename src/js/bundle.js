@@ -5,14 +5,14 @@ import Validation from './module/validation.js';
 import './module/sliders.js';
 
 
-// let validForm = new Validation(
-//    '#contact-form',
-//    '#form-contact [name=user_name]',
-//    null,
-//    '#form-contact [name=user_phone]',
-//    '#form-contact [name=user_email]',
-//    '#form-contact [name=user_message]'
-// )
+let validForm = new Validation(
+   '#contact-form',
+   '#contact-form [name=user_name]',
+   null,
+   '#contact-form [name=user_phone]',
+   '#contact-form [name=user_email]',
+   '#contact-form [name=user_message]'
+)
 
 
  
