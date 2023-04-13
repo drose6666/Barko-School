@@ -80,18 +80,18 @@ const galleryPopup = new openPopup({
 
 // TODO Создание Popup с расписаниями
 const schedules = [
-   {id: '0.9m-1.5y', title: '0.9 мес. - 2 года', img:'../../../img/optimized/schedule/0.9-1.5.webp'},
-   {id: '1.5y-2y', title: '1.5 - 2 года', img:'../../../img/optimized/schedule/1.5-2.webp'},
-   {id: '2y-3y', title: '2 - 3 года', img:'../../../img/optimized/schedule/2-3.webp'},
-   {id: '3y-4y', title: '3 - 4 года', img:'../../../img/optimized/schedule/3-4.webp'},
-   {id: '4y-5y', title: '4 - 5 лет', img:'../../../img/optimized/schedule/4-5.webp'},
-   {id: '5y-6y', title: '5 - 6 лет', img:'../../../img/optimized/schedule/5-6.webp'},
-   {id: '6y-7y', title: '6 - 7 лет', img:'../../../img/optimized/schedule/6-7.webp'},
-   {id: '7y-8y', title: '7 - 8 лет', img:'../../../img/optimized/schedule/7-8.webp'},
-   {id: '8y-9y', title: '8 - 9 лет', img:'../../../img/optimized/schedule/8-9.webp'},
-   {id: '9y-11y', title: '9 - 11 лет', img:'../../../img/optimized/schedule/9-11.webp'},
-   {id: '11y-13y', title: '11 - 13 лет', img:'../../../img/optimized/schedule/11-13.webp'},
-   {id: '14+y', title: '14+', img:'../../../img/optimized/schedule/14+.webp'},
+   {id: '0.9m-1.5y', age: '0.9 мес. - 2 года', img:'../../../img/optimized/schedule/0.9-1.5.webp',},
+   {id: '1.5y-2y', age: '1.5 - 2 года', img:'../../../img/optimized/schedule/1.5-2.webp',},
+   {id: '2y-3y', age: '2 - 3 года', img:'../../../img/optimized/schedule/2-3.webp',},
+   {id: '3y-4y', age: '3 - 4 года', img:'../../../img/optimized/schedule/3-4.webp',},
+   {id: '4y-5y', age: '4 - 5 лет', img:'../../../img/optimized/schedule/4-5.webp',},
+   {id: '5y-6y', age: '5 - 6 лет', img:'../../../img/optimized/schedule/5-6.webp',},
+   {id: '6y-7y', age: '6 - 7 лет', img:'../../../img/optimized/schedule/6-7.webp',},
+   {id: '7y-8y', age: '7 - 8 лет', img:'../../../img/optimized/schedule/7-8.webp',},
+   {id: '8y-9y', age: '8 - 9 лет', img:'../../../img/optimized/schedule/8-9.webp',},
+   {id: '9y-11y', age: '9 - 11 лет', img:'../../../img/optimized/schedule/9-11.webp',},
+   {id: '11y-13y', age: '11 - 13 лет', img:'../../../img/optimized/schedule/11-13.webp',},
+   {id: '14+y', age: '14+', img:'../../../img/optimized/schedule/14+.webp',},
 ]
 const scheduleAge = document.querySelector('.schedule-age')
 const scheduleImage = document.querySelector('.schedule-body img')
@@ -101,8 +101,8 @@ document.querySelectorAll('.schedule-item').forEach(el => {
       const btnAttr = this.getAttribute('data-age')
 
       if (btnAttr) {
-         const {title, img} = schedules.find(el => el.id === btnAttr)
-         scheduleAge.textContent = title
+         const {age, img, title} = schedules.find(el => el.id === btnAttr)
+         scheduleAge.textContent = age
          scheduleImage.src = img
       } else {
          scheduleAge.textContent = ''

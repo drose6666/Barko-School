@@ -14,6 +14,7 @@
 .about-img .about-video-open .video-btn,
 .about-img .skill,
 .ui-close,
+.messangers-wrap .messanger,
 .messangers-wrap,
 #schedule-popup .schedule-head .schedule-age,
 .contact-links .contact-link .icon,
@@ -3052,8 +3053,7 @@ footer {
 }
 
 #gallery-popup #gallery-preview-swiper .swiper-slide img {
-  max-width: 1200px;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -3073,7 +3073,7 @@ footer {
 }
 
 .scrollUp-arrow:after {
-  content: "\e903";
+  content: "\e90d";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -3183,21 +3183,6 @@ footer {
           transition-delay: 0.4s;
 }
 
-.messangers-wrap .messanger:after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-       -o-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  color: #fff;
-  font-family: "Barko School Font";
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
 .messangers-wrap {
   width: 55px;
   height: 55px;
@@ -3266,6 +3251,8 @@ footer {
   opacity: 0;
   visibility: hidden;
   z-index: 0;
+  font-size: 22px;
+  color: #fff;
   -webkit-transition: opacity 0.2s ease visibility 0.2s ease, -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
   transition: opacity 0.2s ease visibility 0.2s ease, -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
   -o-transition: opacity 0.2s ease visibility 0.2s ease, box-shadow 0.2s ease, -o-transform 0.2s ease;
@@ -3273,32 +3260,31 @@ footer {
   transition: transform 0.2s ease, opacity 0.2s ease visibility 0.2s ease, box-shadow 0.2s ease, -webkit-transform 0.2s ease, -o-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
 }
 
-.messangers-wrap .messanger:after {
-  font-size: 22px;
-}
-
 .messangers-wrap .messanger.whatsapp {
+  -webkit-transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, -webkit-transform 0.2s ease 0.1s, -webkit-box-shadow 0.2s ease;
+  transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, -webkit-transform 0.2s ease 0.1s, -webkit-box-shadow 0.2s ease;
+  -o-transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, box-shadow 0.2s ease, -o-transform 0.2s ease 0.1s;
+  transition: transform 0.2s ease 0.1s, opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, box-shadow 0.2s ease;
+  transition: transform 0.2s ease 0.1s, opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, box-shadow 0.2s ease, -webkit-transform 0.2s ease 0.1s, -o-transform 0.2s ease 0.1s, -webkit-box-shadow 0.2s ease;
   background: #50ca5e;
 }
 
-.messangers-wrap .messanger.whatsapp:after {
-  content: "\e90c";
-}
-
 .messangers-wrap .messanger.telegram {
+  -webkit-transition: opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, -webkit-transform 0.2s ease 0.18s, -webkit-box-shadow 0.2s ease;
+  transition: opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, -webkit-transform 0.2s ease 0.18s, -webkit-box-shadow 0.2s ease;
+  -o-transition: opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, box-shadow 0.2s ease, -o-transform 0.2s ease 0.18s;
+  transition: transform 0.2s ease 0.18s, opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, box-shadow 0.2s ease;
+  transition: transform 0.2s ease 0.18s, opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, box-shadow 0.2s ease, -webkit-transform 0.2s ease 0.18s, -o-transform 0.2s ease 0.18s, -webkit-box-shadow 0.2s ease;
   background: #249cd7;
 }
 
-.messangers-wrap .messanger.telegram:after {
-  content: "\e90d";
-}
-
 .messangers-wrap .messanger.viber {
+  -webkit-transition: opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, -webkit-transform 0.2s ease 0.26s, -webkit-box-shadow 0.2s ease;
+  transition: opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, -webkit-transform 0.2s ease 0.26s, -webkit-box-shadow 0.2s ease;
+  -o-transition: opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, box-shadow 0.2s ease, -o-transform 0.2s ease 0.26s;
+  transition: transform 0.2s ease 0.26s, opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, box-shadow 0.2s ease;
+  transition: transform 0.2s ease 0.26s, opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, box-shadow 0.2s ease, -webkit-transform 0.2s ease 0.26s, -o-transform 0.2s ease 0.26s, -webkit-box-shadow 0.2s ease;
   background: #6f3faa;
-}
-
-.messangers-wrap .messanger.viber:after {
-  content: "\e915";
 }
 
 .messangers-wrap.active .open {
@@ -3782,7 +3768,7 @@ footer {
 }
 
 .hero-list li:before {
-  content: "\e91a";
+  content: "\e915";
   margin-right: 13px;
   display: block;
   color: #F2184F;
@@ -5130,13 +5116,9 @@ footer {
   -webkit-border-radius: 50%;
           border-radius: 50%;
   z-index: 1;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease 0.1s;
+  -o-transition: all 0.3s ease 0.1s;
+  transition: all 0.3s ease 0.1s;
 }
 
 .schedule-item .schedule-icon i {
@@ -5520,7 +5502,7 @@ footer {
 }
 
 .gallery-section .gallery [class^=item] .photo .view-icon:after {
-  content: "\e924";
+  content: "\e91b";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -6153,7 +6135,7 @@ i {
 }
 
 .swiper-button-prev:after {
-  content: "\e91d";
+  content: "\e904";
   font-family: "Barko School Font";
 }
 
@@ -6165,7 +6147,7 @@ i {
 }
 
 .swiper-button-next:after {
-  content: "\e91f";
+  content: "\e909";
   font-family: "Barko School Font";
 }
 

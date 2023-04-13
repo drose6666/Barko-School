@@ -131,7 +131,7 @@ i {
 
 .swiper-button-prev {
    &:after {
-      content: '\e91d';
+      content: '\e904';
       font-family: $BRFont;
    }
    &:hover:after { transform: translateX(-5px); }
@@ -139,7 +139,7 @@ i {
 
 .swiper-button-next {
    &:after {
-      content: '\e91f';
+      content: '\e909';
       font-family: $BRFont;
    }
    &:hover:after { transform: translateX(5px); }
