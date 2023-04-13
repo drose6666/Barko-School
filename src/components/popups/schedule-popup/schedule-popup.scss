@@ -61,6 +61,33 @@ $padding: 0 50px;
          max-width: 100%;
          height: auto;
       }
+      .explanation {
+         margin-top: 15px;
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         .mark {
+            width: 15px;
+            height: 15px;
+            background: #57F1A7;
+            border-radius: 50%;
+         }
+         .text {
+            font-family: $Rob;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 100%;
+            color: $text;
+         }
+      }
+      .body-text {
+         margin-top: 30px;
+         font-family: $Rob;
+         font-size: 15px;
+         font-weight: 400;
+         line-height: 147%;
+         color: $title;
+      }
    }
 
 
@@ -80,10 +107,13 @@ $padding: 0 50px;
          width: 100%;
          height: 68px;
          background: url(../../../img/wave-schedule-bottom.svg) no-repeat center / cover;
+         z-index: 0;
       }
 
       .schedule-logo {
+         position: relative;
          max-width: 230px;
+         z-index: 1;
          img {
             max-width: 100%;
             height: auto;
@@ -118,11 +148,16 @@ $padding: 0 50px;
 
 @media all and (max-width: 500px) {
    #schedule-popup {
+      .schedule-body {
+         .explanation .text { font-size: 12px; }
+         .body-text { font-size: 13px; }
+      }
       .schedule-footer {
-         padding: 10px 20px 25px 20px;
+         padding: 0 20px 20px 20px;
          flex-direction: column;
          align-items: center;
-         gap: 25px;
+         gap: 15px;
+         .schedule-logo { max-width: 170px; }
       }
    }
 }

@@ -54,5 +54,8 @@
             color: $action;
          }
       }
+      @media all and (max-width: 500px) {
+         a { font-size: 16px; }
+      }
    }
 }
