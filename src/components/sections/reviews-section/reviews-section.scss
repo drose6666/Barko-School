@@ -5,20 +5,21 @@
    
    position: relative;
 
-   &:after, &:before {
+   &::before, &:after {
       content: '';
       position: absolute;
-      left: 0;
       width: 100%;
-      height: 115px;
+      left: 0;
    }
-   &:before {
-      bottom: 99%;
-      background: url(../../../img/wave-reviews-top.svg) no-repeat center / cover;
+   &::before {
+      bottom: 100%;
+      height: 90px;
+      background: url(../../../img/wave-top.svg) no-repeat center / cover;
    }
-   &:after {
+   &::after {
       top: 100%;
-      background: url(../../../img/wave-reviews-bottom.svg) no-repeat center / cover;
+      height: 90px;
+      background: url(../../../img/wave-bottom.svg) no-repeat center / cover;
    }
    
 

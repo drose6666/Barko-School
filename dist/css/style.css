@@ -3057,6 +3057,15 @@ footer {
   height: auto;
 }
 
+#price-popup .popup {
+  max-width: 1200px;
+}
+
+#price-popup .popup img {
+  max-width: 100%;
+  height: auto;
+}
+
 .scrollUp-arrow {
   width: 55px;
   height: 55px;
@@ -3621,7 +3630,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   opacity: 0;
   visibility: hidden;
   z-index: 2;
@@ -3658,7 +3667,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
 
@@ -4586,14 +4595,14 @@ footer {
 
 .courses-section::before {
   bottom: 100%;
-  height: 82px;
-  background: url(../../../img/wave_top.svg) no-repeat center/cover;
+  height: 90px;
+  background: url(../../../img/wave-top.svg) no-repeat center/cover;
 }
 
 .courses-section::after {
   top: 100%;
-  height: 82px;
-  background: url(../../../img/wave_bottom.svg) no-repeat center/cover;
+  height: 90px;
+  background: url(../../../img/wave-bottom.svg) no-repeat center/cover;
 }
 
 .courses-section .heading {
@@ -5496,9 +5505,11 @@ footer {
       -ms-transform: translateY(10px);
        -o-transform: translateY(10px);
           transform: translateY(10px);
-  -webkit-transition: opacity 0.3s ease 0.1s, background 0.2s ease;
-  -o-transition: opacity 0.3s ease 0.1s, background 0.2s ease;
-  transition: opacity 0.3s ease 0.1s, background 0.2s ease;
+  -webkit-transition: opacity 0.3s ease 0.1s, background-color 0.2s ease, -webkit-transform 0.2s ease 0.1s;
+  transition: opacity 0.3s ease 0.1s, background-color 0.2s ease, -webkit-transform 0.2s ease 0.1s;
+  -o-transition: opacity 0.3s ease 0.1s, background-color 0.2s ease, -o-transform 0.2s ease 0.1s;
+  transition: opacity 0.3s ease 0.1s, background-color 0.2s ease, transform 0.2s ease 0.1s;
+  transition: opacity 0.3s ease 0.1s, background-color 0.2s ease, transform 0.2s ease 0.1s, -webkit-transform 0.2s ease 0.1s, -o-transform 0.2s ease 0.1s;
 }
 
 .gallery-section .gallery [class^=item] .photo .view-icon:after {
@@ -5598,23 +5609,24 @@ footer {
   position: relative;
 }
 
-.reviews-section:after,
-.reviews-section:before {
+.reviews-section::before,
+.reviews-section:after {
   content: "";
   position: absolute;
-  left: 0;
   width: 100%;
-  height: 115px;
+  left: 0;
 }
 
-.reviews-section:before {
-  bottom: 99%;
-  background: url(../../../img/wave-reviews-top.svg) no-repeat center/cover;
+.reviews-section::before {
+  bottom: 100%;
+  height: 90px;
+  background: url(../../../img/wave-top.svg) no-repeat center/cover;
 }
 
-.reviews-section:after {
+.reviews-section::after {
   top: 100%;
-  background: url(../../../img/wave-reviews-bottom.svg) no-repeat center/cover;
+  height: 90px;
+  background: url(../../../img/wave-bottom.svg) no-repeat center/cover;
 }
 
 .reviews-section .ui-container {

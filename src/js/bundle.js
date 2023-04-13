@@ -43,7 +43,7 @@ const mobileMenu = new openMobileMenu({
 
 
 
-// TODO Popup with video
+// TODO Video popup
 const aboutVideo = `<iframe width="560" height="315" src="https://www.youtube.com/embed/LlCwHnp3kL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
 const options = {
    popup: '#video-popup',
@@ -57,13 +57,24 @@ new openPopup(options)
 
 
 
-// TODO Popup schedule
+// TODO Schedule popup
 const schedulePopup = new openPopup({
    popup: '#schedule-popup',
-   open: '.schedule-item',
+   open: '.schedule-items .schedule-item',
    close: '#schedule-popup .ui-close',
    overlay: '#schedule-popup .popup-overlay'
 })
+
+
+
+// TODO Price popup
+const pricePopup = new openPopup({
+   popup: '#price-popup',
+   open: '.schedule-item.item-price',
+   close: '#price-popup .ui-close',
+   overlay: '#price-popup .popup-overlay'
+})
+
 
 
 
@@ -101,7 +112,7 @@ document.querySelectorAll('.schedule-item').forEach(el => {
       const btnAttr = this.getAttribute('data-age')
 
       if (btnAttr) {
-         const {age, img, title} = schedules.find(el => el.id === btnAttr)
+         const {age, img} = schedules.find(el => el.id === btnAttr)
          scheduleAge.textContent = age
          scheduleImage.src = img
       } else {
@@ -136,10 +147,6 @@ function fadeInNavOnScroll(elements, distance) {
       if (window.scrollY <= 150)
          items[i].classList.remove('active')
    }
-}
-
-function changePosScrollWrap () {
-  
 }
 
 

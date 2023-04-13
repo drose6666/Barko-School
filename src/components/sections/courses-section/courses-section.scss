@@ -2,6 +2,19 @@
    padding: 60px 0 40px 0;
    background: $weakColorSelection;
    position: relative;
+
+   // .wave-top, .wave-bottom {
+   //    position: absolute;
+   //    width: 100vw;
+   //    height: 100px;
+   //    left: 0;
+   // }
+   // .wave-top {
+   //    bottom: 100%;
+   // }
+   // .wave-bottom {
+   //    top: 100%;
+   // }
    &::before, &:after {
       content: '';
       position: absolute;
@@ -10,14 +23,16 @@
    }
    &::before {
       bottom: 100%;
-      height: 82px;
-      background: url(../../../img/wave_top.svg) no-repeat center / cover;
+      height: 90px;
+      background: url(../../../img/wave-top.svg) no-repeat center / cover;
    }
    &::after {
       top: 100%;
-      height: 82px;
-      background: url(../../../img/wave_bottom.svg) no-repeat center / cover;
+      height: 90px;
+      background: url(../../../img/wave-bottom.svg) no-repeat center / cover;
    }
+
+
 
    .heading {
       margin-bottom: 50px;
