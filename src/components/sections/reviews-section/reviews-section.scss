@@ -1,6 +1,6 @@
 .reviews-section {
-   margin: 160px 0;
-   padding: 60px 0 40px 0;
+   margin: 200px 0;
+   padding: 60px 0;
    background: $weakColorSelection;
    
    position: relative;
@@ -54,7 +54,7 @@
          z-index: 1;
       }
       &:after {
-         content: '\e907';
+         content: '\e912';
          position: absolute;
          top: 20%;
          right: 105%;

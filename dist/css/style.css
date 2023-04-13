@@ -4235,7 +4235,7 @@ footer {
 
 .section-about {
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 220px;
   overflow: hidden;
 }
 
@@ -4580,7 +4580,7 @@ footer {
 }
 
 .courses-section {
-  padding: 60px 0 40px 0;
+  padding: 50px 0 60px 0;
   background: #FFF3F6;
   position: relative;
 }
@@ -4986,7 +4986,7 @@ footer {
 }
 
 .schedule-section {
-  padding-top: 200px;
+  padding-top: 250px;
 }
 
 .schedule-section .decor-title {
@@ -5176,7 +5176,7 @@ footer {
 }
 
 .gallery-section {
-  padding: 170px 0 70px 0;
+  padding: 200px 0 70px 0;
   overflow-x: hidden;
   position: relative;
   z-index: 1;
@@ -5603,8 +5603,8 @@ footer {
 }
 
 .reviews-section {
-  margin: 160px 0;
-  padding: 60px 0 40px 0;
+  margin: 200px 0;
+  padding: 60px 0;
   background: #FFF3F6;
   position: relative;
 }
@@ -5676,7 +5676,7 @@ footer {
 }
 
 .reviews-section .reviews:after {
-  content: "\e907";
+  content: "\e912";
   position: absolute;
   top: 20%;
   right: 105%;
@@ -5975,7 +5975,7 @@ footer {
 }
 
 .contact-section {
-  padding-top: 100px;
+  padding-top: 150px;
   position: relative;
   overflow: hidden;
 }
