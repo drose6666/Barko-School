@@ -3,10 +3,9 @@
  */
 
 export default class Validation {
-   constructor (form, name, company, phone, email, message) {
+   constructor (form, name, phone, email, message) {
       this.$form = document.querySelector(form)
       this.$name = document.querySelector(name)
-      this.$company = document.querySelector(company)
       this.$phone = document.querySelector(phone)
       this.$email = document.querySelector(email)
       this.$message = document.querySelector(message)
@@ -38,12 +37,6 @@ export default class Validation {
                else if (!this.nameRegex.test(this.$name.value))
                this.error(true, this.$name, 'Введите корректное имя', innerEvent)
                   else this.error(false, this.$name, '', innerEvent)
-
-      // TODO: Company
-      if (this.$company)
-         if (this.$company.value.trim() == '')
-            this.error(true, this.$company, 'Это обязательное поле', innerEvent)
-            else this.error(false, this.$company, '', innerEvent)
 
       // TODO: Phone
       if (this.$phone)

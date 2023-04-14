@@ -8,7 +8,6 @@ import './module/sliders.js';
 let validForm = new Validation(
    '#contact-form',
    '#contact-form [name=user_name]',
-   null,
    '#contact-form [name=user_phone]',
    '#contact-form [name=user_email]',
    '#contact-form [name=user_message]'
@@ -21,12 +20,6 @@ let validForm = new Validation(
 window.addEventListener('load', function () {
    const preloader = document.getElementById('ui-preloader')
    preloader.classList.add('hide')
-})
-
-document.querySelectorAll('.swiper-arrows .arrow').forEach(el => {
-   el.addEventListener('click', function (e) {
-      e.preventDefault()
-   })
 })
 
 

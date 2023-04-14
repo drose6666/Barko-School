@@ -1369,7 +1369,7 @@ button.swiper-pagination-bullet {
           background-size: 100% 1px;
 }
 
-.top-info .items a.item :hover span {
+.top-info .items a.item:hover span {
   -webkit-transform: translateX(3px);
       -ms-transform: translateX(3px);
        -o-transform: translateX(3px);
@@ -3034,6 +3034,8 @@ footer {
 }
 
 #gallery-popup #gallery-preview-swiper .swiper-slide {
+  margin: auto;
+  width: 100%;
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3054,6 +3056,9 @@ footer {
 
 #gallery-popup #gallery-preview-swiper .swiper-slide img {
   max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
   height: auto;
 }
 

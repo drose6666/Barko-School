@@ -43,7 +43,7 @@
       
       a.item {
          @include hoverLinks($hoverSpan: true);
-         :hover {
+         &:hover {
             span { transform: translateX(3px); }
          }
       }

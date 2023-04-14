@@ -96,6 +96,7 @@ const galleryPopupSwiper = new Swiper('#gallery-preview-swiper', {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev"
    },
+   // autoHeight: true
 })
 
 const galleryItems = document.querySelectorAll('.gallery [class^="item"]')
