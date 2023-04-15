@@ -5,6 +5,7 @@ import Validation from './module/validation.js';
 import './module/sliders.js';
 
 
+
 let validForm = new Validation(
    '#contact-form',
    '#contact-form [name=user_name]',

@@ -3,18 +3,6 @@
    background: $weakColorSelection;
    position: relative;
 
-   // .wave-top, .wave-bottom {
-   //    position: absolute;
-   //    width: 100vw;
-   //    height: 100px;
-   //    left: 0;
-   // }
-   // .wave-top {
-   //    bottom: 100%;
-   // }
-   // .wave-bottom {
-   //    top: 100%;
-   // }
    &::before, &:after {
       content: '';
       position: absolute;
@@ -57,133 +45,151 @@
    width: 100%;
    position: relative;
    .swiper-courses {
-      width: 100%;
-      .course {
-         position: relative;
+      .swiper-wrapper {
+         margin: 0 -10px;
+         display: flex;
+         flex-wrap: wrap;
+         width: auto;
+      }
+   }
+
+
+   .swiper-col {
+      margin-bottom: 20px;
+      padding: 0 10px;
+      max-width: 33.3333%;
+      flex: 0 0 33.3333%;
+   }
+   .course {
+      position: relative;
+      border-radius: $blockR;
+      overflow: hidden;
+      height: 280px;
+      &:after {
+         content: '';
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         bottom: 0;
+         left: 0;
+         background: linear-gradient(0deg, rgba(33, 37, 41, 0.9) 0%, rgba(33, 37, 41, 0) 100%);
          border-radius: $blockR;
+         transition: all 0.3s ease;
+      }
+
+      .info {
+         padding: 30px;
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: 1;
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         justify-content: flex-end;
+         border-radius: $blockR;
+      }
+
+      img {
+         display: inline-block;
+         object-fit: cover;
+         object-position: center;
+         height: 100%;
+         width: 100%;
+         transition: all 1s ease;
+      }
+
+      .age {
+         margin-bottom: 15px;
+         font-size: 17px;
+         font-weight: 700;
+         line-height: 100%;
+         color: $action;
+         display: block;
+         transition: all .6s ease .1s;
+      }
+
+      .title {
+         font-size: 21px;
+         font-weight: 700;
+         line-height: 120%;
+         color: $light;
+         display: -webkit-box;
+         -webkit-line-clamp: 2;
+         -webkit-box-orient: vertical;
          overflow: hidden;
-         min-width: 430px;
-         max-width: 430px;
-         height: 280px;
-         &:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            bottom: 0;
-            left: 0;
-            background: linear-gradient(0deg, rgba(33, 37, 41, 0.9) 0%, rgba(33, 37, 41, 0) 100%);
-            border-radius: $blockR;
-            transition: all 0.3s ease;
+         transition: all .6s ease;
+      }
+
+      .text {
+         font-family: $Rob;
+         font-size: 15px;
+         font-weight: 300;
+         line-height: 150%;
+         color: $light;
+         max-width: 350px;
+         display: -webkit-box;
+         -webkit-line-clamp: 3;
+         -webkit-box-orient: vertical;
+         overflow: hidden;
+         position: absolute;
+         bottom: 115px;
+         left: 30px;
+         z-index: 1;
+         opacity: 0;
+         visibility: hidden;
+         transform: translateX(-30px);
+         transition: all .4s ease;
+      }
+
+      .more {
+         padding: 5px 0;
+         font-weight: 600;
+         font-size: 15px;
+         line-height: 100%;
+         color: $action;
+         position: absolute;
+         bottom: 30px;
+         left: 30px;
+         opacity: 0;
+         visibility: hidden;
+         z-index: 1;
+         transform: translateX(-30px);
+         transition: opacity .4s ease, visibility .4s ease, transform .4s ease, background-size .2s ease, color .2s ease;
+         @include hoverLinks($height: 1px);
+         &:hover {
+            color: $light
          }
-         .info {
-            padding: 30px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-end;
+      }
+
+      &:hover {
+         &:after {
+            height: 400%;
             border-radius: $blockR;
          }
          img {
-            display: inline-block;
-            object-fit: cover;
-            object-position: center;
-            height: 100%;
-            width: 100%;
-            transition: all 1s ease;
+            transform: scale(1.1);
          }
          .age {
-            margin-bottom: 15px;
-            font-size: 17px;
-            font-weight: 700;
-            line-height: 100%;
-            color: $action;
-            display: block;
-            transition: all .6s ease .1s;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-175px);
+            transition-delay: 0s;
          }
          .title {
-            font-size: 21px;
-            font-weight: 700;
-            line-height: 115%;
-            color: $light;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            transition: all .6s ease;
+            transform: translateY(-175px);
+            transition-delay: .1s;
          }
-         .text {
-            font-family: $Rob;
-            font-size: 15px;
-            font-weight: 300;
-            line-height: 147%;
-            color: $light;
-            max-width: 350px;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            position: absolute;
-            bottom: 115px;
-            left: 30px;
-            z-index: 1;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateX(-30px);
-            transition: all .4s ease;
+         .text, .more {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+            transition-delay: 0.45s;
          }
          .more {
-            padding: 5px 0;
-            font-weight: 600;
-            font-size: 15px;
-            line-height: 100%;
-            color: $action;
-            position: absolute;
-            bottom: 30px;
-            left: 30px;
-            opacity: 0;
-            visibility: hidden;
-            z-index: 1;
-            transform: translateX(-30px);
-            transition: opacity .4s ease, visibility .4s ease, transform .4s ease, background-size .2s ease, color .2s ease;
-            @include hoverLinks($height: 1px);
-            &:hover {
-               color: $light
-            }
-         }
-         &:hover {
-            &:after {
-               height: 400%;
-               border-radius: $blockR;
-            }
-            img {
-               transform: scale(1.1);
-            }
-            .age {
-               opacity: 0;
-               visibility: hidden;
-               transform: translateY(-175px);
-               transition-delay: 0s;
-            }
-            .title {
-               transform: translateY(-175px);
-               transition-delay: .1s;
-            }
-            .text, .more {
-               opacity: 1;
-               visibility: visible;
-               transform: none;
-               transition-delay: 0.45s;
-            }
-            .more {
-               transition: opacity .4s ease .55s, visibility .4s ease .55s, transform .4s ease .55s, background-size .2s ease, color .2s ease;
-            }
+            transition: opacity .4s ease .55s, visibility .4s ease .55s, transform .4s ease .55s, background-size .2s ease, color .2s ease;
          }
       }
    }
@@ -192,7 +198,7 @@
 .courses-arrows {
    margin-top: 30px;
    position: relative;
-   display: flex;
+   display: none;
    align-items: center;
    justify-content: center;
    gap: 20px;
@@ -220,9 +226,45 @@
 
 
 
+@media all and (max-width: 1320px) {
+   $curW: 1320;
+   $targetW: 1100;
 
-@media all and (max-width: 700px) {
+   .courses .course {
+      .info { padding: 30px 20px; }
+      .title { font-size: calcSize($curW, $targetW, 21, 18); }
+      .age { font-size: 16px; }
+      .text, .more { left: 20px; }
+      .text { max-width: calcSize($curW, $targetW, 350, 285); }
+   }
+}
+
+@media all and (max-width: 1100px) {
+   $curW: 1100;
+   $targetW: 730;
+
+   .courses {
+      .swiper-col {
+         max-width: 50%;
+         flex: 0 0 50%;
+      }
+   }
+
+   .courses .course {
+      .title { 
+         font-size: calcSize($curW, $targetW, 21, 18); 
+         max-width: 400px;
+      }
+      .text { max-width: calcSize($curW, $targetW, 450, 285); }
+   }
+}
+
+@media all and (max-width: 730px) {
    .courses-section {
+      .courses-container {
+         padding: 0;
+         max-width: 100%;
+      }
       .decor-title {
          justify-content: center;
       }
@@ -235,12 +277,41 @@
          }
       }
    }
+
+   .courses {
+      .swiper-courses, .swiper-courses .swiper-wrapper { width: 100%; }
+      .swiper-courses .swiper-wrapper { 
+         margin: 0; 
+         display: flex; 
+         flex-wrap: nowrap;
+         width: 100%; 
+      }
+      .swiper-col {
+         padding: 0;
+         display: block;
+         min-width: 430px;
+         max-width: 430px;
+      }
+
+      .course {
+         min-width: 430px;
+         max-width: 430px;
+         .info { padding: 30px; }
+         .title { font-size: 21px; }
+         .text { max-width: 350px; }
+         .text, .more { left: 30px; }
+      }
+   }
+
+   .courses-arrows { display: flex; } 
 }
 
 @media all and (max-width: 550px) {
    .courses { padding: 0 15px; }
-   .courses .swiper-courses .course {
-      min-width: 100%;
+   .courses .swiper-courses {
+      .swiper-col, .course {
+         min-width: 100%;
+      }
    }
 }
 
@@ -248,7 +319,7 @@
    $currentW: 450;
    $targetW: 280;
 
-   .courses .swiper-courses .course {
+   .courses .course {
       .info { padding: 30px calcSize($currentW, $targetW, 30, 15); }
       .age { font-size: calcSize($currentW, $targetW, 17, 16); }
       .title { 

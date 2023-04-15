@@ -4359,7 +4359,7 @@ footer {
 }
 
 .about-img .about-video-open .video-btn i {
-  margin-left: 2px;
+  margin-left: 4px;
   font-size: 30px;
   color: #F2184F;
 }
@@ -4644,21 +4644,39 @@ footer {
   position: relative;
 }
 
-.courses .swiper-courses {
-  width: 100%;
+.courses .swiper-courses .swiper-wrapper {
+  margin: 0 -10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: auto;
 }
 
-.courses .swiper-courses .course {
+.courses .swiper-col {
+  margin-bottom: 20px;
+  padding: 0 10px;
+  max-width: 33.3333%;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 33.3333%;
+     -moz-box-flex: 0;
+      -ms-flex: 0 0 33.3333%;
+          flex: 0 0 33.3333%;
+}
+
+.courses .course {
   position: relative;
   -webkit-border-radius: 15px;
           border-radius: 15px;
   overflow: hidden;
-  min-width: 430px;
-  max-width: 430px;
   height: 280px;
 }
 
-.courses .swiper-courses .course:after {
+.courses .course:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -4676,7 +4694,7 @@ footer {
   transition: all 0.3s ease;
 }
 
-.courses .swiper-courses .course .info {
+.courses .course .info {
   padding: 30px;
   position: absolute;
   top: 0;
@@ -4710,7 +4728,7 @@ footer {
           border-radius: 15px;
 }
 
-.courses .swiper-courses .course img {
+.courses .course img {
   display: inline-block;
   -o-object-fit: cover;
      object-fit: cover;
@@ -4723,7 +4741,7 @@ footer {
   transition: all 1s ease;
 }
 
-.courses .swiper-courses .course .age {
+.courses .course .age {
   margin-bottom: 15px;
   font-size: 17px;
   font-weight: 700;
@@ -4735,10 +4753,10 @@ footer {
   transition: all 0.6s ease 0.1s;
 }
 
-.courses .swiper-courses .course .title {
+.courses .course .title {
   font-size: 21px;
   font-weight: 700;
-  line-height: 115%;
+  line-height: 120%;
   color: #fff;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -4749,11 +4767,11 @@ footer {
   transition: all 0.6s ease;
 }
 
-.courses .swiper-courses .course .text {
+.courses .course .text {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 300;
-  line-height: 147%;
+  line-height: 150%;
   color: #fff;
   max-width: 350px;
   display: -webkit-box;
@@ -4775,7 +4793,7 @@ footer {
   transition: all 0.4s ease;
 }
 
-.courses .swiper-courses .course .more {
+.courses .course .more {
   padding: 5px 0;
   font-weight: 600;
   font-size: 15px;
@@ -4804,31 +4822,31 @@ footer {
   background-repeat: no-repeat;
 }
 
-.courses .swiper-courses .course .more:hover {
+.courses .course .more:hover {
   background-position: left 0% bottom;
   -webkit-background-size: 100% 1px;
        -o-background-size: 100% 1px;
           background-size: 100% 1px;
 }
 
-.courses .swiper-courses .course .more:hover {
+.courses .course .more:hover {
   color: #fff;
 }
 
-.courses .swiper-courses .course:hover:after {
+.courses .course:hover:after {
   height: 400%;
   -webkit-border-radius: 15px;
           border-radius: 15px;
 }
 
-.courses .swiper-courses .course:hover img {
+.courses .course:hover img {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
        -o-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.courses .swiper-courses .course:hover .age {
+.courses .course:hover .age {
   opacity: 0;
   visibility: hidden;
   -webkit-transform: translateY(-175px);
@@ -4840,7 +4858,7 @@ footer {
           transition-delay: 0s;
 }
 
-.courses .swiper-courses .course:hover .title {
+.courses .course:hover .title {
   -webkit-transform: translateY(-175px);
       -ms-transform: translateY(-175px);
        -o-transform: translateY(-175px);
@@ -4850,8 +4868,8 @@ footer {
           transition-delay: 0.1s;
 }
 
-.courses .swiper-courses .course:hover .text,
-.courses .swiper-courses .course:hover .more {
+.courses .course:hover .text,
+.courses .course:hover .more {
   opacity: 1;
   visibility: visible;
   -webkit-transform: none;
@@ -4863,7 +4881,7 @@ footer {
           transition-delay: 0.45s;
 }
 
-.courses .swiper-courses .course:hover .more {
+.courses .course:hover .more {
   -webkit-transition: opacity 0.4s ease 0.55s, visibility 0.4s ease 0.55s, color 0.2s ease, -webkit-transform 0.4s ease 0.55s, -webkit-background-size 0.2s ease;
   transition: opacity 0.4s ease 0.55s, visibility 0.4s ease 0.55s, color 0.2s ease, -webkit-transform 0.4s ease 0.55s, -webkit-background-size 0.2s ease;
   -o-transition: opacity 0.4s ease 0.55s, visibility 0.4s ease 0.55s, color 0.2s ease, -o-transform 0.4s ease 0.55s, -o-background-size 0.2s ease;
@@ -4874,11 +4892,7 @@ footer {
 .courses-arrows {
   margin-top: 30px;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
   -webkit-align-items: center;
      -moz-box-align: center;
@@ -6223,6 +6237,31 @@ i {
   }
 }
 
+@media all and (max-width: 1320px) {
+  .courses .course .info {
+    padding: 30px 20px;
+  }
+
+  .courses .course .title {
+    font-size: -webkit-calc((100vw - 1100px) / (1320 - 1100) * (21 - 18) + 18px);
+    font-size: calc((100vw - 1100px) / (1320 - 1100) * (21 - 18) + 18px);
+  }
+
+  .courses .course .age {
+    font-size: 16px;
+  }
+
+  .courses .course .text,
+  .courses .course .more {
+    left: 20px;
+  }
+
+  .courses .course .text {
+    max-width: -webkit-calc((100vw - 1100px) / (1320 - 1100) * (350 - 285) + 285px);
+    max-width: calc((100vw - 1100px) / (1320 - 1100) * (350 - 285) + 285px);
+  }
+}
+
 @media all and (max-width: 1300px) {
   .hero-wrap .hero-bg {
     top: -60px;
@@ -6367,6 +6406,26 @@ i {
 
   .hero-list li {
     font-size: 17.5px;
+  }
+
+  .courses .swiper-col {
+    max-width: 50%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+       -moz-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+
+  .courses .course .title {
+    font-size: -webkit-calc((100vw - 730px) / (1100 - 730) * (21 - 18) + 18px);
+    font-size: calc((100vw - 730px) / (1100 - 730) * (21 - 18) + 18px);
+    max-width: 400px;
+  }
+
+  .courses .course .text {
+    max-width: -webkit-calc((100vw - 730px) / (1100 - 730) * (450 - 285) + 285px);
+    max-width: calc((100vw - 730px) / (1100 - 730) * (450 - 285) + 285px);
   }
 }
 
@@ -7250,27 +7309,10 @@ i {
   }
 }
 
-@media all and (max-width: 700px) {
-  .contact-links {
-    -ms-grid-rows: 1fr 10px 1fr;
-    -ms-grid-columns: 1fr 10px 1fr;
-        grid-template: 1fr 1fr/1fr 1fr;
-    gap: 10px;
-  }
-
-  .contact-links .contact-link.address {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: 1/3;
-    -webkit-box-ordinal-group: 4;
-    -webkit-order: 3;
-       -moz-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-
-  .contact-links .contact-link.address span {
-    max-width: 330px;
+@media all and (max-width: 730px) {
+  .courses-section .courses-container {
+    padding: 0;
+    max-width: 100%;
   }
 
   .courses-section .decor-title {
@@ -7299,6 +7341,85 @@ i {
 
   .courses-section .heading .section-title {
     text-align: center;
+  }
+
+  .courses .swiper-courses,
+  .courses .swiper-courses .swiper-wrapper {
+    width: 100%;
+  }
+
+  .courses .swiper-courses .swiper-wrapper {
+    margin: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .courses .swiper-col {
+    padding: 0;
+    display: block;
+    min-width: 430px;
+    max-width: 430px;
+  }
+
+  .courses .course {
+    min-width: 430px;
+    max-width: 430px;
+  }
+
+  .courses .course .info {
+    padding: 30px;
+  }
+
+  .courses .course .title {
+    font-size: 21px;
+  }
+
+  .courses .course .text {
+    max-width: 350px;
+  }
+
+  .courses .course .text,
+  .courses .course .more {
+    left: 30px;
+  }
+
+  .courses-arrows {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .contact-links {
+    -ms-grid-rows: 1fr 10px 1fr;
+    -ms-grid-columns: 1fr 10px 1fr;
+        grid-template: 1fr 1fr/1fr 1fr;
+    gap: 10px;
+  }
+
+  .contact-links .contact-link.address {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+       -moz-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+  .contact-links .contact-link.address span {
+    max-width: 330px;
   }
 }
 
@@ -7456,6 +7577,7 @@ i {
     padding: 0 15px;
   }
 
+  .courses .swiper-courses .swiper-col,
   .courses .swiper-courses .course {
     min-width: 100%;
   }
@@ -7675,23 +7797,23 @@ i {
     padding: 0 20px;
   }
 
-  .courses .swiper-courses .course .info {
+  .courses .course .info {
     padding: 30px -webkit-calc((100vw - 280px) / (450 - 280) * (30 - 15) + 15px);
     padding: 30px calc((100vw - 280px) / (450 - 280) * (30 - 15) + 15px);
   }
 
-  .courses .swiper-courses .course .age {
+  .courses .course .age {
     font-size: -webkit-calc((100vw - 280px) / (450 - 280) * (17 - 16) + 16px);
     font-size: calc((100vw - 280px) / (450 - 280) * (17 - 16) + 16px);
   }
 
-  .courses .swiper-courses .course .title {
+  .courses .course .title {
     font-size: -webkit-calc((100vw - 280px) / (450 - 280) * (21 - 17) + 17px);
     font-size: calc((100vw - 280px) / (450 - 280) * (21 - 17) + 17px);
     -webkit-line-clamp: 3;
   }
 
-  .courses .swiper-courses .course .text {
+  .courses .course .text {
     font-size: -webkit-calc((100vw - 280px) / (450 - 280) * (16 - 15) + 15px);
     font-size: calc((100vw - 280px) / (450 - 280) * (16 - 15) + 15px);
     left: -webkit-calc((100vw - 280px) / (450 - 280) * (30 - 15) + 15px);
@@ -7700,7 +7822,7 @@ i {
     max-width: calc((100vw - 280px) / (450 - 280) * (350 - 210) + 210px);
   }
 
-  .courses .swiper-courses .course .more {
+  .courses .course .more {
     left: -webkit-calc((100vw - 280px) / (450 - 280) * (30 - 15) + 15px);
     left: calc((100vw - 280px) / (450 - 280) * (30 - 15) + 15px);
   }
