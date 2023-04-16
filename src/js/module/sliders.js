@@ -73,8 +73,8 @@ window.addEventListener('resize', function() {
 });
 
 
+// TODO Отображение/скрытие всех курсов при клике на кнопку
 const showBtn = document.querySelector('#courses .btn-all')
-
 showBtn?.addEventListener('click', function () {
    const hasCollapse = slides.find(el => el.classList.contains('collapse'))
 
@@ -119,7 +119,7 @@ const reviews = new Swiper('#swiper-reviews', {
       crossFade: true
    },
    autoHeight: true
-})
+}) 
 
 
 
