@@ -5,11 +5,9 @@ import Swiper from 'swiper/bundle';
 
 
 // TODO Swiper Courses
+let courses = null;
 
-
-var courses = null;
-
-function initSwiper() {
+const initSwiper = function () {
   if (window.innerWidth <= 730) {
     if (!courses) {
       courses = new Swiper('#swiper-courses', {
@@ -19,10 +17,6 @@ function initSwiper() {
          spaceBetween: 20,
          centeredSlides: true,
          speed: 400,
-         // autoplay: {
-         //    delay: 2500,
-         //    disableOnInteraction: true,
-         // },
          pauseOnMouseEnter: true,
          keyboard: {
             enabled: true,
@@ -56,10 +50,45 @@ function initSwiper() {
   }
 }
 
+const collapseCourses = function (arr, count) {
+   if (window.innerWidth <= 730) {
+      arr.forEach(el => el.classList.remove('collapse'))
+   } else {
+      arr.forEach((el, idx) => {
+         console.log('collapseCourses');
+         idx <= count && el.classList.add('collapse')
+      })
+   }
+}
+
+
 initSwiper();
+
+const slides = [...document.querySelectorAll('.courses .swiper-slide')].reverse()
+collapseCourses(slides, 5)
+
 window.addEventListener('resize', function() {
   initSwiper();
+  collapseCourses(slides, 5)
 });
+
+
+const showBtn = document.querySelector('#courses .btn-all')
+
+showBtn?.addEventListener('click', function () {
+   const hasCollapse = slides.find(el => el.classList.contains('collapse'))
+
+   if (hasCollapse) {
+      slides.forEach(el => el.classList.remove('collapse'))
+      this.textContent = 'Свернуть'
+   }  else {
+      slides.forEach((el, idx) => {
+         console.log('collapseCourses');
+         idx <= 5 && el.classList.add('collapse')
+      })
+      this.textContent = 'Все курсы'
+   }
+})
 
 
 

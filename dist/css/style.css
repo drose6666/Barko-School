@@ -4610,36 +4610,37 @@ footer {
   background: url(../../../img/wave-bottom.svg) no-repeat center/cover;
 }
 
-.courses-section .heading {
-  margin-bottom: 50px;
+.courses-section .decor-title {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.courses-section .section-title {
+  text-align: center;
+}
+
+.courses-section .btn-all {
+  margin: 50px auto 0 auto;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 15px;
-}
-
-.courses-section .heading .btn-all {
-  padding: 8px 20px;
-  font-size: 14px;
-  font-weight: 500;
-  white-space: nowrap;
-  width: 139px;
-  min-width: 139px;
+  text-align: center;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 
 .courses {
+  margin-top: 60px;
   width: 100%;
   position: relative;
 }
@@ -4657,7 +4658,7 @@ footer {
   width: auto;
 }
 
-.courses .swiper-col {
+.courses .swiper-slide {
   margin-bottom: 20px;
   padding: 0 10px;
   max-width: 33.3333%;
@@ -4973,29 +4974,6 @@ footer {
 }
 
 .courses-section .heading .btn-all.animate.animation {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
-}
-
-.courses-section .courses.animate {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 0.6s ease 0.4s, visibility 0.6s ease 0.4s, -webkit-transform 0.6s ease 0.4s;
-  transition: opacity 0.6s ease 0.4s, visibility 0.6s ease 0.4s, -webkit-transform 0.6s ease 0.4s;
-  -o-transition: opacity 0.6s ease 0.4s, visibility 0.6s ease 0.4s, -o-transform 0.6s ease 0.4s;
-  transition: transform 0.6s ease 0.4s, opacity 0.6s ease 0.4s, visibility 0.6s ease 0.4s;
-  transition: transform 0.6s ease 0.4s, opacity 0.6s ease 0.4s, visibility 0.6s ease 0.4s, -webkit-transform 0.6s ease 0.4s, -o-transform 0.6s ease 0.4s;
-  -webkit-transform: translateY(30px);
-      -ms-transform: translateY(30px);
-       -o-transform: translateY(30px);
-          transform: translateY(30px);
-}
-
-.courses-section .courses.animate.animation {
   opacity: 1;
   visibility: visible;
   -webkit-transform: none;
@@ -6189,6 +6167,288 @@ i {
           transform: translateX(5px);
 }
 
+@media all and (min-width: 731px) {
+  .courses .swiper-slide:nth-child(1).animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.6s ease 0.1s, visibility 0.6s ease 0.1s, -webkit-transform 0.6s ease 0.1s;
+    transition: opacity 0.6s ease 0.1s, visibility 0.6s ease 0.1s, -webkit-transform 0.6s ease 0.1s;
+    -o-transition: opacity 0.6s ease 0.1s, visibility 0.6s ease 0.1s, -o-transform 0.6s ease 0.1s;
+    transition: transform 0.6s ease 0.1s, opacity 0.6s ease 0.1s, visibility 0.6s ease 0.1s;
+    transition: transform 0.6s ease 0.1s, opacity 0.6s ease 0.1s, visibility 0.6s ease 0.1s, -webkit-transform 0.6s ease 0.1s, -o-transform 0.6s ease 0.1s;
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+         -o-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  .courses .swiper-slide:nth-child(1).animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .courses .swiper-slide:nth-child(2).animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.6s ease 0.15s, visibility 0.6s ease 0.15s, -webkit-transform 0.6s ease 0.15s;
+    transition: opacity 0.6s ease 0.15s, visibility 0.6s ease 0.15s, -webkit-transform 0.6s ease 0.15s;
+    -o-transition: opacity 0.6s ease 0.15s, visibility 0.6s ease 0.15s, -o-transform 0.6s ease 0.15s;
+    transition: transform 0.6s ease 0.15s, opacity 0.6s ease 0.15s, visibility 0.6s ease 0.15s;
+    transition: transform 0.6s ease 0.15s, opacity 0.6s ease 0.15s, visibility 0.6s ease 0.15s, -webkit-transform 0.6s ease 0.15s, -o-transform 0.6s ease 0.15s;
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+         -o-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  .courses .swiper-slide:nth-child(2).animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .courses .swiper-slide:nth-child(3).animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s, -webkit-transform 0.6s ease 0.2s;
+    transition: opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s, -webkit-transform 0.6s ease 0.2s;
+    -o-transition: opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s, -o-transform 0.6s ease 0.2s;
+    transition: transform 0.6s ease 0.2s, opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s;
+    transition: transform 0.6s ease 0.2s, opacity 0.6s ease 0.2s, visibility 0.6s ease 0.2s, -webkit-transform 0.6s ease 0.2s, -o-transform 0.6s ease 0.2s;
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+         -o-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  .courses .swiper-slide:nth-child(3).animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .courses .swiper-slide:nth-child(4).animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.6s ease 0.25s, visibility 0.6s ease 0.25s, -webkit-transform 0.6s ease 0.25s;
+    transition: opacity 0.6s ease 0.25s, visibility 0.6s ease 0.25s, -webkit-transform 0.6s ease 0.25s;
+    -o-transition: opacity 0.6s ease 0.25s, visibility 0.6s ease 0.25s, -o-transform 0.6s ease 0.25s;
+    transition: transform 0.6s ease 0.25s, opacity 0.6s ease 0.25s, visibility 0.6s ease 0.25s;
+    transition: transform 0.6s ease 0.25s, opacity 0.6s ease 0.25s, visibility 0.6s ease 0.25s, -webkit-transform 0.6s ease 0.25s, -o-transform 0.6s ease 0.25s;
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+         -o-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  .courses .swiper-slide:nth-child(4).animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .courses .swiper-slide:nth-child(5).animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s, -webkit-transform 0.6s ease 0.3s;
+    transition: opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s, -webkit-transform 0.6s ease 0.3s;
+    -o-transition: opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s, -o-transform 0.6s ease 0.3s;
+    transition: transform 0.6s ease 0.3s, opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s;
+    transition: transform 0.6s ease 0.3s, opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s, -webkit-transform 0.6s ease 0.3s, -o-transform 0.6s ease 0.3s;
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+         -o-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  .courses .swiper-slide:nth-child(5).animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .courses .swiper-slide:nth-child(6).animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.6s ease 0.35s, visibility 0.6s ease 0.35s, -webkit-transform 0.6s ease 0.35s;
+    transition: opacity 0.6s ease 0.35s, visibility 0.6s ease 0.35s, -webkit-transform 0.6s ease 0.35s;
+    -o-transition: opacity 0.6s ease 0.35s, visibility 0.6s ease 0.35s, -o-transform 0.6s ease 0.35s;
+    transition: transform 0.6s ease 0.35s, opacity 0.6s ease 0.35s, visibility 0.6s ease 0.35s;
+    transition: transform 0.6s ease 0.35s, opacity 0.6s ease 0.35s, visibility 0.6s ease 0.35s, -webkit-transform 0.6s ease 0.35s, -o-transform 0.6s ease 0.35s;
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+         -o-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  .courses .swiper-slide:nth-child(6).animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .courses .swiper-slide:nth-child(7).animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.6s ease 0.4s, visibility 0.6s ease 0.4s, -webkit-transform 0.6s ease 0.4s;
+    transition: opacity 0.6s ease 0.4s, visibility 0.6s ease 0.4s, -webkit-transform 0.6s ease 0.4s;
+    -o-transition: opacity 0.6s ease 0.4s, visibility 0.6s ease 0.4s, -o-transform 0.6s ease 0.4s;
+    transition: transform 0.6s ease 0.4s, opacity 0.6s ease 0.4s, visibility 0.6s ease 0.4s;
+    transition: transform 0.6s ease 0.4s, opacity 0.6s ease 0.4s, visibility 0.6s ease 0.4s, -webkit-transform 0.6s ease 0.4s, -o-transform 0.6s ease 0.4s;
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+         -o-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  .courses .swiper-slide:nth-child(7).animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .courses .swiper-slide:nth-child(8).animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.6s ease 0.45s, visibility 0.6s ease 0.45s, -webkit-transform 0.6s ease 0.45s;
+    transition: opacity 0.6s ease 0.45s, visibility 0.6s ease 0.45s, -webkit-transform 0.6s ease 0.45s;
+    -o-transition: opacity 0.6s ease 0.45s, visibility 0.6s ease 0.45s, -o-transform 0.6s ease 0.45s;
+    transition: transform 0.6s ease 0.45s, opacity 0.6s ease 0.45s, visibility 0.6s ease 0.45s;
+    transition: transform 0.6s ease 0.45s, opacity 0.6s ease 0.45s, visibility 0.6s ease 0.45s, -webkit-transform 0.6s ease 0.45s, -o-transform 0.6s ease 0.45s;
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+         -o-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  .courses .swiper-slide:nth-child(8).animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .courses .swiper-slide:nth-child(9).animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.6s ease 0.5s, visibility 0.6s ease 0.5s, -webkit-transform 0.6s ease 0.5s;
+    transition: opacity 0.6s ease 0.5s, visibility 0.6s ease 0.5s, -webkit-transform 0.6s ease 0.5s;
+    -o-transition: opacity 0.6s ease 0.5s, visibility 0.6s ease 0.5s, -o-transform 0.6s ease 0.5s;
+    transition: transform 0.6s ease 0.5s, opacity 0.6s ease 0.5s, visibility 0.6s ease 0.5s;
+    transition: transform 0.6s ease 0.5s, opacity 0.6s ease 0.5s, visibility 0.6s ease 0.5s, -webkit-transform 0.6s ease 0.5s, -o-transform 0.6s ease 0.5s;
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+         -o-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  .courses .swiper-slide:nth-child(9).animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .courses .swiper-slide:nth-child(10).animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.6s ease 0.55s, visibility 0.6s ease 0.55s, -webkit-transform 0.6s ease 0.55s;
+    transition: opacity 0.6s ease 0.55s, visibility 0.6s ease 0.55s, -webkit-transform 0.6s ease 0.55s;
+    -o-transition: opacity 0.6s ease 0.55s, visibility 0.6s ease 0.55s, -o-transform 0.6s ease 0.55s;
+    transition: transform 0.6s ease 0.55s, opacity 0.6s ease 0.55s, visibility 0.6s ease 0.55s;
+    transition: transform 0.6s ease 0.55s, opacity 0.6s ease 0.55s, visibility 0.6s ease 0.55s, -webkit-transform 0.6s ease 0.55s, -o-transform 0.6s ease 0.55s;
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+         -o-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  .courses .swiper-slide:nth-child(10).animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .courses .swiper-slide:nth-child(11).animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.6s ease 0.6s, visibility 0.6s ease 0.6s, -webkit-transform 0.6s ease 0.6s;
+    transition: opacity 0.6s ease 0.6s, visibility 0.6s ease 0.6s, -webkit-transform 0.6s ease 0.6s;
+    -o-transition: opacity 0.6s ease 0.6s, visibility 0.6s ease 0.6s, -o-transform 0.6s ease 0.6s;
+    transition: transform 0.6s ease 0.6s, opacity 0.6s ease 0.6s, visibility 0.6s ease 0.6s;
+    transition: transform 0.6s ease 0.6s, opacity 0.6s ease 0.6s, visibility 0.6s ease 0.6s, -webkit-transform 0.6s ease 0.6s, -o-transform 0.6s ease 0.6s;
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+         -o-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  .courses .swiper-slide:nth-child(11).animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .courses .swiper-slide:nth-child(12).animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.6s ease 0.65s, visibility 0.6s ease 0.65s, -webkit-transform 0.6s ease 0.65s;
+    transition: opacity 0.6s ease 0.65s, visibility 0.6s ease 0.65s, -webkit-transform 0.6s ease 0.65s;
+    -o-transition: opacity 0.6s ease 0.65s, visibility 0.6s ease 0.65s, -o-transform 0.6s ease 0.65s;
+    transition: transform 0.6s ease 0.65s, opacity 0.6s ease 0.65s, visibility 0.6s ease 0.65s;
+    transition: transform 0.6s ease 0.65s, opacity 0.6s ease 0.65s, visibility 0.6s ease 0.65s, -webkit-transform 0.6s ease 0.65s, -o-transform 0.6s ease 0.65s;
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+         -o-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  .courses .swiper-slide:nth-child(12).animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .courses .swiper-slide.collapse {
+    display: none;
+  }
+}
+
 @media all and (min-width: 1920px) {
   .courses .swiper-courses .course {
     min-width: 500px;
@@ -6408,7 +6668,7 @@ i {
     font-size: 17.5px;
   }
 
-  .courses .swiper-col {
+  .courses .swiper-slide {
     max-width: 50%;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 50%;
@@ -7361,7 +7621,7 @@ i {
     width: 100%;
   }
 
-  .courses .swiper-col {
+  .courses .swiper-slide {
     padding: 0;
     display: block;
     min-width: 430px;
@@ -7577,7 +7837,7 @@ i {
     padding: 0 15px;
   }
 
-  .courses .swiper-courses .swiper-col,
+  .courses .swiper-courses .swiper-slide,
   .courses .swiper-courses .course {
     min-width: 100%;
   }
