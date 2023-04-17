@@ -6027,6 +6027,10 @@ i {
   right: -10px;
 }
 
+.swiper-wrap.courses .arrow {
+  display: none;
+}
+
 #swiper-pagination {
   margin: 30px auto 0 auto;
   bottom: -45px;
@@ -7482,6 +7486,14 @@ i {
   }
 
   .courses-arrows {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .swiper-wrap.courses .arrow {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;

@@ -207,6 +207,15 @@ i {
          }
       }
    }
+
+   &.courses {
+      .arrow {
+         display: none;
+         @media all and (max-width: 730px) {
+            display: flex;
+         }
+      }
+   }
 }
 
 
