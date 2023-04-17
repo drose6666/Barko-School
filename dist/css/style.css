@@ -8,8 +8,8 @@
    $targetFont - целевой размер шрифа, значение до которого изменяется шрифт
 */
 
-.gallery-section .gallery [class^=item] .photo .view-icon,
-.gallery-section .gallery [class^=item] .photo .hidden-overlay,
+.gallery-section .gallery .item .photo .view-icon,
+.gallery-section .gallery .item .photo .hidden-overlay,
 .schedule-item .schedule-icon,
 .about-img .about-video-open .video-btn,
 .about-img .skill,
@@ -3023,7 +3023,9 @@ footer {
 }
 
 #gallery-popup .popup {
-  max-width: 1200px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
   height: 100%;
 }
 
@@ -3617,9 +3619,16 @@ footer {
 .ui-close {
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  color: #F2184F;
+  color: #fff;
   font-size: 20px;
   cursor: pointer;
+  -webkit-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.ui-close:hover {
+  color: #F2184F;
 }
 
 .popup-wrap .ui-close {
@@ -3627,6 +3636,14 @@ footer {
   top: 15px;
   right: 15px;
   z-index: 2;
+}
+
+.popup-wrap#schedule-popup .ui-close {
+  color: #212529;
+}
+
+.popup-wrap#schedule-popup .ui-close:hover {
+  color: #F2184F;
 }
 
 .ui-overlay {
@@ -5282,189 +5299,28 @@ footer {
 
 .gallery-section .gallery {
   margin-top: 55px;
-  display: -ms-grid;
-  display: grid;
-  gap: 20px;
-      grid-template-areas: "item-1 item-2 item-3" "item-1 item-4 item-5" "item-6 item-7 item-7";
+  position: relative;
 }
 
-.gallery-section .gallery [class^=item]:nth-child(1).animate {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 0.6s ease 0.25s, visibility 0.6s ease 0.25s, -webkit-transform 0.6s ease 0.25s;
-  transition: opacity 0.6s ease 0.25s, visibility 0.6s ease 0.25s, -webkit-transform 0.6s ease 0.25s;
-  -o-transition: opacity 0.6s ease 0.25s, visibility 0.6s ease 0.25s, -o-transform 0.6s ease 0.25s;
-  transition: transform 0.6s ease 0.25s, opacity 0.6s ease 0.25s, visibility 0.6s ease 0.25s;
-  transition: transform 0.6s ease 0.25s, opacity 0.6s ease 0.25s, visibility 0.6s ease 0.25s, -webkit-transform 0.6s ease 0.25s, -o-transform 0.6s ease 0.25s;
-  -webkit-transform: translateX(30px);
-      -ms-transform: translateX(30px);
-       -o-transform: translateX(30px);
-          transform: translateX(30px);
+.gallery-section .gallery .item {
+  width: 430px;
+  height: 280px;
 }
 
-.gallery-section .gallery [class^=item]:nth-child(1).animate.animation {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
-}
-
-.gallery-section .gallery [class^=item]:nth-child(2).animate {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s, -webkit-transform 0.6s ease 0.3s;
-  transition: opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s, -webkit-transform 0.6s ease 0.3s;
-  -o-transition: opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s, -o-transform 0.6s ease 0.3s;
-  transition: transform 0.6s ease 0.3s, opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s;
-  transition: transform 0.6s ease 0.3s, opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s, -webkit-transform 0.6s ease 0.3s, -o-transform 0.6s ease 0.3s;
-  -webkit-transform: translateX(30px);
-      -ms-transform: translateX(30px);
-       -o-transform: translateX(30px);
-          transform: translateX(30px);
-}
-
-.gallery-section .gallery [class^=item]:nth-child(2).animate.animation {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
-}
-
-.gallery-section .gallery [class^=item]:nth-child(3).animate {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 0.6s ease 0.35s, visibility 0.6s ease 0.35s, -webkit-transform 0.6s ease 0.35s;
-  transition: opacity 0.6s ease 0.35s, visibility 0.6s ease 0.35s, -webkit-transform 0.6s ease 0.35s;
-  -o-transition: opacity 0.6s ease 0.35s, visibility 0.6s ease 0.35s, -o-transform 0.6s ease 0.35s;
-  transition: transform 0.6s ease 0.35s, opacity 0.6s ease 0.35s, visibility 0.6s ease 0.35s;
-  transition: transform 0.6s ease 0.35s, opacity 0.6s ease 0.35s, visibility 0.6s ease 0.35s, -webkit-transform 0.6s ease 0.35s, -o-transform 0.6s ease 0.35s;
-  -webkit-transform: translateX(30px);
-      -ms-transform: translateX(30px);
-       -o-transform: translateX(30px);
-          transform: translateX(30px);
-}
-
-.gallery-section .gallery [class^=item]:nth-child(3).animate.animation {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
-}
-
-.gallery-section .gallery [class^=item]:nth-child(4).animate {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 0.6s ease 0.4s, visibility 0.6s ease 0.4s, -webkit-transform 0.6s ease 0.4s;
-  transition: opacity 0.6s ease 0.4s, visibility 0.6s ease 0.4s, -webkit-transform 0.6s ease 0.4s;
-  -o-transition: opacity 0.6s ease 0.4s, visibility 0.6s ease 0.4s, -o-transform 0.6s ease 0.4s;
-  transition: transform 0.6s ease 0.4s, opacity 0.6s ease 0.4s, visibility 0.6s ease 0.4s;
-  transition: transform 0.6s ease 0.4s, opacity 0.6s ease 0.4s, visibility 0.6s ease 0.4s, -webkit-transform 0.6s ease 0.4s, -o-transform 0.6s ease 0.4s;
-  -webkit-transform: translateX(30px);
-      -ms-transform: translateX(30px);
-       -o-transform: translateX(30px);
-          transform: translateX(30px);
-}
-
-.gallery-section .gallery [class^=item]:nth-child(4).animate.animation {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
-}
-
-.gallery-section .gallery [class^=item]:nth-child(5).animate {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 0.6s ease 0.45s, visibility 0.6s ease 0.45s, -webkit-transform 0.6s ease 0.45s;
-  transition: opacity 0.6s ease 0.45s, visibility 0.6s ease 0.45s, -webkit-transform 0.6s ease 0.45s;
-  -o-transition: opacity 0.6s ease 0.45s, visibility 0.6s ease 0.45s, -o-transform 0.6s ease 0.45s;
-  transition: transform 0.6s ease 0.45s, opacity 0.6s ease 0.45s, visibility 0.6s ease 0.45s;
-  transition: transform 0.6s ease 0.45s, opacity 0.6s ease 0.45s, visibility 0.6s ease 0.45s, -webkit-transform 0.6s ease 0.45s, -o-transform 0.6s ease 0.45s;
-  -webkit-transform: translateX(30px);
-      -ms-transform: translateX(30px);
-       -o-transform: translateX(30px);
-          transform: translateX(30px);
-}
-
-.gallery-section .gallery [class^=item]:nth-child(5).animate.animation {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
-}
-
-.gallery-section .gallery [class^=item]:nth-child(6).animate {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 0.6s ease 0.5s, visibility 0.6s ease 0.5s, -webkit-transform 0.6s ease 0.5s;
-  transition: opacity 0.6s ease 0.5s, visibility 0.6s ease 0.5s, -webkit-transform 0.6s ease 0.5s;
-  -o-transition: opacity 0.6s ease 0.5s, visibility 0.6s ease 0.5s, -o-transform 0.6s ease 0.5s;
-  transition: transform 0.6s ease 0.5s, opacity 0.6s ease 0.5s, visibility 0.6s ease 0.5s;
-  transition: transform 0.6s ease 0.5s, opacity 0.6s ease 0.5s, visibility 0.6s ease 0.5s, -webkit-transform 0.6s ease 0.5s, -o-transform 0.6s ease 0.5s;
-  -webkit-transform: translateX(30px);
-      -ms-transform: translateX(30px);
-       -o-transform: translateX(30px);
-          transform: translateX(30px);
-}
-
-.gallery-section .gallery [class^=item]:nth-child(6).animate.animation {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
-}
-
-.gallery-section .gallery [class^=item]:nth-child(7).animate {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 0.6s ease 0.55s, visibility 0.6s ease 0.55s, -webkit-transform 0.6s ease 0.55s;
-  transition: opacity 0.6s ease 0.55s, visibility 0.6s ease 0.55s, -webkit-transform 0.6s ease 0.55s;
-  -o-transition: opacity 0.6s ease 0.55s, visibility 0.6s ease 0.55s, -o-transform 0.6s ease 0.55s;
-  transition: transform 0.6s ease 0.55s, opacity 0.6s ease 0.55s, visibility 0.6s ease 0.55s;
-  transition: transform 0.6s ease 0.55s, opacity 0.6s ease 0.55s, visibility 0.6s ease 0.55s, -webkit-transform 0.6s ease 0.55s, -o-transform 0.6s ease 0.55s;
-  -webkit-transform: translateX(30px);
-      -ms-transform: translateX(30px);
-       -o-transform: translateX(30px);
-          transform: translateX(30px);
-}
-
-.gallery-section .gallery [class^=item]:nth-child(7).animate.animation {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
-}
-
-.gallery-section .gallery [class^=item] .photo {
+.gallery-section .gallery .item .photo {
   -webkit-border-radius: 15px;
           border-radius: 15px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  width: 100%;
-  height: 100%;
-  -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-.gallery-section .gallery [class^=item] .photo img {
+.gallery-section .gallery .item .photo img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -5473,7 +5329,7 @@ footer {
      object-position: center;
 }
 
-.gallery-section .gallery [class^=item] .photo .hidden-overlay {
+.gallery-section .gallery .item .photo .hidden-overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -5488,7 +5344,7 @@ footer {
   transition: all 0.3s ease;
 }
 
-.gallery-section .gallery [class^=item] .photo .view-icon {
+.gallery-section .gallery .item .photo .view-icon {
   width: 40px;
   height: 40px;
   background: #fff;
@@ -5509,8 +5365,8 @@ footer {
   transition: opacity 0.3s ease 0.1s, background-color 0.2s ease, transform 0.2s ease 0.1s, -webkit-transform 0.2s ease 0.1s, -o-transform 0.2s ease 0.1s;
 }
 
-.gallery-section .gallery [class^=item] .photo .view-icon:after {
-  content: "\e91b";
+.gallery-section .gallery .item .photo .view-icon:after {
+  content: "\e91d";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -5526,77 +5382,26 @@ footer {
   transition: all 0.2s ease;
 }
 
-.gallery-section .gallery [class^=item] .photo .view-icon:hover {
+.gallery-section .gallery .item .photo .view-icon:hover {
   background: #F2184F;
   -webkit-box-shadow: 0px 0px 0px 8px rgba(242, 24, 79, 0.2);
           box-shadow: 0px 0px 0px 8px rgba(242, 24, 79, 0.2);
 }
 
-.gallery-section .gallery [class^=item] .photo .view-icon:hover:after {
+.gallery-section .gallery .item .photo .view-icon:hover:after {
   color: #fff;
 }
 
-.gallery-section .gallery [class^=item] .photo:hover {
-  -webkit-transform: translateY(-5px);
-      -ms-transform: translateY(-5px);
-       -o-transform: translateY(-5px);
-          transform: translateY(-5px);
-}
-
-.gallery-section .gallery [class^=item] .photo:hover .hidden-overlay {
+.gallery-section .gallery .item .photo:hover .hidden-overlay {
   background: rgba(32, 44, 69, 0.6);
 }
 
-.gallery-section .gallery [class^=item] .photo:hover .hidden-overlay .view-icon {
+.gallery-section .gallery .item .photo:hover .hidden-overlay .view-icon {
   opacity: 1;
   -webkit-transform: none;
       -ms-transform: none;
        -o-transform: none;
           transform: none;
-}
-
-.gallery-section .gallery .item-1 {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 1;
-  grid-area: item-1;
-}
-
-.gallery-section .gallery .item-2 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: item-2;
-}
-
-.gallery-section .gallery .item-3 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 5;
-  grid-area: item-3;
-}
-
-.gallery-section .gallery .item-4 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  grid-area: item-4;
-}
-
-.gallery-section .gallery .item-5 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 5;
-  grid-area: item-5;
-}
-
-.gallery-section .gallery .item-6 {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  grid-area: item-6;
-}
-
-.gallery-section .gallery .item-7 {
-  -ms-grid-row: 5;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 3;
-  grid-area: item-7;
 }
 
 .reviews-section {
@@ -5791,23 +5596,6 @@ footer {
   color: #9193A3;
   position: relative;
   z-index: 1;
-}
-
-#reviews-pagination {
-  margin: 30px auto 0 auto;
-  bottom: -45px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-       -o-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: 1;
-}
-
-#reviews-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background: #F2184F;
 }
 
 .decor-title.animate {
@@ -6165,6 +5953,95 @@ i {
       -ms-transform: translateX(5px);
        -o-transform: translateX(5px);
           transform: translateX(5px);
+}
+
+.swiper-wrap .arrow.circle-arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: #fff;
+  opacity: 0.4;
+  -webkit-box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25);
+          box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25);
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.swiper-wrap .arrow.circle-arrow:after {
+  font-size: 17px;
+  color: #212529;
+}
+
+.swiper-wrap .arrow.circle-arrow.swiper-button-prev {
+  left: 20px;
+}
+
+.swiper-wrap .arrow.circle-arrow.swiper-button-prev:after {
+  margin-left: -2px;
+  content: "\e917";
+}
+
+.swiper-wrap .arrow.circle-arrow.swiper-button-next {
+  right: 20px;
+}
+
+.swiper-wrap .arrow.circle-arrow.swiper-button-next:after {
+  margin-right: -2px;
+  content: "\e918";
+}
+
+.swiper-wrap .arrow.circle-arrow:hover {
+  opacity: 1;
+}
+
+.swiper-wrap .arrow.circle-arrow:hover:after {
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  color: #F2184F;
+}
+
+.swiper-wrap .arrow.circle-arrow:active {
+  -webkit-transform: scale(0.95) translateY(-50%);
+      -ms-transform: scale(0.95) translateY(-50%);
+       -o-transform: scale(0.95) translateY(-50%);
+          transform: scale(0.95) translateY(-50%);
+}
+
+.swiper-wrap.reviews-swiper-wrap .arrow.circle-arrow.swiper-button-prev {
+  opacity: 1;
+  left: -10px;
+}
+
+.swiper-wrap.reviews-swiper-wrap .arrow.circle-arrow.swiper-button-next {
+  opacity: 1;
+  right: -10px;
+}
+
+#swiper-pagination {
+  margin: 30px auto 0 auto;
+  bottom: -45px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1;
+}
+
+#swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #F2184F;
 }
 
 @media all and (min-width: 731px) {
@@ -6714,10 +6591,6 @@ i {
 
   #schedule-popup .schedule-footer {
     padding: 10px 20px 25px 20px;
-  }
-
-  .gallery {
-    gap: 15px;
   }
 }
 
@@ -7445,52 +7318,10 @@ i {
             flex: 0 0 50%;
   }
 
-  .gallery-section .gallery {
-        grid-template-areas: "item-1 item-2" "item-1 item-3" "item-4 item-5" "item-6 item-7";
-    gap: 15px;
-  }
-
   .gallery-section:after {
     width: 400px;
     height: 400px;
     top: 250px;
-  }
-
-  .gallery-section .gallery .item-1 {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 1;
-  }
-
-  .gallery-section .gallery .item-2 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-  }
-
-  .gallery-section .gallery .item-3 {
-    -ms-grid-row: 3;
-    -ms-grid-column: 3;
-  }
-
-  .gallery-section .gallery .item-4 {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-  }
-
-  .gallery-section .gallery .item-5 {
-    -ms-grid-row: 5;
-    -ms-grid-column: 3;
-  }
-
-  .gallery-section .gallery .item-6 {
-    -ms-grid-row: 7;
-    -ms-grid-column: 1;
-  }
-
-  .gallery-section .gallery .item-7 {
-    -ms-grid-row: 7;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
   }
 }
 
@@ -7841,6 +7672,15 @@ i {
   .courses .swiper-courses .course {
     min-width: 100%;
   }
+
+  .gallery-section .gallery {
+    padding: 0 15px;
+  }
+
+  .gallery-section .gallery .item {
+    min-width: 100%;
+    max-width: auto;
+  }
 }
 
 @media all and (max-width: 500px) {
@@ -8000,47 +7840,6 @@ i {
   .schedule-item.item-price {
     padding: 20px 50px;
     font-size: 20px;
-  }
-
-  .gallery-section .gallery {
-        grid-template-areas: "item-1" "item-2" "item-3" "item-4" "item-5" "item-6" "item-7";
-  }
-
-  .gallery-section .gallery .item-1 {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
-  }
-
-  .gallery-section .gallery .item-2 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-  }
-
-  .gallery-section .gallery .item-3 {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-  }
-
-  .gallery-section .gallery .item-4 {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-  }
-
-  .gallery-section .gallery .item-5 {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-  }
-
-  .gallery-section .gallery .item-6 {
-    -ms-grid-row: 6;
-    -ms-grid-column: 1;
-  }
-
-  .gallery-section .gallery .item-7 {
-    -ms-grid-row: 7;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
   }
 }
 

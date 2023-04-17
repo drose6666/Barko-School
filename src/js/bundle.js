@@ -75,7 +75,7 @@ const pricePopup = new openPopup({
 // TODO Gallery popup
 const galleryPopup = new openPopup({
    popup: '#gallery-popup',
-   open: '.gallery [class^="item"]',
+   open: '.gallery .item',
    close: '#gallery-popup .ui-close',
    overlay: '#gallery-popup .popup-overlay'
 })

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Barko School Font';
-  src:  url('../fonts/Iconsfont/barko-school.eot?ojd93n');
-  src:  url('../fonts/Iconsfont/barko-school.eot?ojd93n#iefix') format('embedded-opentype'),
-    url('../fonts/Iconsfont/barko-school.ttf?ojd93n') format('truetype'),
-    url('../fonts/Iconsfont/barko-school.woff?ojd93n') format('woff'),
-    url('../fonts/Iconsfont/barko-school.svg?ojd93n#barko-school') format('svg');
+  src:  url('../fonts/Iconsfont/barko-school.eot?f0t9eh');
+  src:  url('../fonts/Iconsfont/barko-school.eot?f0t9eh#iefix') format('embedded-opentype'),
+    url('../fonts/Iconsfont/barko-school.ttf?f0t9eh') format('truetype'),
+    url('../fonts/Iconsfont/barko-school.woff?f0t9eh') format('woff'),
+    url('../fonts/Iconsfont/barko-school.svg?f0t9eh#barko-school') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,14 +25,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.i-telegram:before {
-  content: "\e929";
+.i-chevron-left:before {
+  content: "\e917";
 }
-.i-viber:before {
-  content: "\e92a";
-}
-.i-whatsapp:before {
-  content: "\e92c";
+.i-chevron-right:before {
+  content: "\e918";
 }
 .i-arrow-bottom-long-regular:before {
   content: "\e900";
@@ -104,59 +101,68 @@
   content: "\e916";
 }
 .i-clock:before {
-  content: "\e917";
-}
-.i-clock-fill:before {
-  content: "\e918";
-}
-.i-close:before {
   content: "\e919";
 }
-.i-eye:before {
+.i-clock-fill:before {
   content: "\e91a";
 }
-.i-eye-fill:before {
+.i-close:before {
   content: "\e91b";
 }
-.i-facebook:before {
+.i-eye:before {
   content: "\e91c";
 }
-.i-instagram:before {
+.i-eye-fill:before {
   content: "\e91d";
 }
-.i-map-marker:before {
+.i-facebook:before {
   content: "\e91e";
 }
-.i-map-marker-dot-fill:before {
+.i-instagram:before {
   content: "\e91f";
 }
-.i-map-marker-fill:before {
+.i-map-marker:before {
   content: "\e920";
 }
-.i-message:before {
+.i-map-marker-dot-fill:before {
   content: "\e921";
 }
-.i-message-fill:before {
+.i-map-marker-fill:before {
   content: "\e922";
 }
-.i-phone:before {
+.i-message:before {
   content: "\e923";
 }
-.i-phone-fill:before {
+.i-message-fill:before {
   content: "\e924";
 }
-.i-play:before {
+.i-phone:before {
   content: "\e925";
 }
-.i-quotes:before {
+.i-phone-fill:before {
   content: "\e926";
 }
-.i-schedule:before {
+.i-play:before {
   content: "\e927";
 }
-.i-schedule-price:before {
+.i-quotes:before {
   content: "\e928";
 }
-.i-vk:before {
+.i-schedule:before {
+  content: "\e929";
+}
+.i-schedule-price:before {
+  content: "\e92a";
+}
+.i-telegram:before {
   content: "\e92b";
+}
+.i-viber:before {
+  content: "\e92c";
+}
+.i-vk:before {
+  content: "\e92d";
+}
+.i-whatsapp:before {
+  content: "\e92e";
 }

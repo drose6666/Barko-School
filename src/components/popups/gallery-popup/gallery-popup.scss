@@ -1,6 +1,6 @@
 #gallery-popup {
    .popup {
-      max-width: 1200px;
+      max-width: max-content;
       height: 100%;
       .gallery-preview, #gallery-preview-swiper,
       #gallery-preview-swiper .swiper-slide {

@@ -55,12 +55,10 @@ const collapseCourses = function (arr, count) {
       arr.forEach(el => el.classList.remove('collapse'))
    } else {
       arr.forEach((el, idx) => {
-         console.log('collapseCourses');
          idx <= count && el.classList.add('collapse')
       })
    }
 }
-
 
 initSwiper();
 
@@ -83,7 +81,6 @@ showBtn?.addEventListener('click', function () {
       this.textContent = 'Свернуть'
    }  else {
       slides.forEach((el, idx) => {
-         console.log('collapseCourses');
          idx <= 5 && el.classList.add('collapse')
       })
       this.textContent = 'Все курсы'
@@ -93,7 +90,6 @@ showBtn?.addEventListener('click', function () {
 
 
 // TODO Swiprr Reviews
-
 const reviews = new Swiper('#swiper-reviews', {
    slidesPerView: 1,
    slidesPerGroup: 1,
@@ -108,8 +104,12 @@ const reviews = new Swiper('#swiper-reviews', {
       enabled: true,
       onlyInViewport: false,
    },
+   navigation: {
+      nextEl: ".reviews .swiper-button-next",
+      prevEl: ".reviews .swiper-button-prev"
+   },
    pagination: {
-      el: '.swiper-pagination',
+      el: '.reviews-pagination',
       clickable: true,
       type: 'bullets',
       dynamicBullets: true
@@ -124,10 +124,59 @@ const reviews = new Swiper('#swiper-reviews', {
 
 
 
+// TODO Gallery Swiper
+const gallerySwiper = new Swiper('#gallery-swiper', {
+   slidesPerView: 'auto',
+   slidesPerGroup: 1,
+   loop: true,
+   spaceBetween: 20,
+   centeredSlides: true,
+   speed: 400,
+   pauseOnMouseEnter: true,
+   keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+   },
+   navigation: {
+      nextEl: ".gallery .swiper-button-next",
+      prevEl: ".gallery .swiper-button-prev"
+   },
+   pagination: {
+      el: '.gallery-pagination',
+      clickable: true,
+      type: 'bullets',
+      dynamicBullets: true
+   },
+   breakpoints: {
+      120: {
+         slidesPerView: 1,
+         slidesPerGroup: 1,
+         spaceBetween: 20,
+         centeredSlides: true,
+      },
+      550: {
+         spaceBetween: 20,
+         slidesPerGroup: 1,
+         centeredSlides: true,
+         slidesPerView: 'auto',
+      },
+      800: {
+         spaceBetween: 20,
+         slidesPerGroup: 1,
+         centeredSlides: true,
+         slidesPerView: 'auto',
+      },
+
+   }
+})
+
+
+
+
 
 // TODO Swiper Gallery popup
 const galleryPopupSwiper = new Swiper('#gallery-preview-swiper', {
-   slidesPerView: 1,
+   slidesPerView: 'auto',
    slidesPerGroup: 1,
    loop: true,
    speed: 400,
@@ -137,13 +186,13 @@ const galleryPopupSwiper = new Swiper('#gallery-preview-swiper', {
       onlyInViewport: false,
    },
    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
+      nextEl: ".gallery-preview .swiper-button-next",
+      prevEl: ".gallery-preview .swiper-button-prev"
    },
    // autoHeight: true
 })
 
-const galleryItems = document.querySelectorAll('.gallery [class^="item"]')
+const galleryItems = document.querySelectorAll('.gallery .item')
 const galleryPreviewSlider = document.querySelectorAll('#gallery-preview-swiper img')
 
 galleryItems.forEach(el => {

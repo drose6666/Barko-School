@@ -153,20 +153,6 @@
 }
 
 
-// TODO Swiper Pagination
-#reviews-pagination {
-   margin: 30px auto 0 auto;
-   bottom: -45px;
-   left: 50%;
-   transform: translateX(-50%);
-   z-index: 1;
-   .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
-      background: $action;
-   }
-}
-
 
 .decor-title {
    @include scrollAnimationFade($toRight: true, $delay: .1s)
