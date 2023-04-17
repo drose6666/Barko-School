@@ -156,8 +156,9 @@ i {
          height: 40px;
          border-radius: 50%;
          background: $light;
-         opacity: .4;
+         opacity: .3;
          box-shadow: 0 0 0 4px rgba(255,255,255,.25);
+         z-index: 1;
          transition: all .2s ease;
 
          &:after {

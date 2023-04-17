@@ -6008,9 +6008,10 @@ i {
   -webkit-border-radius: 50%;
           border-radius: 50%;
   background: #fff;
-  opacity: 0.4;
+  opacity: 0.3;
   -webkit-box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25);
           box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25);
+  z-index: 1;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
