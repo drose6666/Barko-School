@@ -3141,7 +3141,7 @@ footer {
           align-items: center;
   gap: 10px;
   position: fixed;
-  bottom: 60px;
+  bottom: 70px;
   right: 15px;
   z-index: 2;
 }
@@ -3276,31 +3276,52 @@ footer {
   transition: transform 0.2s ease, opacity 0.2s ease visibility 0.2s ease, box-shadow 0.2s ease, -webkit-transform 0.2s ease, -o-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
 }
 
-.messangers-wrap .messanger.whatsapp {
+.messangers-wrap .messanger:nth-child(1) {
   -webkit-transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, -webkit-transform 0.2s ease 0.1s, -webkit-box-shadow 0.2s ease;
   transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, -webkit-transform 0.2s ease 0.1s, -webkit-box-shadow 0.2s ease;
   -o-transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, box-shadow 0.2s ease, -o-transform 0.2s ease 0.1s;
   transition: transform 0.2s ease 0.1s, opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, box-shadow 0.2s ease;
   transition: transform 0.2s ease 0.1s, opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, box-shadow 0.2s ease, -webkit-transform 0.2s ease 0.1s, -o-transform 0.2s ease 0.1s, -webkit-box-shadow 0.2s ease;
-  background: #50ca5e;
 }
 
-.messangers-wrap .messanger.telegram {
+.messangers-wrap .messanger:nth-child(2) {
   -webkit-transition: opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, -webkit-transform 0.2s ease 0.18s, -webkit-box-shadow 0.2s ease;
   transition: opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, -webkit-transform 0.2s ease 0.18s, -webkit-box-shadow 0.2s ease;
   -o-transition: opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, box-shadow 0.2s ease, -o-transform 0.2s ease 0.18s;
   transition: transform 0.2s ease 0.18s, opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, box-shadow 0.2s ease;
   transition: transform 0.2s ease 0.18s, opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, box-shadow 0.2s ease, -webkit-transform 0.2s ease 0.18s, -o-transform 0.2s ease 0.18s, -webkit-box-shadow 0.2s ease;
-  background: #249cd7;
 }
 
-.messangers-wrap .messanger.viber {
+.messangers-wrap .messanger:nth-child(3) {
   -webkit-transition: opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, -webkit-transform 0.2s ease 0.26s, -webkit-box-shadow 0.2s ease;
   transition: opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, -webkit-transform 0.2s ease 0.26s, -webkit-box-shadow 0.2s ease;
   -o-transition: opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, box-shadow 0.2s ease, -o-transform 0.2s ease 0.26s;
   transition: transform 0.2s ease 0.26s, opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, box-shadow 0.2s ease;
   transition: transform 0.2s ease 0.26s, opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, box-shadow 0.2s ease, -webkit-transform 0.2s ease 0.26s, -o-transform 0.2s ease 0.26s, -webkit-box-shadow 0.2s ease;
-  background: #6f3faa;
+}
+
+.messangers-wrap .messanger:nth-child(4) {
+  -webkit-transition: opacity 0.2s ease 0.34s, visibility 0.2s ease 0.34s, -webkit-transform 0.2s ease 0.34s, -webkit-box-shadow 0.2s ease;
+  transition: opacity 0.2s ease 0.34s, visibility 0.2s ease 0.34s, -webkit-transform 0.2s ease 0.34s, -webkit-box-shadow 0.2s ease;
+  -o-transition: opacity 0.2s ease 0.34s, visibility 0.2s ease 0.34s, box-shadow 0.2s ease, -o-transform 0.2s ease 0.34s;
+  transition: transform 0.2s ease 0.34s, opacity 0.2s ease 0.34s, visibility 0.2s ease 0.34s, box-shadow 0.2s ease;
+  transition: transform 0.2s ease 0.34s, opacity 0.2s ease 0.34s, visibility 0.2s ease 0.34s, box-shadow 0.2s ease, -webkit-transform 0.2s ease 0.34s, -o-transform 0.2s ease 0.34s, -webkit-box-shadow 0.2s ease;
+}
+
+.messangers-wrap .messanger.whatsapp {
+  background: #50ca5e;
+}
+
+.messangers-wrap .messanger.telegram {
+  background: #249cd7;
+}
+
+.messangers-wrap .messanger.instagram {
+  background: #c13584;
+}
+
+.messangers-wrap .messanger.vk {
+  background: #0077ff;
 }
 
 .messangers-wrap.active .open {
@@ -3322,16 +3343,52 @@ footer {
   visibility: visible;
 }
 
-.messangers-wrap.active .messanger.whatsapp {
+.messangers-wrap.active .messanger:nth-child(1) {
+  -webkit-transform: translate(-50%, -85px);
+      -ms-transform: translate(-50%, -85px);
+       -o-transform: translate(-50%, -85px);
+          transform: translate(-50%, -85px);
   -webkit-transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, -webkit-transform 0.2s ease 0.1s, -webkit-box-shadow 0.2s ease;
   transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, -webkit-transform 0.2s ease 0.1s, -webkit-box-shadow 0.2s ease;
   -o-transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, box-shadow 0.2s ease, -o-transform 0.2s ease 0.1s;
   transition: transform 0.2s ease 0.1s, opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, box-shadow 0.2s ease;
   transition: transform 0.2s ease 0.1s, opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, box-shadow 0.2s ease, -webkit-transform 0.2s ease 0.1s, -o-transform 0.2s ease 0.1s, -webkit-box-shadow 0.2s ease;
-  -webkit-transform: translate(-50px, -80px);
-      -ms-transform: translate(-50px, -80px);
-       -o-transform: translate(-50px, -80px);
-          transform: translate(-50px, -80px);
+}
+
+.messangers-wrap.active .messanger:nth-child(2) {
+  -webkit-transform: translate(-82px, -55px);
+      -ms-transform: translate(-82px, -55px);
+       -o-transform: translate(-82px, -55px);
+          transform: translate(-82px, -55px);
+  -webkit-transition: opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, -webkit-transform 0.2s ease 0.18s, -webkit-box-shadow 0.2s ease;
+  transition: opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, -webkit-transform 0.2s ease 0.18s, -webkit-box-shadow 0.2s ease;
+  -o-transition: opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, box-shadow 0.2s ease, -o-transform 0.2s ease 0.18s;
+  transition: transform 0.2s ease 0.18s, opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, box-shadow 0.2s ease;
+  transition: transform 0.2s ease 0.18s, opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, box-shadow 0.2s ease, -webkit-transform 0.2s ease 0.18s, -o-transform 0.2s ease 0.18s, -webkit-box-shadow 0.2s ease;
+}
+
+.messangers-wrap.active .messanger:nth-child(3) {
+  -webkit-transform: translate(-80px, 6px);
+      -ms-transform: translate(-80px, 6px);
+       -o-transform: translate(-80px, 6px);
+          transform: translate(-80px, 6px);
+  -webkit-transition: opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, -webkit-transform 0.2s ease 0.26s, -webkit-box-shadow 0.2s ease;
+  transition: opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, -webkit-transform 0.2s ease 0.26s, -webkit-box-shadow 0.2s ease;
+  -o-transition: opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, box-shadow 0.2s ease, -o-transform 0.2s ease 0.26s;
+  transition: transform 0.2s ease 0.26s, opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, box-shadow 0.2s ease;
+  transition: transform 0.2s ease 0.26s, opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, box-shadow 0.2s ease, -webkit-transform 0.2s ease 0.26s, -o-transform 0.2s ease 0.26s, -webkit-box-shadow 0.2s ease;
+}
+
+.messangers-wrap.active .messanger:nth-child(4) {
+  -webkit-transform: translate(-50%, 35px);
+      -ms-transform: translate(-50%, 35px);
+       -o-transform: translate(-50%, 35px);
+          transform: translate(-50%, 35px);
+  -webkit-transition: opacity 0.2s ease 0.34s, visibility 0.2s ease 0.34s, -webkit-transform 0.2s ease 0.34s, -webkit-box-shadow 0.2s ease;
+  transition: opacity 0.2s ease 0.34s, visibility 0.2s ease 0.34s, -webkit-transform 0.2s ease 0.34s, -webkit-box-shadow 0.2s ease;
+  -o-transition: opacity 0.2s ease 0.34s, visibility 0.2s ease 0.34s, box-shadow 0.2s ease, -o-transform 0.2s ease 0.34s;
+  transition: transform 0.2s ease 0.34s, opacity 0.2s ease 0.34s, visibility 0.2s ease 0.34s, box-shadow 0.2s ease;
+  transition: transform 0.2s ease 0.34s, opacity 0.2s ease 0.34s, visibility 0.2s ease 0.34s, box-shadow 0.2s ease, -webkit-transform 0.2s ease 0.34s, -o-transform 0.2s ease 0.34s, -webkit-box-shadow 0.2s ease;
 }
 
 .messangers-wrap.active .messanger.whatsapp:hover {
@@ -3339,38 +3396,19 @@ footer {
           box-shadow: 0px 0px 0px 4px rgba(80, 202, 94, 0.5);
 }
 
-.messangers-wrap.active .messanger.telegram {
-  -webkit-transition: opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, -webkit-transform 0.2s ease 0.18s, -webkit-box-shadow 0.2s ease;
-  transition: opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, -webkit-transform 0.2s ease 0.18s, -webkit-box-shadow 0.2s ease;
-  -o-transition: opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, box-shadow 0.2s ease, -o-transform 0.2s ease 0.18s;
-  transition: transform 0.2s ease 0.18s, opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, box-shadow 0.2s ease;
-  transition: transform 0.2s ease 0.18s, opacity 0.2s ease 0.18s, visibility 0.2s ease 0.18s, box-shadow 0.2s ease, -webkit-transform 0.2s ease 0.18s, -o-transform 0.2s ease 0.18s, -webkit-box-shadow 0.2s ease;
-  -webkit-transform: translate(-85px, -50%);
-      -ms-transform: translate(-85px, -50%);
-       -o-transform: translate(-85px, -50%);
-          transform: translate(-85px, -50%);
-}
-
 .messangers-wrap.active .messanger.telegram:hover {
   -webkit-box-shadow: 0px 0px 0px 4px rgba(36, 156, 215, 0.5);
           box-shadow: 0px 0px 0px 4px rgba(36, 156, 215, 0.5);
 }
 
-.messangers-wrap.active .messanger.viber {
-  -webkit-transition: opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, -webkit-transform 0.2s ease 0.26s, -webkit-box-shadow 0.2s ease;
-  transition: opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, -webkit-transform 0.2s ease 0.26s, -webkit-box-shadow 0.2s ease;
-  -o-transition: opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, box-shadow 0.2s ease, -o-transform 0.2s ease 0.26s;
-  transition: transform 0.2s ease 0.26s, opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, box-shadow 0.2s ease;
-  transition: transform 0.2s ease 0.26s, opacity 0.2s ease 0.26s, visibility 0.2s ease 0.26s, box-shadow 0.2s ease, -webkit-transform 0.2s ease 0.26s, -o-transform 0.2s ease 0.26s, -webkit-box-shadow 0.2s ease;
-  -webkit-transform: translate(-50px, 30px);
-      -ms-transform: translate(-50px, 30px);
-       -o-transform: translate(-50px, 30px);
-          transform: translate(-50px, 30px);
+.messangers-wrap.active .messanger.instagram:hover {
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(193, 53, 132, 0.5);
+          box-shadow: 0px 0px 0px 4px rgba(193, 53, 132, 0.5);
 }
 
-.messangers-wrap.active .messanger.viber:hover {
-  -webkit-box-shadow: 0px 0px 0px 4px rgba(111, 63, 170, 0.5);
-          box-shadow: 0px 0px 0px 4px rgba(111, 63, 170, 0.5);
+.messangers-wrap.active .messanger.vk:hover {
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(0, 119, 255, 0.5);
+          box-shadow: 0px 0px 0px 4px rgba(0, 119, 255, 0.5);
 }
 
 .ui-burger {
@@ -3652,7 +3690,6 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
   opacity: 0;
   visibility: hidden;
   z-index: 2;
@@ -3664,6 +3701,16 @@ footer {
 .ui-overlay.active {
   opacity: 1;
   visibility: visible;
+}
+
+.ui-overlay,
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.ui-overlay:hover,
+.popup-overlay:hover {
+  cursor: url(../../../img/icons/close.svg), auto;
 }
 
 .popup-wrap {
@@ -3689,7 +3736,6 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
 
