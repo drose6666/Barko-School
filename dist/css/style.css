@@ -4830,7 +4830,7 @@ footer {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 300;
-  line-height: 165%;
+  line-height: 160%;
   color: #fff;
   max-width: 380px;
   display: -webkit-box;
@@ -6465,6 +6465,7 @@ i {
   .courses .course .text {
     max-width: -webkit-calc((100vw - 1100px) / (1320 - 1100) * (380 - 285) + 285px);
     max-width: calc((100vw - 1100px) / (1320 - 1100) * (380 - 285) + 285px);
+    line-height: 155%;
   }
 }
 
@@ -6632,6 +6633,7 @@ i {
   .courses .course .text {
     max-width: -webkit-calc((100vw - 730px) / (1100 - 730) * (450 - 285) + 285px);
     max-width: calc((100vw - 730px) / (1100 - 730) * (450 - 285) + 285px);
+    line-height: 160%;
   }
 }
 
@@ -7934,7 +7936,7 @@ i {
   }
 
   .courses-section .section-title {
-    font-size: 36px;
+    font-size: 35px;
   }
 
   .courses .course .info {
@@ -7948,8 +7950,8 @@ i {
   }
 
   .courses .course .title {
-    font-size: -webkit-calc((100vw - 280px) / (450 - 280) * (21 - 17) + 17px);
-    font-size: calc((100vw - 280px) / (450 - 280) * (21 - 17) + 17px);
+    font-size: -webkit-calc((100vw - 280px) / (450 - 280) * (21 - 19) + 19px);
+    font-size: calc((100vw - 280px) / (450 - 280) * (21 - 19) + 19px);
     -webkit-line-clamp: 3;
   }
 
@@ -7960,6 +7962,7 @@ i {
     left: calc((100vw - 280px) / (450 - 280) * (30 - 15) + 15px);
     max-width: -webkit-calc((100vw - 280px) / (450 - 280) * (350 - 210) + 210px);
     max-width: calc((100vw - 280px) / (450 - 280) * (350 - 210) + 210px);
+    line-height: 150%;
   }
 
   .courses .course .more {

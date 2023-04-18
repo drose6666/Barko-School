@@ -130,7 +130,7 @@
          font-family: $Rob;
          font-size: 14px;
          font-weight: 300;
-         line-height: 165%;
+         line-height: 160%;
          color: $light;
          max-width: 380px;
          display: -webkit-box;
@@ -238,7 +238,10 @@
       .title { font-size: calcSize($curW, $targetW, 21, 18); }
       .age { font-size: 16px; }
       .text, .more { left: 20px; }
-      .text { max-width: calcSize($curW, $targetW, 380, 285); }
+      .text { 
+         max-width: calcSize($curW, $targetW, 380, 285); 
+         line-height: 155%;
+      }
    }
 }
 
@@ -258,7 +261,10 @@
          font-size: calcSize($curW, $targetW, 21, 18); 
          max-width: 400px;
       }
-      .text { max-width: calcSize($curW, $targetW, 450, 285); }
+      .text { 
+         max-width: calcSize($curW, $targetW, 450, 285); 
+         line-height: 160%;
+      }
    }
 }
 
@@ -322,19 +328,20 @@
    $currentW: 450;
    $targetW: 280;
 
-   .courses-section .section-title { font-size: 36px; }
+   .courses-section .section-title { font-size: 35px; }
 
    .courses .course {
       .info { padding: 30px calcSize($currentW, $targetW, 30, 15); }
       .age { font-size: calcSize($currentW, $targetW, 17, 16); }
       .title { 
-         font-size: calcSize($currentW, $targetW, 21, 17); 
+         font-size: calcSize($currentW, $targetW, 21, 19); 
          -webkit-line-clamp: 3;
       }
       .text {
          font-size: calcSize($currentW, $targetW, 16, 15);
          left: calcSize($currentW, $targetW, 30, 15);
          max-width: calcSize($currentW, $targetW, 350, 210);
+         line-height: 150%;
       }
       .more { left: calcSize($currentW, $targetW, 30, 15); }
    }
