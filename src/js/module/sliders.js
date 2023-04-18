@@ -63,11 +63,11 @@ const collapseCourses = function (arr, count) {
 initSwiper();
 
 const slides = [...document.querySelectorAll('.courses .swiper-slide')].reverse()
-collapseCourses(slides, 5)
+collapseCourses(slides, 6)
 
 window.addEventListener('resize', function() {
   initSwiper();
-  collapseCourses(slides, 5)
+  collapseCourses(slides, 6)
 });
 
 
@@ -81,7 +81,7 @@ showBtn?.addEventListener('click', function () {
       this.textContent = 'Свернуть'
    }  else {
       slides.forEach((el, idx) => {
-         idx <= 5 && el.classList.add('collapse')
+         idx <= 6 && el.classList.add('collapse')
       })
       this.textContent = 'Все курсы'
    }

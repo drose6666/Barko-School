@@ -14,10 +14,6 @@
 @import '../components/features/features';
 @import '../components/contact-form/contact-form';
 @import '../components/contact-links/contact-links';
-@import '../components/popups/video-popup/video-popup';
-@import '../components/popups/schedule-popup/schedule-popup';
-@import '../components/popups/gallery-popup/gallery-popup';
-@import '../components/popups/price-popup/price-popup';
 @import '../components/scrollUp-arrow/scrollUp-arrow';
 @import '../components/scrollUp-wrap/scrollUp-wrap';
 @import '../components/messangers/messangers';
@@ -29,6 +25,13 @@
 @import '../components/ui/ui-close/ui-close';
 @import '../components/ui/ui-overlay/ui-overlay';
 @import '../components/popups/ui-popup';
+
+// Popups
+@import '../components/popups/video-popup/video-popup';
+@import '../components/popups/schedule-popup/schedule-popup';
+@import '../components/popups/gallery-popup/gallery-popup';
+@import '../components/popups/price-popup/price-popup';
+@import '../components/popups/courses/courses-popup';
 
 // Sections
 @import '../components/sections/hero-section/hero-section';
