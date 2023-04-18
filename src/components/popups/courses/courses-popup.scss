@@ -1,0 +1,227 @@
+/*
+   Структурные элементы:
+   -  Заголовок - h4.detail-info-title
+   -  Текст - p.detail-info-text
+   -  Список - ul.detail-info-list>li.detail-list-item 
+*/
+
+.detail-info-title {
+   margin-bottom: 20px;
+   font-size: 21px;
+   font-weight: 600;
+   line-height: 143%;
+   color: $textLight;
+}
+
+.detail-info-text {
+   font-family: $Rob;
+   font-size: 15px;
+   font-weight: 400;
+   line-height: 190%;
+   color: $text;
+
+   strong {
+      font-weight: 600;
+      color: $textLight;
+   }
+}
+
+.detail-info-list {
+   li {
+      font-family: $Rob;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 193%;
+      color: $text;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+
+      &:not(:last-child) {
+         margin-bottom: 5px;
+      }
+
+      &:before {
+         content: '';
+         margin-right: 10px;
+         display: block;
+      }
+   }
+
+   &.circle-fill {
+      li {
+         &:before {
+            margin-top: 9px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: $action;
+         }
+      }
+   }
+
+   &.circle-border {
+      li {
+         &:before {
+            margin-top: 9px;
+            background: transparent;
+            border: 1px solid $action;
+         }
+      }
+   }
+
+   &.check {
+      li {
+         &:before {
+            content: '\e913';
+            font-family: $BRFont;
+            font-size: 15px;
+            color: $action;
+         }
+      }
+   }
+
+   &.check-circle {
+      li {
+         &:before {
+            content: '\e914';
+            font-family: $BRFont;
+            font-size: 15px;
+            color: $action;
+         }
+      }
+   }
+}
+
+.course-popup {
+   .popup {
+      max-width: 700px;
+      border-radius: 15px;
+      box-shadow: 0px 15px 30px 11px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+   }
+
+   &-head {
+      position: relative;
+
+      .course-popup-title {
+         padding: 180px 30px 50px 30px;
+         position: relative;
+         font-size: 24px;
+         font-weight: 700;
+         line-height: 133%;
+         color: $light;
+         max-width: 470px;
+         z-index: 1;
+      }
+
+      .img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+         }
+
+         &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 0.01%, rgba(0, 0, 0, 0) 120%);
+         }
+      }
+   }
+   
+   &-body {
+      margin-top: -25px;
+      padding: 40px 30px 50px 30px;
+      position: relative;
+      border-radius: 15px;
+      border-top-right-radius: 25px;
+      border-top-left-radius: 25px;
+      background: $footerBg;
+      z-index: 1;
+
+      .short-info {
+         padding-bottom: 35px;
+         position: relative;
+         &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -30px;
+            width: 75%;
+            height: 1px;
+            background: $action;
+         }
+
+         &-item {
+            display: grid;
+            grid-template: auto / 1fr 1fr;
+
+            &:not(:first-child) {
+               margin-top: 20px;
+            }
+
+            .name {
+               display: flex;
+               align-items: center;
+               gap: 10px;
+
+               span {
+                  font-family: $Rob;
+                  font-size: 15px;
+                  font-weight: 400;
+                  line-height: 98%;
+                  color: $text;
+               }
+
+               i {
+                  font-size: 20px;
+                  color: $action;
+               }
+            }
+
+            .value {
+               font-size: 15px;
+               font-weight: 500;
+               line-height: 100%;
+               color: $light;
+            }
+         }
+      }
+
+      .detail-info {
+         margin-top: 60px;
+         
+         &-item {
+            &:not(:last-child) {
+               margin-bottom: 50px;
+            }
+         }
+      }
+
+      .course-popup-action {
+         margin-top: 80px;
+         padding-top: 35px;
+         border-top: 1px solid $text;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+
+         .btn--course {
+            padding: 11px 22px;
+            font-size: 16px;
+         }
+      }
+   }
+}

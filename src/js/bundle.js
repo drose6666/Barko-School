@@ -83,6 +83,17 @@ const galleryPopup = new openPopup({
 
 
 
+// TODO Gallery popup
+const coursesPopup = new openPopup({
+   popup: '#soft-skills',
+   open: '.courses .more',
+   close: '#soft-skills .ui-close',
+   overlay: '#soft-skills .popup-overlay'
+})
+
+
+
+
 // TODO Создание Popup с расписаниями
 const schedules = [
    {id: '0.9m-1.5y', age: '0.9 мес. - 2 года', img:'../../../img/optimized/schedule/0.9-1.5.webp',},

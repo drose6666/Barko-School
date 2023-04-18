@@ -3768,6 +3768,255 @@ footer {
   height: auto;
 }
 
+/*
+   Структурные элементы:
+   -  Заголовок - h4.detail-info-title
+   -  Текст - p.detail-info-text
+   -  Список - ul.detail-info-list>li.detail-list-item 
+*/
+
+.detail-info-title {
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 143%;
+  color: #D1CFDD;
+}
+
+.detail-info-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 190%;
+  color: #9193A3;
+}
+
+.detail-info-text strong {
+  font-weight: 600;
+  color: #D1CFDD;
+}
+
+.detail-info-list li {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 193%;
+  color: #9193A3;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.detail-info-list li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.detail-info-list li:before {
+  content: "";
+  margin-right: 10px;
+  display: block;
+}
+
+.detail-info-list.circle-fill li:before {
+  margin-top: 9px;
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: #F2184F;
+}
+
+.detail-info-list.circle-border li:before {
+  margin-top: 9px;
+  background: transparent;
+  border: 1px solid #F2184F;
+}
+
+.detail-info-list.check li:before {
+  content: "\e913";
+  font-family: "Barko School Font";
+  font-size: 15px;
+  color: #F2184F;
+}
+
+.detail-info-list.check-circle li:before {
+  content: "\e914";
+  font-family: "Barko School Font";
+  font-size: 15px;
+  color: #F2184F;
+}
+
+.course-popup .popup {
+  max-width: 700px;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+  -webkit-box-shadow: 0px 15px 30px 11px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 15px 30px 11px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.course-popup-head {
+  position: relative;
+}
+
+.course-popup-head .course-popup-title {
+  padding: 180px 30px 50px 30px;
+  position: relative;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 133%;
+  color: #fff;
+  max-width: 470px;
+  z-index: 1;
+}
+
+.course-popup-head .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.course-popup-head .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.course-popup-head .img:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(0.01%, rgba(0, 0, 0, 0.65)), color-stop(120%, rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 0.01%, rgba(0, 0, 0, 0) 120%);
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 0.01%, rgba(0, 0, 0, 0) 120%);
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 0.01%, rgba(0, 0, 0, 0) 120%);
+}
+
+.course-popup-body {
+  margin-top: -25px;
+  padding: 40px 30px 50px 30px;
+  position: relative;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+  -webkit-border-top-right-radius: 25px;
+          border-top-right-radius: 25px;
+  -webkit-border-top-left-radius: 25px;
+          border-top-left-radius: 25px;
+  background: #25282E;
+  z-index: 1;
+}
+
+.course-popup-body .short-info {
+  padding-bottom: 35px;
+  position: relative;
+}
+
+.course-popup-body .short-info:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -30px;
+  width: 75%;
+  height: 1px;
+  background: #F2184F;
+}
+
+.course-popup-body .short-info-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template: auto/1fr 1fr;
+}
+
+.course-popup-body .short-info-item:not(:first-child) {
+  margin-top: 20px;
+}
+
+.course-popup-body .short-info-item .name {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.course-popup-body .short-info-item .name span {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 98%;
+  color: #9193A3;
+}
+
+.course-popup-body .short-info-item .name i {
+  font-size: 20px;
+  color: #F2184F;
+}
+
+.course-popup-body .short-info-item .value {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #fff;
+}
+
+.course-popup-body .detail-info {
+  margin-top: 60px;
+}
+
+.course-popup-body .detail-info-item:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.course-popup-body .course-popup-action {
+  margin-top: 80px;
+  padding-top: 35px;
+  border-top: 1px solid #9193A3;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.course-popup-body .course-popup-action .btn--course {
+  padding: 11px 22px;
+  font-size: 16px;
+}
+
 .hero-wrap {
   position: relative;
   overflow: hidden;
@@ -4838,7 +5087,7 @@ footer {
   -webkit-box-orient: vertical;
   overflow: hidden;
   position: absolute;
-  bottom: 90px;
+  top: 100px;
   left: 30px;
   z-index: 1;
   opacity: 0;

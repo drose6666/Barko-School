@@ -73,13 +73,14 @@ window.addEventListener('resize', function() {
 
 // TODO Отображение/скрытие всех курсов при клике на кнопку
 const showBtn = document.querySelector('#courses .btn-all')
+
 showBtn?.addEventListener('click', function () {
    const hasCollapse = slides.find(el => el.classList.contains('collapse'))
 
    if (hasCollapse) {
       slides.forEach(el => el.classList.remove('collapse'))
       this.textContent = 'Свернуть'
-   }  else {
+   } else {
       slides.forEach((el, idx) => {
          idx <= 6 && el.classList.add('collapse')
       })
