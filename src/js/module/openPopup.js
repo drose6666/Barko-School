@@ -26,7 +26,7 @@ export default class openPopup {
    onOpen = () => {
       this.$popup.classList.add('active')
       document.body.classList.add('no-scroll')
-      // debugger
+ 
       if (this.frame) {
          this.insertIframe()
       }
@@ -36,7 +36,6 @@ export default class openPopup {
       this.$popup?.classList.remove('active')
       document.body.classList.remove('no-scroll')
 
-      // debugger
       if (this.frame) {
          this.deleteFrame()
       }

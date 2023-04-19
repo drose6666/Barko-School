@@ -85,10 +85,10 @@ const galleryPopup = new openPopup({
 
 // TODO Gallery popup
 const coursesPopup = new openPopup({
-   popup: '#soft-skills',
+   popup: '#course-popup',
    open: '.courses .more',
-   close: '#soft-skills .ui-close',
-   overlay: '#soft-skills .popup-overlay'
+   close: '#course-popup .ui-close',
+   overlay: '#course-popup .popup-overlay'
 })
 
 
@@ -177,3 +177,110 @@ scrollUpArrow.addEventListener('click', () => {
 
 
 
+
+
+
+// TODO Создание контента для Course popup
+
+const softSkillsContent = `
+   <div class="detail-info-item">
+      <h4 class="detail-info-title">Важность гибких навыков</h4>
+      <p class="detail-info-text">Чтобы быть успешными в будущем детям нужно научиться эффективно и гармонично выстраивать межличностное взаимодействие, т.е. развивать такие качества как: организованность, умение работать в команде, критическое мышление, креативность, дружелюбность, лидерские качества, умение решать сложные задачи и т.д.</p>
+   </div>
+
+   <div class="detail-info-item">
+      <h4 class="detail-info-title">Курс состоит из 4 блоков:</h4>
+      <ul class="detail-info-list check">
+         <li>Самопрезентация</li>
+         <li>Формирование дружеских отношений</li>
+         <li>Создание договоренностей</li>
+         <li>Работа в команде</li>
+      </ul>
+   </div>
+
+   <div class="detail-info-item">
+      <p class="detail-info-text">Мы начнем закладывать необходимую базу для развития этих гибких навыков. В каждом блоке 4 занятия по 50 минут, которые проводятся в игровой форме с обсуждениями. <strong>Занятия проходят 1 раз в неделю.</strong></p>
+   </div>
+`
+const educationnalClassesContent = `
+   <div class="detail-info-item">
+      <h4 class="detail-info-title">Полноценное развитие</h4>
+      <p class="detail-info-text"><strong>На этом курсе с ребенком занимаются:</strong> сенсорным развитием, речевым развитием, познавательным развитием, художественно-эстетическим развитием, физическим развитием, развитием самостоятельности, ранней социализацией, гармонизацией детско-родительских отношений.</p>
+   </div>
+
+   <div class="detail-info-item">
+      <h4 class="detail-info-title">Учимся играя</h4>
+      <p class="detail-info-text"><strong>Занятие длится 45 минут и включает в себя:</strong> подвижные игры, развитие крупной моторики, пальчиковые игры, продуктивную деятельность, игры на развитие мелкой моторики, музыкальные игры, игры на развитие восприятия цвета, формы, размера, игры на развитие речи и пополнение пассивного и активного словаря ребёнка.</p>
+   </div>
+`
+const tyapLyap = `
+   <div class="detail-info-item">
+      <h4 class="detail-info-title">Творческие задания</h4>
+      <p class="detail-info-text">Мы будем давать разные творческие задания: различные виды аппликации, доступные и разнообразные техники рисования, лепки + креативные техники. При этом малыши справляются с ними самостоятельно или с небольшой помощью мамы. Темы занятий просты и понятны детям.</p>
+   </div>
+
+   <div class="detail-info-item">
+      <h4 class="detail-info-title">Игровой формат</h4>
+      <p class="detail-info-text">Занятие в игровом формате с использованием сказок и рассказов, а также игрушек, с частой сменой деятельности.  Также обязательно включаем упражнения для развития мелкой моторики руки. Занятие длится 45 минут</p>
+   </div>
+`
+
+const getCurrentContent = function (id) {
+   switch (id) {
+      case 1:
+         return softSkillsContent;
+      case 2:
+         return educationnalClassesContent;
+      case 3:
+         return tyapLyap;
+      default:
+         return 'Ошибка в getCurrentContent, в конструкции switch'
+   }
+}
+
+const coursesData = [
+   { id: 1, title: 'Soft skills (гибкие навыки)', img: '../../../img/optimized/courses/soft-skills.webp', age: 'От 4 до 11 лет', price: 'От 4 400 рублей', duration: '50 минут', content: getCurrentContent(1) },
+   { id: 2, title: 'Развивающие занятия', img: '../../../img/optimized/courses/educational-classes.webp', age: 'От 9 месяцев', price: 'От 5 400 рублей', duration: '45 минут', content: getCurrentContent(2) },
+   { id: 3, title: 'Тяп-ляп - творческие занятия', img: '../../../img/optimized/courses/tyap.webp', age: 'От 9 мес до 3 лет', price: 'От 6 400 рублей', duration: '45 минут', content: getCurrentContent(3) },
+]
+
+const openCourseBtn = document.querySelectorAll('.courses .course .more')
+
+// получаем id кликнутого курса
+const getClickedCourseAttr = (element) => Number(element.getAttribute('data-id'))
+
+// рендер контента в модальном окне
+const renderCourseContent = (course) => {
+   const courseDetailInfo = document.querySelector('#course-popup .detail-info')
+   let courseImg = document.querySelector('#course-popup .course-popup-head img')
+   let courseTitle = document.querySelector('.course-popup-title')
+   let courseAge = document.querySelector('.short-info-item.age .value')
+   let coursePrice = document.querySelector('.short-info-item.price .value')
+   let courseDuration = document.querySelector('.short-info-item.duration .value')
+   
+   courseDetailInfo.insertAdjacentHTML('afterbegin', course.content)
+   courseImg.src = course.img
+   courseTitle.textContent = course.title
+   courseAge.textContent = course.age
+   coursePrice.textContent = course.price
+   courseDuration.textContent = course.duration
+}
+
+const clearCourseConent = () => {
+   const courseDetailInfo = document.querySelector('#course-popup .detail-info')
+   const courseDetailInfoChilds = courseDetailInfo.querySelectorAll('.detail-info-item')
+
+   for (let el of courseDetailInfoChilds) {
+      courseDetailInfo.removeChild(el)
+   }
+}
+
+openCourseBtn.forEach(el => {
+   el.addEventListener('click', function () {
+      clearCourseConent()
+      let attr = getClickedCourseAttr(el)
+      let currentCourse = coursesData.find(el => el.id === attr)
+
+      renderCourseContent(currentCourse)
+   })
+})
