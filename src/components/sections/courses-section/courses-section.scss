@@ -159,6 +159,7 @@
          opacity: 0;
          visibility: hidden;
          z-index: 1;
+         cursor: pointer;
          transform: translateX(-30px);
          transition: opacity .4s ease, visibility .4s ease, transform .4s ease, background-size .2s ease, color .2s ease;
          @include hoverLinks($height: 1px);
