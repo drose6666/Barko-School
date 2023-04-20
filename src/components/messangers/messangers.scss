@@ -84,7 +84,7 @@
          opacity: 1;
          visibility: visible;
          &:nth-child(1) {
-            transform: translate(-50%, -85px);
+            transform: translate(-50%, -89px);
             transition: transform .2s ease .1s, opacity .2s ease .1s, visibility .2s ease .1s, box-shadow .2s ease;
          }
          &:nth-child(2) {
@@ -96,7 +96,7 @@
             transition: transform .2s ease .26s, opacity .2s ease .26s, visibility .2s ease .26s, box-shadow .2s ease;
          }
          &:nth-child(4) {
-            transform: translate(-50%, 35px);
+            transform: translate(-50%, 37px);
             transition: transform .2s ease .34s, opacity .2s ease .34s, visibility .2s ease .34s, box-shadow .2s ease;
          }
 

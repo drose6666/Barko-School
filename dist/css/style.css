@@ -3121,10 +3121,10 @@ footer {
 }
 
 .messangers-wrap.active .messanger:nth-child(1) {
-  -webkit-transform: translate(-50%, -85px);
-      -ms-transform: translate(-50%, -85px);
-       -o-transform: translate(-50%, -85px);
-          transform: translate(-50%, -85px);
+  -webkit-transform: translate(-50%, -89px);
+      -ms-transform: translate(-50%, -89px);
+       -o-transform: translate(-50%, -89px);
+          transform: translate(-50%, -89px);
   -webkit-transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, -webkit-transform 0.2s ease 0.1s, -webkit-box-shadow 0.2s ease;
   transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, -webkit-transform 0.2s ease 0.1s, -webkit-box-shadow 0.2s ease;
   -o-transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s, box-shadow 0.2s ease, -o-transform 0.2s ease 0.1s;
@@ -3157,10 +3157,10 @@ footer {
 }
 
 .messangers-wrap.active .messanger:nth-child(4) {
-  -webkit-transform: translate(-50%, 35px);
-      -ms-transform: translate(-50%, 35px);
-       -o-transform: translate(-50%, 35px);
-          transform: translate(-50%, 35px);
+  -webkit-transform: translate(-50%, 37px);
+      -ms-transform: translate(-50%, 37px);
+       -o-transform: translate(-50%, 37px);
+          transform: translate(-50%, 37px);
   -webkit-transition: opacity 0.2s ease 0.34s, visibility 0.2s ease 0.34s, -webkit-transform 0.2s ease 0.34s, -webkit-box-shadow 0.2s ease;
   transition: opacity 0.2s ease 0.34s, visibility 0.2s ease 0.34s, -webkit-transform 0.2s ease 0.34s, -webkit-box-shadow 0.2s ease;
   -o-transition: opacity 0.2s ease 0.34s, visibility 0.2s ease 0.34s, box-shadow 0.2s ease, -o-transform 0.2s ease 0.34s;
@@ -5722,7 +5722,7 @@ footer {
 }
 
 .gallery-section .gallery .item .photo .view-icon:after {
-  content: "\e91d";
+  content: "\e91f";
   position: absolute;
   top: 50%;
   left: 50%;
