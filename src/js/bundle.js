@@ -83,11 +83,12 @@ const galleryPopup = new openPopup({
 
 
 
-// TODO Gallery popup
+// TODO Course popup
 const coursesPopup = new openPopup({
    popup: '#course-popup',
    open: '.courses .more',
    close: '#course-popup .ui-close',
+   closeItem: '#course-popup .btn--course',
    overlay: '#course-popup .popup-overlay'
 })
 

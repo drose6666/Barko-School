@@ -5834,7 +5834,7 @@ footer {
 }
 
 .reviews-section .reviews:after {
-  content: "\e912";
+  content: "\e913";
   position: absolute;
   top: 20%;
   right: 105%;
@@ -6343,7 +6343,7 @@ i {
 
 .swiper-wrap .arrow.circle-arrow.swiper-button-prev:after {
   margin-left: -2px;
-  content: "\e917";
+  content: "\e918";
 }
 
 .swiper-wrap .arrow.circle-arrow.swiper-button-next {
@@ -6352,7 +6352,7 @@ i {
 
 .swiper-wrap .arrow.circle-arrow.swiper-button-next:after {
   margin-right: -2px;
-  content: "\e918";
+  content: "\e919";
 }
 
 .swiper-wrap .arrow.circle-arrow:hover {
@@ -8161,6 +8161,10 @@ i {
         -ms-flex-align: center;
             align-items: center;
     gap: 25px;
+  }
+
+  .detail-info-list.inside-list {
+    margin: 10px 0 10px 0px;
   }
 
   .hero-info {
