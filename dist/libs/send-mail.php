@@ -15,15 +15,15 @@ $mail = new PHPMailer(true);
 try {
     $mail->SMTPDebug = 0; // Режим отладки SMTP (0 = выключен)
     $mail->isSMTP(); // Указываем, что используем SMTP
-    $mail->Host = 'smtp.example.com'; // Адрес SMTP сервера
+    $mail->Host = 'cpanel9.d.fozzy.com'; // Адрес SMTP сервера
     $mail->SMTPAuth = true; // Включение аутентификации на SMTP сервере
-    $mail->Username = 'user@example.com'; // Логин для SMTP сервера
-    $mail->Password = 'password'; // Пароль для SMTP сервера
+    $mail->Username = 'webdev@danilarose.net'; // Логин для SMTP сервера
+    $mail->Password = 'danilarose'; // Пароль для SMTP сервера
     $mail->SMTPSecure = 'tls'; // Тип шифрования (tls или ssl)
-    $mail->Port = 587; // Порт SMTP сервера
+    $mail->Port = 465; // Порт SMTP сервера
     
     // От кого будет отправлено письмо
-    $mail->setFrom('user@example.com', 'My Website');
+    $mail->setFrom('danila.rose.web@gmail.com', 'My Website');
     
     // Кому будет отправлено письмо
     $mail->addAddress('recipient@example.com');
