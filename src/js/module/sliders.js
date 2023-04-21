@@ -23,8 +23,14 @@ const initSwiper = function () {
             onlyInViewport: false,
          },
          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
+            nextEl: "#courses .swiper-button-next",
+            prevEl: "#courses .swiper-button-prev"
+         },
+         pagination: {
+            el: '.courses-pagination',
+            clickable: true,
+            type: 'bullets',
+            dynamicBullets: true
          },
          breakpoints: {
             120: {

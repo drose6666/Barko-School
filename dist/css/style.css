@@ -4957,7 +4957,7 @@ footer {
 }
 
 .courses-section {
-  padding: 50px 0 60px 0;
+  padding: 50px 0 100px 0;
   background: #FFF3F6;
   position: relative;
 }
@@ -6406,6 +6406,10 @@ i {
 }
 
 @media all and (min-width: 731px) {
+  .courses-pagination {
+    display: none;
+  }
+
   .courses .swiper-slide:nth-child(1).animate {
     opacity: 0;
     visibility: hidden;
@@ -7820,6 +7824,10 @@ i {
     text-align: center;
   }
 
+  .courses-section .btn-all {
+    display: none;
+  }
+
   .courses .swiper-courses,
   .courses .swiper-courses .swiper-wrapper {
     width: 100%;
@@ -7873,6 +7881,10 @@ i {
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .courses-pagination {
+    display: block;
   }
 
   .swiper-wrap.courses .arrow {

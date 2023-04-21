@@ -1,5 +1,5 @@
 .courses-section {
-   padding: 50px 0 60px 0;
+   padding: 50px 0 100px 0;
    background: $weakColorSelection;
    position: relative;
 
@@ -286,6 +286,7 @@
             text-align: center;
          }
       }
+      .btn-all { display: none; }
    }
 
    .courses {
@@ -314,6 +315,7 @@
    }
 
    .courses-arrows { display: flex; } 
+   .courses-pagination { display: block; }
 }
 
 @media all and (max-width: 550px) {
@@ -351,6 +353,7 @@
 
 
 @media all and (min-width: 731px) {
+   .courses-pagination { display: none; }
    .courses .swiper-slide {
       $j: 0.05s;
       @for $i from 1 through 13 {
