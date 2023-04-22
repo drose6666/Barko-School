@@ -11,12 +11,12 @@
    <meta property="og:image" content="http://bkb-company.ru/img/about/about1.jpg">
    <meta property="og:site_name" content="Barko School">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20230422192720" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <link rel="stylesheet" href="../libs/bootstrap-grid.min.css?_v=20230422192720">
-   <link rel="stylesheet" href="../libs/reset.min.css?_v=20230422192720">
-   <link rel="stylesheet" as="font" href="../fonts/fonts.css?_v=20230422192720">
-   <link rel="stylesheet" as="font" href="../fonts/iconsfont.css?_v=20230422192720">
-   <link rel="stylesheet" href="css/style.min.css?_v=20230422192720">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20230422223222" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <link rel="stylesheet" href="../libs/bootstrap-grid.min.css?_v=20230422223222">
+   <link rel="stylesheet" href="../libs/reset.min.css?_v=20230422223222">
+   <link rel="stylesheet" as="font" href="../fonts/fonts.css?_v=20230422223222">
+   <link rel="stylesheet" as="font" href="../fonts/iconsfont.css?_v=20230422223222">
+   <link rel="stylesheet" href="css/style.min.css?_v=20230422223222">
    
    <title>Barko School</title>
 </head>
@@ -896,24 +896,25 @@
 
    <form action="libs/mail.php" method="POST" class="contact-form" id="contact-form" enctype="multipart/form-data">
       <div class="form-item-group media900">
+
          <div class="form-item">
-            <input class="ui-input field" name="user_name" type="text" inputmode="text" placeholder="Ваше имя">
+            <input class="ui-input" name="Имя" type="text" inputmode="text" data-valid="name" placeholder="Ваше имя">
             <span class="error-message"></span>
          </div>
    
          <div class="form-item">
-            <input class="ui-input field" name="user_phone" type="tel" inputmode="tel" placeholder="Ваш Телефон">
+            <input class="ui-input" name="Телефон" type="tel" inputmode="tel" data-valid="phone" placeholder="Ваш Телефон">
             <span class="error-message">Введите корректный номер</span>
          </div>
       </div>
 
       <div class="form-item">
-         <input class="ui-input field" name="user_email" type="email" inputmode="email" placeholder="Ваш Email">
+         <input class="ui-input" name="Email" type="email" inputmode="email" data-valid="email" placeholder="Ваш Email">
          <span class="error-message"></span>
       </div>
       
       <div class="form-item">
-         <textarea class="ui-input ui-textarea field" name="user_message" id="" placeholder="Сообщение"></textarea>
+         <textarea class="ui-input ui-textarea" name="Сообщение" data-valid="message" placeholder="Сообщение"></textarea>
          <span class="error-message"></span>
       </div>
 
@@ -1097,11 +1098,11 @@
    <div class="ui-overlay"></div>
    
    
-   <!-- <script defer src="./libs/jquery-3.6.3.min.js?_v=20230422192720"></script> -->
-   <script defer src="./libs/inputmask.min.js?_v=20230422192720"></script>
-   <script defer src="./libs/initPreviewGallery.js?_v=20230422192720"></script>
-   <script defer src="./libs/renderCoursePopupContent.js?_v=20230422192720"></script>
-   <script defer src="./libs/send-mail.js?_v=20230422192720"></script>
-   <script defer src="js/bundle.min.js?_v=20230422192720"></script>
+   <!-- <script defer src="./libs/jquery-3.6.3.min.js?_v=20230422223222"></script> -->
+   <script defer src="./libs/inputmask.min.js?_v=20230422223222"></script>
+   <script defer src="./libs/initPreviewGallery.js?_v=20230422223222"></script>
+   <script defer src="./libs/renderCoursePopupContent.js?_v=20230422223222"></script>
+   <script defer src="./libs/send-mail.js?_v=20230422223222"></script>
+   <script defer src="js/bundle.min.js?_v=20230422223222"></script>
 </body>
 </html>

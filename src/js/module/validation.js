@@ -9,6 +9,7 @@ export default class Validation {
       this.$phone = document.querySelector(phone)
       this.$email = document.querySelector(email)
       this.$message = document.querySelector(message)
+      this.error = false
       
 
       this.nameRegex = /^[A-zА-я\s_ ][^0-9]+$/; //'[\\w\s]+';
@@ -18,10 +19,10 @@ export default class Validation {
 
       if (this.$form) this.$fields = this.$form.querySelectorAll(`${form} .field`)
       
-      this.#setup()
+      this.sendForm()
    }
 
-   #setup() {
+   sendForm() {
       if (this.$form) 
          this.$form.addEventListener('submit', (event) => {
             let innerEvent = event
@@ -61,8 +62,6 @@ export default class Validation {
             else if (this.$message.value.trim().length > 3000)
                this.error(true, this.$message, 'Не более 3000 символов', innerEvent)
                   else this.error(false, this.$message, '', innerEvent)
-
-      // Отправка формы
    }
 
    error(error, input, message, innerEvent) {

@@ -4,24 +4,25 @@
 
    <form action="libs/mail.php" method="POST" class="contact-form" id="contact-form" enctype="multipart/form-data">
       <div class="form-item-group media900">
+
          <div class="form-item">
-            <input class="ui-input field" name="user_name" type="text" inputmode="text" placeholder="Ваше имя">
+            <input class="ui-input" name="Имя" type="text" inputmode="text" data-valid="name" placeholder="Ваше имя">
             <span class="error-message"></span>
          </div>
    
          <div class="form-item">
-            <input class="ui-input field" name="user_phone" type="tel" inputmode="tel" placeholder="Ваш Телефон">
+            <input class="ui-input" name="Телефон" type="tel" inputmode="tel" data-valid="phone" placeholder="Ваш Телефон">
             <span class="error-message">Введите корректный номер</span>
          </div>
       </div>
 
       <div class="form-item">
-         <input class="ui-input field" name="user_email" type="email" inputmode="email" placeholder="Ваш Email">
+         <input class="ui-input" name="Email" type="email" inputmode="email" data-valid="email" placeholder="Ваш Email">
          <span class="error-message"></span>
       </div>
       
       <div class="form-item">
-         <textarea class="ui-input ui-textarea field" name="user_message" id="" placeholder="Сообщение"></textarea>
+         <textarea class="ui-input ui-textarea" name="Сообщение" data-valid="message" placeholder="Сообщение"></textarea>
          <span class="error-message"></span>
       </div>
 
