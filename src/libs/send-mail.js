@@ -5,16 +5,12 @@ const form = document.getElementById('contact-form');
 // inputMask.mask(phone)
 
 function validForm (name, phone, email, message) {
-	let nameRes = nameValid(name)
-	let phoneRes = phoneValid(phone)
-	let emailRes = emailValid(email)
-	let messageRes = messageValid(message)
+	let nameRes = nameValid(name);
+	let phoneRes = phoneValid(phone);
+	let emailRes = emailValid(email);
+	let messageRes = messageValid(message);
 
-	if ( nameRes || phoneRes || emailRes || messageRes) {
-		return false
-	} else {
-		return true
-	}
+	return (nameRes || phoneRes || emailRes || messageRes) ? false : true;
 }
 
 function nameValid (field) {
@@ -110,19 +106,22 @@ function errorHandler (error, field, message) {
 form.addEventListener('submit', (event) => {
 	event.preventDefault();
 
-	console.log(validForm('[data-valid="name"]', '[data-valid="phone"]', '[data-valid="email"]', '[data-valid="message"]'));
+	const formData = new FormData(form);
+	const isValid = validForm('[data-valid="name"]', '[data-valid="phone"]', '[data-valid="email"]', '[data-valid="message"]')
 
-	// const formData = new FormData(form);
-	// console.log([...formData.entries()]);
+	if (isValid) {
+		fetch('../libs/mail.php', {
+			method: 'POST',
+			body: formData
+		})
+		.then(response => {
+			response.ok && alert('Форма отправлена')
+		})
+		.catch(error => {
+			console.error(error, 'Форма не отправилась');
+		});
+	}
 
-	// fetch('../libs/mail.php', {
-	// 	method: 'POST',
-	// 	body: formData
-	// })
-	// .then(response => {
-	// 	response.ok && alert('Форма отправлена')
-	// })
-	// .catch(error => {
-	// 	console.error(error);
-	// });
+	
+
 });
