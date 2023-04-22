@@ -98,14 +98,7 @@ function errorHandler (error, field, message) {
 	}
 }
 
-
-
-
-
-
-form.addEventListener('submit', (event) => {
-	event.preventDefault();
-
+function sendForm () {
 	const formData = new FormData(form);
 	const isValid = validForm('[data-valid="name"]', '[data-valid="phone"]', '[data-valid="email"]', '[data-valid="message"]')
 
@@ -121,7 +114,12 @@ form.addEventListener('submit', (event) => {
 			console.error(error, 'Форма не отправилась');
 		});
 	}
+}
 
-	
+
+
+
+form.addEventListener('submit', (event) => {
+	event.preventDefault();
 
 });
