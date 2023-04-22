@@ -61,6 +61,8 @@ export default class Validation {
             else if (this.$message.value.trim().length > 3000)
                this.error(true, this.$message, 'Не более 3000 символов', innerEvent)
                   else this.error(false, this.$message, '', innerEvent)
+
+      // Отправка формы
    }
 
    error(error, input, message, innerEvent) {
