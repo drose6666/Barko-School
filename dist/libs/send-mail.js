@@ -14,9 +14,8 @@ form.addEventListener('submit', (event) => {
 		method: 'POST',
 		body: formData
 	})
-	.then(response => response.json())
-	.then(data => {
-		console.log(data);
+	.then(response => {
+		response.ok && alert('Форма отправлена')
 	})
 	.catch(error => {
 		console.error(error);
