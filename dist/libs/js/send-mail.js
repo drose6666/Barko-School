@@ -4,15 +4,6 @@ const form = document.getElementById('contact-form');
 // const inputMask = new Inputmask('+7 (999) 999-99-99')
 // inputMask.mask(phone)
 
-function validForm (name, phone, email, message) {
-	let nameRes = nameValid(name);
-	let phoneRes = phoneValid(phone);
-	let emailRes = emailValid(email);
-	let messageRes = messageValid(message);
-
-	return (nameRes || phoneRes || emailRes || messageRes) ? false : true;
-}
-
 function nameValid (field) {
 	const $name = document.querySelector(field)
 	const nameVal = $name?.value.trim()
@@ -41,7 +32,7 @@ function phoneValid (field) {
 			errorHandler(true, $phone, 'Это обязательное поле')
 			return true
 		} else if (!phoneRegex.test(phoneVal)) {
-			errorHandler(true, $phone, 'Телефон может содержать только цифры')
+			errorHandler(true, $phone, 'Введите корректный номер телефона')
 			return true
 		} else {
 			errorHandler(false, $phone, '')
@@ -98,6 +89,15 @@ function errorHandler (error, field, message) {
 	}
 }
 
+function validForm (name, phone, email, message) {
+	let nameRes = nameValid(name);
+	let phoneRes = phoneValid(phone);
+	let emailRes = emailValid(email);
+	let messageRes = messageValid(message);
+
+	return (nameRes || phoneRes || emailRes || messageRes) ? false : true;
+}
+
 function sendForm () {
 	const formData = new FormData(form);
 	const isValid = validForm('[data-valid="name"]', '[data-valid="phone"]', '[data-valid="email"]', '[data-valid="message"]')
@@ -108,18 +108,41 @@ function sendForm () {
 			body: formData
 		})
 		.then(response => {
-			response.ok && alert('Форма отправлена')
+			if (response.ok) {
+				for (let item of form.querySelectorAll('[data-valid]')) {
+					item.value = ''
+				}
+				new openPopup({
+					popup: '#success-popup',
+					close: '#success-popup .ui-close',
+					closeItem: '.confirm-popup .confirm--btn',
+					openFlag: true,
+					overlay: '#success-popup .popup-overlay'
+				})
+			} else {
+				new openPopup({
+					popup: '#error-popup',
+					close: '#error-popup .ui-close',
+					closeItem: '.confirm-popup .confirm--btn',
+					openFlag: true,
+					overlay: '#error-popup .popup-overlay'
+				})
+			}
 		})
 		.catch(error => {
-			console.error(error, 'Форма не отправилась');
+			new openPopup({
+				popup: '#error-popup',
+				close: '#error-popup .ui-close',
+				closeItem: '.confirm-popup .confirm--btn',
+				openFlag: true,
+				overlay: '#error-popup .popup-overlay'
+			})
 		});
 	}
 }
 
 
-
-
 form.addEventListener('submit', (event) => {
 	event.preventDefault();
-
+	sendForm()
 });

@@ -7,16 +7,16 @@
    <meta property="og:type" content="website">
    <meta property="og:title" content="Barko School - Центр комплексного развития">
    <meta property="og:description" content="Более 7 лет успешного обучения детей разных возрастов">
-   <meta property="og:url" content="http://bkb-company.ru">
-   <meta property="og:image" content="http://bkb-company.ru/img/about/about1.jpg">
+   <meta property="og:url" content="http://danilarose.net">
+   <meta property="og:image" content="http://danilarose.net/img/optimized/og-image.jpg">
    <meta property="og:site_name" content="Barko School">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20230423022724" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <link rel="stylesheet" href="../libs/bootstrap-grid.min.css?_v=20230423022724">
-   <link rel="stylesheet" href="../libs/reset.min.css?_v=20230423022724">
-   <link rel="stylesheet" as="font" href="../fonts/fonts.css?_v=20230423022724">
-   <link rel="stylesheet" as="font" href="../fonts/iconsfont.css?_v=20230423022724">
-   <link rel="stylesheet" href="css/style.min.css?_v=20230423022724">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20230423141210" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <link rel="stylesheet" href="../libs/css/bootstrap-grid.min.css?_v=20230423141210">
+   <link rel="stylesheet" href="../libs/css/reset.min.css?_v=20230423141210">
+   <link rel="stylesheet" as="font" href="../fonts/fonts.css?_v=20230423141210">
+   <link rel="stylesheet" as="font" href="../fonts/iconsfont.css?_v=20230423141210">
+   <link rel="stylesheet" href="css/style.min.css?_v=20230423141210">
    
    <title>Barko School</title>
 </head>
@@ -894,7 +894,7 @@
    <h3 class="form-title">Мы ждем Вас!</h3>
    <p class="form-text">Если у Вас остались вопросы, заполните форму ниже, и мы с удовольствием Вам перезоним!</p>
 
-   <form action="libs/mail.php" method="POST" class="contact-form" id="contact-form" enctype="multipart/form-data">
+   <form action="libs/js/mail.php" method="POST" class="contact-form" id="contact-form" enctype="multipart/form-data">
       <div class="form-item-group media900">
 
          <div class="form-item">
@@ -1019,12 +1019,11 @@
    <div class="ui-close"><i class="i-close"></i></div>
 
    <div class="popup">
-      <img src="../../../img/optimized/schedule/6-7.webp" alt="">
+      <img src="../../../img/optimized/schedule/price.webp" alt="">
    </div>
 
    <div class="popup-overlay"></div>
 </div>
-
    <div class="popup-wrap course-popup" id="course-popup">
    <div class="popup">
 
@@ -1078,6 +1077,30 @@
 
    <div class="popup-overlay"></div>
 </div>
+   <div class="popup-wrap confirm-popup" id="success-popup">
+   <div class="popup">
+      <div class="ui-close"><i class="i-close"></i></div>
+
+      <div class="confirm-icon"><i class="i-check-bold"></i></div>
+      <h3 class="confirm-title">Ваши данные успешно отправлены</h3>
+      <p class="confirm-text">Спасибо, мы получили Ваше сообщение и свяжемся с Вами в ближайшее время</p>
+      <button class="ui-btn btn--dark confirm--btn"><span>Ок, спасибо</span></button>
+   </div>
+
+   <div class="popup-overlay"></div>
+</div>
+   <div class="popup-wrap confirm-popup" id="error-popup">
+   <div class="popup">
+      <div class="ui-close"><i class="i-close"></i></div>
+
+      <div class="confirm-icon"><i class="i-close"></i></div>
+      <h3 class="confirm-title">Упс, что-то пошло не так</h3>
+      <p class="confirm-text">При отправке данных произошла ошибка, если вы увидели это сообщение, пожалуйста, сообщите нам любым удобным способом</p>
+      <button class="ui-btn btn--dark confirm--btn"><span>Ок, закрыть</span></button>
+   </div>
+
+   <div class="popup-overlay"></div>
+</div>
    
    <div class="scrollUp-wrap sticky">
    <div class="scrollUp-item"><div class="scrollUp-arrow"></div></div>
@@ -1098,11 +1121,13 @@
    <div class="ui-overlay"></div>
    
    
-   <!-- <script defer src="./libs/jquery-3.6.3.min.js?_v=20230423022724"></script> -->
-   <script defer src="./libs/inputmask.min.js?_v=20230423022724"></script>
-   <script defer src="./libs/initPreviewGallery.js?_v=20230423022724"></script>
-   <script defer src="./libs/renderCoursePopupContent.js?_v=20230423022724"></script>
-   <script defer src="./libs/send-mail.js?_v=20230423022724"></script>
-   <script defer src="js/bundle.min.js?_v=20230423022724"></script>
+   <!-- <script defer src="./libs/jquery-3.6.3.min.js?_v=20230423141210"></script> -->
+   <script defer src="./libs/js/inputmask.min.js?_v=20230423141210"></script>
+   <script defer src="./libs/js/openMobileMenu.js?_v=20230423141210"></script>
+   <script defer src="./libs/js/openPopup.js?_v=20230423141210"></script>
+   <script defer src="./libs/js/initPreviewGallery.js?_v=20230423141210"></script>
+   <script defer src="./libs/js/renderCoursePopupContent.js?_v=20230423141210"></script>
+   <script defer src="./libs/js/send-mail.js?_v=20230423141210"></script>
+   <script defer src="js/bundle.min.js?_v=20230423141210"></script>
 </body>
 </html>

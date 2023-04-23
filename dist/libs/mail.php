@@ -8,7 +8,7 @@ $title = "Тема письма";
 
 $c = true;
 // Формирование самого письма
-$title = "Заголовок письма";
+$title = "Письмо с barkoschool.ru";
 foreach ( $_POST as $key => $value ) {
   if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
     $body .= "
@@ -31,13 +31,13 @@ try {
   $mail->SMTPAuth   = true;
 
   // Настройки вашей почты
-  $mail->Host       = 'cpanel9.d.fozzy.com'; // SMTP сервера вашей почты
-  $mail->Username   = 'webdev@danilarose.net'; // Логин на почте
-  $mail->Password   = 'danilarose'; // Пароль на почте
+  $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
+  $mail->Username   = 'danila.rose.web@gmail.com'; // Логин на почте
+  $mail->Password   = 'izvwdvaptqvpnkiz'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('danila.rose.web@gmail.com', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('danila.rose.web@gmail.com', 'Сообщение с сайта barkoschool.ru'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
   $mail->addAddress('danila.rose.web@gmail.com');

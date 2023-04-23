@@ -1,18 +1,7 @@
 import './module/scrollAnimation.js';
-import openMobileMenu from './module/openMobileMenu.js';
-import openPopup from './module/openPopup.js';
-import Validation from './module/validation.js';
+// import openMobileMenu from './module/openMobileMenu.js';
+// import openPopup from './module/openPopup.js';
 import './module/sliders.js';
-
-
-
-let validForm = new Validation(
-   '#contact-form',
-   '#contact-form [name=user_name]',
-   '#contact-form [name=user_phone]',
-   '#contact-form [name=user_email]',
-   '#contact-form [name=user_message]'
-)
 
 
  

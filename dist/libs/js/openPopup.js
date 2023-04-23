@@ -1,5 +1,5 @@
-export default class openPopup {
-   constructor ({ popup, open, close, closeItem = null, overlay = null, whereInsert = null, frame = null }) {
+class openPopup {
+   constructor ({ popup, open = null, openFlag = false, close, closeItem = null, overlay = null, whereInsert = null, frame = null }) {
       this.$popup = document.querySelector(popup)
       this.$openBtn = document.querySelectorAll(open)
       this.$closeBtn = document.querySelector(close)
@@ -7,17 +7,21 @@ export default class openPopup {
       this.$overlay = document.querySelector(overlay)
       this.$whereInsert = document.querySelector(whereInsert)
       this.frame = frame
+      this.openFlag = openFlag
 
       this.#setup()
    }
 
    #setup = () => {
-      for (let i = 0; i < this.$openBtn.length; i++) {
-         this.$openBtn[i].addEventListener('click', this.onOpen)
+      if (this.$openBtn) {
+         for (let i = 0; i < this.$openBtn.length; i++) {
+            this.$openBtn[i].addEventListener('click', this.onOpen)
+         }
       }
+
+      this.openFlag ? this.onOpen() : this.onClose()
       
       this.$overlay?.addEventListener('click', this.onClose)
-      
       this.$closeBtn?.addEventListener('click', this.onClose)
       this.$closeItem?.addEventListener('click', this.onClose)
       document.body.addEventListener('keydown', (e) => {
@@ -28,6 +32,8 @@ export default class openPopup {
    onOpen = () => {
       this.$popup.classList.add('active')
       document.body.classList.add('no-scroll')
+
+      this.openFlag = true
  
       if (this.frame) {
          this.insertIframe()
@@ -37,6 +43,7 @@ export default class openPopup {
    onClose = () => {
       this.$popup?.classList.remove('active')
       document.body.classList.remove('no-scroll')
+      this.openFlag = false
 
       if (this.frame) {
          this.deleteFrame()

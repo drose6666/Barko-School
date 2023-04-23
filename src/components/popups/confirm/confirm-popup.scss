@@ -1,0 +1,74 @@
+.confirm-popup {
+   @extend %flexCenter;
+   .popup {
+      padding: 40px 20px;
+      max-width: 520px;
+      border-radius: $blockR;
+      overflow: hidden;
+      box-shadow: 0px 15px 30px 11px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .confirm-icon {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      @extend %flexCenter;
+      i {
+         font-size: 40px;
+         color: $light;
+      }
+   }
+
+   .confirm-title {
+      margin-top: 35px;
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 114%;
+      text-align: center;
+      color: $title;
+      max-width: 405px;
+   }
+
+   .confirm-text {
+      margin-top: 20px;
+      font-size: 16px;
+      font-family: $Rob;
+      font-weight: 300;
+      line-height: 150%;
+      text-align: center;
+      color: $title;
+      max-width: 380px;
+   }
+
+   .confirm--btn {
+      margin-top: 40px;
+      padding: 13px 25px;
+      font-size: 17px;
+      font-weight: 500;
+   }
+
+
+
+   
+
+   &#success-popup {
+      .popup { background: $confirmSuccessBg; }
+
+      .confirm-icon {
+         background: $tableHeadBenefits;
+         box-shadow: 0px 8px 30px -13px rgba(13, 191, 105, 0.7);
+      }
+   }
+
+   &#error-popup {
+      .popup { background: $weakColorSelection; }
+
+      .confirm-icon {
+         background: $action;
+         box-shadow: $btnActionS;
+      }
+   }
+}

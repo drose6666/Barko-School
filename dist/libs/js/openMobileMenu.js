@@ -1,4 +1,4 @@
-export default class openMobileMenu {
+class openMobileMenu {
    constructor ({ menu, close, open, overlay, closeItems }) {
       this.$selectorMenu = document.querySelector(menu)
       this.$selectorClose = document.querySelector(close)
