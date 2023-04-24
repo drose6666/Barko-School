@@ -246,40 +246,71 @@ const getCurrentContent = function getCurrentContent (id) {
 
 // Данные о курсах
 const coursesData = [
-   { id: 1, title: 'Soft skills (гибкие навыки)', img: '../../../img/optimized/courses/soft-skills.webp', age: 'От 4 до 11 лет', price: 'От 4 400 рублей', duration: '50 минут', content: getCurrentContent(1) },
-   { id: 2, title: 'Развивающие занятия', img: '../../../img/optimized/courses/educational-classes.webp', age: 'От 9 месяцев', price: 'От 5 400 рублей', duration: '45 минут', content: getCurrentContent(2) },
-   { id: 3, title: 'Тяп-ляп - творческие занятия', img: '../../../img/optimized/courses/tyap.webp', age: 'От 9 мес до 3 лет', price: 'От 6 400 рублей', duration: '45 минут', content: getCurrentContent(3) },
-   { id: 4, title: 'Экспресс подготовка к школе', img: '../../../img/optimized/courses/preparing-for-school.webp', age: 'От 4 лет', price: 'От 7 000 рублей', duration: '90 минут', content: getCurrentContent(4) },
-   { id: 5, title: 'Подготовка к школе (в течение учебного года)', img: '../../../img/optimized/courses/school.webp', age: 'От 6 лет', price: 'От 5 000 рублей', duration: '50 минут', content: getCurrentContent(5) },
-   { id: 6, title: 'Логопедические занятия', img: '../../../img/optimized/courses/speech-therapist.webp', age: 'От 2 лет', price: 'От 5 500 рублей', duration: '30 минут', content: getCurrentContent(6) },
-   { id: 7, title: 'Логоритмика', img: '../../../img/optimized/courses/logorhythmics.webp', age: 'От 4 лет', price: 'От 5 700 рублей', duration: '50 минут', content: getCurrentContent(7) },
-   { id: 8, title: 'ИЗО-студия - художественные занятия', img: '../../../img/optimized/courses/draw.webp', age: 'От 3 лет', price: 'От 3 500 рублей', duration: 'От 30 минут', content: getCurrentContent(8) },
-   { id: 9, title: 'Нейрогимнастика', img: '../../../img/optimized/courses/neurohymnastics.webp', age: 'От 3 лет', price: 'От 3 900 рублей', duration: '45 минут (~ 10 мин)', content: getCurrentContent(9) },
-   { id: 10, title: 'Шахматы', img: '../../../img/optimized/courses/chess.webp', age: 'От 4 лет', price: 'От 4 100 рублей', duration: '50 минут', content: getCurrentContent(10) },
-   { id: 11, title: 'Психолог', img: '../../../img/optimized/courses/psychology.webp', age: 'До 18 лет', price: 'От 8 000 рублей', duration: 'От 30 минут', content: getCurrentContent(11) },
-   { id: 12, title: 'Летний клуб «Навыки будущего»', img: '../../../img/optimized/courses/skills-future.webp', age: 'От 4 до 11 лет', price: 'От 7 000 рублей', duration: 'Летний лагерь', content: getCurrentContent(12) },
+   { id: 1, title: 'Soft skills (гибкие навыки)', img: '../../../img/optimized/courses/soft-skills.webp', age: 'с 6 лет', priceTicket: '4000 рублей', priceIndividual: null, duration: '50 минут', content: getCurrentContent(1) },
+   { id: 2, title: 'Развивающие занятия', img: '../../../img/optimized/courses/educational-classes.webp', age: 'с 9 месяцев', priceTicket: '4 400 - 6 800 рублей', priceIndividual: null, duration: '45 минут', content: getCurrentContent(2) },
+   { id: 3, title: 'Тяп-ляп - творческие занятия', img: '../../../img/optimized/courses/tyap.webp', age: 'с 9 мес до 3 лет', priceTicket: '4 400 - 6 800 рублей', priceIndividual: null, duration: '45 минут', content: getCurrentContent(3) },
+   { id: 4, title: 'Экспресс подготовка к школе', img: '../../../img/optimized/courses/preparing-for-school.webp', age: 'дошкольники', priceTicket: '5 300 рублей', priceIndividual: null, duration: '90 минут', content: getCurrentContent(4) },
+   { id: 5, title: 'Подготовка к школе (в течение учебного года)', img: '../../../img/optimized/courses/school.webp', age: 'с 6-7 лет', priceTicket: '5 300 рублей', priceIndividual: null, duration: '50 минут', content: getCurrentContent(5) },
+   { id: 6, title: 'Логопедические занятия', img: '../../../img/optimized/courses/speech-therapist.webp', age: 'с 2 лет', priceTicket: '3 600 - 7 200 рублей', priceIndividual: null, priceDiagnostics: '900 рублей', duration: '30 минут', content: getCurrentContent(6) },
+   { id: 7, title: 'Логоритмика', img: '../../../img/optimized/courses/logorhythmics.webp', age: 'с 4 лет', priceTicket: '3 600 рублей', priceIndividual: null, duration: '50 минут', content: getCurrentContent(7) },
+   { id: 8, title: 'ИЗО-студия - художественные занятия', img: '../../../img/optimized/courses/draw.webp', age: 'с 3 лет', priceTicket: '3 500 - 5 500 рублей', priceIndividual: '900 - 1 700 рублей', priceOneVisit: '900 рублей', duration: '30 - 60 минут', content: getCurrentContent(8) },
+   { id: 9, title: 'Нейрогимнастика', img: '../../../img/optimized/courses/neurohymnastics.webp', age: 'с 3 лет', priceTicket: '4 400 - 6 800 рублей', priceIndividual: null, duration: '45 минут (~ 10 мин)', content: getCurrentContent(9) },
+   { id: 10, title: 'Шахматы', img: '../../../img/optimized/courses/chess.webp', age: 'с 4 лет', priceTicket: '3 700 - 6 400 рублей', priceIndividual: '1700 рублей', duration: '50 минут', content: getCurrentContent(10) },
+   { id: 11, title: 'Психолог', img: '../../../img/optimized/courses/psychology.webp', age: 'до 18 лет', priceTicket: 'от 8 000 рублей', priceIndividual: '', duration: 'От 30 минут', content: getCurrentContent(11) },
+   { id: 12, title: 'Летний клуб «Навыки будущего»', img: '../../../img/optimized/courses/skills-future.webp', age: 'с 4 до 11 лет', priceTicket: 'от 7 000 рублей', priceIndividual: '', duration: 'Летний лагерь', content: getCurrentContent(12) },
 ]
 
-const $openCourseBtn = document.querySelectorAll('.courses .course .more')
+
+
+const $openCourseBtn = document.querySelectorAll('.courses .course .more[data-id]')
 
 // получаем id кликнутого курса
 const getClickedCourseAttr = (element) => Number(element.getAttribute('data-id'))
 
+// отображение опционального контента
+const optionalContent = function (condition, elementHide, elementContent, content) {
+   if (condition) {
+      elementContent.textContent = content
+      elementHide.style.display = 'grid'
+   } else {
+      elementHide.style.display = 'none'
+   }
+}
+
 // рендер контента в модальном окне курса
-const renderCourseContent = (course) => {
+const renderCourseContent = ({ title, img, age, priceTicket, priceIndividual, duration, content, ...other }) => {
    const $courseDetailInfo = document.querySelector('#course-popup .detail-info')
-   let $courseImg = document.querySelector('#course-popup .course-popup-head img')
-   let $courseTitle = document.querySelector('.course-popup-title')
-   let $courseAge = document.querySelector('.short-info-item.age .value')
-   let $coursePrice = document.querySelector('.short-info-item.price .value')
-   let $courseDuration = document.querySelector('.short-info-item.duration .value')
+   const $coursePriceTicketItem = document.querySelector('.short-info-item.price-individual')
+   const $coursePriceDiagnosticsItem = document.querySelector('.short-info-item.price-diagnostics')
+   const $coursePriceOneVisitItem = document.querySelector('.short-info-item.price-one-visit')
+
+   const $courseImg = document.querySelector('#course-popup .course-popup-head img')
+   const $courseTitle = document.querySelector('.course-popup-title')
+   const $courseAge = document.querySelector('.short-info-item.age .value')
+   const $coursePriceTicket = document.querySelector('.short-info-item.price-ticket .value')
+   const $coursePriceIndividual = document.querySelector('.short-info-item.price-individual .value')
+   const $coursePriceDiagnostics = document.querySelector('.short-info-item.price-diagnostics .value')
+   const $coursePriceOneVisit = document.querySelector('.short-info-item.price-one-visit .value')
+   const $courseDuration = document.querySelector('.short-info-item.duration .value')
    
-   $courseDetailInfo.insertAdjacentHTML('afterbegin', course.content)
-   $courseImg.src = course.img
-   $courseTitle.textContent = course.title
-   $courseAge.textContent = course.age
-   $coursePrice.textContent = course.price
-   $courseDuration.textContent = course.duration
+   $courseDetailInfo.insertAdjacentHTML('afterbegin', content)
+   $courseImg.src = img
+   $courseTitle.textContent = title
+   $courseAge.textContent = age
+   $coursePriceTicket.textContent = priceTicket
+   $courseDuration.textContent = duration
+
+   // отобрвжение опцинального контента
+   optionalContent(priceIndividual, $coursePriceTicketItem, $coursePriceIndividual, priceIndividual)
+   optionalContent(other.priceDiagnostics, $coursePriceDiagnosticsItem, $coursePriceDiagnostics, other.priceDiagnostics)
+   optionalContent(other.priceOneVisit, $coursePriceOneVisitItem, $coursePriceOneVisit, other.priceOneVisit)
+
+   // if (priceIndividual) {
+   //    $coursePriceIndividual.textContent = priceIndividual
+   //    $coursePriceTicketItem.style.display = 'grid'
+   // } else {
+   //    $coursePriceTicketItem.style.display = 'none'
+   // }
 }
 
 // очищение контента модального окна курса

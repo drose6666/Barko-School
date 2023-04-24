@@ -1,5 +1,5 @@
 import './module/scrollAnimation.js';
-// import openMobileMenu from './module/openMobileMenu.js';
+import openMobileMenu from './module/openMobileMenu.js';
 // import openPopup from './module/openPopup.js';
 import './module/sliders.js';
 
@@ -75,7 +75,7 @@ const galleryPopup = new openPopup({
 // TODO Course popup
 const coursesPopup = new openPopup({
    popup: '#course-popup',
-   open: '.courses .more',
+   open: '.courses .more[data-id]',
    close: '#course-popup .ui-close',
    closeItem: '#course-popup .btn--course',
    overlay: '#course-popup .popup-overlay'

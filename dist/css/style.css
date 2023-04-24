@@ -3989,13 +3989,13 @@ footer {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto;
-  -ms-grid-columns: minmax(200px, 1fr) 20px 1fr;
-      grid-template: auto/minmax(200px, 1fr) 1fr;
+  -ms-grid-columns: minmax(250px, 1.5fr) 20px 1fr;
+      grid-template: auto/minmax(250px, 1.5fr) 1fr;
   gap: 20px;
 }
 
 .course-popup-body .short-info-item:not(:first-child) {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .course-popup-body .short-info-item .name {
@@ -4004,11 +4004,11 @@ footer {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 10px;
 }
 
@@ -4016,7 +4016,7 @@ footer {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 400;
-  line-height: 98%;
+  line-height: 120%;
   color: #9193A3;
 }
 
@@ -4038,6 +4038,11 @@ footer {
           justify-content: center;
   width: 18px;
   height: 18px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 18px;
+     -moz-box-flex: 0;
+      -ms-flex: 0 0 18px;
+          flex: 0 0 18px;
 }
 
 .course-popup-body .short-info-item .name .icon i {
@@ -4049,7 +4054,11 @@ footer {
   font-size: 15px;
   font-weight: 500;
   line-height: 100%;
-  color: #fff;
+  color: #D1CFDD;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
 }
 
 .course-popup-body .detail-info {
@@ -4063,7 +4072,7 @@ footer {
 .course-popup-body .course-popup-action {
   margin-top: 80px;
   padding-top: 35px;
-  border-top: 1px solid #9193A3;
+  border-top: 1px solid rgba(145, 147, 163, 0.3);
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -8161,6 +8170,53 @@ i {
     text-align: center;
   }
 
+  .course-popup-head .course-popup-title {
+    padding: 180px 20px 50px 20px;
+  }
+
+  .course-popup-body {
+    padding: 40px 20px 50px 20px;
+  }
+
+  .course-popup-body .short-info:after {
+    width: 85%;
+  }
+
+  .course-popup-body .short-info-item {
+    -ms-grid-rows: auto;
+    -ms-grid-columns: 1fr;
+        grid-template: auto/1fr;
+    gap: 10px;
+  }
+
+  .course-popup-body .short-info-item:not(:first-child) {
+    margin-top: 30px;
+  }
+
+  .course-popup-body .short-info-item .value {
+    margin-left: 30px;
+  }
+
+  .course-popup-body .course-popup-action {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 25px;
+  }
+
+  .detail-info-list.inside-list {
+    margin: 10px 0 10px 0px;
+  }
+
   .courses {
     padding: 0 15px;
   }
@@ -8221,53 +8277,6 @@ i {
 
   #schedule-popup .schedule-footer .schedule-logo {
     max-width: 170px;
-  }
-
-  .course-popup-head .course-popup-title {
-    padding: 180px 20px 50px 20px;
-  }
-
-  .course-popup-body {
-    padding: 40px 20px 50px 20px;
-  }
-
-  .course-popup-body .short-info:after {
-    width: 85%;
-  }
-
-  .course-popup-body .short-info-item {
-    -ms-grid-rows: auto;
-    -ms-grid-columns: 1fr;
-        grid-template: auto/1fr;
-    gap: 10px;
-  }
-
-  .course-popup-body .short-info-item:not(:first-child) {
-    margin-top: 30px;
-  }
-
-  .course-popup-body .short-info-item .value {
-    margin-left: 30px;
-  }
-
-  .course-popup-body .course-popup-action {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-       -moz-box-orient: vertical;
-       -moz-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-       -moz-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 25px;
-  }
-
-  .detail-info-list.inside-list {
-    margin: 10px 0 10px 0px;
   }
 
   .hero-info {

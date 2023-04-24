@@ -192,23 +192,23 @@
 
          &-item {
             display: grid;
-            grid-template: auto / minmax(200px, 1fr) 1fr;
+            grid-template: auto / minmax(250px, 1.5fr) 1fr;
             gap: 20px;
 
             &:not(:first-child) {
-               margin-top: 20px;
+               margin-top: 25px;
             }
 
             .name {
                display: flex;
-               align-items: center;
+               align-items: flex-start;
                gap: 10px;
 
                span {
                   font-family: $Rob;
                   font-size: 15px;
                   font-weight: 400;
-                  line-height: 98%;
+                  line-height: 120%;
                   color: $text;
                }
 
@@ -218,6 +218,7 @@
                   justify-content: center;
                   width: 18px;
                   height: 18px;
+                  flex: 0 0 18px;
                   
                   i {
                      font-size: 18px;
@@ -230,7 +231,8 @@
                font-size: 15px;
                font-weight: 500;
                line-height: 100%;
-               color: $light;
+               color: $textLight;
+               align-self: center;
             }
          }
       }
@@ -248,7 +250,7 @@
       .course-popup-action {
          margin-top: 80px;
          padding-top: 35px;
-         border-top: 1px solid $text;
+         border-top: 1px solid rgba(145, 147, 163, .3);
          display: flex;
          align-items: center;
          justify-content: space-between;
@@ -261,7 +263,7 @@
    }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 550px) {
    .course-popup-head .course-popup-title {
       padding: 180px 20px 50px 20px;
    }

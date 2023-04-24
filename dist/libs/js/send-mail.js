@@ -89,6 +89,7 @@ function errorHandler (error, field, message) {
 	}
 }
 
+// Проверка валидности всех полей
 function validForm (name, phone, email, message) {
 	let nameRes = nameValid(name);
 	let phoneRes = phoneValid(phone);
@@ -98,6 +99,7 @@ function validForm (name, phone, email, message) {
 	return (nameRes || phoneRes || emailRes || messageRes) ? false : true;
 }
 
+// Запрос на отправку формы
 function sendForm () {
 	const formData = new FormData(form);
 	const isValid = validForm('[data-valid="name"]', '[data-valid="phone"]', '[data-valid="email"]', '[data-valid="message"]')
@@ -112,10 +114,11 @@ function sendForm () {
 				for (let item of form.querySelectorAll('[data-valid]')) {
 					item.value = ''
 				}
+
 				new openPopup({
 					popup: '#success-popup',
 					close: '#success-popup .ui-close',
-					closeItem: '.confirm-popup .confirm--btn',
+					closeItem: '#success-popup .confirm--btn',
 					openFlag: true,
 					overlay: '#success-popup .popup-overlay'
 				})
@@ -123,7 +126,7 @@ function sendForm () {
 				new openPopup({
 					popup: '#error-popup',
 					close: '#error-popup .ui-close',
-					closeItem: '.confirm-popup .confirm--btn',
+					closeItem: '#error-popup .confirm--btn',
 					openFlag: true,
 					overlay: '#error-popup .popup-overlay'
 				})
@@ -133,7 +136,7 @@ function sendForm () {
 			new openPopup({
 				popup: '#error-popup',
 				close: '#error-popup .ui-close',
-				closeItem: '.confirm-popup .confirm--btn',
+				closeItem: '#error-popup .confirm--btn',
 				openFlag: true,
 				overlay: '#error-popup .popup-overlay'
 			})
@@ -141,7 +144,14 @@ function sendForm () {
 	}
 }
 
+// Удаление класса .error у полей ввода при фокусе
+for (let el of document.querySelectorAll('.field')) {
+	el.addEventListener('focus', () => {
+		errorHandler(false, el, '')
+	})
+}
 
+// Событие отправки формы
 form.addEventListener('submit', (event) => {
 	event.preventDefault();
 	sendForm()

@@ -2,27 +2,27 @@
    <h3 class="form-title">Мы ждем Вас!</h3>
    <p class="form-text">Если у Вас остались вопросы, заполните форму ниже, и мы с удовольствием Вам перезоним!</p>
 
-   <form action="libs/js/mail.php" method="POST" class="contact-form" id="contact-form" enctype="multipart/form-data">
+   <form action="libs/mail.php" method="POST" class="contact-form" id="contact-form" enctype="multipart/form-data">
       <div class="form-item-group media900">
 
          <div class="form-item">
-            <input class="ui-input" name="Имя" type="text" inputmode="text" data-valid="name" placeholder="Ваше имя">
+            <input class="ui-input field" name="Имя" type="text" inputmode="text" autocomplete="on" data-valid="name" placeholder="Ваше имя">
             <span class="error-message"></span>
          </div>
    
          <div class="form-item">
-            <input class="ui-input" name="Телефон" type="tel" inputmode="tel" data-valid="phone" placeholder="Ваш Телефон">
+            <input class="ui-input field" name="Телефон" type="tel" inputmode="tel" autocomplete="on" data-valid="phone" placeholder="Ваш Телефон">
             <span class="error-message">Введите корректный номер</span>
          </div>
       </div>
 
       <div class="form-item">
-         <input class="ui-input" name="Email" type="email" inputmode="email" data-valid="email" placeholder="Ваш Email">
+         <input class="ui-input field" name="Email" type="email" inputmode="email" autocomplete="on" data-valid="email" placeholder="Ваш Email">
          <span class="error-message"></span>
       </div>
       
       <div class="form-item">
-         <textarea class="ui-input ui-textarea" name="Сообщение" data-valid="message" placeholder="Сообщение"></textarea>
+         <textarea class="ui-input ui-textarea field" name="Сообщение" data-valid="message" placeholder="Сообщение"></textarea>
          <span class="error-message"></span>
       </div>
 
