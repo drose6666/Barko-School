@@ -211,6 +211,24 @@ const skillsOfTheFuture = `
       <p class="detail-info-text">Летом у нас будет работать клуб «Навыки будущего», фокусом которого будет наш новый курс по гибким навыкам (софт скиллз). Мы уверены, чтобы быть успешными в будущем детям нужно научиться эффективно и гармонично выстраивать межличностное взаимодействие, т.е. развивать такие качества как: организованность, умение работать в команде, критическое мышление, креативность, дружелюбность, лидерские качества, умение решать сложные задачи и т.д.</p>
    </div>
 `
+const english = `
+   <div class="detail-info-item">
+      <h4 class="detail-info-title">Строим фундамент</h4>
+      <p class="detail-info-text">Наши занятия строятся по <strong>Кембриджской программе</strong>. Они направлены в первую очередь на <strong>расширение словарного запаса</strong> и развитие <strong>разговорной речи</strong>, развитие <strong>умения понимать английскую речь на слух</strong>, а также на изучение грамматики, на первых порах только <strong>в игровой форме</strong>.</p>
+   </div>
+
+   <div class="detail-info-item">
+      <h4 class="detail-info-title">Два варианта изучения:</h4>
+      <ul class="detail-info-list check">
+         <li>Без использования русского языка: <strong class="pl">в группе и индивидуально</strong></li>
+         <li>С русским языком: <strong class="pl">в основном индивидуально</strong></li>
+      </ul>
+   </div>
+
+   <div class="detail-info-item">
+      <p class="detail-info-text">Когда преподаватель говорит <strong>только на английском языке</strong>, дети быстрее привыкают к иностранной речи, начинают лучше в ней ориентироваться, практически на интуитивном уровне. Также помогаем со школьной программой на индивидуальных занятиях. Индивидуальные занятия также проводим в онлайн формате.</p>
+   </div>
+`
 
 // Определение необходимого контента
 const getCurrentContent = function getCurrentContent (id) {
@@ -239,6 +257,8 @@ const getCurrentContent = function getCurrentContent (id) {
          return psychology;
       case 12:
          return skillsOfTheFuture;
+      case 13:
+         return english;
       default:
          return 'WARNING! Говнокод, в конструкции switch'
    }
@@ -246,18 +266,19 @@ const getCurrentContent = function getCurrentContent (id) {
 
 // Данные о курсах
 const coursesData = [
-   { id: 1, title: 'Soft skills (гибкие навыки)', img: '../../../img/optimized/courses/soft-skills.webp', age: 'с 6 лет', priceTicket: '4000 рублей', priceIndividual: null, duration: '50 минут', content: getCurrentContent(1) },
-   { id: 2, title: 'Развивающие занятия', img: '../../../img/optimized/courses/educational-classes.webp', age: 'с 9 месяцев', priceTicket: '4 400 - 6 800 рублей', priceIndividual: null, duration: '45 минут', content: getCurrentContent(2) },
-   { id: 3, title: 'Тяп-ляп - творческие занятия', img: '../../../img/optimized/courses/tyap.webp', age: 'с 9 мес до 3 лет', priceTicket: '4 400 - 6 800 рублей', priceIndividual: null, duration: '45 минут', content: getCurrentContent(3) },
-   { id: 4, title: 'Экспресс подготовка к школе', img: '../../../img/optimized/courses/preparing-for-school.webp', age: 'дошкольники', priceTicket: '5 300 рублей', priceIndividual: null, duration: '90 минут', content: getCurrentContent(4) },
-   { id: 5, title: 'Подготовка к школе (в течение учебного года)', img: '../../../img/optimized/courses/school.webp', age: 'с 6-7 лет', priceTicket: '5 300 рублей', priceIndividual: null, duration: '50 минут', content: getCurrentContent(5) },
-   { id: 6, title: 'Логопедические занятия', img: '../../../img/optimized/courses/speech-therapist.webp', age: 'с 2 лет', priceTicket: '3 600 - 7 200 рублей', priceIndividual: null, priceDiagnostics: '900 рублей', duration: '30 минут', content: getCurrentContent(6) },
-   { id: 7, title: 'Логоритмика', img: '../../../img/optimized/courses/logorhythmics.webp', age: 'с 4 лет', priceTicket: '3 600 рублей', priceIndividual: null, duration: '50 минут', content: getCurrentContent(7) },
+   { id: 1, title: 'Soft skills (гибкие навыки)', img: '../../../img/optimized/courses/soft-skills.webp', age: 'с 6 лет', priceTicket: '4000 рублей', duration: '50 минут', content: getCurrentContent(1) },
+   { id: 2, title: 'Развивающие занятия', img: '../../../img/optimized/courses/educational-classes.webp', age: 'с 9 месяцев', priceTicket: '4 400 - 6 800 рублей', duration: '45 минут', content: getCurrentContent(2) },
+   { id: 3, title: 'Тяп-ляп - творческие занятия', img: '../../../img/optimized/courses/tyap.webp', age: 'с 9 мес до 3 лет', priceTicket: '4 400 - 6 800 рублей', duration: '45 минут', content: getCurrentContent(3) },
+   { id: 4, title: 'Экспресс подготовка к школе', img: '../../../img/optimized/courses/preparing-for-school.webp', age: 'дошкольники', priceTicket: '5 300 рублей', duration: '90 минут', content: getCurrentContent(4) },
+   { id: 5, title: 'Подготовка к школе (в течение учебного года)', img: '../../../img/optimized/courses/school.webp', age: 'с 6-7 лет', priceTicket: '5 300 рублей', duration: '50 минут', content: getCurrentContent(5) },
+   { id: 6, title: 'Логопедические занятия', img: '../../../img/optimized/courses/speech-therapist.webp', age: 'с 2 лет', priceTicket: '3 600 - 7 200 рублей', priceDiagnostics: '900 рублей', duration: '30 минут', content: getCurrentContent(6) },
+   { id: 7, title: 'Логоритмика', img: '../../../img/optimized/courses/logorhythmics.webp', age: 'с 4 лет', priceTicket: '3 600 рублей', duration: '50 минут', content: getCurrentContent(7) },
    { id: 8, title: 'ИЗО-студия - художественные занятия', img: '../../../img/optimized/courses/draw.webp', age: 'с 3 лет', priceTicket: '3 500 - 5 500 рублей', priceIndividual: '900 - 1 700 рублей', priceOneVisit: '900 рублей', duration: '30 - 60 минут', content: getCurrentContent(8) },
-   { id: 9, title: 'Нейрогимнастика', img: '../../../img/optimized/courses/neurohymnastics.webp', age: 'с 3 лет', priceTicket: '4 400 - 6 800 рублей', priceIndividual: null, duration: '45 минут (~ 10 мин)', content: getCurrentContent(9) },
+   { id: 9, title: 'Нейрогимнастика', img: '../../../img/optimized/courses/neurohymnastics.webp', age: 'с 3 лет', priceTicket: '4 400 - 6 800 рублей', duration: '45 минут (~ 10 мин)', content: getCurrentContent(9) },
    { id: 10, title: 'Шахматы', img: '../../../img/optimized/courses/chess.webp', age: 'с 4 лет', priceTicket: '3 700 - 6 400 рублей', priceIndividual: '1700 рублей', duration: '50 минут', content: getCurrentContent(10) },
-   { id: 11, title: 'Психолог', img: '../../../img/optimized/courses/psychology.webp', age: 'до 18 лет', priceTicket: 'от 8 000 рублей', priceIndividual: '', duration: 'От 30 минут', content: getCurrentContent(11) },
-   { id: 12, title: 'Летний клуб «Навыки будущего»', img: '../../../img/optimized/courses/skills-future.webp', age: 'с 4 до 11 лет', priceTicket: 'от 7 000 рублей', priceIndividual: '', duration: 'Летний лагерь', content: getCurrentContent(12) },
+   { id: 11, title: 'Психолог', img: '../../../img/optimized/courses/psychology.webp', age: 'до 18 лет', priceTicket: 'от 8 000 рублей', duration: 'От 30 минут', content: getCurrentContent(11) },
+   { id: 12, title: 'Летний клуб «Навыки будущего»', img: '../../../img/optimized/courses/skills-future.webp', age: 'с 4 до 11 лет', priceTicket: 'от 7 000 рублей', duration: 'Летний лагерь', content: getCurrentContent(12) },
+   { id: 13, title: 'Английский язык', img: '../../../img/optimized/courses/english.webp', age: 'с 3 лет', priceTicket: '3 400 - 5 400 рублей', priceIndividual: '800 - 1 600 рублей', duration: '30 - 60 минут', content: getCurrentContent(13) },
 ]
 
 
@@ -304,13 +325,6 @@ const renderCourseContent = ({ title, img, age, priceTicket, priceIndividual, du
    optionalContent(priceIndividual, $coursePriceTicketItem, $coursePriceIndividual, priceIndividual)
    optionalContent(other.priceDiagnostics, $coursePriceDiagnosticsItem, $coursePriceDiagnostics, other.priceDiagnostics)
    optionalContent(other.priceOneVisit, $coursePriceOneVisitItem, $coursePriceOneVisit, other.priceOneVisit)
-
-   // if (priceIndividual) {
-   //    $coursePriceIndividual.textContent = priceIndividual
-   //    $coursePriceTicketItem.style.display = 'grid'
-   // } else {
-   //    $coursePriceTicketItem.style.display = 'none'
-   // }
 }
 
 // очищение контента модального окна курса
