@@ -1984,10 +1984,6 @@ footer {
           transition-delay: calc(1.05s + 0.2s);
 }
 
-.features {
-  margin-top: 120px;
-}
-
 .features .container--features {
   display: block;
   margin-top: 100px;
@@ -4752,7 +4748,7 @@ footer {
 }
 
 .section-about > .ui-container {
-  margin: 0 auto;
+  margin: 0 auto 120px auto;
   padding: 0 25px;
   max-width: 1400px;
   display: -ms-grid;
@@ -4761,7 +4757,7 @@ footer {
   grid-template-columns: 500px 1fr;
   -ms-grid-rows: auto;
   grid-template-rows: auto;
-  gap: 110px;
+  gap: 100px;
 }
 
 .about-img {

@@ -4,9 +4,10 @@
    overflow: hidden;
    & > .ui-container {
       @include container (
+         $margin: 0 auto 120px auto, 
          $grid: true,
          $columns: 500px 1fr,
-         $gap: 110px,
+         $gap: 100px,
       )
    }
 }

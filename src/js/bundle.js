@@ -77,7 +77,7 @@ const coursesPopup = new openPopup({
    popup: '#course-popup',
    open: '.courses .more[data-id]',
    close: '#course-popup .ui-close',
-   closeItem: '#course-popup .btn--action.btn--course',
+   closeItem: '#course-popup .btn--course',
    overlay: '#course-popup .popup-overlay'
 })
 

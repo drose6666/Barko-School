@@ -3,7 +3,7 @@ class openPopup {
       this.$popup = document.querySelector(popup)
       this.$openBtn = document.querySelectorAll(open)
       this.$closeBtn = document.querySelector(close)
-      this.$closeItem = document.querySelector(closeItem)
+      this.$closeItem = document.querySelectorAll(closeItem)
       this.$overlay = document.querySelector(overlay)
       this.$whereInsert = document.querySelector(whereInsert)
       this.frame = frame
@@ -23,7 +23,11 @@ class openPopup {
       
       this.$overlay?.addEventListener('click', this.onClose)
       this.$closeBtn?.addEventListener('click', this.onClose)
-      this.$closeItem?.addEventListener('click', this.onClose)
+      this.$closeItem?.forEach(el => {
+         el.addEventListener('click', () => {
+            this.onClose()
+         })
+      })
       document.body.addEventListener('keydown', (e) => {
          if (e.keyCode == 27) this.onClose()
       })

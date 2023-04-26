@@ -276,10 +276,10 @@ const coursesData = [
    { id: 8, title: 'ИЗО-студия - художественные занятия', img: '../../../img/optimized/courses/draw.webp', age: 'с 3 лет', priceTicket: '3 500 - 5 500 рублей', priceIndividual: '900 - 1 700 рублей', priceOneVisit: '900 рублей', duration: '30 - 60 минут', content: getCurrentContent(8) },
    { id: 9, title: 'Нейрогимнастика', img: '../../../img/optimized/courses/neurohymnastics.webp', age: 'с 3 лет', priceTicket: '4 400 - 6 800 рублей', duration: '45 минут (~ 10 мин)', content: getCurrentContent(9) },
    { id: 10, title: 'Шахматы', img: '../../../img/optimized/courses/chess.webp', age: 'с 4 лет', priceTicket: '3 700 - 6 400 рублей', priceIndividual: '1700 рублей', duration: '50 минут', content: getCurrentContent(10) },
-   { id: 11, title: 'Психолог', img: '../../../img/optimized/courses/psychology.webp', age: 'до 18 лет', priceTicket: 'от 8 000 рублей', duration: 'От 30 минут', content: getCurrentContent(11) },
+   { id: 11, title: 'Психолог', img: '../../../img/optimized/courses/psychology.webp', age: 'до 18 лет', priceOneVisit: '1 200 - 1 600 рублей', duration: '30 - 60 минут', content: getCurrentContent(11) },
    { id: 12, title: 'Летний клуб «Навыки будущего»', img: '../../../img/optimized/courses/skills-future.webp', age: 'с 4 до 11 лет', priceTicket: 'от 7 000 рублей', duration: 'Летний лагерь', content: getCurrentContent(12) },
    { id: 13, title: 'Английский язык', img: '../../../img/optimized/courses/english.webp', age: 'с 3 лет', priceTicket: '3 400 - 5 400 рублей', priceIndividual: '800 - 1 600 рублей', duration: '30 - 60 минут', content: getCurrentContent(13) },
-]
+] 
 
 
 
@@ -301,7 +301,8 @@ const optionalContent = function (condition, elementHide, elementContent, conten
 // рендер контента в модальном окне курса
 const renderCourseContent = ({ title, img, age, priceTicket, priceIndividual, duration, content, ...other }) => {
    const $courseDetailInfo = document.querySelector('#course-popup .detail-info')
-   const $coursePriceTicketItem = document.querySelector('.short-info-item.price-individual')
+   const $coursePriceTicketItem = document.querySelector('.short-info-item.price-ticket')
+   const $coursePriceIndividualItem = document.querySelector('.short-info-item.price-individual')
    const $coursePriceDiagnosticsItem = document.querySelector('.short-info-item.price-diagnostics')
    const $coursePriceOneVisitItem = document.querySelector('.short-info-item.price-one-visit')
 
@@ -318,11 +319,11 @@ const renderCourseContent = ({ title, img, age, priceTicket, priceIndividual, du
    $courseImg.src = img
    $courseTitle.textContent = title
    $courseAge.textContent = age
-   $coursePriceTicket.textContent = priceTicket
    $courseDuration.textContent = duration
 
    // отобрвжение опцинального контента
-   optionalContent(priceIndividual, $coursePriceTicketItem, $coursePriceIndividual, priceIndividual)
+   optionalContent(priceTicket, $coursePriceTicketItem, $coursePriceTicket, priceTicket)
+   optionalContent(priceIndividual, $coursePriceIndividualItem, $coursePriceIndividual, priceIndividual)
    optionalContent(other.priceDiagnostics, $coursePriceDiagnosticsItem, $coursePriceDiagnostics, other.priceDiagnostics)
    optionalContent(other.priceOneVisit, $coursePriceOneVisitItem, $coursePriceOneVisit, other.priceOneVisit)
 }
