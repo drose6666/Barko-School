@@ -59,7 +59,7 @@ class openPopup {
    }
 
    deleteFrame = () => {
-      if (this.$whereInsert.querySelector('iframe'))
+      if (this.$whereInsert?.querySelector('iframe'))
          this.$whereInsert.querySelector('iframe').remove()
    }
 }

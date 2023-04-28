@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('components/head.html', {
+   "title": "Barko School"
+})
+
+<body>
+   @@include('components/ui/ui-preloader/ui-preloader.html')
+
+   @@include('components/top-info/top-info.html')
+   @@include('components/course-page/header/course-header-sticky.html')
+   @@include('components/course-page/menu/mobile/course-mobile-menu.html')
+   
+   <main>
+      @@include('components/course-page/header/course-header.html')
+
+      @@include('components/course-page/sections/hero-section/hero-section.html')
+      @@include('components/sections/reviews-section/reviews-section.html')
+      @@include('components/sections/contact-section/contact-section.html')
+
+      @@include('components/footer/_footer.html')
+   </main>
+
+   @@include('components/popups/confirm/success-popup.html')
+   @@include('components/popups/confirm/error-popup.html')
+   
+   @@include('components/scrollUp-wrap/scrollUp-wrap.html')
+   <div class="ui-overlay"></div>
+   
+   
+   <script defer src="./libs/js/openPopup.js"></script>
+   <script defer src="./libs/js/min/send-mail.min.js"></script>
+   <script defer src="js/bundle-course.min.js"></script>
+</body>
+</html>

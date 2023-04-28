@@ -5,43 +5,41 @@
 })
 
 <body>
-   @@include('./components/ui/ui-preloader/ui-preloader.html')
+   @@include('components/ui/ui-preloader/ui-preloader.html')
 
-   @@include('./components/top-info/top-info.html')
-   @@include('./components/header/header-sticky.html')
-   @@include('./components/menu/mobile/mobile-menu.html')
+   @@include('components/top-info/top-info.html')
+   @@include('components/header/header-sticky.html')
+   @@include('components/menu/mobile/mobile-menu.html')
    
    <main>
       <div class="hero-wrap">
          <img class="hero-bg animate" src="./img/hero_bg.svg" alt="">
-         @@include('./components/header/header.html')
-         @@include('./components/sections/hero-section/hero-section.html')
+         @@include('components/header/header.html')
+         @@include('components/sections/hero-section/hero-section.html')
       </div>
 
-      @@include('./components/sections/about-section/about-section.html')
-      @@include('./components/sections/courses-section/courses-section.html')
-      @@include('./components/sections/schedule-section/schedule-section.html')
-      @@include('./components/sections/gallery-section/gallery-section.html')
-      @@include('./components/sections/reviews-section/reviews-section.html')
-      @@include('./components/sections/contact-section/contact-section.html')
+      @@include('components/sections/about-section/about-section.html')
+      @@include('components/sections/courses-section/courses-section.html')
+      @@include('components/sections/schedule-section/schedule-section.html')
+      @@include('components/sections/gallery-section/gallery-section.html')
+      @@include('components/sections/reviews-section/reviews-section.html')
+      @@include('components/sections/contact-section/contact-section.html')
 
       @@include('components/footer/_footer.html')
    </main>
 
-   @@include('./components/popups/video-popup/video-popup.html')
-   @@include('./components/popups/schedule-popup/schedule-popup.html')
-   @@include('./components/popups/gallery-popup/gallery-popup.html')
-   @@include('./components/popups/price-popup/price-popup.html')
-   @@include('./components/popups/courses/course-popup.html')
-   @@include('./components/popups/confirm/success-popup.html')
-   @@include('./components/popups/confirm/error-popup.html')
+   <!-- @@include('./components/popups/video-popup/video-popup.html') -->
+   @@include('components/popups/schedule-popup/schedule-popup.html')
+   @@include('components/popups/gallery-popup/gallery-popup.html')
+   @@include('components/popups/price-popup/price-popup.html')
+   @@include('components/popups/courses/course-popup.html')
+   @@include('components/popups/confirm/success-popup.html')
+   @@include('components/popups/confirm/error-popup.html')
    
-   @@include('./components/scrollUp-wrap/scrollUp-wrap.html')
+   @@include('components/scrollUp-wrap/scrollUp-wrap.html')
    <div class="ui-overlay"></div>
    
    
-   <!-- <script defer src="./libs/jquery-3.6.3.min.js"></script> -->
-   <!-- <script defer src="./libs/js/inputmask.min.js"></script> -->
    <script defer src="./libs/js/openPopup.js"></script>
    <script defer src="./libs/js/min/initPreviewGallery.min.js"></script>
    <script defer src="./libs/js/min/renderCoursePopupContent.min.js"></script>

@@ -36,7 +36,9 @@ export const path = {
       svg: `${srcFolder}/img/**/*.svg`,
       homeJs: `${srcFolder}/js/home-page/bundle-home.js`,
       courseJs: `${srcFolder}/js/course-page/bundle-course.js`,
-      scss: `${srcFolder}/scss/style.scss`, // get the main style.scss file
+      // scss: `${srcFolder}/scss/style.scss`,
+      homeScss: `${srcFolder}/scss/home/home-style.scss`,
+      courseScss: `${srcFolder}/scss/course/course-style.scss`,
       html: `${srcFolder}/*.html`, // we get .html files that are in the src folder (the contents of the "components" folder are not copied to dist)
       libs: `${srcFolder}/libs/**/*.*`, // all files in all folders inside files folder
       other: `${srcFolder}/other/**/*.*`
@@ -49,7 +51,9 @@ export const path = {
       // js: `${srcFolder}/js/**/*.js`,
       homeJs: `${srcFolder}/js/**/*.js`,
       courseJs: `${srcFolder}/js/**/*.js`,
-      scss: `${srcFolder}/**/*.scss`, // monitor all .scss files in all folders in the src/ directory
+      // scss: `${srcFolder}/**/*.scss`,
+      homeScss: `${srcFolder}/**/*.scss`,
+      courseScss: `${srcFolder}/**/*.scss`,
       html: `${srcFolder}/**/*.html`, // keep track of all .html files in all folders in the src/ directory
       libs: `${srcFolder}/libs/**/*.*`, // track all files with any extension in all folders in the src/files directory
       other: `${srcFolder}/other/**/*.*`,

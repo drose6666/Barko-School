@@ -1,47 +1,47 @@
-@import './_vars';
-@import './_functions';
-@import './extends';
-@import './_mixins';
-@import '../../node_modules/swiper/swiper-bundle.min';
+@import '../_vars';
+@import '../_functions';
+@import '../_extends';
+@import '../_mixins';
+@import '../../../node_modules/swiper/swiper-bundle.min';
 
 // Components
-@import '../components/top-info/top-info';
-@import '../components/socials/socials';
-@import '../components/header/header';
-@import '../components/footer/footer';
-@import '../components/menu/nav/nav';
-@import '../components/menu/mobile/mobile-menu'; 
-@import '../components/features/features';
-@import '../components/contact-form/contact-form';
-@import '../components/contact-links/contact-links';
-@import '../components/scrollUp-arrow/scrollUp-arrow';
-@import '../components/scrollUp-wrap/scrollUp-wrap';
-@import '../components/messangers/messangers';
+@import '../../components/top-info/top-info';
+@import '../../components/socials/socials';
+@import '../../components/header/header';
+@import '../../components/footer/footer';
+@import '../../components/menu/nav/nav';
+@import '../../components/menu/mobile/mobile-menu'; 
+@import '../../components/features/features';
+@import '../../components/contact-form/contact-form';
+@import '../../components/contact-links/contact-links';
+@import '../../components/scrollUp-arrow/scrollUp-arrow';
+@import '../../components/scrollUp-wrap/scrollUp-wrap';
+@import '../../components/messangers/messangers';
 
 // UI
-@import '../components/ui/ui-burger/ui-burger';
-@import '../components/ui/ui-buttons/ui-buttons';
-@import '../components/ui/ui-preloader/ui-preloader';
-@import '../components/ui/ui-close/ui-close';
-@import '../components/ui/ui-overlay/ui-overlay';
-@import '../components/popups/ui-popup';
+@import '../../components/ui/ui-burger/ui-burger';
+@import '../../components/ui/ui-buttons/ui-buttons';
+@import '../../components/ui/ui-preloader/ui-preloader';
+@import '../../components/ui/ui-close/ui-close';
+@import '../../components/ui/ui-overlay/ui-overlay';
+@import '../../components/popups/ui-popup';
 
 // Popups
-@import '../components/popups/video-popup/video-popup';
-@import '../components/popups/schedule-popup/schedule-popup';
-@import '../components/popups/gallery-popup/gallery-popup';
-@import '../components/popups/price-popup/price-popup';
-@import '../components/popups/courses/courses-popup';
-@import '../components/popups/confirm/confirm-popup';
+@import '../../components/popups/video-popup/video-popup';
+@import '../../components/popups/schedule-popup/schedule-popup';
+@import '../../components/popups/gallery-popup/gallery-popup';
+@import '../../components/popups/price-popup/price-popup';
+@import '../../components/popups/courses/courses-popup';
+@import '../../components/popups/confirm/confirm-popup';
 
 // Sections
-@import '../components/sections/hero-section/hero-section';
-@import '../components/sections/about-section/about-section';
-@import '../components/sections/courses-section/courses-section';
-@import '../components/sections/schedule-section/schedule-section';
-@import '../components/sections/gallery-section/gallery-section';
-@import '../components/sections/reviews-section/reviews-section';
-@import '../components/sections/contact-section/contact-section';
+@import '../../components/sections/hero-section/hero-section';
+@import '../../components/sections/about-section/about-section';
+@import '../../components/sections/courses-section/courses-section';
+@import '../../components/sections/schedule-section/schedule-section';
+@import '../../components/sections/gallery-section/gallery-section';
+@import '../../components/sections/reviews-section/reviews-section';
+@import '../../components/sections/contact-section/contact-section';
 
 
 

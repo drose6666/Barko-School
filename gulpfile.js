@@ -15,7 +15,7 @@ import { copyOther } from "./gulp/tasks/copyOther.js";
 import { cleanDist } from "./gulp/tasks/clean.js";
 import  html  from "./gulp/tasks/html.js";
 import { server } from "./gulp/tasks/server.js";
-import { scss } from "./gulp/tasks/scss.js";
+import { homeScss, courseScss } from "./gulp/tasks/scss.js";
 import { homeJs, courseJs } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
 import { cleanImages } from "./gulp/tasks/cleanImages.js";
@@ -63,7 +63,9 @@ function watcher() {
    gulp.watch(path.watch.libs, copyLibs)
    gulp.watch(path.watch.other, copyOther)
    gulp.watch(path.watch.html, html)
-   gulp.watch(path.watch.scss, scss)
+   // gulp.watch(path.watch.scss, scss)
+   gulp.watch(path.watch.homeScss, homeScss)
+   gulp.watch(path.watch.courseScss, courseScss)
    // gulp.watch(path.watch.js, js)
    gulp.watch(path.watch.homeJs, homeJs)
    gulp.watch(path.watch.courseJs, courseJs)
@@ -83,7 +85,7 @@ function watcher() {
  * Separation (grouping) of tasks (for visual separation)
  * ------------------------------------------------------------------
  */
-const mainTasks = gulp.parallel(copyLibs, copyOther, fonts, html, scss, homeJs, courseJs, svg, gulp.series(cleanImages, images));
+const mainTasks = gulp.parallel(copyLibs, copyOther, fonts, html, homeScss, courseScss, homeJs, courseJs, svg, gulp.series(cleanImages, images));
 
 
 

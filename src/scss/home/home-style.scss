@@ -1,0 +1,242 @@
+@import '../_vars';
+@import '../_functions';
+@import '../_extends';
+@import '../_mixins';
+@import '../../../node_modules/swiper/swiper-bundle.min';
+
+// Components
+@import '../../components/top-info/top-info';
+@import '../../components/socials/socials';
+@import '../../components/header/header';
+@import '../../components/footer/footer';
+@import '../../components/menu/nav/nav';
+@import '../../components/menu/mobile/mobile-menu'; 
+@import '../../components/features/features';
+@import '../../components/contact-form/contact-form';
+@import '../../components/contact-links/contact-links';
+@import '../../components/scrollUp-arrow/scrollUp-arrow';
+@import '../../components/scrollUp-wrap/scrollUp-wrap';
+@import '../../components/messangers/messangers';
+
+// UI
+@import '../../components/ui/ui-burger/ui-burger';
+@import '../../components/ui/ui-buttons/ui-buttons';
+@import '../../components/ui/ui-preloader/ui-preloader';
+@import '../../components/ui/ui-close/ui-close';
+@import '../../components/ui/ui-overlay/ui-overlay';
+@import '../../components/popups/ui-popup';
+
+// Popups
+@import '../../components/popups/video-popup/video-popup';
+@import '../../components/popups/schedule-popup/schedule-popup';
+@import '../../components/popups/gallery-popup/gallery-popup';
+@import '../../components/popups/price-popup/price-popup';
+@import '../../components/popups/courses/courses-popup';
+@import '../../components/popups/confirm/confirm-popup';
+
+// Sections
+@import '../../components/sections/hero-section/hero-section';
+@import '../../components/sections/about-section/about-section';
+@import '../../components/sections/courses-section/courses-section';
+@import '../../components/sections/schedule-section/schedule-section';
+@import '../../components/sections/gallery-section/gallery-section';
+@import '../../components/sections/reviews-section/reviews-section';
+@import '../../components/sections/contact-section/contact-section';
+
+
+
+
+
+
+// TODO  Остновные стили
+
+* {
+   box-sizing: border-box;
+   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+      -webkit-tap-highlight-color: transparent;
+   scroll-behavior: smooth;
+   scrollbar-color: $title, $weakDecor ; /* «цвет ползунка» «цвет полосы скроллбара» */
+   scrollbar-width: thin ;/* толщина */
+}
+
+a, a:hover, a:focus, a:active {
+   outline: none;
+}
+
+
+html,body {
+   height: 100%;
+   // all: unset; // сбрасывыает все стили до значений по умолчанию
+}
+
+body {
+   position: relative;
+   font-family: $Monts;
+   &.no-scroll {
+      overflow: hidden;
+   }
+}
+
+button {
+   border: none;
+   background: transparent;
+   &:active, &:focus {
+      border: none;
+   }
+}
+
+a, a:hover, a:focus, a:active {
+   text-decoration: none;
+}
+
+i {
+   font-family: $BRFont;
+}
+
+
+// TODO  Custom Scroll
+
+::-webkit-scrollbar {
+   background: $weakColorSelection;
+   // border-radius: 50px;
+   width: 5px;
+   height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+   background: $title;
+   border-radius: 50px;
+}
+
+::-webkit-scrollbar-corner {
+   background: transparent;
+}
+
+
+
+// TODO Swiper arrows
+
+.swiper-button-prev,
+.swiper-button-next {
+   margin: 0;
+   padding: 0;
+   height: auto;
+   &:after {
+      font-size: 17px;
+      color: $title;
+      transition: all .2s ease;
+   }
+   &:hover {
+      &:after {
+         color: $action;
+      }
+   }
+}
+
+.swiper-button-prev {
+   &:after {
+      content: '\e904';
+      font-family: $BRFont;
+   }
+   &:hover:after { transform: translateX(-5px); }
+}
+
+.swiper-button-next {
+   &:after {
+      content: '\e909';
+      font-family: $BRFont;
+   }
+   &:hover:after { transform: translateX(5px); }
+}
+
+
+.swiper-wrap {
+   .arrow {
+      &.circle-arrow {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         width: 40px;
+         height: 40px;
+         border-radius: 50%;
+         background: $light;
+         opacity: .3;
+         box-shadow: 0 0 0 4px rgba(255,255,255,.25);
+         z-index: 1;
+         transition: all .2s ease;
+
+         &:after {
+            font-size: 17px;
+            color: $title;
+         }
+   
+         &.swiper-button-prev {
+            left: 20px;
+            &:after {
+               margin-left: -2px;
+               content: '\e918';
+            }
+         }
+   
+         &.swiper-button-next {
+            right: 20px;
+            &:after {
+               margin-right: -2px;
+               content: '\e919';
+            }
+         }
+   
+         &:hover {
+            opacity: 1;
+            &:after {
+               transform: none;
+               color: $action;
+            }
+         }
+   
+         &:active {
+            transform: scale(0.95) translateY(-50%);
+         }
+      }
+   }
+
+   &.reviews-swiper-wrap {
+      .arrow.circle-arrow {
+         &.swiper-button-prev {
+            opacity: 1;
+            left: -10px;
+         }
+         &.swiper-button-next {
+            opacity: 1;
+            right: -10px;
+         }
+      }
+   }
+
+   &.courses {
+      .arrow {
+         display: none;
+         @media all and (max-width: 730px) {
+            display: flex;
+         }
+      }
+   }
+}
+
+
+
+
+// TODO Swiper Pagination
+// TODO Swiper Pagination
+#swiper-pagination {
+   margin: 30px auto 0 auto;
+   bottom: -45px;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 1;
+   .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background: $action;
+   }
+}
