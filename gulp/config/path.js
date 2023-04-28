@@ -18,7 +18,9 @@ export const path = {
       fonts: `${distFolder}/fonts/`,
       images: `${distFolder}/img/optimized/`,
       svg: `${distFolder}/img/`,
-      js: `${distFolder}/js/`,
+      // js: `${distFolder}/js/`,
+      homeJs: `${distFolder}/js/`,
+      courseJs: `${distFolder}/js/`,
       css: `${distFolder}/css/`,
       html: `${distFolder}/`,
       other: `${distFolder}/other/`
@@ -32,7 +34,8 @@ export const path = {
       imagesOptimized: `${srcFolder}/img/optimized/**/*.{jpg,jpeg,png,gif,webp}`,
       imagesOptimizedDist: `${srcFolder}/img/optimized/`,
       svg: `${srcFolder}/img/**/*.svg`,
-      js: `${srcFolder}/js/bundle.js`,
+      homeJs: `${srcFolder}/js/home-page/bundle-home.js`,
+      courseJs: `${srcFolder}/js/course-page/bundle-course.js`,
       scss: `${srcFolder}/scss/style.scss`, // get the main style.scss file
       html: `${srcFolder}/*.html`, // we get .html files that are in the src folder (the contents of the "components" folder are not copied to dist)
       libs: `${srcFolder}/libs/**/*.*`, // all files in all folders inside files folder
@@ -43,7 +46,9 @@ export const path = {
    watch: { 
       fonts: `${srcFolder}/fonts/**/*.*`,
       images: [`${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`, `!${srcFolder}/img/optimized/**/*.{jpg,jpeg,png,gif,webp}`],
-      js: `${srcFolder}/js/**/*.js`,
+      // js: `${srcFolder}/js/**/*.js`,
+      homeJs: `${srcFolder}/js/**/*.js`,
+      courseJs: `${srcFolder}/js/**/*.js`,
       scss: `${srcFolder}/**/*.scss`, // monitor all .scss files in all folders in the src/ directory
       html: `${srcFolder}/**/*.html`, // keep track of all .html files in all folders in the src/ directory
       libs: `${srcFolder}/libs/**/*.*`, // track all files with any extension in all folders in the src/files directory

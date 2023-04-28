@@ -1,9 +1,9 @@
-import './module/scrollAnimation.js';
-import openMobileMenu from './module/openMobileMenu.js';
+import '../module/scrollAnimation.js';
+import openMobileMenu from '../module/openMobileMenu.js';
 // import openPopup from './module/openPopup.js';
-import './module/sliders.js';
+import '../module/sliders.js';
 
-
+console.log('Подключился bundle-home.js');
  
 // TODO Preloader
 
