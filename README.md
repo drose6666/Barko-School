@@ -5,6 +5,7 @@ Landing Page for the children's center for integrated development Barko School
 ## Preview
 
 ![App Screenshot](http://danilarose.net/preview_projects_github/barko-school-home-page.png)
+![App Screenshot](http://danilarose.net/preview_projects_github/barko-school-english-page.png)
 
 
 ## Tech Stack
