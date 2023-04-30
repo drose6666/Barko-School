@@ -1,5 +1,5 @@
 .pupils-section {
-   padding: 120px 0;
+   padding: 120px 0 70px 0;
    .ui-container {
       @include container (
          $flex: true,
@@ -60,7 +60,7 @@
 
 @media all and (max-width: 500px) {
    .pupils-section {
-      padding: 100px 0;
+      padding: 100px 0 50px 0;
       .pupil-item {
          .pupil-text {
             font-size: 16px;

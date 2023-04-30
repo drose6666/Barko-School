@@ -50,7 +50,22 @@
       bottom: 20px;
       right: 20px;
    }
+
+   &-4 {
+      top: 35%;
+      right: -5%;
+
+      .swimming-img {
+         box-shadow: none;
+      }
+   }
+
+   &-5 {
+      bottom: 55px;
+      left: -30px;
+   }
 }
+
 
 
 @media all and (max-width: 1300px) {
@@ -108,8 +123,11 @@
 
       &-2 { left: -40px; }
 
-      &-3 {
-         bottom: 5px;
+      &-3 { bottom: 5px;}
+
+      &-4 {
+         top: 9%;
+         right: 9%;
       }
    }
 }
@@ -179,6 +197,16 @@
       &-3 {
          bottom: 0;
          right: 0;
+      }
+
+      &-4 {
+         top: 20px;
+         right: 0;
+      }
+
+      &-5 {
+         bottom: 30px;
+         left: 0;
       }
    }
 }

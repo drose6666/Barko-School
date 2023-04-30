@@ -1,5 +1,6 @@
 .hero-wrap {
    position: relative;
+   overflow: hidden;
    .hero-bg {
       position: absolute;
       top: 0;
@@ -48,7 +49,7 @@
          max-width: max-content;
          position: relative;
 
-         &:after {
+         &:before {
             content: '';
             position: absolute;
             left: 50%;

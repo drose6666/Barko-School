@@ -2804,6 +2804,21 @@ footer {
   right: 20px;
 }
 
+.swimming-4 {
+  top: 35%;
+  right: -5%;
+}
+
+.swimming-4 .swimming-img {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.swimming-5 {
+  bottom: 55px;
+  left: -30px;
+}
+
 .ui-burger {
   padding: 0;
   width: 30px;
@@ -3605,6 +3620,7 @@ footer {
 
 .hero-wrap {
   position: relative;
+  overflow: hidden;
 }
 
 .hero-wrap .hero-bg {
@@ -3669,7 +3685,7 @@ footer {
   position: relative;
 }
 
-.hero-section .hero-img .img:after {
+.hero-section .hero-img .img:before {
   content: "";
   position: absolute;
   left: 50%;
@@ -3695,7 +3711,7 @@ footer {
 }
 
 .pupils-section {
-  padding: 120px 0;
+  padding: 120px 0 70px 0;
 }
 
 .pupils-section .ui-container {
@@ -3762,6 +3778,105 @@ footer {
 
 .pupils-section .pupil-item .pupil-text:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.faq-section {
+  padding: 230px 0;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.faq-section .decor-title {
+  font-size: 18px;
+  line-height: 120%;
+}
+
+.faq-section .section-title {
+  margin-bottom: 35px;
+  font-size: 35px;
+  line-height: 120%;
+}
+
+.faq-section .faq {
+  display: -ms-grid;
+  display: grid;
+  gap: 100px;
+}
+
+.faq-section .faq:not(:last-child) {
+  margin-bottom: 160px;
+}
+
+.faq-section .faq-img {
+  position: relative;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
+}
+
+.faq-section .faq-img:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 145%;
+  height: 145%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: #FFF3F6;
+  z-index: -1;
+}
+
+.faq-section .faq-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.faq-section .faq.faq--right {
+  -ms-grid-rows: auto;
+  -ms-grid-columns: minmax(375px, 585px) minmax(435px, 1fr);
+      grid-template: auto/minmax(375px, 585px) minmax(435px, 1fr);
+}
+
+.faq-section .faq.faq--right .faq-img:before {
+  left: -80%;
+}
+
+.faq-section .faq.faq--left {
+  -ms-grid-rows: auto;
+  -ms-grid-columns: minmax(435px, 1fr) minmax(375px, 585px);
+      grid-template: auto/minmax(435px, 1fr) minmax(375px, 585px);
+}
+
+.faq-section .faq.faq--left .faq-img:before {
+  right: -80%;
+}
+
+.faq-section .faq-info {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
+}
+
+.faq-section .faq-info .faq-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 176%;
+  color: #212529;
+}
+
+.faq-section .faq-info .faq-text:not(:first-child) {
+  margin-top: 20px;
+}
+
+.faq-section .faq-info .ui-btn {
+  margin-top: 70px;
 }
 
 .reviews-section {
@@ -4438,6 +4553,11 @@ i {
   .swimming-2 {
     left: -30px;
   }
+
+  .faq-section {
+    padding: -webkit-calc((100vw - 900px) / (1300 - 900) * (220 - 150) + 150px) 0;
+    padding: calc((100vw - 900px) / (1300 - 900) * (220 - 150) + 150px) 0;
+  }
 }
 
 @media all and (max-width: 1260px) {
@@ -4509,6 +4629,12 @@ i {
 
   .swimming-3 {
     bottom: 5px;
+  }
+}
+
+@media all and (max-width: 1100px) {
+  .faq-section .faq {
+    gap: 50px;
   }
 }
 
@@ -4720,6 +4846,11 @@ i {
     bottom: 5px;
   }
 
+  .swimming-4 {
+    top: 9%;
+    right: 9%;
+  }
+
   .hero-section {
     padding: 80px 0;
   }
@@ -4786,6 +4917,69 @@ i {
 
   .pupils-section .pupil-item .pupil-title {
     margin-bottom: 45px;
+  }
+
+  .faq-section {
+    padding: -webkit-calc((100vw - 280px) / (900 - 280) * (180 - 120) + 120px) 0;
+    padding: calc((100vw - 280px) / (900 - 280) * (180 - 120) + 120px) 0;
+  }
+
+  .faq-section .decor-title {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .faq-section .section-title {
+    margin: 0 auto 35px auto;
+    text-align: center;
+    max-width: 480px;
+  }
+
+  .faq-section .faq.faq--right,
+  .faq-section .faq.faq--left {
+    -ms-grid-rows: auto;
+    -ms-grid-columns: 1fr;
+        grid-template: auto/1fr;
+    gap: 50px;
+  }
+
+  .faq-section .faq.faq--left .faq-img {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+       -moz-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .faq-section .faq.faq--left .faq-info {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+       -moz-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+
+  .faq-section .faq-img,
+  .faq-section .faq-info {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+
+  .faq-section .faq-info .faq-text {
+    margin: 0 auto 0 auto;
+    text-align: center;
+    max-width: 700px;
+  }
+
+  .faq-section .faq-info .ui-btn {
+    margin: 50px auto 0 auto;
+    display: block;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
   }
 
   .reviews-section .ui-container {
@@ -5111,7 +5305,7 @@ i {
   }
 
   .pupils-section {
-    padding: 100px 0;
+    padding: 100px 0 50px 0;
   }
 
   .pupils-section .pupil-item .pupil-text {
@@ -5253,6 +5447,16 @@ i {
   .swimming-3 {
     bottom: 0;
     right: 0;
+  }
+
+  .swimming-4 {
+    top: 20px;
+    right: 0;
+  }
+
+  .swimming-5 {
+    bottom: 30px;
+    left: 0;
   }
 
   .hero-section .hero-info .hero-title {
