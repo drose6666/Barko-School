@@ -12,9 +12,14 @@
    @@include('components/course-page/menu/mobile/course-mobile-menu.html')
    
    <main>
-      @@include('components/course-page/header/course-header.html')
+      <div class="hero-wrap">
+         <img class="hero-bg" src="./img/english/hero_bg.svg" alt="">
+         @@include('components/course-page/header/course-header.html')
+         @@include('components/course-page/sections/hero-section/hero-section.html')
+      </div>
+      
 
-      @@include('components/course-page/sections/hero-section/hero-section.html')
+      @@include('components/course-page/sections/pupils-section/pupils-section.html')
       @@include('components/sections/reviews-section/reviews-section.html')
       @@include('components/sections/contact-section/contact-section.html')
 

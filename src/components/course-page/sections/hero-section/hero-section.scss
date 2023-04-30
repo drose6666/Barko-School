@@ -1,6 +1,19 @@
+.hero-wrap {
+   position: relative;
+   .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: -1;
+   }
+}
+
 .hero-section {
    padding: 150px 0;
-   background: $weakColorSelection;
    .ui-container {
       @include container (
          $grid: true,
@@ -40,8 +53,8 @@
             position: absolute;
             left: 50%;
             top: 50%;   
-            width: 115%;
-            height: 115%;
+            width: 120%;
+            height: 120%;
             transform: translate(-50%, -50%);
             border-radius: 50%;
             background: rgba(255, 255, 255, .8);
@@ -82,7 +95,7 @@
          @include container ( 
             $grid: true, 
             $columns: 1fr,
-            $gap: 80px 
+            $gap: 100px 
          )
       }
 
@@ -97,6 +110,7 @@
          }
          
          .hero-text {
+            margin-bottom: 50px;
             font-size: 16px;
             text-align: center;
             max-width: 680px;
@@ -113,4 +127,35 @@
          justify-self: center;
       }
    }
+}
+
+@media all and (max-width: 700px) {
+   $curW: 700;
+   $tarW: 400;
+
+   .hero-section {
+      .hero-info {
+         .hero-title {
+            font-size: calcSize($curW, $tarW, 70, 50);
+         }
+      }
+   } 
+}
+
+@media all and (max-width: 400px) {
+   $curW: 400;
+   $tarW: 280;
+
+   .hero-section {
+      .hero-info {
+         .hero-title {
+            font-size: calcSize($curW, $tarW, 50, 35);
+         }
+
+         .hero-text { 
+            margin-bottom: 50px;
+            font-size: 15px; 
+         }
+      }
+   } 
 }

@@ -1,0 +1,70 @@
+.pupils-section {
+   padding: 120px 0;
+   .ui-container {
+      @include container (
+         $flex: true,
+         $alignY: flex-start,
+      );
+      gap: 100px;
+      flex-wrap: nowrap;
+   }
+
+   .pupil-item {
+      max-width: 50%;
+      width: 100%;
+
+      .pupil-title {
+         margin-bottom: 50px;
+         font-size: 25px;
+         font-weight: 700;
+         line-height: 100%;
+         color: $title;
+         display: flex;
+         align-items: flex-start;
+         gap: 25px;
+
+         strong {
+            color: $action;
+         }
+      }
+
+      .pupil-text {
+         font-family: $Rob;
+         font-size: 17px;
+         font-weight: 300;
+         line-height: 176%;
+         color: $title;
+         &:not(:last-child) {
+            margin-bottom: 20px;
+         }
+      }
+   }
+}
+
+@media all and (max-width: 900px) {
+   .pupils-section {
+      .ui-container {
+         flex-direction: column;
+      }
+
+      .pupil-item {
+         margin: 0 auto;
+         max-width: 750px;
+
+         .pupil-title {
+            margin-bottom: 45px;
+         }
+      }
+   }
+}
+
+@media all and (max-width: 500px) {
+   .pupils-section {
+      padding: 100px 0;
+      .pupil-item {
+         .pupil-text {
+            font-size: 16px;
+         }
+      }
+   }
+}
