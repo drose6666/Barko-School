@@ -1990,7 +1990,7 @@ footer {
   -webkit-border-radius: 15px;
           border-radius: 15px;
   position: absolute;
-  top: -770px;
+  bottom: 0;
   right: 20px;
   z-index: 1;
 }
@@ -3637,7 +3637,7 @@ footer {
 }
 
 .hero-section {
-  padding: 150px 0;
+  padding: 120px 0 150px 0;
 }
 
 .hero-section .ui-container {
@@ -3781,7 +3781,7 @@ footer {
 }
 
 .faq-section {
-  padding: 230px 0;
+  padding: 200px 0;
   overflow-x: hidden;
   overflow-y: visible;
 }
@@ -3877,6 +3877,240 @@ footer {
 
 .faq-section .faq-info .ui-btn {
   margin-top: 70px;
+}
+
+.tickets-section .decor-title {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tickets-section .section-title {
+  text-align: center;
+}
+
+.tickets-section .tickets {
+  margin-top: 45px;
+  gap: 30px;
+}
+
+.tickets-section .tickets .ticket-row {
+  display: -ms-grid;
+  display: grid;
+  gap: 30px;
+}
+
+.tickets-section .tickets .ticket-row:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.tickets-section .tickets .ticket-row.tickets_1 {
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template: 1fr/1fr 1fr;
+}
+
+.tickets-section .tickets .ticket-row.tickets_2 {
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template: 1fr/1fr 1fr 1fr;
+}
+
+.tickets-section .tickets .ticket {
+  padding: 30px 60px;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tickets-section .tickets .ticket:before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: -13px;
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: #FFEAEF;
+  -webkit-box-shadow: 0px 0px 0px 15px rgba(255, 231, 237, 0.3);
+          box-shadow: 0px 0px 0px 15px rgba(255, 231, 237, 0.3);
+  z-index: 0;
+}
+
+.tickets-section .tickets .ticket-short-title {
+  margin-bottom: 5px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #F2184F;
+  text-align: center;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.tickets-section .tickets .ticket-name {
+  margin-bottom: 45px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 110%;
+  color: #212529;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.tickets-section .tickets .ticket-name strong {
+  font-weight: 800;
+  color: #F2184F;
+}
+
+.tickets-section .tickets .ticket-list {
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.tickets-section .tickets .ticket-list li {
+  padding-left: 30px;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 106%;
+  color: #212529;
+}
+
+.tickets-section .tickets .ticket-list li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.tickets-section .tickets .ticket-list li:before {
+  content: "\e914";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Barko School Font";
+  font-size: 16px;
+  color: #F2184F;
+}
+
+.tickets-section .tickets .ticket .ui-btn {
+  padding: 12px 25px;
+  font-size: 17px;
+  position: relative;
+  z-index: 1;
+}
+
+.tickets-section .tickets .ticket .price {
+  padding: 15px 25px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 122%;
+  color: #212529;
+  -webkit-border-top-left-radius: 15px;
+          border-top-left-radius: 15px;
+  background: #FFEAEF;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.tickets-section .tickets .ticket.ticket--primary {
+  background: #202C45;
+  width: 100%;
+  -webkit-box-shadow: 0px 13px 50px -15px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 13px 50px -15px rgba(0, 0, 0, 0.25);
+}
+
+.tickets-section .tickets .ticket.ticket--primary .ticket-name {
+  color: #fff;
+}
+
+.tickets-section .tickets .ticket.ticket--primary .ticket-list li {
+  color: #fff;
+}
+
+.tickets-section .tickets .ticket.ticket--primary .price {
+  color: #F2184F;
+}
+
+.tickets-section .tickets .ticket.ticket--secondary {
+  background: #FFF3F6;
+  -webkit-box-shadow: 0px 13px 50px -15px rgba(91, 2, 24, 0.2);
+          box-shadow: 0px 13px 50px -15px rgba(91, 2, 24, 0.2);
+  width: 100%;
+}
+
+.tickets-section .tickets .ticket.ticket--secondary:before {
+  background: #FF7497;
+  -webkit-box-shadow: 0px 0px 0px 15px rgba(255, 116, 151, 0.15);
+          box-shadow: 0px 0px 0px 15px rgba(255, 116, 151, 0.15);
+}
+
+.tickets-section .tickets .ticket.ticket--secondary .price {
+  background: #FF7497;
+  color: #fff;
+}
+
+.tickets-section .tickets .ticket[class*=ticket--individual] {
+  padding: 30px;
+  background: #fff;
+  -webkit-box-shadow: 0px 13px 50px -15px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 13px 50px -15px rgba(0, 0, 0, 0.15);
+}
+
+.tickets-section .tickets .ticket[class*=ticket--individual]:before {
+  top: -19px;
+  left: -13px;
+}
+
+.tickets-section .tickets .ticket[class*=ticket--individual] .ticket-short-title {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.tickets-section .tickets .ticket[class*=ticket--individual] .ticket-name {
+  margin-bottom: 40px;
+  font-size: 19px;
+  line-height: 105%;
+}
+
+.tickets-section .tickets .ticket[class*=ticket--individual] .ticket-list li {
+  font-size: 15px;
+}
+
+.tickets-section .tickets .ticket[class*=ticket--individual] .ui-btn {
+  padding: 12px 20px;
+  font-size: 15px;
+}
+
+.tickets-section .tickets .ticket[class*=ticket--individual] .price {
+  padding: 11px 25px;
+  font-size: 23px;
+  font-weight: 700;
 }
 
 .reviews-section {
@@ -4665,7 +4899,7 @@ i {
   .contact-form-wrap {
     padding: 50px 35px 50px 35px;
     max-width: 480px;
-    top: -725px;
+    bottom: 0;
   }
 }
 

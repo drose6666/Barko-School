@@ -5,7 +5,7 @@
    width: 100%;
    border-radius: $blockR;
    position: absolute;
-   top: -770px;
+   bottom: 0;
    right: 20px;
    z-index: 1;
    @include scrollAnimationFade($toLeft: true, $delay: .3s);
@@ -130,7 +130,7 @@
    .contact-form-wrap {
       padding: 50px 35px 50px 35px;
       max-width: 480px;
-      top: -725px;
+      bottom: 0;
    }
 }
 

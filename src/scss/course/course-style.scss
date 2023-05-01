@@ -11,7 +11,6 @@
 @import '../../components/footer/footer';
 @import '../../components/menu/nav/nav';
 @import '../../components/menu/mobile/mobile-menu'; 
-// @import '../../components/features/features';
 @import '../../components/contact-form/contact-form';
 @import '../../components/contact-links/contact-links';
 @import '../../components/scrollUp-arrow/scrollUp-arrow';
@@ -29,10 +28,6 @@
 @import '../../components/popups/ui-popup';
 
 // Popups
-// @import '../../components/popups/video-popup/video-popup';
-// @import '../../components/popups/schedule-popup/schedule-popup';
-// @import '../../components/popups/gallery-popup/gallery-popup';
-// @import '../../components/popups/price-popup/price-popup';
 @import '../../components/popups/courses/courses-popup';
 @import '../../components/popups/confirm/confirm-popup';
 
@@ -40,6 +35,7 @@
 @import '../../components/course-page/sections/hero-section/hero-section';
 @import '../../components/course-page/sections/pupils-section/pupils-section';
 @import '../../components/course-page/sections/faq-section/faq-section';
+@import '../../components/course-page/sections/tickets-section/tickets-section';
 @import '../../components/sections/reviews-section/reviews-section';
 @import '../../components/sections/contact-section/contact-section';
 

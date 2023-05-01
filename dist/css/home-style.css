@@ -2448,7 +2448,7 @@ footer {
   -webkit-border-radius: 15px;
           border-radius: 15px;
   position: absolute;
-  top: -770px;
+  bottom: 0;
   right: 20px;
   z-index: 1;
 }
@@ -7107,7 +7107,7 @@ i {
   .contact-form-wrap {
     padding: 50px 35px 50px 35px;
     max-width: 480px;
-    top: -725px;
+    bottom: 0;
   }
 
   #schedule-popup .schedule-body {

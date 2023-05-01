@@ -1,0 +1,217 @@
+.tickets-section {
+
+   .decor-title {
+      justify-content: center;
+   }
+
+   .section-title {
+      text-align: center;
+   }
+
+   .tickets {
+      margin-top: 45px;
+      gap: 30px;
+
+      .ticket-row {
+         display: grid;
+         gap: 30px;
+         &:not(:last-child) {
+            margin-bottom: 30px;
+         }
+
+         &.tickets_1 {
+            grid-template: 1fr / 1fr 1fr;
+         }
+
+         &.tickets_2 {
+            grid-template: 1fr / 1fr 1fr 1fr;
+         }
+      }
+
+      .ticket {
+         padding: 30px 60px;
+         border-radius: $blockR;
+         position: relative;
+         overflow: hidden;
+
+         &:before {
+            $width: 100px;
+
+            content: '';
+            position: absolute;
+            top: -13px;
+            left: -13px;
+            width: $width;
+            height: $width;
+            border-radius: 50%;
+            background: $tableBodyDark;
+            box-shadow: 0px 0px 0px 15px rgba(255, 231, 237, 0.3);
+            z-index: 0;
+         }
+
+         &-short-title {
+            margin-bottom: 5px;
+            font-family: $MontsAlt;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 100%;
+            color: $action;
+            text-align: center;
+            display: block;
+            position: relative;
+            z-index: 1;
+         }
+
+         &-name {
+            margin-bottom: 45px;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 110%;
+            color: $title;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+
+            strong {
+               font-weight: 800;
+               color: $action;
+            }
+         }
+
+         &-list {
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 1;
+            li {
+               padding-left: 30px;
+               position: relative;
+               font-family: $Rob;
+               font-size: 17px;
+               font-weight: 300;
+               line-height: 106%;
+               color: $title;
+
+               &:not(:last-child) {
+                  margin-bottom: 12px;
+               }
+
+               &:before {
+                  content: '\e914'; 
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  font-family: $BRFont;
+                  font-size: 16px;
+                  color: $action;
+               }
+            }
+
+         }
+
+         .ui-btn {
+            padding: 12px 25px;
+            font-size: 17px;
+            position: relative;
+            z-index: 1;
+         }
+
+         .price {
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: 800;
+            line-height: 122%;
+            color: $title;
+            border-top-left-radius: 15px;
+            background: $tableBodyDark;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+         }
+
+         &.ticket--primary {
+            background: $darkDecor;
+            // grid-area: primary;
+            width: 100%;
+            box-shadow: 0px 13px 50px -15px rgba(0, 0, 0, 0.25);
+
+            .ticket-name {
+               color: $light;
+            }
+
+            .ticket-list {
+               li {
+                  // font-weight: 400;
+                  color: $light;
+               }
+            }
+
+            .price {
+               color: $action;
+            }
+         }
+
+         &.ticket--secondary {
+            background: $weakColorSelection;
+            box-shadow: 0px 13px 50px -15px rgba(91, 2, 24, 0.2);
+            // grid-area: secondary;
+            width: 100%;
+
+            &:before {
+               background: $tableHead;
+               box-shadow: 0px 0px 0px 15px rgba(255, 116, 151, 0.15);
+            }
+
+            .price {
+               background: $tableHead;
+               color: $light;
+            }
+         }
+
+         &[class*="ticket--individual"] {
+            padding: 30px;
+            background: $light;
+            box-shadow: 0px 13px 50px -15px rgba(0, 0, 0, 0.15);
+   
+            &:before {
+               $width: 80px;
+   
+               top: -19px;
+               left: -13px;
+            }
+   
+            .ticket-short-title {
+               margin-bottom: 10px;
+               font-size: 14px;
+               font-weight: 400;
+            }
+   
+            .ticket-name {
+               margin-bottom: 40px;
+               font-size: 19px;
+               line-height: 105%;
+            }
+   
+            .ticket-list {
+               li {
+                  font-size: 15px;
+               }
+            }
+   
+            .ui-btn {
+               padding: 12px 20px;
+               font-size: 15px;
+            }
+   
+            .price {
+               padding: 11px 25px;
+               font-size: 23px;
+               font-weight: 700;
+            }
+         }
+      }
+   }
+}
