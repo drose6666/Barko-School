@@ -66,7 +66,7 @@
             margin-bottom: 45px;
             font-size: 30px;
             font-weight: 700;
-            line-height: 110%;
+            line-height: 120%;
             color: $title;
             text-align: center;
             position: relative;
@@ -88,7 +88,7 @@
                font-family: $Rob;
                font-size: 17px;
                font-weight: 300;
-               line-height: 106%;
+               line-height: 130%;
                color: $title;
 
                &:not(:last-child) {
@@ -179,6 +179,8 @@
             &:before {
                $width: 80px;
    
+               width: $width;
+               height: $width;
                top: -19px;
                left: -13px;
             }
@@ -192,7 +194,7 @@
             .ticket-name {
                margin-bottom: 40px;
                font-size: 19px;
-               line-height: 105%;
+               line-height: 120%;
             }
    
             .ticket-list {
@@ -211,6 +213,168 @@
                font-size: 23px;
                font-weight: 700;
             }
+         }
+      }
+   }
+}
+
+@media all and (max-width: 1220px) {
+   $curW: 1220;
+   $tarW: 1000;
+
+   .tickets-section .tickets {
+      .ticket {
+         padding: 30px calcSize($curW, $tarW, 60, 30);
+
+         &-name {
+            font-size: calcSize($curW, $tarW, 30, 23);
+         }
+
+         &[class*="ticket--individual"] {
+            padding: 30px calcSize($curW, $tarW, 30, 20);
+         }
+      }
+   }
+}
+
+
+@media all and (max-width: 1000px) {
+   .tickets-section .tickets {
+      .ticket-row {
+         &.tickets_2 {
+            grid-template: auto / 1fr 1fr;
+         }
+      }
+
+      .ticket {
+         padding: 30px;
+
+         &-name {
+            font-size: 23px;
+         }
+
+         &:before {
+            width: 80px;
+            height: 80px;
+         }
+
+         &-list {
+            li {
+               font-size: 15px;
+            }
+         }
+
+         &[class*="ticket--individual"] {
+            padding: 30px;
+         }
+      }
+   }
+}
+
+
+@media all and (max-width: 800px) {
+   .tickets-section .tickets {
+      .ticket-row {
+         &.tickets_1, &.tickets_2 {
+            grid-template: auto / 1fr;
+         }
+      }
+
+      .ticket {
+         padding: 30px 60px;
+
+         &-name {
+            font-size: 30px;
+         }
+
+         &-list {
+            li {
+               font-size: 17px;
+            }
+         }
+
+         &[class*="ticket--individual"] {
+            padding: 30px 60px;
+
+            .ticket-short-title {
+               margin-bottom: 5px;
+               font-size: 15px;
+               font-weight: 500;
+               line-height: 100%;
+            }
+
+            .ticket-name {
+               margin-bottom: 45px;
+               font-size: 30px;
+               line-height: 110%;
+            }
+
+            .ticket-list {
+               li {
+                  font-size: 17px;
+               }
+            }
+
+            .ui-btn {
+               padding: 12px 25px;
+               font-size: 17px;
+            }
+
+            .price {
+               padding: 15px 25px;
+               font-size: 25px;
+               font-weight: 800;
+               line-height: 122%;
+            }
+         }
+      }
+   }
+}
+
+
+@media all and (max-width: 550px) {
+   $curW: 550;
+   $tarW: 280;
+
+   .tickets-section .tickets {
+      .ticket, .ticket[class*="ticket--individual"] {
+
+         padding: 30px calcSize($curW, $tarW, 60, 20);
+
+         .ticket-name {
+            font-size: calcSize($curW, $tarW, 30, 23);
+         }
+
+         .ticket-list {
+            li {
+               font-size: calcSize($curW, $tarW, 17, 15);
+            }
+         }
+
+         .ui-btn {
+            padding: calcSize($curW, $tarW, 12, 11) calcSize($curW, $tarW, 25, 23);
+            // font-size: calcSize($curW, $tarW, 17, 15);
+         }
+
+         .price {
+            padding: calcSize($curW, $tarW, 15, 10) calcSize($curW, $tarW, 25, 20);
+            font-size: calcSize($curW, $tarW, 25, 22);
+         }
+      }
+   }
+}
+
+
+@media all and (max-width: 400px) {
+   .tickets-section .tickets {
+      .ticket {
+         
+         .ticket-name {
+            margin-bottom: 35px;
+         }
+
+         .ui-btn {
+            margin-bottom: 45px;
          }
       }
    }
