@@ -1,0 +1,61 @@
+.ui-dropdown {
+   position: relative;
+
+   .selected {
+      position: relative;
+      &:after {
+         content: '\e914';
+         position: absolute;
+         top: 50%;
+         right: 21px;
+         transform: translateY(-50%);
+         font-family: $BRFont;
+         font-size: 13px;
+         color: $text;
+      }
+   }
+
+   .options {
+      background: $light;
+      border-radius: $blockR;
+      overflow: hidden;
+      box-shadow: $blocksWhiteS;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 140%;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .2s ease;
+      z-index: 1;
+
+      .option {
+         padding: 14px 25px;
+         font-family: $Rob;
+         font-weight: 300;
+         font-size: 14px;
+         line-height: 93%;
+         color: $text;
+         cursor: pointer;
+         transition: all .2s ease;
+
+         &:hover {
+            background: $weakColorSelection;
+            color: $title; 
+         }
+
+         &.current {
+            background: $weakDecor;
+            color: $title;
+         }
+      }
+   }
+
+   &.active {
+      .options {
+         opacity: 1;
+         visibility: visible;
+         top: 110%;
+      }
+   }
+}

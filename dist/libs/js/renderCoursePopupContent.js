@@ -306,6 +306,8 @@ const renderCourseContent = ({ title, img, age, priceTicket, priceIndividual, du
    const $coursePriceDiagnosticsItem = document.querySelector('.short-info-item.price-diagnostics')
    const $coursePriceOneVisitItem = document.querySelector('.short-info-item.price-one-visit')
 
+   const $btnGrops = document.querySelector('.course-popup-action .btn-group')
+
    const $courseImg = document.querySelector('#course-popup .course-popup-head img')
    const $courseTitle = document.querySelector('.course-popup-title')
    const $courseAge = document.querySelector('.short-info-item.age .value')
@@ -326,12 +328,25 @@ const renderCourseContent = ({ title, img, age, priceTicket, priceIndividual, du
    optionalContent(priceIndividual, $coursePriceIndividualItem, $coursePriceIndividual, priceIndividual)
    optionalContent(other.priceDiagnostics, $coursePriceDiagnosticsItem, $coursePriceDiagnostics, other.priceDiagnostics)
    optionalContent(other.priceOneVisit, $coursePriceOneVisitItem, $coursePriceOneVisit, other.priceOneVisit)
+
+
+   let linkToEnglishPage = null;
+   
+   if (other.id === 13 && !linkToEnglishPage) {
+      linkToEnglishPage = `<a href="english.html" class="ui-btn btn--bordered btn--course btn--link"><span>Подробнее</span></a>`
+      $btnGrops.insertAdjacentHTML('beforeend', linkToEnglishPage)
+   } else {
+      linkToEnglishPage = null
+   }
 }
 
 // очищение контента модального окна курса
 const clearCourseConent = () => {
    const $courseDetailInfo = document.querySelector('#course-popup .detail-info')
    const $courseDetailInfoChilds = $courseDetailInfo.querySelectorAll('.detail-info-item')
+   const $moreLink = document.querySelector('.course-popup-action .btn-group .btn--link')
+
+   $moreLink?.remove()
 
    for (let el of $courseDetailInfoChilds) {
       $courseDetailInfo.removeChild(el)

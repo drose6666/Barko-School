@@ -1,5 +1,6 @@
 import '../module/scrollAnimation.js';
 import openMobileMenu from '../module/openMobileMenu.js';
+import Dropdown from '../module/dropdown.js'
 import '../module/sliders.js';
 
 console.log('bundle-course.js');
@@ -76,4 +77,23 @@ scrollUpArrow.addEventListener('click', () => {
       left: 0,
       behavior: 'smooth'
    });
+})
+
+
+
+
+// Создание dropdown в форме
+const courseDropdownData = [
+   { id: 1, value: '8 групповых занятий' },
+   { id: 2, value: '4 групповых занятия' },
+   { id: 3, value: 'Индивидуальное занятие: 30 минут' },
+   { id: 4, value: 'Индивидуальное занятие: 45 минут' },
+   { id: 5, value: 'Индивидуальное занятие: 60 минут' },
+]
+
+const courseDropdown = new Dropdown({
+   selector: '.ui-dropdown',
+   open: '.ui-dropdown .selected',
+   close: '.ui-dropdown .option',
+   data: courseDropdownData
 })

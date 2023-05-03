@@ -2819,6 +2819,76 @@ footer {
   left: -30px;
 }
 
+.ui-dropdown {
+  position: relative;
+}
+
+.ui-dropdown .selected {
+  position: relative;
+}
+
+.ui-dropdown .selected:after {
+  content: "\e914";
+  position: absolute;
+  top: 50%;
+  right: 21px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-family: "Barko School Font";
+  font-size: 13px;
+  color: #9193A3;
+}
+
+.ui-dropdown .options {
+  background: #fff;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.07);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 140%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.ui-dropdown .options .option {
+  padding: 14px 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 93%;
+  color: #9193A3;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.ui-dropdown .options .option:hover {
+  background: #FFF3F6;
+  color: #212529;
+}
+
+.ui-dropdown .options .option.current {
+  background: #FFE7ED;
+  color: #212529;
+}
+
+.ui-dropdown.active .options {
+  opacity: 1;
+  visibility: visible;
+  top: 110%;
+}
+
 .ui-burger {
   padding: 0;
   width: 30px;
