@@ -92,8 +92,22 @@ const courseDropdownData = [
 ]
 
 const courseDropdown = new Dropdown({
-   selector: '.ui-dropdown',
+   dropdown: '.ui-dropdown',
    open: '.ui-dropdown .selected',
-   close: '.ui-dropdown .option',
-   data: courseDropdownData
+   data: courseDropdownData,
+   selectedId: null
 })
+
+
+// Текущий абонемент
+// function getCurrentTicket () {
+//    const tickets = document.querySelectorAll('.ticket .ui-btn')
+
+//    tickets.forEach(el => {
+//       el.addEventListener('click', () => {
+//          let id = el.getAttribute('data-id')
+//       })
+//    })
+// }
+
+// getCurrentTicket()

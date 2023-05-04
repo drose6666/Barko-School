@@ -1,24 +1,29 @@
 export default class Dropdown {
-   constructor ({selector, open, close, data}) {
-      this.$selector = document.querySelector(selector)
-      this.$open = document.querySelector(open)
-      this.$close = close
+   constructor ({dropdown, open, data, selectedId}) {
+      this.dropdown = dropdown
+      this.open = open
       this.data = data
+      this.selectedId = selectedId
+
+      this.$dropdownEl = document.querySelector(this.dropdown)
+      this.$openEl = document.querySelector(this.open)
 
       this.#setup()
    }
 
    #setup = () => {
-      
-      const options = this.$selector.querySelector('.ui-dropdown .options')
-      options.insertAdjacentHTML('afterbegin', this.#render())
+      this.$dropdownEl.insertAdjacentHTML('afterbegin', this.#render())
 
-      this.$open?.addEventListener('click', this.onOpen)
+      this.$closeEls = this.$dropdownEl.querySelectorAll(`${this.dropdown} .option`)
+      this.$selected = this.$dropdownEl.querySelector(`${this.dropdown} .selected`)
 
-      const closeItems = document.querySelectorAll(`.ui-dropdown ${this.$close}`)
-      console.log(closeItems);
-      closeItems.forEach(el => {
-         el.addEventListener('click', this.onClose)
+      this.$selected.addEventListener('click', this.onOpen)
+
+      this.$closeEls.forEach(el => {
+         el.addEventListener('click', () => {
+            this.onClose()
+            this.onSelect(el)
+         })
       })
    }
 
@@ -26,17 +31,44 @@ export default class Dropdown {
       const items = this.data.map(({ id, value }) => {
          return `<li data-id="${id}" class="option">${value}</li>`
       })
+
       return `
-         ${items.join('')}
+         <div class="selected form-item">
+            <input type="text" class="ui-input field" placeholder="Выберите формат" data-valid="tickets" readonly>
+            <span class="error-message"></span>
+         </div>
+
+         <ul class="options">
+            ${items.join('')}
+         </ul>
+         
       `
    }
 
    onOpen = () => {
-      this.$selector.classList.toggle('active')
+      this.$dropdownEl.classList.toggle('active')
    }
 
    onClose = () => {
-      console.log(this.$close);
-      this.$selector.classList.remove('active')
+      this.$dropdownEl.classList.remove('active')
+   }
+
+   onSelect = (currentItem) => {
+      const $dropdownInput = this.$dropdownEl.querySelector(`${this.dropdown} .field`)
+
+      for (let item of this.$closeEls) {
+         item.classList.remove('current')
+      }
+
+      if (this.selectedId) {
+         let selectItem = this.data.find(el => el.id === this.selectedId)
+         $dropdownInput.value = selectItem.value
+         currentItem.classList.add('current')
+      } else {
+         const currentId = Number(currentItem.getAttribute('data-id'))
+         let selectItem = this.data.find(el => el.id === currentId)
+         $dropdownInput.value = selectItem.value
+         currentItem.classList.add('current')
+      }
    }
 }

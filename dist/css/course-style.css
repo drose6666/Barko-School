@@ -2825,20 +2825,24 @@ footer {
 
 .ui-dropdown .selected {
   position: relative;
+  cursor: pointer;
 }
 
 .ui-dropdown .selected:after {
-  content: "\e914";
+  content: "\e919";
   position: absolute;
   top: 50%;
   right: 21px;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-       -o-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-50%) rotate(90deg);
+      -ms-transform: translateY(-50%) rotate(90deg);
+       -o-transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(90deg);
   font-family: "Barko School Font";
   font-size: 13px;
   color: #9193A3;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .ui-dropdown .options {
@@ -2881,6 +2885,13 @@ footer {
 .ui-dropdown .options .option.current {
   background: #FFE7ED;
   color: #212529;
+}
+
+.ui-dropdown.active .selected:after {
+  -webkit-transform: translateY(-50%) rotate(270deg);
+      -ms-transform: translateY(-50%) rotate(270deg);
+       -o-transform: translateY(-50%) rotate(270deg);
+          transform: translateY(-50%) rotate(270deg);
 }
 
 .ui-dropdown.active .options {

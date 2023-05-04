@@ -3,15 +3,18 @@
 
    .selected {
       position: relative;
+      cursor: pointer;
       &:after {
-         content: '\e914';
+
+         content: '\e919';
          position: absolute;
          top: 50%;
          right: 21px;
-         transform: translateY(-50%);
+         transform: translateY(-50%) rotate(90deg);
          font-family: $BRFont;
          font-size: 13px;
          color: $text;
+         transition: all .2s ease;
       }
    }
 
@@ -52,6 +55,12 @@
    }
 
    &.active {
+      .selected {
+         &:after {
+            transform: translateY(-50%) rotate(270deg);
+         }
+      }
+
       .options {
          opacity: 1;
          visibility: visible;

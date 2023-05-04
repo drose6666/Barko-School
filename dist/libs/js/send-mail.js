@@ -76,6 +76,20 @@ function messageValid (field) {
 		}
 }
 
+function ticketsField (field) {
+	const $tickets = document.querySelector(field)
+	const ticketsVal = $tickets?.value.trim()
+
+	if ($tickets) 
+		if (ticketsVal === '') {
+			errorHandler(true, $tickets, 'Это обязательное поле')
+			return true
+		} else {
+			errorHandler(false, $tickets, '')
+			return false
+		}
+}
+
 function errorHandler (error, field, message) {
 	const fieldParent = field.parentNode
 	const fieldError = fieldParent.querySelector('.error-message')
@@ -89,23 +103,29 @@ function errorHandler (error, field, message) {
 	}
 }
 
+
+
 // Проверка валидности всех полей
-function validForm (name, phone, email, message) {
+function validForm (name, phone, email, message, tickets) {
 	let nameRes = nameValid(name);
 	let phoneRes = phoneValid(phone);
 	let emailRes = emailValid(email);
 	let messageRes = messageValid(message);
+	let ticketsRes;
 
-	return (nameRes || phoneRes || emailRes || messageRes) ? false : true;
+	tickets ? ticketsRes = ticketsField(tickets) : null
+	
+
+	return (nameRes || phoneRes || emailRes || ticketsRes || messageRes) ? false : true;
 }
 
 // Запрос на отправку формы
 function sendForm () {
 	const formData = new FormData(form);
-	const isValid = validForm('[data-valid="name"]', '[data-valid="phone"]', '[data-valid="email"]', '[data-valid="message"]')
+	const isValid = validForm('[data-valid="name"]', '[data-valid="phone"]', '[data-valid="email"]', '[data-valid="tickets"]', '[data-valid="message"]')
 
 	if (isValid) {
-		fetch('../libs/mail.php', {
+		fetch('../mail.php', {
 			method: 'POST',
 			body: formData
 		})
