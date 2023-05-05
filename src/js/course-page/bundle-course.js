@@ -1,7 +1,7 @@
 import '../module/scrollAnimation.js';
 import openMobileMenu from '../module/openMobileMenu.js';
 import Dropdown from '../module/dropdown.js'
-import '../module/sliders.js';
+import Swiper from 'swiper/bundle';
 
 console.log('bundle-course.js');
 
@@ -24,6 +24,41 @@ const mobileMenu = new openMobileMenu({
    overlay: '.ui-overlay',
    closeItems: '.mobile-menu-list a',
 })
+
+
+
+// TODO Swiper Reviews
+const reviews = new Swiper('#swiper-reviews', {
+   slidesPerView: 1,
+   slidesPerGroup: 1,
+   loop: true,
+   speed: 400,
+   spaceBetween: 20,
+   // autoplay: {
+   //    delay: 2500,
+   //    disableOnInteraction: true
+   // },
+   keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+   },
+   navigation: {
+      nextEl: ".reviews .swiper-button-next",
+      prevEl: ".reviews .swiper-button-prev"
+   },
+   pagination: {
+      el: '.reviews-pagination',
+      clickable: true,
+      type: 'bullets',
+      dynamicBullets: true
+   },
+   effect: 'fade',
+   fadeEffect: {
+      crossFade: true
+   },
+   autoHeight: true
+}) 
+
 
 
 

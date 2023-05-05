@@ -166,7 +166,9 @@ function sendForm () {
 
 // Удаление класса .error у полей ввода при фокусе
 for (let el of document.querySelectorAll('.field')) {
+	
 	el.addEventListener('focus', () => {
+		console.log(el);
 		errorHandler(false, el, '')
 	})
 }

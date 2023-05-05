@@ -58,11 +58,60 @@
       .swimming-img {
          box-shadow: none;
       }
+
+      &.animate {
+         opacity: 0;
+         visibility: hidden;
+         transform: translateX(-20px);
+         transition: all .6s ease .5s;
+
+         &.animation {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+         }
+      }
    }
 
    &-5 {
       bottom: 55px;
       left: -30px;
+
+      &.animate {
+         opacity: 0;
+         visibility: hidden;
+         transform: translateX(-20px);
+         transition: all .6s ease .5s;
+
+         &.animation {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+         }
+      }
+   }
+}
+
+.hero-section {
+   .swimming {
+      $j: 0.45s;
+      @for $i from 1 through 8 {
+         $j: $j +0.1s;
+         &:nth-child(#{$i}) {
+            &.animate {
+               opacity: 0;
+               visibility: hidden;
+               transform: translateX(20px);
+               transition: all .6s ease $j;
+      
+               &.animation {
+                  opacity: 1;
+                  visibility: visible;
+                  transform: none;
+               }
+            }
+         }  
+      }
    }
 }
 

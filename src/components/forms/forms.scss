@@ -8,7 +8,7 @@
    bottom: 0;
    right: 20px;
    z-index: 1;
-   @include scrollAnimationFade($toLeft: true, $delay: .3s);
+   @include scrollAnimationFade($toTop: true, $delay: .3s);
 
    .form-title {
       margin-bottom: 24px;

@@ -201,8 +201,8 @@
 
 .section-title {
    @include title;
-   @media all and (max-width: 340px) {
-      font-size: calcSize(340, 280, 40, 32);
+   @media all and (max-width: 500px) {
+      font-size: calcSize(500, 280, 40, 29);
    }
 }
 
