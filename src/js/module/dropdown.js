@@ -13,6 +13,7 @@ export default class Dropdown {
 
    #setup = () => {
       this.$dropdownEl.insertAdjacentHTML('afterbegin', this.#render())
+      // console.log(this.selectedId);
 
       this.$closeEls = this.$dropdownEl.querySelectorAll(`${this.dropdown} .option`)
       this.$selected = this.$dropdownEl.querySelector(`${this.dropdown} .selected`)
@@ -34,7 +35,7 @@ export default class Dropdown {
 
       return `
          <div class="selected form-item">
-            <input type="text" class="ui-input field" placeholder="Выберите формат" data-valid="tickets" readonly>
+            <input type="text" name="Формат" class="ui-input field" placeholder="Выберите формат" data-valid="tickets" readonly>
             <span class="error-message"></span>
          </div>
 

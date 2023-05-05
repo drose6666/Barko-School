@@ -106,7 +106,7 @@ function errorHandler (error, field, message) {
 
 
 // Проверка валидности всех полей
-function validForm (name, phone, email, message, tickets) {
+function validForm (name, phone, email, tickets, message) {
 	let nameRes = nameValid(name);
 	let phoneRes = phoneValid(phone);
 	let emailRes = emailValid(email);
@@ -125,7 +125,7 @@ function sendForm () {
 	const isValid = validForm('[data-valid="name"]', '[data-valid="phone"]', '[data-valid="email"]', '[data-valid="tickets"]', '[data-valid="message"]')
 
 	if (isValid) {
-		fetch('../mail.php', {
+		fetch('../../libs/mail.php', {
 			method: 'POST',
 			body: formData
 		})

@@ -82,6 +82,10 @@ scrollUpArrow.addEventListener('click', () => {
 
 
 
+
+
+
+
 // Создание dropdown в форме
 const courseDropdownData = [
    { id: 1, value: '8 групповых занятий' },
@@ -91,23 +95,9 @@ const courseDropdownData = [
    { id: 5, value: 'Индивидуальное занятие: 60 минут' },
 ]
 
-const courseDropdown = new Dropdown({
+let courseDropdown = new Dropdown({
    dropdown: '.ui-dropdown',
    open: '.ui-dropdown .selected',
    data: courseDropdownData,
    selectedId: null
 })
-
-
-// Текущий абонемент
-// function getCurrentTicket () {
-//    const tickets = document.querySelectorAll('.ticket .ui-btn')
-
-//    tickets.forEach(el => {
-//       el.addEventListener('click', () => {
-//          let id = el.getAttribute('data-id')
-//       })
-//    })
-// }
-
-// getCurrentTicket()
