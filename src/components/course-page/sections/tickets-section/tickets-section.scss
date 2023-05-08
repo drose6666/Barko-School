@@ -36,17 +36,16 @@
          transition: all .3s ease;
 
          &:before {
-            $width: 100px;
-
             content: '';
             position: absolute;
-            top: -13px;
-            left: -13px;
-            width: $width;
-            height: $width;
+            bottom: -50px;
+            right: -50px;
+            width: 250px;
+            height: 250px;
             border-radius: 50%;
             background: $tableBodyDark;
-            box-shadow: 0px 0px 0px 15px rgba(255, 231, 237, 0.3);
+            box-shadow: 0px 0px 0px 40px rgba(255, 231, 237, 0.3);
+            opacity: .08;
             z-index: 0;
             transition: all .4s ease;
          }
@@ -81,7 +80,6 @@
          }
 
          &-list {
-            margin-bottom: 50px;
             position: relative;
             z-index: 1;
             li {
@@ -118,21 +116,12 @@
          }
 
          .price {
-            padding: 15px 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            margin: 35px 0;
+            padding-left: 30px;
             font-size: 25px;
-            font-weight: 800;
-            line-height: 122%;
-            color: $title;
-            border-top-left-radius: 15px;
-            background: $tableBodyDark;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            z-index: 1;
-            transition: all .2s ease;
+            font-weight: 700;
+            line-height: 100%;
+            color: $light;
          }
 
          &.ticket--primary {
@@ -147,30 +136,23 @@
 
             .ticket-list {
                li {
-                  // font-weight: 400;
                   color: $light;
                }
-            }
-
-            .price {
-               color: $action;
             }
          }
 
          &.ticket--secondary {
             background: $weakColorSelection;
             box-shadow: 0px 13px 50px -15px rgba(91, 2, 24, 0.2);
-            // grid-area: secondary;
             width: 100%;
 
             &:before {
                background: $tableHead;
-               box-shadow: 0px 0px 0px 15px rgba(255, 116, 151, 0.15);
+               box-shadow: 0 0 0 40px rgba(255,116,151,.4);
             }
 
             .price {
-               background: $tableHead;
-               color: $light;
+               color: $darkDecor;
             }
          }
 
@@ -180,12 +162,11 @@
             box-shadow: 0px 13px 50px -15px rgba(0, 0, 0, 0.15);
    
             &:before {
-               $width: 80px;
-   
-               width: $width;
-               height: $width;
-               top: -19px;
-               left: -13px;
+               width: 200px;
+               height: 200px;
+               background: $textLight;
+               opacity: .12;
+               box-shadow: 0 0 0 40px rgba(209, 207, 221, .45);
             }
    
             .ticket-short-title {
@@ -205,16 +186,14 @@
                   font-size: 15px;
                }
             }
+
+            .price {
+               color: $darkDecor;
+            }
    
             .ui-btn {
                padding: 12px 20px;
                font-size: 15px;
-            }
-   
-            .price {
-               padding: 11px 25px;
-               font-size: 23px;
-               font-weight: 700;
             }
          }
 
@@ -238,12 +217,8 @@
 
                &:before {
                   background: $tableHead;
-                  box-shadow: 0px 0px 0px 15px rgba(255, 116, 151, 0.15);
-               }
-
-               .price {
-                  background: $tableHead;
-                  color: $light;
+                  opacity: .08;
+                  box-shadow: 0 0 0 40px rgba(255,116,151,.4);
                }
             }
          }
@@ -286,14 +261,20 @@
             font-size: 23px;
          }
 
-         &:before {
-            width: 80px;
-            height: 80px;
-         }
-
          &-list {
             li {
                font-size: 15px;
+            }
+         }
+
+         .price {
+            margin: 30px 0;
+         }
+
+         &.ticket--primary, &.ticket--secondary {
+            &:before {
+               width: 200px;
+               height: 200px;
             }
          }
 
@@ -326,6 +307,11 @@
             }
          }
 
+         .price {
+            margin: 30px 0;
+         }
+
+
          &[class*="ticket--individual"] {
             padding: 30px 60px;
 
@@ -352,12 +338,12 @@
                padding: 12px 25px;
                font-size: 17px;
             }
+         }
 
-            .price {
-               padding: 15px 25px;
-               font-size: 25px;
-               font-weight: 800;
-               line-height: 122%;
+         &.ticket--primary, &.ticket--secondary, &[class*="ticket--individual"] {
+            &:before {
+               width: 250px;
+               height: 250px;
             }
          }
       }
@@ -390,8 +376,15 @@
          }
 
          .price {
-            padding: calcSize($curW, $tarW, 15, 10) calcSize($curW, $tarW, 25, 20);
-            font-size: calcSize($curW, $tarW, 25, 22);
+            margin: 35px 0;
+         }
+      }
+      .ticket {
+         &.ticket--primary, &.ticket--secondary, &[class*="ticket--individual"] {
+            &:before {
+               width: 200px;
+               height: 200px;
+            }
          }
       }
    }
@@ -401,13 +394,8 @@
 @media all and (max-width: 400px) {
    .tickets-section .tickets {
       .ticket {
-         
          .ticket-name {
             margin-bottom: 35px;
-         }
-
-         .ui-btn {
-            margin-bottom: 45px;
          }
       }
    }
