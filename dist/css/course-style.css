@@ -5218,6 +5218,7 @@ body {
 body {
   position: relative;
   font-family: "Montserrat", sans-serif;
+  background: #fff;
 }
 
 body.no-scroll {

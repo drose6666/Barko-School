@@ -72,6 +72,7 @@ html,body {
 body {
    position: relative;
    font-family: $Monts;
+   background: $light;
    &.no-scroll {
       overflow: hidden;
    }
