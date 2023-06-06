@@ -3732,9 +3732,7 @@ footer {
 }
 
 #gallery-popup .popup {
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
+  max-width: 1000px;
   height: 100%;
 }
 
