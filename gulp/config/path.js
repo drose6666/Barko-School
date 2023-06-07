@@ -30,8 +30,8 @@ export const path = {
    src: { 
       fonts: `${srcFolder}/fonts/**/*.*`,
       libs: `${srcFolder}/libs/**/*.*`,
-      images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,ico}`,
-      imagesOptimized: `${srcFolder}/img/optimized/**/*.{jpg,jpeg,png,gif,webp,ico}`,
+      images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
+      imagesOptimized: `${srcFolder}/img/optimized/**/*.{jpg,jpeg,png,gif,webp}`,
       imagesOptimizedDist: `${srcFolder}/img/optimized/`,
       svg: [`${srcFolder}/img/**/*.svg`, `${srcFolder}/img/**/*.ico`],
       homeJs: `${srcFolder}/js/home-page/bundle-home.js`,
@@ -47,7 +47,7 @@ export const path = {
    // files/folders tracking
    watch: { 
       fonts: `${srcFolder}/fonts/**/*.*`,
-      images: [`${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,ico}`, `!${srcFolder}/img/optimized/**/*.{jpg,jpeg,png,gif,webp}`],
+      images: [`${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`, `!${srcFolder}/img/optimized/**/*.{jpg,jpeg,png,gif,webp}`],
       // js: `${srcFolder}/js/**/*.js`,
       homeJs: `${srcFolder}/js/**/*.js`,
       courseJs: `${srcFolder}/js/**/*.js`,

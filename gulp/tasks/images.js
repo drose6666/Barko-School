@@ -13,7 +13,12 @@ export const images = () => {
             message: 'Error: <%= error.message %>'
          })
       ))
-      .pipe(app.plugins.newer(app.path.src.images)) // check images in result folder
+      // .pipe(app.plugins.newer(app.path.src.images)) // check images in result folder
+      // .pipe(app.gulp.src(app.path.src.svg)) // get .svg images
+      // .pipe(app.gulp.dest(app.path.dist.svg)) // put in the folder with the result .svg images
+
+      // .pipe(app.gulp.src(app.path.src.images))
+      .pipe(app.plugins.newer(app.path.src.images))
       .pipe(webp()) // create .webp images
       .pipe(app.gulp.dest(app.path.src.imagesOptimizedDist)) // put .webp in the folder with the result
  
@@ -29,9 +34,7 @@ export const images = () => {
       }))
 
       .pipe(app.gulp.dest(app.path.src.imagesOptimizedDist)) // put the optimized images in the folder with the result
-      .pipe(app.gulp.src(app.path.src.svg)) // get .svg images
-      .pipe(app.gulp.dest(app.path.dist.images)) // put in the folder with the result .svg images
-      
+
       .pipe(app.gulp.src(app.path.src.imagesOptimized))
       .pipe(app.gulp.dest(app.path.dist.images))
       .pipe(app.plugins.browsersync.stream());

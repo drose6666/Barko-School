@@ -85,7 +85,7 @@ function watcher() {
  * Separation (grouping) of tasks (for visual separation)
  * ------------------------------------------------------------------
  */
-const mainTasks = gulp.parallel(copyLibs, copyOther, fonts, html, homeScss, courseScss, homeJs, courseJs, svg, gulp.series(cleanImages, images));
+const mainTasks = gulp.parallel(copyLibs, copyOther, fonts, html, homeScss, courseScss, homeJs, courseJs, gulp.series(cleanImages, images, svg));
 
 
 
