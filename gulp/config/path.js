@@ -30,10 +30,10 @@ export const path = {
    src: { 
       fonts: `${srcFolder}/fonts/**/*.*`,
       libs: `${srcFolder}/libs/**/*.*`,
-      images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
-      imagesOptimized: `${srcFolder}/img/optimized/**/*.{jpg,jpeg,png,gif,webp}`,
+      images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,ico}`,
+      imagesOptimized: `${srcFolder}/img/optimized/**/*.{jpg,jpeg,png,gif,webp,ico}`,
       imagesOptimizedDist: `${srcFolder}/img/optimized/`,
-      svg: `${srcFolder}/img/**/*.svg`,
+      svg: [`${srcFolder}/img/**/*.svg`, `${srcFolder}/img/**/*.ico`],
       homeJs: `${srcFolder}/js/home-page/bundle-home.js`,
       courseJs: `${srcFolder}/js/course-page/bundle-course.js`,
       // scss: `${srcFolder}/scss/style.scss`,
@@ -47,7 +47,7 @@ export const path = {
    // files/folders tracking
    watch: { 
       fonts: `${srcFolder}/fonts/**/*.*`,
-      images: [`${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`, `!${srcFolder}/img/optimized/**/*.{jpg,jpeg,png,gif,webp}`],
+      images: [`${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,ico}`, `!${srcFolder}/img/optimized/**/*.{jpg,jpeg,png,gif,webp}`],
       // js: `${srcFolder}/js/**/*.js`,
       homeJs: `${srcFolder}/js/**/*.js`,
       courseJs: `${srcFolder}/js/**/*.js`,
@@ -57,7 +57,7 @@ export const path = {
       html: `${srcFolder}/**/*.html`, // keep track of all .html files in all folders in the src/ directory
       libs: `${srcFolder}/libs/**/*.*`, // track all files with any extension in all folders in the src/files directory
       other: `${srcFolder}/other/**/*.*`,
-      svg: `${srcFolder}/img/**/*.svg`,
+      svg: [`${srcFolder}/img/**/*.svg`, `${srcFolder}/img/**/*.ico`],
    }, 
 
    clean: distFolder, // clear the production folder
