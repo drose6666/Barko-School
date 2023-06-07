@@ -99,15 +99,22 @@ i {
    // border-radius: 50px;
    width: 5px;
    height: 5px;
+   transition: all .2s ease;
+
+   // &:hover {
+   //    width: 10px;
+   // }
 }
 
 ::-webkit-scrollbar-thumb {
    background: $title;
    border-radius: 50px;
+   transition: all .2s ease;
 }
 
 ::-webkit-scrollbar-corner {
    background: transparent;
+   transition: all .2s ease;
 }
 
 

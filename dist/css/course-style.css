@@ -2791,10 +2791,11 @@ footer {
 
 .swimming-1 {
   top: 20px;
-  left: 0;
+  left: 100px;
 }
 
 .swimming-2 {
+  margin-top: -35px;
   top: 50%;
   left: -100px;
 }
@@ -5250,16 +5251,22 @@ i {
   background: #FFF3F6;
   width: 5px;
   height: 5px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #212529;
   -webkit-border-radius: 50px;
           border-radius: 50px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 ::-webkit-scrollbar-corner {
   background: transparent;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .swiper-button-prev,
@@ -6141,10 +6148,6 @@ i {
     max-width: 330px;
   }
 
-  .swimming-1 {
-    left: 70px;
-  }
-
   .swimming-2 {
     left: -10px;
   }
@@ -6322,7 +6325,6 @@ i {
 
   .swimming-1 {
     top: -15px;
-    left: 70px;
   }
 
   .swimming-2 {

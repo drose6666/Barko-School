@@ -38,10 +38,11 @@
 
    &-1 {
       top: 20px;
-      left: 0;
+      left: 100px;
    }
 
    &-2 {
+      margin-top: -35px;
       top: 50%;
       left: -100px;
    }
@@ -183,8 +184,6 @@
 
 @media all and (max-width: 700px) {
    .swimming {
-      &-1 { left: 70px; }
-
       &-2 { left: -10px; }
    }
 }
@@ -203,10 +202,7 @@
          max-width: 140px;
       }
 
-      &-1 {
-         top: -15px;
-         left: 70px;
-      }
+      &-1 { top: -15px; }
 
       &-2 {
          left: -10px;
@@ -222,13 +218,7 @@
    .swimming {
       padding: 5px 10px 5px 5px;
 
-      &-img {
-         // width: 40px;
-         // flex: 0 0 40px;
-      }
-
       &-text {
-         // font-size: 13px;
          max-width: 140px;
       }
 
