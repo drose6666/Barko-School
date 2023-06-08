@@ -1,6 +1,6 @@
 # Barko School
 
-Landing Page for the children's center for integrated development Barko School
+Website for the Child Development Center (under development)
 
 ## Preview
 
@@ -13,4 +13,4 @@ Landing Page for the children's center for integrated development Barko School
 
 ## Tech Stack
 
-**Client:** HTML5, CSS3, SCSS, JavaScript, GULP 4,
+**Client:** HTML5, CSS3, SCSS, JavaScript, GULP 4
