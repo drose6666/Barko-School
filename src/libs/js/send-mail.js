@@ -105,7 +105,7 @@ function errorHandler (error, field, message) {
 
 
 
-// Проверка валидности всех полей
+// TODO Проверка валидности всех полей
 function validForm (name, phone, email, tickets, message) {
 	let nameRes = nameValid(name);
 	let phoneRes = phoneValid(phone);
@@ -115,11 +115,31 @@ function validForm (name, phone, email, tickets, message) {
 
 	tickets ? ticketsRes = ticketsField(tickets) : null
 	
-
 	return (nameRes || phoneRes || emailRes || ticketsRes || messageRes) ? false : true;
 }
 
-// Запрос на отправку формы
+// TODO Создание модального окна notification
+function createNotePopup (status) {
+	if (status) {
+		new openPopup({
+			popup: '#success-popup',
+			close: '#success-popup .ui-close',
+			closeItem: '#success-popup .confirm--btn',
+			openFlag: true,
+			overlay: '#success-popup .popup-overlay'
+		})
+	} else {
+		new openPopup({
+			popup: '#error-popup',
+			close: '#error-popup .ui-close',
+			closeItem: '#error-popup .confirm--btn',
+			openFlag: true,
+			overlay: '#error-popup .popup-overlay'
+		})
+	}
+}
+
+// TODO Запрос на отправку формы
 function sendForm () {
 	const formData = new FormData(form);
 	const isValid = validForm('[data-valid="name"]', '[data-valid="phone"]', '[data-valid="email"]', '[data-valid="tickets"]', '[data-valid="message"]')
@@ -134,46 +154,25 @@ function sendForm () {
 				for (let item of form.querySelectorAll('[data-valid]')) {
 					item.value = ''
 				}
-
-				new openPopup({
-					popup: '#success-popup',
-					close: '#success-popup .ui-close',
-					closeItem: '#success-popup .confirm--btn',
-					openFlag: true,
-					overlay: '#success-popup .popup-overlay'
-				})
-			} else {
-				new openPopup({
-					popup: '#error-popup',
-					close: '#error-popup .ui-close',
-					closeItem: '#error-popup .confirm--btn',
-					openFlag: true,
-					overlay: '#error-popup .popup-overlay'
-				})
+				createNotePopup(true)
+			}  else {
+				createNotePopup(false)
 			}
 		})
 		.catch(error => {
-			new openPopup({
-				popup: '#error-popup',
-				close: '#error-popup .ui-close',
-				closeItem: '#error-popup .confirm--btn',
-				openFlag: true,
-				overlay: '#error-popup .popup-overlay'
-			})
+			createNotePopup(false)
 		});
 	}
 }
 
-// Удаление класса .error у полей ввода при фокусе
+// TODO Удаление класса .error у полей ввода при фокусе
 for (let el of document.querySelectorAll('.field')) {
-	
 	el.addEventListener('focus', () => {
-		console.log(el);
 		errorHandler(false, el, '')
 	})
 }
 
-// Событие отправки формы
+// TODO Событие отправки формы
 form.addEventListener('submit', (event) => {
 	event.preventDefault();
 	sendForm()

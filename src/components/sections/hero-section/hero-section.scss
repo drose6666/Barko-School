@@ -376,7 +376,7 @@ $offset: 30px;
    .hero-action {
       margin: 0 0 60px 0;
       order: 3;
-      .btn--hero-dark-wrap { display: flex; }
+      .btn--hero-dark-wrap { display: flex; order: 2; }
       .action-wrap {
          .action-icon, .action-text { display: none; }
       }

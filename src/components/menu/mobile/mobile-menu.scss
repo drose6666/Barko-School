@@ -114,6 +114,7 @@
             }
             &.address {
                align-items: flex-start;
+               span { padding: 0; }
                i { font-size: 25px;}
             }
             &:not(:first-child) {

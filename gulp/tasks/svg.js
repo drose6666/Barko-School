@@ -12,15 +12,6 @@ export const svg = () => {
             message: 'Error: <%= error.message %>'
          })
       ))
-      // .pipe(svgSprite({
-      //    mode: {
-      //       stack: {
-      //          sprite: `../icons/icons.svg`,
-      //          // An html page is created with preview icons
-      //          example: true
-      //       }
-      //    }
-      // }))
       .pipe(app.gulp.dest(app.path.dist.svg))
       .pipe(app.plugins.browsersync.stream());
 }

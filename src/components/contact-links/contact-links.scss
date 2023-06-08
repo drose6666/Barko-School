@@ -54,7 +54,10 @@
       &.address {
          line-height: 144%;
          align-items: flex-start;
-         span { max-width: 330px; }
+         span { 
+            max-width: 330px; 
+            padding: 0; 
+         }
          i { font-size: 25px; }
       }
    }
@@ -111,7 +114,8 @@
             background: $weakDecor;
             border-radius: 50%;
             flex: 0 0 auto;
-            box-shadow: 0px 0px 0px 10px rgba(255, 231, 237, 0.25);
+            box-shadow: 0px 0px 0px 8px rgba(255, 231, 237, 0.35);
+            transition: .2s ease;
          }
          span {
             color: $title;
@@ -121,6 +125,13 @@
       }
       a.contact-link {
          @include hoverLinks($hoverSpan: true, $height: 2px);
+         &:hover {
+            .icon {
+               color: $light;
+               background: $action;
+               box-shadow: 0 0 0 8px rgba(242,24,79,.2);
+            }
+         }
       }
    }
 }

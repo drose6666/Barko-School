@@ -1,6 +1,6 @@
 .reviews-section {
-   margin: 200px 0;
-   padding: 60px 0;
+   margin: 200px 0 130px 0;
+   padding: 60px 0 110px 0;
    background: $weakColorSelection;
    
    position: relative;
@@ -195,6 +195,7 @@
 
 @media all and (max-width: 900px) {
    .reviews-section {
+      margin: 200px 0 100px 0;
       .ui-container {
          display: block;
       }

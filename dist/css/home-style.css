@@ -1783,6 +1783,10 @@ footer {
           align-items: flex-start;
 }
 
+.mobile-menu-wrap .mobile-menu .mobile-contact-links .mobile-contact-link.address span {
+  padding: 0;
+}
+
 .mobile-menu-wrap .mobile-menu .mobile-contact-links .mobile-contact-link.address i {
   font-size: 25px;
 }
@@ -2441,7 +2445,7 @@ footer {
 }
 
 .contact-form-wrap {
-  padding: 50px 50px 60px 50px;
+  padding: 50px 50px 50px 50px;
   background: #F5F5F5;
   max-width: 550px;
   width: 100%;
@@ -2823,6 +2827,7 @@ footer {
 
 .contact-links .contact-link.address span {
   max-width: 330px;
+  padding: 0;
 }
 
 .contact-links .contact-link.address i {
@@ -3806,7 +3811,7 @@ footer {
 
 .detail-info-text strong {
   font-weight: 600;
-  color: #D1CFDD;
+  color: #A4A5B2;
 }
 
 .detail-info-list li {
@@ -3826,7 +3831,7 @@ footer {
 .detail-info-list li strong {
   padding-right: 5px;
   font-weight: 600;
-  color: #D1CFDD;
+  color: #A4A5B2;
 }
 
 .detail-info-list li strong.pl {
@@ -5894,8 +5899,8 @@ footer {
 }
 
 .reviews-section {
-  margin: 200px 0;
-  padding: 60px 0;
+  margin: 200px 0 130px 0;
+  padding: 60px 0 110px 0;
   background: #FFF3F6;
   position: relative;
 }
@@ -7264,6 +7269,11 @@ i {
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+       -moz-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
 
   .hero-action .action-wrap .action-icon,
@@ -7679,8 +7689,11 @@ i {
        -moz-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-    -webkit-box-shadow: 0px 0px 0px 10px rgba(255, 231, 237, 0.25);
-            box-shadow: 0px 0px 0px 10px rgba(255, 231, 237, 0.25);
+    -webkit-box-shadow: 0px 0px 0px 8px rgba(255, 231, 237, 0.35);
+            box-shadow: 0px 0px 0px 8px rgba(255, 231, 237, 0.35);
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
   }
 
   .contact-links .contact-link span,
@@ -7704,6 +7717,17 @@ i {
     -webkit-background-size: 100% 2px;
          -o-background-size: 100% 2px;
             background-size: 100% 2px;
+  }
+
+  .contact-links a.contact-link:hover .icon {
+    color: #fff;
+    background: #F2184F;
+    -webkit-box-shadow: 0 0 0 8px rgba(242, 24, 79, 0.2);
+            box-shadow: 0 0 0 8px rgba(242, 24, 79, 0.2);
+  }
+
+  .reviews-section {
+    margin: 200px 0 100px 0;
   }
 
   .reviews-section .ui-container {
