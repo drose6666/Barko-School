@@ -1,10 +1,13 @@
 import '../module/scrollAnimation.js';
 import openMobileMenu from '../module/openMobileMenu.js';
+import MobilePopupHandler from '../module/MobilePopupHandler/MobilePopupHandler.js';
 // import openPopup from './module/openPopup.js';
 import '../module/sliders.js';
+import PopupHandler from '../module/MobilePopupHandler/PopupHandler.js';
 
 console.log('Подключился bundle-home.js');
- 
+
+
 // TODO Preloader
 
 window.addEventListener('load', function () {
@@ -15,12 +18,21 @@ window.addEventListener('load', function () {
 
 
 // TODO Mobile menu
-const mobileMenu = new openMobileMenu({
-   menu: '.mobile-menu-wrap',
-   close: '.mobile-menu-wrap .ui-close',
-   open: '.ui-burger',
+// const mobileMenu = new openMobileMenu({
+//    menu: '.mobile-menu-wrap',
+//    close: '.mobile-menu-wrap .ui-close',
+//    open: '.ui-burger',
+//    overlay: '.ui-overlay',
+//    closeItems: '.mobile-menu-list a',
+// })
+
+const mobile = new MobilePopupHandler({
+   selector: '.mobile-menu-wrap',
+   btnClose: '.mobile-menu-wrap .ui-close',
+   btnOpen: '.ui-burger',
    overlay: '.ui-overlay',
-   closeItems: '.mobile-menu-list a',
+   elsToClose: '.mobile-menu-list a',
+   
 })
 
 
@@ -28,47 +40,76 @@ const mobileMenu = new openMobileMenu({
 
 // TODO Video popup
 const aboutVideo = `<iframe width="560" height="315" src="https://www.youtube.com/embed/LlCwHnp3kL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
-const options = {
-   popup: '#video-popup',
-   open: '.about-video-open',
-   close: '#video-popup .ui-close',
+// const options = {
+//    popup: '#video-popup',
+//    open: '.about-video-open',
+//    close: '#video-popup .ui-close',
+//    overlay: '#video-popup .popup-overlay',
+//    whereInsert: '#about-video',
+//    frame: aboutVideo
+// }
+// new openPopup(options)
+
+const video = new PopupHandler({
+   selector: '#video-popup',
+   btnClose: '#video-popup .ui-close',
+   btnOpen: '.about-video-open',
    overlay: '#video-popup .popup-overlay',
-   whereInsert: '#about-video',
-   frame: aboutVideo
-}
-new openPopup(options)
-
-
-
-// TODO Schedule popup
-const schedulePopup = new openPopup({
-   popup: '#schedule-popup',
-   open: '.schedule-items .schedule-item',
-   close: '#schedule-popup .ui-close',
-   overlay: '#schedule-popup .popup-overlay'
+   frame: aboutVideo,
+   insertTo: '#about-video'
 })
 
 
 
+// TODO Schedule popup
+// const schedulePopup = new openPopup({
+//    popup: '#schedule-popup',
+//    open: '.schedule-items .schedule-item',
+//    close: '#schedule-popup .ui-close',
+//    overlay: '#schedule-popup .popup-overlay'
+// })
+const shedulePopup = new PopupHandler({
+   selector: '#schedule-popup',
+   btnClose: '#schedule-popup .ui-close',
+   btnOpen: '.schedule-items .schedule-item',
+   overlay: '#schedule-popup .popup-overlay',
+})
+
+
+
+
 // TODO Price popup
-const pricePopup = new openPopup({
-   popup: '#price-popup',
-   open: '.schedule-item.item-price',
-   close: '#price-popup .ui-close',
-   overlay: '#price-popup .popup-overlay'
+// const pricePopup = new openPopup({
+//    popup: '#price-popup',
+//    open: '.schedule-item.item-price',
+//    close: '#price-popup .ui-close',
+//    overlay: '#price-popup .popup-overlay'
+// })
+
+const pricePopup = new PopupHandler({
+   selector: '#price-popup',
+   btnClose: '#price-popup .ui-close',
+   btnOpen: '.schedule-item.item-price',
+   overlay: '#price-popup .popup-overlay',
 })
 
 
 
 
 // TODO Gallery popup
-const galleryPopup = new openPopup({
-   popup: '#gallery-popup',
-   open: '.gallery .item',
-   close: '#gallery-popup .ui-close',
-   overlay: '#gallery-popup .popup-overlay'
-})
+// const galleryPopup = new openPopup({
+//    popup: '#gallery-popup',
+//    open: '.gallery .item',
+//    close: '#gallery-popup .ui-close',
+//    overlay: '#gallery-popup .popup-overlay'
+// })
 
+const galleryPopup = new PopupHandler({
+   selector: '#price-popup',
+   btnClose: '#gallery-popup .ui-close',
+   btnOpen: '.gallery .item',
+   overlay: '#gallery-popup .popup-overlay',
+})
 
 
 

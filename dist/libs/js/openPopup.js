@@ -54,7 +54,7 @@ class openPopup {
       }
    }
 
-   insertIframe = () => {
+   insertIframe = () => { 
       this.$whereInsert.insertAdjacentHTML('afterbegin', this.frame)
    }
 
