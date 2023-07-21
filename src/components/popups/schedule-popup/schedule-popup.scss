@@ -1,6 +1,6 @@
 #schedule-popup {
    .popup {
-      max-width: 1200px;
+      max-width: 1600px;
       background: $light;
       border-radius: $blockR;
       overflow: hidden;
@@ -54,13 +54,14 @@
 
 
    .schedule-body {
-      padding: 120px 50px 150px 50px;
+      padding: 90px 50px 130px 50px;
       img {
+         margin: 15px 0;
          max-width: 100%;
          height: auto;
+         display: inline-block;
       }
       .explanation {
-         margin-top: 15px;
          display: flex;
          align-items: center;
          gap: 10px;
@@ -76,6 +77,18 @@
             font-size: 13px;
             line-height: 100%;
             color: $text;
+            &.selected {
+               color: $darkDecor;
+               line-height: 140%;
+               max-width: 700px;
+            }
+            a {
+               color: $darkDecor;
+               text-decoration: underline;
+               &:hover {
+                  color: $action;
+               }
+            }
          }
       }
       .body-text {

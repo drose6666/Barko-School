@@ -31,16 +31,16 @@ try {
   $mail->SMTPAuth   = true;
 
   // Настройки вашей почты
-  $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-  $mail->Username   = 'danila.rose.web@gmail.com'; // Логин на почте
-  $mail->Password   = 'izvwdvaptqvpnkiz'; // Пароль на почте
+  $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
+  $mail->Username   = 'danila.rose.web@yandex.ru'; // Логин на почте
+  $mail->Password   = 'wntkvrxlgojjbayo'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('danila.rose.web@gmail.com', 'Сообщение с сайта barkoschool.ru'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('danila.rose.web@yandex.ru', 'Сообщение с сайта barkoschool.ru'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('danila.rose.web@gmail.com');
+  $mail->addAddress('danila.rose.web@yandex.ru');
 
   // Отправка сообщения
   $mail->isHTML(true);

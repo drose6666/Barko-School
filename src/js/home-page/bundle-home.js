@@ -1,11 +1,7 @@
 import '../module/scrollAnimation.js';
 import openMobileMenu from '../module/openMobileMenu.js';
-import MobilePopupHandler from '../module/MobilePopupHandler/MobilePopupHandler.js';
-// import openPopup from './module/openPopup.js';
 import '../module/sliders.js';
-import PopupHandler from '../module/MobilePopupHandler/PopupHandler.js';
 
-console.log('Подключился bundle-home.js');
 
 
 // TODO Preloader
@@ -17,98 +13,62 @@ window.addEventListener('load', function () {
 
 
 
-// TODO Mobile menu
-// const mobileMenu = new openMobileMenu({
-//    menu: '.mobile-menu-wrap',
-//    close: '.mobile-menu-wrap .ui-close',
-//    open: '.ui-burger',
-//    overlay: '.ui-overlay',
-//    closeItems: '.mobile-menu-list a',
-// })
-
-const mobile = new MobilePopupHandler({
-   selector: '.mobile-menu-wrap',
-   btnClose: '.mobile-menu-wrap .ui-close',
-   btnOpen: '.ui-burger',
+// TODO Инициализация экземпляра Mobile menu
+const mobileMenu = new openMobileMenu({
+   menu: '.mobile-menu-wrap',
+   close: '.mobile-menu-wrap .ui-close',
+   open: '.ui-burger',
    overlay: '.ui-overlay',
-   elsToClose: '.mobile-menu-list a',
-   
+   closeItems: '.mobile-menu-list a',
 })
 
 
 
 
-// TODO Video popup
+// TODO 
 const aboutVideo = `<iframe width="560" height="315" src="https://www.youtube.com/embed/LlCwHnp3kL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
-// const options = {
-//    popup: '#video-popup',
-//    open: '.about-video-open',
-//    close: '#video-popup .ui-close',
-//    overlay: '#video-popup .popup-overlay',
-//    whereInsert: '#about-video',
-//    frame: aboutVideo
-// }
-// new openPopup(options)
-
-const video = new PopupHandler({
-   selector: '#video-popup',
-   btnClose: '#video-popup .ui-close',
-   btnOpen: '.about-video-open',
+const options = {
+   popup: '#video-popup',
+   open: '.about-video-open',
+   close: '#video-popup .ui-close',
    overlay: '#video-popup .popup-overlay',
-   frame: aboutVideo,
-   insertTo: '#about-video'
-})
+   whereInsert: '#about-video',
+   frame: aboutVideo
+}
+new openPopup(options)
 
 
 
 // TODO Schedule popup
-// const schedulePopup = new openPopup({
-//    popup: '#schedule-popup',
-//    open: '.schedule-items .schedule-item',
-//    close: '#schedule-popup .ui-close',
-//    overlay: '#schedule-popup .popup-overlay'
-// })
-const shedulePopup = new PopupHandler({
-   selector: '#schedule-popup',
-   btnClose: '#schedule-popup .ui-close',
-   btnOpen: '.schedule-items .schedule-item',
-   overlay: '#schedule-popup .popup-overlay',
+const schedulePopup = new openPopup({
+   popup: '#schedule-popup',
+   open: '.schedule-items .schedule-item',
+   close: '#schedule-popup .ui-close',
+   overlay: '#schedule-popup .popup-overlay'
 })
 
-
+  
 
 
 // TODO Price popup
-// const pricePopup = new openPopup({
-//    popup: '#price-popup',
-//    open: '.schedule-item.item-price',
-//    close: '#price-popup .ui-close',
-//    overlay: '#price-popup .popup-overlay'
-// })
-
-const pricePopup = new PopupHandler({
-   selector: '#price-popup',
-   btnClose: '#price-popup .ui-close',
-   btnOpen: '.schedule-item.item-price',
-   overlay: '#price-popup .popup-overlay',
+const pricePopup = new openPopup({
+   popup: '#price-popup',
+   open: '.schedule-item.item-price',
+   close: '#price-popup .ui-close',
+   overlay: '#price-popup .popup-overlay'
 })
+
+
 
 
 
 
 // TODO Gallery popup
-// const galleryPopup = new openPopup({
-//    popup: '#gallery-popup',
-//    open: '.gallery .item',
-//    close: '#gallery-popup .ui-close',
-//    overlay: '#gallery-popup .popup-overlay'
-// })
-
-const galleryPopup = new PopupHandler({
-   selector: '#price-popup',
-   btnClose: '#gallery-popup .ui-close',
-   btnOpen: '.gallery .item',
-   overlay: '#gallery-popup .popup-overlay',
+const galleryPopup = new openPopup({
+   popup: '#gallery-popup',
+   open: '.gallery .item',
+   close: '#gallery-popup .ui-close',
+   overlay: '#gallery-popup .popup-overlay'
 })
 
 
@@ -127,7 +87,7 @@ const coursesPopup = new openPopup({
 
 // TODO Создание Popup с расписаниями
 const schedules = [
-   {id: '0.9m-1.5y', age: '0.9 мес. - 2 года', img:'../../../img/optimized/schedule/0.9-1.5.webp',},
+   {id: '0.9m-1.5y', age: '9 мес. - 1.5 года', img:'../../../img/optimized/schedule/0.9-1.5.webp',},
    {id: '1.5y-2y', age: '1.5 - 2 года', img:'../../../img/optimized/schedule/1.5-2.webp',},
    {id: '2y-3y', age: '2 - 3 года', img:'../../../img/optimized/schedule/2-3.webp',},
    {id: '3y-4y', age: '3 - 4 года', img:'../../../img/optimized/schedule/3-4.webp',},
@@ -143,36 +103,46 @@ const schedules = [
 const scheduleAge = document.querySelector('.schedule-age')
 const scheduleImage = document.querySelector('.schedule-body img')
 
-document.querySelectorAll('.schedule-item').forEach(el => {
-   el.addEventListener('click', function () {
-      const btnAttr = this.getAttribute('data-age')
+function renderContentForCoursePopup () {
+   const btnAttr = this.getAttribute('data-age')
 
-      if (btnAttr) {
-         const {age, img} = schedules.find(el => el.id === btnAttr)
-         scheduleAge.textContent = age
-         scheduleImage.src = img
-      } else {
-         scheduleAge.textContent = ''
-         scheduleImage.src = ''
-      }
-   })
+   if (btnAttr) {
+      const {age, img} = schedules.find(el => el.id === btnAttr)
+      scheduleAge.textContent = age
+      scheduleImage.src = img
+   } else {
+      scheduleAge.textContent = ''
+      scheduleImage.src = ''
+   }
+}
+
+document.querySelectorAll('.schedule-item').forEach(el => {
+   el.addEventListener('click', renderContentForCoursePopup)
 })
+
 
 
 
 const footer = document.querySelector('footer')
 const scrollWrap = document.querySelector('.scrollUp-wrap')
 
-window.addEventListener('load', () => {
-   fadeInNavOnScroll('.sticky', 200)
+
+// TODO Вызов функции fadeInNavOnScroll и добаления класса плавающим социалдлкам, чтобы не закрывать контент в footer
+function addAndRemoveClassesForStickyElements (elements, distance) {
+   fadeInNavOnScroll(elements, distance)
    footer.classList.contains('animation') ? scrollWrap.classList.add('up') : scrollWrap.classList.remove('up')
-   
+}
+
+window.addEventListener('load', () => {
+   addAndRemoveClassesForStickyElements ('.sticky', 200) 
+
    window.addEventListener('scroll', () => {
-      fadeInNavOnScroll('.sticky', 200)
-      footer.classList.contains('animation') ? scrollWrap.classList.add('up') : scrollWrap.classList.remove('up')
+      addAndRemoveClassesForStickyElements ('.sticky', 200) 
    })
 })
 
+
+// TODO Проверка расстояния скролла и добавения класса 'active' плавающим элементам
 function fadeInNavOnScroll(elements, distance) {
    let items = document.querySelectorAll(elements)
 
@@ -205,3 +175,6 @@ scrollUpArrow.addEventListener('click', () => {
       behavior: 'smooth'
    });
 })
+
+
+

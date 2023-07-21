@@ -161,6 +161,7 @@ $offset: 30px;
       border-radius: 50%;
       background: rgba(33, 37, 41, 0.6);
       animation: awardMove 6s ease-in-out infinite;
+      // display: none;
       i {
          font-size: 55px;
          color: $light;
@@ -347,6 +348,12 @@ $offset: 30px;
       .free-lesson {
          display: flex;
          left: calcSize($currentW, $targetW, 90, 15);
+         background: $darkDecor;
+         box-shadow: 0px 0px 0px 15px rgba(32, 44, 69, 0.19);
+         .text {
+            font-size: 16px;
+            color: $light;
+         }
       }
    }
 

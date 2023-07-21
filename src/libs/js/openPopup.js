@@ -9,7 +9,7 @@ class openPopup {
       this.frame = frame
       this.openFlag = openFlag
 
-      this.#setup()
+      this.#setup()  
    }
 
    #setup = () => {

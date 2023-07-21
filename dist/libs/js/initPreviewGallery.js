@@ -1,4 +1,4 @@
-const galleryItemsInit = document.querySelectorAll('.gallery .item')
+const galleryItemsInit = document.querySelectorAll('#gallery .item')
 const galleryPreviewSliderInit = document.querySelector('#gallery-preview-swiper .swiper-wrapper')
 
 for (let item of galleryItemsInit) {

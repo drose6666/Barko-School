@@ -3584,7 +3584,7 @@ footer {
 }
 
 #schedule-popup .popup {
-  max-width: 1200px;
+  max-width: 1600px;
   background: #fff;
   -webkit-border-radius: 15px;
           border-radius: 15px;
@@ -3640,16 +3640,17 @@ footer {
 }
 
 #schedule-popup .schedule-body {
-  padding: 120px 50px 150px 50px;
+  padding: 90px 50px 130px 50px;
 }
 
 #schedule-popup .schedule-body img {
+  margin: 15px 0;
   max-width: 100%;
   height: auto;
+  display: inline-block;
 }
 
 #schedule-popup .schedule-body .explanation {
-  margin-top: 15px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -3677,6 +3678,21 @@ footer {
   font-size: 13px;
   line-height: 100%;
   color: #9193A3;
+}
+
+#schedule-popup .schedule-body .explanation .text.selected {
+  color: #202C45;
+  line-height: 140%;
+  max-width: 700px;
+}
+
+#schedule-popup .schedule-body .explanation .text a {
+  color: #202C45;
+  text-decoration: underline;
+}
+
+#schedule-popup .schedule-body .explanation .text a:hover {
+  color: #F2184F;
 }
 
 #schedule-popup .schedule-body .body-text {
@@ -5149,10 +5165,59 @@ footer {
   max-width: max-content;
 }
 
+.courses-tabs {
+  margin: 60px 0 50px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  gap: 30px;
+}
+
+.courses-tabs .tab {
+  padding: 13px 40px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #202C45;
+  background: transparent;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+  border: 1px solid #202C45;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.courses-tabs .tab.active,
+.courses-tabs .tab:hover {
+  background: #202C45;
+  color: #fff;
+}
+
 .courses {
-  margin-top: 60px;
   width: 100%;
   position: relative;
+  display: none;
+}
+
+.courses.active {
+  display: block;
 }
 
 .courses .swiper-courses .swiper-wrapper {
@@ -6462,7 +6527,7 @@ i {
   -webkit-border-radius: 50%;
           border-radius: 50%;
   background: #fff;
-  opacity: 0.3;
+  opacity: 0.5;
   -webkit-box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25);
           box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25);
   z-index: 1;
@@ -6848,6 +6913,98 @@ i {
             transform: none;
   }
 
+  .courses .swiper-slide:nth-child(14).animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.6s ease 0.75s, visibility 0.6s ease 0.75s, -webkit-transform 0.6s ease 0.75s;
+    transition: opacity 0.6s ease 0.75s, visibility 0.6s ease 0.75s, -webkit-transform 0.6s ease 0.75s;
+    -o-transition: opacity 0.6s ease 0.75s, visibility 0.6s ease 0.75s, -o-transform 0.6s ease 0.75s;
+    transition: transform 0.6s ease 0.75s, opacity 0.6s ease 0.75s, visibility 0.6s ease 0.75s;
+    transition: transform 0.6s ease 0.75s, opacity 0.6s ease 0.75s, visibility 0.6s ease 0.75s, -webkit-transform 0.6s ease 0.75s, -o-transform 0.6s ease 0.75s;
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+         -o-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  .courses .swiper-slide:nth-child(14).animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .courses .swiper-slide:nth-child(15).animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.6s ease 0.8s, visibility 0.6s ease 0.8s, -webkit-transform 0.6s ease 0.8s;
+    transition: opacity 0.6s ease 0.8s, visibility 0.6s ease 0.8s, -webkit-transform 0.6s ease 0.8s;
+    -o-transition: opacity 0.6s ease 0.8s, visibility 0.6s ease 0.8s, -o-transform 0.6s ease 0.8s;
+    transition: transform 0.6s ease 0.8s, opacity 0.6s ease 0.8s, visibility 0.6s ease 0.8s;
+    transition: transform 0.6s ease 0.8s, opacity 0.6s ease 0.8s, visibility 0.6s ease 0.8s, -webkit-transform 0.6s ease 0.8s, -o-transform 0.6s ease 0.8s;
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+         -o-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  .courses .swiper-slide:nth-child(15).animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .courses .swiper-slide:nth-child(16).animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.6s ease 0.85s, visibility 0.6s ease 0.85s, -webkit-transform 0.6s ease 0.85s;
+    transition: opacity 0.6s ease 0.85s, visibility 0.6s ease 0.85s, -webkit-transform 0.6s ease 0.85s;
+    -o-transition: opacity 0.6s ease 0.85s, visibility 0.6s ease 0.85s, -o-transform 0.6s ease 0.85s;
+    transition: transform 0.6s ease 0.85s, opacity 0.6s ease 0.85s, visibility 0.6s ease 0.85s;
+    transition: transform 0.6s ease 0.85s, opacity 0.6s ease 0.85s, visibility 0.6s ease 0.85s, -webkit-transform 0.6s ease 0.85s, -o-transform 0.6s ease 0.85s;
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+         -o-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  .courses .swiper-slide:nth-child(16).animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .courses .swiper-slide:nth-child(17).animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.6s ease 0.9s, visibility 0.6s ease 0.9s, -webkit-transform 0.6s ease 0.9s;
+    transition: opacity 0.6s ease 0.9s, visibility 0.6s ease 0.9s, -webkit-transform 0.6s ease 0.9s;
+    -o-transition: opacity 0.6s ease 0.9s, visibility 0.6s ease 0.9s, -o-transform 0.6s ease 0.9s;
+    transition: transform 0.6s ease 0.9s, opacity 0.6s ease 0.9s, visibility 0.6s ease 0.9s;
+    transition: transform 0.6s ease 0.9s, opacity 0.6s ease 0.9s, visibility 0.6s ease 0.9s, -webkit-transform 0.6s ease 0.9s, -o-transform 0.6s ease 0.9s;
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+         -o-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  .courses .swiper-slide:nth-child(17).animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
   .courses .swiper-slide.collapse {
     display: none;
   }
@@ -7203,6 +7360,14 @@ i {
     display: flex;
     left: -webkit-calc((100vw - 768px) / (950 - 768) * (90 - 15) + 15px);
     left: calc((100vw - 768px) / (950 - 768) * (90 - 15) + 15px);
+    background: #202C45;
+    -webkit-box-shadow: 0px 0px 0px 15px rgba(32, 44, 69, 0.19);
+            box-shadow: 0px 0px 0px 15px rgba(32, 44, 69, 0.19);
+  }
+
+  .hero-img .free-lesson .text {
+    font-size: 16px;
+    color: #fff;
   }
 
   .hero-info {
@@ -8005,6 +8170,7 @@ i {
   }
 
   .courses .swiper-slide {
+    margin-bottom: 0;
     padding: 0;
     display: block;
     min-width: 430px;
@@ -8284,6 +8450,10 @@ i {
   .courses .swiper-courses .swiper-slide,
   .courses .swiper-courses .course {
     min-width: 100%;
+  }
+
+  .courses-tabs {
+    gap: 10px;
   }
 
   .gallery-section .gallery {

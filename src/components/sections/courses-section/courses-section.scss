@@ -41,12 +41,43 @@
    
 }
 
+// Courses tabs
+.courses-tabs {
+   margin: 60px 0 50px 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 30px;
+
+   .tab {
+      padding: 13px 40px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 100%;
+      color: $darkDecor;
+      background: transparent;
+      border-radius: 50px;
+      border: 1px solid $darkDecor;
+      cursor: pointer;
+      transition: all .2s ease;
+
+      &.active, &:hover {
+         background: $darkDecor;
+         color: $light;
+      }
+   }
+}
+
 
 // TODO Courses Swiper
 .courses {
-   margin-top: 60px;
    width: 100%;
    position: relative;
+   display: none;
+   &.active {
+      display: block;
+   }
    .swiper-courses {
       .swiper-wrapper {
          margin: 0 -10px;
@@ -298,6 +329,7 @@
          width: 100%; 
       }
       .swiper-slide {
+         margin-bottom: 0;
          padding: 0;
          display: block;
          min-width: 430px;
@@ -324,6 +356,9 @@
       .swiper-slide, .course {
          min-width: 100%;
       }
+   }
+   .courses-tabs {
+      gap: 10px; 
    }
 }
 
@@ -356,7 +391,7 @@
    .courses-pagination { display: none; }
    .courses .swiper-slide {
       $j: 0.05s;
-      @for $i from 1 through 13 {
+      @for $i from 1 through 17 {
          $j: $j +0.05s;
          &:nth-child(#{$i}) {
             @include scrollAnimationFade($toTop: true, $delay: $j)

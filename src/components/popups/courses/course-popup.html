@@ -2,7 +2,7 @@
    <div class="popup">
 
       <div class="course-popup-head">
-         @@include('../../ui/ui-close/ui-close.html')
+         <div class="btn-close-wrap el-popup--close">@@include('../../ui/ui-close/ui-close.html')</div>
          <div class="img"><img src="" alt="Soft skills (гибкие навыки)"></div>
          <h3 class="course-popup-title"></h3>
       </div>
@@ -61,7 +61,7 @@
          <div class="detail-info"></div>
          <div class="course-popup-action">
             <div class="btn-group">
-               <a href="#contacts" class="ui-btn btn--action btn--course"><span>Пробное занятие</span></a>
+               <a href="#contacts" class="ui-btn btn--action btn--course el-popup--close"><span>Пробное занятие</span></a>
             </div>
             <div class="socials socials--top socials--course">
                @@include('../../socials/socials.html')
