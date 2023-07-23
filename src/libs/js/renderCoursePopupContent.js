@@ -485,7 +485,7 @@ const coursesData = [
    { id: 1, title: 'Английский язык', img: '../../../img/optimized/courses/english.webp', age: 'с 2 лет', priceTicket: 'от 2 700 рублей', priceIndividual: 'от 800 рублей', duration: 'от 30 минут', content: getCurrentContent(1) },
    { id: 2, title: 'Французский язык', img: '../../../img/optimized/courses/french.webp', age: 'с 2 лет', priceTicket: 'от 3 700 рублей', priceIndividual: 'от 1100 рублей', duration: 'от 30 минут', content: getCurrentContent(2) },
    { id: 3, title: 'Испанский язык', img: '../../../img/optimized/courses/spanish.webp', age: 'с 2 лет', priceTicket: 'от 3 700 рублей', priceIndividual: 'от 1100 рублей', duration: 'от 30 минут', content: getCurrentContent(3) },
-   { id: 4, title: 'Soft skills (гибкие навыки)', img: '../../../img/optimized/courses/soft-skills.webp', age: 'с 6 лет', priceTicket: '4 800 рублей', content: getCurrentContent(4) },
+   { id: 4, title: 'Soft skills (гибкие навыки)', img: '../../../img/optimized/courses/skills-future.webp', age: 'с 6 лет', priceTicket: '4 800 рублей', content: getCurrentContent(4) },
    { id: 5, title: 'Нейрогимнастика', img: '../../../img/optimized/courses/neurohymnastics.webp', age: 'с 3 лет', priceTicket: '4 400 - 7 000 рублей', content: getCurrentContent(5) },
    { id: 6, title: 'Подготовка к школе (в течение учебного года)', img: '../../../img/optimized/courses/school.webp', age: 'с 6-7 лет', priceTicket: '6 800 рублей', content: getCurrentContent(6) },
    { id: 7, title: 'Развивающие занятия', img: '../../../img/optimized/courses/educational-classes.webp', age: 'с 9 месяцев', priceTicket: '4 400 - 6 800 рублей', content: getCurrentContent(7) },

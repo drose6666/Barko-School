@@ -113,9 +113,11 @@
                color: $action;
             }
             &.address {
+               i { font-size: 25px;}
+            }
+            &.align-top {
                align-items: flex-start;
                span { padding: 0; }
-               i { font-size: 25px;}
             }
             &:not(:first-child) {
                margin-top: 22px;

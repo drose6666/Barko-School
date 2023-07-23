@@ -52,7 +52,7 @@
    $lHeight: 100%,
    $color: $light,
    $bg: $action,
-   $border: 2px solid transparent,
+   $border: 1px solid transparent,
    $trans: all 0.1s ease-out,
    $borderR: $btnR,
    $shadow: none,
@@ -121,7 +121,7 @@
          $fWeight: 500,
          $bg: transparent,
          $color: $title,
-         $border: 2px solid $title,
+         $border: 1px solid $title,
       );
       // @extend %btnHoverFill;
       &:hover {

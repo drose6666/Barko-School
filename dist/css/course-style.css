@@ -122,7 +122,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   -webkit-border-radius: 50px;
           border-radius: 50px;
 }
@@ -168,7 +168,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   -webkit-border-radius: 50px;
           border-radius: 50px;
 }
@@ -212,7 +212,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   -webkit-border-radius: 50px;
           border-radius: 50px;
 }
@@ -257,7 +257,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid #212529;
+  border: 1px solid #212529;
   -webkit-border-radius: 50px;
           border-radius: 50px;
 }
@@ -1329,9 +1329,9 @@ button.swiper-pagination-bullet {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 100%;
+  line-height: 130%;
   color: #212529;
 }
 
@@ -1350,15 +1350,24 @@ button.swiper-pagination-bullet {
   transition: background-size 0.2s ease, transform 0.2s ease, -webkit-background-size 0.2s ease, -o-background-size 0.2s ease, -webkit-transform 0.2s ease, -o-transform 0.2s ease;
 }
 
+.top-info .items .item.item--address span {
+  max-width: 300px;
+}
+
 .top-info .items .item.item--address > i {
   font-size: 20px;
+}
+
+.top-info .items .item.item--address.first:after {
+  margin-left: 0;
+  height: 36px;
 }
 
 .top-info .items .item.first:after {
   content: "";
   margin-left: 30px;
   display: block;
-  height: 20px;
+  height: 18px;
   width: 1px;
   background: #212529;
 }
@@ -1769,7 +1778,11 @@ footer {
   color: #F2184F;
 }
 
-.mobile-menu-wrap .mobile-menu .mobile-contact-links .mobile-contact-link.address {
+.mobile-menu-wrap .mobile-menu .mobile-contact-links .mobile-contact-link.address i {
+  font-size: 25px;
+}
+
+.mobile-menu-wrap .mobile-menu .mobile-contact-links .mobile-contact-link.align-top {
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
      -moz-box-align: start;
@@ -1777,12 +1790,8 @@ footer {
           align-items: flex-start;
 }
 
-.mobile-menu-wrap .mobile-menu .mobile-contact-links .mobile-contact-link.address span {
+.mobile-menu-wrap .mobile-menu .mobile-contact-links .mobile-contact-link.align-top span {
   padding: 0;
-}
-
-.mobile-menu-wrap .mobile-menu .mobile-contact-links .mobile-contact-link.address i {
-  font-size: 25px;
 }
 
 .mobile-menu-wrap .mobile-menu .mobile-contact-links .mobile-contact-link:not(:first-child) {

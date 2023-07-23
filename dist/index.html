@@ -22,12 +22,12 @@
    <link rel="icon" href="img/optimized/favicon/favicon_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="img/optimized/favicon/favicon_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20230721200636" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <link rel="stylesheet" href="../libs/css/bootstrap-grid.min.css?_v=20230721200636">
-   <link rel="stylesheet" href="../libs/css/reset.min.css?_v=20230721200636">
-   <link rel="stylesheet" as="font" href="../fonts/fonts.css?_v=20230721200636">
-   <link rel="stylesheet" as="font" href="../fonts/iconsfont.css?_v=20230721200636">
-   <link rel="stylesheet" href="css/home-style.min.css?_v=20230721200636">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20230723195901" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <link rel="stylesheet" href="../libs/css/bootstrap-grid.min.css?_v=20230723195901">
+   <link rel="stylesheet" href="../libs/css/reset.min.css?_v=20230723195901">
+   <link rel="stylesheet" as="font" href="../fonts/fonts.css?_v=20230723195901">
+   <link rel="stylesheet" as="font" href="../fonts/iconsfont.css?_v=20230723195901">
+   <link rel="stylesheet" href="css/home-style.min.css?_v=20230723195901">
    
    <title>Barko School</title>
 </head>
@@ -52,7 +52,8 @@
 
          <div class="item item--hours">
             <i class="i-clock-fill"></i>
-            Пн-Пт: 8:00 - 20:00 
+            Пн-Пт: 8:00 - 20:00, <br>
+            Сб,Вс: 09:00-18:00
          </div>
       </div>
 
@@ -116,9 +117,14 @@
             <i class="i-phone-fill"></i>
             <span>+7 911 149 05 05</span>
          </a>
-         <div class="mobile-contact-link address">
+         <div class="mobile-contact-link align-top address">
             <i class="i-map-marker-fill"></i>
             <span>Санкт-Петербург, М.Фрунзенская, Московский пр. 75А</span>
+         </div>
+         <div class="mobile-contact-link align-top">
+            <i class="i-clock-fill"></i>
+            <span>Пн-Пт: 8:00 - 20:00, <br>
+               Сб,Вс: 09:00-18:00</span>
          </div>
       </div>
 
@@ -131,7 +137,7 @@
    </div>
 </div>
    
-   <main>
+   <main id="app">
       <div class="hero-wrap">
          <img class="hero-bg animate" src="./img/hero_bg.svg" alt="">
          <header class="header">
@@ -330,13 +336,14 @@
          <div data-tab="online" class="tab">Онлайн напраления</div>
       </div>
 
+      <!-- Оффлайн слайдер -->
       <div data-content="offline" class="courses courses-offline swiper-wrap active">
          <div class="swiper swiper-courses" id="swiper-courses-offline">
             <div class="swiper-wrapper">
 
                <div class="swiper-slide animate">
                   <div class="course">
-                     <img loading="lazy" src="../../../img/optimized/courses/soft-skills.webp" alt="Soft Skills (гибкие навыки)">
+                     <img loading="lazy" src="../../../img/optimized/courses/skills-future.webp" alt="Soft Skills (гибкие навыки)">
                      <div class="info">
                         <span class="age">с 6 лет</span>
                         <h4 class="title">Soft Skills (гибкие навыки)</h4>
@@ -493,12 +500,13 @@
             </div>
          </div>
    
-         <div class="swiper-pagination courses-pagination courses-pagination-offline" id="swiper-pagination"></div>
+         <div class="swiper-pagination courses-pagination courses-pagination-offline"></div>
 
          <div class="swiper-button-prev arrow circle-arrow"></div>
          <div class="swiper-button-next arrow circle-arrow"></div>
       </div>
 
+      <!-- Онлайн слайдер -->
       <div data-content="online" class="courses courses-online swiper-wrap">
          <div class="swiper swiper-courses" id="swiper-courses-online">
             <div class="swiper-wrapper">
@@ -554,7 +562,7 @@
             </div>
          </div>
    
-         <div class="swiper-pagination courses-pagination courses-pagination-online" id="swiper-pagination"></div>
+         <div class="swiper-pagination courses-pagination courses-pagination-online"></div>
 
          <div class="swiper-button-prev arrow circle-arrow"></div>
          <div class="swiper-button-next arrow circle-arrow"></div>
@@ -1092,6 +1100,16 @@
    <div class="popup-wrap" id="schedule-popup">
    <div class="popup">
       <div class="ui-close"><i class="i-close"></i></div>
+
+      <ul class="schedule-top">
+         <li class="schedule-top--item item--address">
+            <i class="i-map-marker-fill"></i>
+            <span>Санкт-Петербург, М.Фрунзенская, Московский пр. 75А</span>
+         </li>
+         <li class="schedule-top--item"><i class="i-clock-fill"></i>
+            <span>Пн-Пт: 08:00-20:00 <br> Сб, Вс: 09:00-18:00</span>
+         </li>
+      </ul>
       
       <div class="schedule-head">
          <h3 class="schedule-title">Расписание занятий</h3>
@@ -1101,7 +1119,7 @@
       <div class="schedule-body">
          <div class="explanation">
             <span class="mark"></span>
-            <p class="text"> - льготное время</p>
+            <p class="text"> - Скидка 10% ТОЛЬКО на групповые занятия</p>
          </div>
 
          <img loading="lazy" src="" alt="">
@@ -1112,11 +1130,25 @@
       </div>
 
       <div class="schedule-footer">
-         <a href="/" class="schedule-logo"><img src="../../../img/logo_light.svg" alt="Barko School Logo"></a>
-         <div class="socials socials--schedule"> <a href="https://www.instagram.com/barkokids/" target="_blank"><i class="i-instagram"></i></a>
+         <div class="footer-col left-col">
+            <a href="/" class="schedule-logo"><img src="../../../img/logo_light.svg" alt="Barko School Logo"></a>
+            <div class="socials socials--schedule"> <a href="https://www.instagram.com/barkokids/" target="_blank"><i class="i-instagram"></i></a>
 <a href="https://vk.com/barkokids" target="_blank"><i class="i-vk"></i></a>
 <a href="https://t.me/BarkoSchool" target="_blank"><i class="i-telegram"></i></a>
 <a href="https://wa.me/+79111490505" target="_blank"><i class="i-whatsapp"></i></a> </div>
+         </div>
+
+         <div class="footer-col right-col">
+            <a href="mailto:barkoschool.info@yandex.ru" class="footer-contact-link">
+               <i class="i-message-fill"></i>
+               <span>barkoschool.info@yandex.ru</span>
+            </a>
+            <a href="tel:+79111490505" class="footer-contact-link">
+               <i class="i-phone-fill"></i>
+               <span>+7 911 149 05 05</span>
+            </a>
+         </div>
+         
          <!-- <button class="ui-btn btn--action btn-schedule "><span>Пробное занятие</span></button> -->
       </div>
    </div>
@@ -1274,10 +1306,10 @@
    <div class="ui-overlay"></div> 
    
    
-   <script defer src="./libs/js/min/openPopup.min.js?_v=20230721200636"></script>
-   <script defer src="./libs/js/min/initPreviewGallery.min.js?_v=20230721200636"></script>
-   <script defer src="./libs/js/min/renderCoursePopupContent.min.js?_v=20230721200636"></script>
-   <script defer src="./libs/js/min/send-mail.min.js?_v=20230721200636"></script>
-   <script defer src="js/bundle-home.min.js?_v=20230721200636"></script>
+   <script defer src="./libs/js/min/openPopup.min.js?_v=20230723195901"></script>
+   <script defer src="./libs/js/min/initPreviewGallery.min.js?_v=20230723195901"></script>
+   <script defer src="./libs/js/renderCoursePopupContent.js?_v=20230723195901"></script>
+   <script defer src="./libs/js/min/send-mail.min.js?_v=20230723195901"></script>
+   <script defer src="js/bundle-home.min.js?_v=20230723195901"></script>
 </body>
 </html>

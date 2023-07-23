@@ -9,21 +9,6 @@
       background: url(../../../img/triangle.svg) no-repeat center / contain;
       z-index: -1;
    }
-   &:after {
-      $size: 500px;
-      top: 70px;
-      left: -140px;
-      width: $size;
-      height: $size;
-      transform: rotate(130deg);
-   }
-   &:before {
-      $size: 400px;
-      bottom: 10%;
-      right: -100px;
-      width: $size;
-      height: $size;
-   }
 
    .decor-title { 
       justify-content: center; 
@@ -118,28 +103,6 @@
                }
             }
          }
-      }
-   }
-}
-
-
-@media all and (max-width: 1150px) {
-   .gallery-section {
-      &:after {
-         width: 400px;
-         height: 400px;
-         top: 200px;
-      }
-   }
-}
-
-
-@media all and (max-width: 800px) {
-   .gallery-section {
-      &:after {
-         width: 400px;
-         height: 400px;
-         top: 250px;
       }
    }
 }

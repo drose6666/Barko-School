@@ -1,9 +1,44 @@
+$paddingX: 50px;
+
 #schedule-popup {
    .popup {
       max-width: 1600px;
       background: $light;
       border-radius: $blockR;
       overflow: hidden;
+   }
+
+   .schedule-top {
+      padding: 9px 75px 9px $paddingX;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: $weakColorSelection;
+
+      &--item {
+         font-family: $Monts;
+         font-size: 13px;
+         font-weight: 400;
+         line-height: 120%;
+         display: flex;
+         align-items: center;
+         gap: 10px;
+
+         i {
+            color: $action;
+            font-size: 16px;
+         }
+
+         &.item--address {
+            i {
+               font-size: 18px;
+            }
+         }
+
+         span {
+            max-width: 300px;
+         }
+      }
    }
 
    .schedule-head {
@@ -54,7 +89,7 @@
 
 
    .schedule-body {
-      padding: 90px 50px 130px 50px;
+      padding: 90px $paddingX 130px $paddingX;
       img {
          margin: 15px 0;
          max-width: 100%;
@@ -103,7 +138,7 @@
 
 
    .schedule-footer {
-      padding: 10px 50px 25px 50px;
+      padding: 10px $paddingX 25px $paddingX;
       background: $footerBg;
       position: relative;
       display: flex;
@@ -121,6 +156,18 @@
          z-index: 0;
       }
 
+      .footer-col {
+         display: flex;
+         flex-direction: column;
+         &.left-col {
+            align-items: center;
+            gap: 30px;
+         }
+         &.right-col {
+            gap: 20px;
+         }
+      }
+
       .schedule-logo {
          position: relative;
          max-width: 230px;
@@ -128,6 +175,34 @@
          img {
             max-width: 100%;
             height: auto;
+         }
+      }
+
+      .footer-contact-link {
+         font-family: $Monts;
+         font-size: 14px;
+         font-weight: 500;
+         line-height: 100%;
+         color: $light;
+         display: flex;
+         align-items: center;
+         gap: 15px;
+         @include hoverLinks($hoverSpan: true);
+
+         span {
+            padding: 5px 0;
+            transition: background-size .2s ease, transform .2s ease;
+         }
+
+         i {
+            font-size: 17px; 
+            color: $action;
+         }
+
+         &:hover {
+            span {
+               transform: translateX(3px);
+            }
          }
       }
 
@@ -139,9 +214,11 @@
 
 
 @media all and (max-width: 1000px) {
+   $paddingX: 20px;
    #schedule-popup {
-      .schedule-body { padding: 120px 20px 150px 20px; }
-      .schedule-footer { padding: 10px 20px 25px 20px; }
+      .schedule-body { padding: 120px $paddingX 150px $paddingX; }
+      .schedule-footer { padding: 10px $paddingX 25px $paddingX; }
+      .schedule-top {padding: 9px 50px 9px $paddingX;}
    }
 }
 
@@ -157,6 +234,33 @@
    }
 }
 
+@media all and (max-width: 590px) {
+   #schedule-popup {
+      .schedule-top {
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 15px;
+
+         span {
+            max-width: 100%;
+         }
+      }
+
+      .schedule-footer {
+         flex-direction: column;
+         align-items: center;
+         
+         .footer-col {
+            &.right-col {
+               margin-top: 15px;
+               align-items: center;
+               gap: 15px;
+            }
+         }
+      }
+   }
+}
+
 @media all and (max-width: 500px) {
    #schedule-popup {
       .schedule-body {
@@ -164,7 +268,7 @@
          .body-text { font-size: 13px; }
       }
       .schedule-footer {
-         padding: 0 20px 20px 20px;
+         padding: 0 $paddingX 20px $paddingX;
          flex-direction: column;
          align-items: center;
          gap: 15px;

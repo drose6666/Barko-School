@@ -10,9 +10,9 @@
       .item {
          display: flex;
          align-items: center;
-         font-size: 15px;
+         font-size: 14px;
          font-weight: 400;
-         line-height: 100%;
+         line-height: 130%;
          color: $title;
          
          & > i {
@@ -27,15 +27,22 @@
          }
 
          &.item--address {
+            span {
+               max-width: 300px;
+            }
             & > i {
                font-size: 20px;
+            }
+            &.first:after {
+               margin-left: 0;
+               height: 36px;
             }
          }
          &.first:after {
             content: '';
             margin-left: 30px;
             display: block;
-            height: 20px;
+            height: 18px;
             width: 1px;
             background: $title;
          } 

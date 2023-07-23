@@ -128,7 +128,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   -webkit-border-radius: 50px;
           border-radius: 50px;
 }
@@ -174,7 +174,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   -webkit-border-radius: 50px;
           border-radius: 50px;
 }
@@ -218,7 +218,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   -webkit-border-radius: 50px;
           border-radius: 50px;
 }
@@ -263,7 +263,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid #212529;
+  border: 1px solid #212529;
   -webkit-border-radius: 50px;
           border-radius: 50px;
 }
@@ -1335,9 +1335,9 @@ button.swiper-pagination-bullet {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 100%;
+  line-height: 130%;
   color: #212529;
 }
 
@@ -1356,15 +1356,24 @@ button.swiper-pagination-bullet {
   transition: background-size 0.2s ease, transform 0.2s ease, -webkit-background-size 0.2s ease, -o-background-size 0.2s ease, -webkit-transform 0.2s ease, -o-transform 0.2s ease;
 }
 
+.top-info .items .item.item--address span {
+  max-width: 300px;
+}
+
 .top-info .items .item.item--address > i {
   font-size: 20px;
+}
+
+.top-info .items .item.item--address.first:after {
+  margin-left: 0;
+  height: 36px;
 }
 
 .top-info .items .item.first:after {
   content: "";
   margin-left: 30px;
   display: block;
-  height: 20px;
+  height: 18px;
   width: 1px;
   background: #212529;
 }
@@ -1775,7 +1784,11 @@ footer {
   color: #F2184F;
 }
 
-.mobile-menu-wrap .mobile-menu .mobile-contact-links .mobile-contact-link.address {
+.mobile-menu-wrap .mobile-menu .mobile-contact-links .mobile-contact-link.address i {
+  font-size: 25px;
+}
+
+.mobile-menu-wrap .mobile-menu .mobile-contact-links .mobile-contact-link.align-top {
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
      -moz-box-align: start;
@@ -1783,12 +1796,8 @@ footer {
           align-items: flex-start;
 }
 
-.mobile-menu-wrap .mobile-menu .mobile-contact-links .mobile-contact-link.address span {
+.mobile-menu-wrap .mobile-menu .mobile-contact-links .mobile-contact-link.align-top span {
   padding: 0;
-}
-
-.mobile-menu-wrap .mobile-menu .mobile-contact-links .mobile-contact-link.address i {
-  font-size: 25px;
 }
 
 .mobile-menu-wrap .mobile-menu .mobile-contact-links .mobile-contact-link:not(:first-child) {
@@ -3591,6 +3600,57 @@ footer {
   overflow: hidden;
 }
 
+#schedule-popup .schedule-top {
+  padding: 9px 75px 9px 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #FFF3F6;
+}
+
+#schedule-popup .schedule-top--item {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 120%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+#schedule-popup .schedule-top--item i {
+  color: #F2184F;
+  font-size: 16px;
+}
+
+#schedule-popup .schedule-top--item.item--address i {
+  font-size: 18px;
+}
+
+#schedule-popup .schedule-top--item span {
+  max-width: 300px;
+}
+
 #schedule-popup .schedule-head {
   padding: 25px 0 0 0;
   position: relative;
@@ -3737,6 +3797,34 @@ footer {
   z-index: 0;
 }
 
+#schedule-popup .schedule-footer .footer-col {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#schedule-popup .schedule-footer .footer-col.left-col {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+
+#schedule-popup .schedule-footer .footer-col.right-col {
+  gap: 20px;
+}
+
 #schedule-popup .schedule-footer .schedule-logo {
   position: relative;
   max-width: 230px;
@@ -3746,6 +3834,62 @@ footer {
 #schedule-popup .schedule-footer .schedule-logo img {
   max-width: 100%;
   height: auto;
+}
+
+#schedule-popup .schedule-footer .footer-contact-link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+#schedule-popup .schedule-footer .footer-contact-link > span {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F2184F));
+  -webkit-background-size: 0% 1px;
+       -o-background-size: 0% 1px;
+          background-size: 0% 1px;
+  background-position: right 0% bottom;
+  background-repeat: no-repeat;
+}
+
+#schedule-popup .schedule-footer .footer-contact-link:hover > span {
+  background-position: left 0% bottom;
+  -webkit-background-size: 100% 1px;
+       -o-background-size: 100% 1px;
+          background-size: 100% 1px;
+}
+
+#schedule-popup .schedule-footer .footer-contact-link span {
+  padding: 5px 0;
+  -webkit-transition: -webkit-background-size 0.2s ease, -webkit-transform 0.2s ease;
+  transition: -webkit-background-size 0.2s ease, -webkit-transform 0.2s ease;
+  -o-transition: -o-background-size 0.2s ease, -o-transform 0.2s ease;
+  transition: background-size 0.2s ease, transform 0.2s ease;
+  transition: background-size 0.2s ease, transform 0.2s ease, -webkit-background-size 0.2s ease, -o-background-size 0.2s ease, -webkit-transform 0.2s ease, -o-transform 0.2s ease;
+}
+
+#schedule-popup .schedule-footer .footer-contact-link i {
+  font-size: 17px;
+  color: #F2184F;
+}
+
+#schedule-popup .schedule-footer .footer-contact-link:hover span {
+  -webkit-transform: translateX(3px);
+      -ms-transform: translateX(3px);
+       -o-transform: translateX(3px);
+          transform: translateX(3px);
 }
 
 #schedule-popup .schedule-footer .btn-schedule {
@@ -5763,24 +5907,6 @@ footer {
   z-index: -1;
 }
 
-.gallery-section:after {
-  top: 70px;
-  left: -140px;
-  width: 500px;
-  height: 500px;
-  -webkit-transform: rotate(130deg);
-      -ms-transform: rotate(130deg);
-       -o-transform: rotate(130deg);
-          transform: rotate(130deg);
-}
-
-.gallery-section:before {
-  bottom: 10%;
-  right: -100px;
-  width: 400px;
-  height: 400px;
-}
-
 .gallery-section .decor-title {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -6592,7 +6718,7 @@ i {
   display: none;
 }
 
-#swiper-pagination {
+#app .swiper-pagination {
   margin: 30px auto 0 auto;
   bottom: -45px;
   left: 50%;
@@ -6603,7 +6729,7 @@ i {
   z-index: 1;
 }
 
-#swiper-pagination .swiper-pagination-bullet {
+#app .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background: #F2184F;
@@ -7188,14 +7314,6 @@ i {
   }
 }
 
-@media all and (max-width: 1150px) {
-  .gallery-section:after {
-    width: 400px;
-    height: 400px;
-    top: 200px;
-  }
-}
-
 @media all and (max-width: 1100px) {
   .hero-section {
     padding-bottom: 110px;
@@ -7277,6 +7395,10 @@ i {
 
   #schedule-popup .schedule-footer {
     padding: 10px 20px 25px 20px;
+  }
+
+  #schedule-popup .schedule-top {
+    padding: 9px 50px 9px 20px;
   }
 }
 
@@ -8030,12 +8152,6 @@ i {
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
   }
-
-  .gallery-section:after {
-    width: 400px;
-    height: 400px;
-    top: 250px;
-  }
 }
 
 @media all and (max-width: 768px) {
@@ -8305,6 +8421,53 @@ i {
   }
 }
 
+@media all and (max-width: 590px) {
+  #schedule-popup .schedule-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+       -moz-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 15px;
+  }
+
+  #schedule-popup .schedule-top span {
+    max-width: 100%;
+  }
+
+  #schedule-popup .schedule-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  #schedule-popup .schedule-footer .footer-col.right-col {
+    margin-top: 15px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15px;
+  }
+}
+
 @media all and (max-width: 576px) {
   .contact-form-wrap .contact-form .form-text {
     margin: 0 auto 40px auto;
@@ -8494,7 +8657,7 @@ i {
   }
 
   #schedule-popup .schedule-footer {
-    padding: 0 20px 20px 20px;
+    padding: 0 50px 20px 50px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
