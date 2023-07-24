@@ -1,8 +1,44 @@
-<div class="popup-wrap" id="price-popup">
-   @@include('../../ui/ui-close/ui-close.html')
-
+<div class="popup-wrap schedule-popup" id="price-popup">
    <div class="popup">
-      <img src="../../../img/optimized/schedule/price.webp" alt="">
+      @@include('../../ui/ui-close/ui-close.html')
+
+      <ul class="schedule-top">
+         <li class="schedule-top--item item--address">
+            <i class="i-map-marker-fill"></i>
+            <span>Санкт-Петербург, М.Фрунзенская, Московский пр. 75А</span>
+         </li>
+         <li class="schedule-top--item"><i class="i-clock-fill"></i>
+            <span>Пн-Пт: 08:00-20:00 <br> Сб, Вс: 09:00-18:00</span>
+         </li>
+      </ul>
+      
+      <div class="schedule-head">
+         <h3 class="schedule-title">Прайс-лист</h3>
+      </div>
+
+      <div class="schedule-body">
+         <img loading="lazy" src="../../../img/optimized/schedule/price.webp" alt="Прайс-лист Barko School">
+      </div>
+
+      <div class="schedule-footer">
+         <div class="footer-col left-col">
+            <a href="/" class="schedule-logo"><img src="../../../img/logo_light.svg" alt="Barko School Logo"></a>
+            <div class="socials socials--schedule"> @@include('../../socials/socials.html') </div>
+         </div>
+
+         <div class="footer-col right-col">
+            <a href="mailto:barkoschool.info@yandex.ru" class="footer-contact-link">
+               <i class="i-message-fill"></i>
+               <span>barkoschool.info@yandex.ru</span>
+            </a>
+            <a href="tel:+79111490505" class="footer-contact-link">
+               <i class="i-phone-fill"></i>
+               <span>+7 911 149 05 05</span>
+            </a>
+         </div>
+         
+         <!-- <button class="ui-btn btn--action btn-schedule "><span>Пробное занятие</span></button> -->
+      </div>
    </div>
 
    <div class="popup-overlay"></div>

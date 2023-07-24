@@ -18,7 +18,7 @@
       z-index: 2;
    }
 
-   &#schedule-popup,  &.confirm-popup {
+   &.schedule-popup,  &.confirm-popup {
       .ui-close {
          color: $title;
          &:hover {

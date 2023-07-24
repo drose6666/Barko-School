@@ -3390,12 +3390,12 @@ footer {
   z-index: 2;
 }
 
-.popup-wrap#schedule-popup .ui-close,
+.popup-wrap.schedule-popup .ui-close,
 .popup-wrap.confirm-popup .ui-close {
   color: #212529;
 }
 
-.popup-wrap#schedule-popup .ui-close:hover,
+.popup-wrap.schedule-popup .ui-close:hover,
 .popup-wrap.confirm-popup .ui-close:hover {
   color: #F2184F;
 }

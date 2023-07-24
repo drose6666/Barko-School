@@ -1,6 +1,6 @@
 $paddingX: 50px;
 
-#schedule-popup {
+.schedule-popup {
    .popup {
       max-width: 1600px;
       background: $light;
@@ -215,7 +215,7 @@ $paddingX: 50px;
 
 @media all and (max-width: 1000px) {
    $paddingX: 20px;
-   #schedule-popup {
+   .schedule-popup {
       .schedule-body { padding: 120px $paddingX 150px $paddingX; }
       .schedule-footer { padding: 10px $paddingX 25px $paddingX; }
       .schedule-top {padding: 9px 50px 9px $paddingX;}
@@ -223,7 +223,7 @@ $paddingX: 50px;
 }
 
 @media all and (max-width: 768px) {
-   #schedule-popup {
+   .schedule-popup {
       .schedule-head {
          .schedule-title { font-size: calcSize(768, 500, 35, 26); }
          .schedule-age { font-size: calcSize(768, 500, 22, 19); }
@@ -235,7 +235,7 @@ $paddingX: 50px;
 }
 
 @media all and (max-width: 590px) {
-   #schedule-popup {
+   .schedule-popup {
       .schedule-top {
          flex-direction: column;
          align-items: flex-start;
@@ -262,7 +262,7 @@ $paddingX: 50px;
 }
 
 @media all and (max-width: 500px) {
-   #schedule-popup {
+   .schedule-popup {
       .schedule-body {
          .explanation .text { font-size: 12px; }
          .body-text { font-size: 13px; }
