@@ -1,5 +1,5 @@
 .top-info {
-   padding: 11px 0;
+   padding: 9px 0;
    background: $light;
    box-shadow: $blocksWhiteS;
 
@@ -16,7 +16,8 @@
          color: $title;
 
          &.align-srart {
-            align-items: flex-start;
+            // align-items: flex-start;
+            font-size: 13px;
             span {
                padding: 0;
             }
@@ -35,14 +36,14 @@
 
          &.item--address {
             span {
-               max-width: 300px;
+               max-width: 260px;
             }
             & > i {
                font-size: 20px;
             }
             &.first:after {
                margin-left: 0;
-               height: 36px;
+               height: 30px;
             }
          }
          &.first:after {
