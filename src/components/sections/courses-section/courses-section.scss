@@ -125,14 +125,14 @@
             padding: 12px 20px;
             border-bottom-right-radius: 15px;
             background: rgba(32, 44, 69, 1);
-            box-shadow: 0px 0px 0px 7px rgba(32, 44, 69, .4);
+            box-shadow: 0px 0px 0px 5px rgba(32, 44, 69, .4);
             position: absolute;
             top: 0;
             left: 0;
             opacity: 1;
             visibility: visible;
             transition: all .3s ease .4s;
-         }
+         } 
 
          &.hidden-price {
             position: absolute;
@@ -181,6 +181,7 @@
       }
 
       .title {
+         margin-bottom: 10px;
          font-size: 21px;
          font-weight: 700;
          line-height: 120%;
@@ -220,14 +221,14 @@
          font-size: 15px;
          line-height: 100%;
          color: $action;
-         position: absolute;
-         bottom: 30px;
-         left: 30px;
-         opacity: 0;
-         visibility: hidden;
+         // position: absolute;
+         // bottom: 30px;
+         // left: 30px;
+         // opacity: 0;
+         // visibility: hidden;
          z-index: 1;
          cursor: pointer;
-         transform: translateX(-30px);
+         // transform: translateX(-30px);
          transition: opacity .4s ease, visibility .4s ease, transform .4s ease, background-size .2s ease, color .2s ease;
          @include hoverLinks($height: 1px);
          &:hover {
@@ -264,7 +265,7 @@
             transition-delay: 0s;
          }
          .title {
-            transform: translateY(-175px);
+            // transform: translateY(-175px);
             transition-delay: .1s;
          }
          .text, .more {

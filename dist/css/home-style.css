@@ -1341,6 +1341,18 @@ button.swiper-pagination-bullet {
   color: #212529;
 }
 
+.top-info .items .item.align-srart {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.top-info .items .item.align-srart span {
+  padding: 0;
+}
+
 .top-info .items .item > i {
   margin-right: 12px;
   color: #F2184F;
@@ -5436,8 +5448,8 @@ footer {
   -webkit-border-bottom-right-radius: 15px;
           border-bottom-right-radius: 15px;
   background: #202c45;
-  -webkit-box-shadow: 0px 0px 0px 7px rgba(32, 44, 69, 0.4);
-          box-shadow: 0px 0px 0px 7px rgba(32, 44, 69, 0.4);
+  -webkit-box-shadow: 0px 0px 0px 5px rgba(32, 44, 69, 0.4);
+          box-shadow: 0px 0px 0px 5px rgba(32, 44, 69, 0.4);
   position: absolute;
   top: 0;
   left: 0;
@@ -5524,6 +5536,7 @@ footer {
 }
 
 .courses .course .title {
+  margin-bottom: 10px;
   font-size: 21px;
   font-weight: 700;
   line-height: 120%;
@@ -5570,17 +5583,8 @@ footer {
   font-size: 15px;
   line-height: 100%;
   color: #F2184F;
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-  opacity: 0;
-  visibility: hidden;
   z-index: 1;
   cursor: pointer;
-  -webkit-transform: translateX(-30px);
-      -ms-transform: translateX(-30px);
-       -o-transform: translateX(-30px);
-          transform: translateX(-30px);
   -webkit-transition: opacity 0.4s ease, visibility 0.4s ease, color 0.2s ease, -webkit-transform 0.4s ease, -webkit-background-size 0.2s ease;
   transition: opacity 0.4s ease, visibility 0.4s ease, color 0.2s ease, -webkit-transform 0.4s ease, -webkit-background-size 0.2s ease;
   -o-transition: opacity 0.4s ease, visibility 0.4s ease, color 0.2s ease, -o-transform 0.4s ease, -o-background-size 0.2s ease;
@@ -5655,10 +5659,6 @@ footer {
 }
 
 .courses .course:hover .title {
-  -webkit-transform: translateY(-175px);
-      -ms-transform: translateY(-175px);
-       -o-transform: translateY(-175px);
-          transform: translateY(-175px);
   -webkit-transition-delay: 0.1s;
        -o-transition-delay: 0.1s;
           transition-delay: 0.1s;

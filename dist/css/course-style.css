@@ -1335,6 +1335,18 @@ button.swiper-pagination-bullet {
   color: #212529;
 }
 
+.top-info .items .item.align-srart {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.top-info .items .item.align-srart span {
+  padding: 0;
+}
+
 .top-info .items .item > i {
   margin-right: 12px;
   color: #F2184F;

@@ -32,15 +32,15 @@ try {
 
   // Настройки вашей почты
   $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
-  $mail->Username   = 'danila.rose.web@yandex.ru'; // Логин на почте
-  $mail->Password   = 'wntkvrxlgojjbayo'; // Пароль на почте
+  $mail->Username   = 'barkoschool.info@yandex.ru'; // Логин на почте
+  $mail->Password   = 'xgqqboeqzvawtzfb'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('danila.rose.web@yandex.ru', 'Сообщение с сайта barkoschool.ru'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('barkoschool.info@yandex.ru', 'Сообщение с сайта barkoschool.ru'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('danila.rose.web@yandex.ru');
+  $mail->addAddress('barkoschool.info@yandex.ru');
 
   // Отправка сообщения
   $mail->isHTML(true);
