@@ -98,7 +98,7 @@ const schedules = [
    {id: '8y-9y', age: '8 - 9 лет', img:'../../../img/optimized/schedule/8-9.webp',},
    {id: '9y-11y', age: '9 - 11 лет', img:'../../../img/optimized/schedule/9-11.webp',},
    {id: '11y-13y', age: '11 - 13 лет', img:'../../../img/optimized/schedule/11-13.webp',},
-   {id: '14+y', age: '14+', img:'../../../img/optimized/schedule/14+.webp',},
+   {id: '14+y', age: '14+ лет', img:'../../../img/optimized/schedule/14+.webp',},
 ]
 const scheduleAge = document.querySelector('.schedule-age')
 const scheduleImage = document.querySelector('.schedule-body img')
