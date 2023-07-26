@@ -3610,7 +3610,7 @@ footer {
 
 .schedule-popup .schedule-top {
   margin-bottom: 30px;
-  padding: 0 75px 10px 50px;
+  padding: 0 50px 12px 50px;
   background: #FFF3F6;
   width: 100%;
   position: relative;
@@ -3626,7 +3626,7 @@ footer {
 }
 
 .schedule-popup .schedule-top--item:not(:last-child) {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .schedule-popup .schedule-top:after {
@@ -3875,7 +3875,7 @@ footer {
 }
 
 .schedule-popup .schedule-footer .footer-contact-link i {
-  font-size: 17px;
+  font-size: 16px;
   color: #F2184F;
 }
 
@@ -7456,7 +7456,7 @@ i {
   }
 
   .schedule-popup .schedule-top {
-    padding: 9px 50px 9px 20px;
+    padding: 20px 20px 12px 20px;
   }
 }
 
@@ -8481,26 +8481,6 @@ i {
 }
 
 @media all and (max-width: 590px) {
-  .schedule-popup .schedule-top {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-       -moz-box-orient: vertical;
-       -moz-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-       -moz-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    gap: 15px;
-  }
-
-  .schedule-popup .schedule-top span {
-    max-width: 100%;
-  }
-
   .schedule-popup .schedule-footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -8695,7 +8675,7 @@ i {
   }
 
   .socials.socials--schedule a {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .features-col {
