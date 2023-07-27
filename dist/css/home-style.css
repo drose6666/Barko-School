@@ -1425,7 +1425,7 @@ button.swiper-pagination-bullet {
 .socials.socials--top a {
   display: inline-block;
   color: #9193A3;
-  font-size: 19px;
+  font-size: 18px;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -3626,7 +3626,7 @@ footer {
 }
 
 .schedule-popup .schedule-top--item:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .schedule-popup .schedule-top:after {
@@ -8685,6 +8685,10 @@ i {
        -moz-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
+  }
+
+  .schedule-popup .schedule-top--item:not(:last-child) {
+    margin-bottom: 10px;
   }
 
   .schedule-popup .schedule-body .explanation .text {

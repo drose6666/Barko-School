@@ -23,7 +23,7 @@ $paddingX: 50px;
          text-align: center;
          width: 100%;
          &:not(:last-child) {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
          }
       }
 
@@ -253,6 +253,11 @@ $paddingX: 50px;
 
 @media all and (max-width: 500px) {
    .schedule-popup {
+      .schedule-top {
+         &--item:not(:last-child) {
+            margin-bottom: 10px;
+         }
+      }
       .schedule-body {
          .explanation .text { font-size: 12px; }
          .body-text { font-size: 13px; }
