@@ -4430,7 +4430,7 @@ footer {
 
 .hero-list li {
   font-family: "Roboto", sans-serif;
-  font-size: 17.5px;
+  font-size: 17px;
   font-weight: 300;
   line-height: 120%;
   color: #212529;
@@ -7300,8 +7300,8 @@ i {
   }
 
   .hero-list li {
-    font-size: -webkit-calc((100vw - 1100px) / (1300 - 1100) * (17.5 - 16) + 16px);
-    font-size: calc((100vw - 1100px) / (1300 - 1100) * (17.5 - 16) + 16px);
+    font-size: -webkit-calc((100vw - 1100px) / (1300 - 1100) * (17 - 16) + 16px);
+    font-size: calc((100vw - 1100px) / (1300 - 1100) * (17 - 16) + 16px);
   }
 }
 
@@ -7403,7 +7403,7 @@ i {
   }
 
   .hero-list li {
-    font-size: 17.5px;
+    font-size: 17px;
   }
 
   .courses .swiper-slide {
@@ -7635,7 +7635,7 @@ i {
   }
 
   .hero-list li {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .hero-img .img-wrap.animate {

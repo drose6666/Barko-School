@@ -104,7 +104,7 @@ const french = `
 const spanish = `
    <div class="detail-info-item">
       <h4 class="detail-info-title">Строим фундамент</h4>
-      <p class="detail-info-text">Занятия направлены в первую очередь на расширение словарного запаса и развитие разговорной речи, развитие умения понимать испанскую речь на слух, а также на изучение грамматики. <strong>Занятия разработаны как для взрослых, так и для детей!</strong></p>
+      <p class="detail-info-text">Занятия направлены в первую очередь на расширение словарного запаса и развитие разговорной речи, развитие умения понимать испанскую речь на слух, а также на изучение грамматики.</p>
       <p class="detail-info-text"><strong>Занятия разработаны как для взрослых, так и для детей!</strong></p>
    </div>
 
@@ -598,6 +598,56 @@ const psychologyOnline = `
    </div>
 `
 
+const china = `
+   <div class="detail-info-item">
+      <h4 class="detail-info-title">Строим фундамент</h4>
+      <p class="detail-info-text">Занятия направлены в первую очередь на расширение словарного запаса и развитие разговорной речи, развитие умения понимать китайскую речь на слух, а также на изучение грамматики.</p>
+      <p class="detail-info-text"><strong>Занятия разработаны как для взрослых, так и для детей!</strong></p>
+   </div>
+
+   <div class="detail-info-item">
+      <h4 class="detail-info-title">Варианты обучения:</h4>
+      <ul class="detail-info-list circle-fill">
+         <li>Без/с использования(ем) русского языка</li>
+         <li>Онлайн</li>
+         <li>Индивидуально/в группе</li>
+      </ul>
+   </div>
+
+   <div class="detail-info-item">
+      <h4 class="detail-info-title">Для детей от 2-х до 5-ти лет:</h4>
+      <ul class="detail-info-list circle-fill">
+         <li>Занятия проходят в игровой форме для лучшего понимания и запоминания новой информации</li>
+      </ul>
+   </div>
+
+   <div class="detail-info-item">
+      <h4 class="detail-info-title">Для детей от 6-ти лет:</h4>
+      <ul class="detail-info-list circle-fill">
+         <li>Подготовка к егэ и огэ</li>
+         <li>Подготовка к олимпиадам/конкурсам</li>
+         <li>Разговорный китайский</li>
+      </ul>
+   </div>
+
+   <div class="detail-info-item">
+      <h4 class="detail-info-title">Для взрослых:</h4>
+      <ul class="detail-info-list circle-fill">
+         <li>Китайский для путешествий;</li>
+         <li>Разговорный китайский</li>
+         <li>Деловой китайский</li>
+      </ul>
+   </div>
+
+   <div class="detail-info-item">
+      <h4 class="detail-info-title">Мы поможем Вам</h4>
+      <p class="detail-info-text">Погрузиться в языковую среду и побороть страх сказать что-то не то и начать говорить по-Китайски. А также полностью понимать речь носителей языка и вести с ним диалог.</p>
+   </div>
+
+   <div class="detail-info-item">
+      <p class="detail-info-text">Записывайтесь на пробное <strong>БЕСПЛАТНОЕ</strong> занятие. Это ни к чему не обязывает!</p>
+   </div>
+`
 
 
 // TODO Определение необходимого контента
@@ -641,6 +691,8 @@ const getCurrentContent = function getCurrentContent (id) {
          return englishOnline;
       case 19: 
          return psychologyOnline;
+      case 20:
+         return china;
       default:
          return 'WARNING! Говнокод, в конструкции switch'
    }
@@ -667,6 +719,7 @@ const coursesData = [
    { id: 17, title: 'Английский мини-сад', img: '../../../img/optimized/courses/englishMiniKindergarten.webp', age: 'с 4 до 7 лет', content: getCurrentContent(17) },
    { id: 18, title: 'Английский язык', img: '../../../img/optimized/courses/english.webp', age: 'с 2 лет', content: getCurrentContent(18) },
    { id: 19, title: 'Психолог', img: '../../../img/optimized/courses/psychology.webp', age: 'до 18 лет', content: getCurrentContent(19) },
+   { id: 20, title: 'Китайский язык', img: '../../../img/optimized/courses/china.webp', age: 'с 2 лет', content: getCurrentContent(20) },
 ] 
 
 
