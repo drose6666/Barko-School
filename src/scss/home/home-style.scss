@@ -66,6 +66,7 @@ a, a:hover, a:focus, a:active {
 
 html,body {
    height: 100%;
+   scrollbar-gutter: stable;
    // all: unset; // сбрасывыает все стили до значений по умолчанию
 }
 
